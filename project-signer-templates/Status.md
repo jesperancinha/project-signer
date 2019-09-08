@@ -36,6 +36,7 @@
 ---
 
 [![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=MancalaJE&color=informational)](http://mancalaje.joaofilipesabinoesperancinha.nl/)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Mancala%20JE&color=informational)](https://github.com/jesperancinha/mancalaje)
 [![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/mancalaje.svg)](https://github.com/jesperancinha/mancalaje/releases)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f30b682f67e44391a922f62ada6b2f85)](https://www.codacy.com/app/jofisaes/mancalaje?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/mancalaje&amp;utm_campaign=Badge_Grade)
@@ -52,6 +53,7 @@
 ---
 
 [![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Image%20Train%20Filters&color=informational)](http://itf.joaofilipesabinoesperancinha.nl/)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Image%20Train%20Filters&color=informational)](https://github.com/jesperancinha/image-train-filters-scala)
 [![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/image-train-filters-scala.svg)](https://github.com/jesperancinha/image-train-filters-scala/releases)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b45a0bd9c3694401b78580b95c0b505b?)](https://www.codacy.com/app/jofisaes/image-train-filters-scala?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/image-train-filters-scala&amp;utm_campaign=Badge_Grade)
