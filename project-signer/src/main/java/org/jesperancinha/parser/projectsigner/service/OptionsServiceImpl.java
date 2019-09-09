@@ -9,7 +9,7 @@ import picocli.CommandLine;
 
 @Service
 @Profile({"dev", "prod"})
-public class OptionsServiceImpl implements OptionsService {
+public class OptionsServiceImpl implements OptionsService<ProjectSignerOptions> {
 
     protected ProjectSignerOptions projectSignerOptions;
 
