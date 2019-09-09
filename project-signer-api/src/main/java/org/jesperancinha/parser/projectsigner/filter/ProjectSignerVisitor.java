@@ -21,12 +21,12 @@ import static org.jesperancinha.parser.projectsigner.filter.ProjectSignerFilterH
 @Builder
 public class ProjectSignerVisitor extends SimpleFileVisitor<Path> {
 
-    private final GeneratorService generatorSevice;
+    private final GeneratorService generatorService;
     private final Paragraphs allParagraphs;
 
-    public ProjectSignerVisitor(GeneratorService generatorSevice, Paragraphs allParagraphs) {
+    public ProjectSignerVisitor(GeneratorService generatorService, Paragraphs allParagraphs) {
 
-        this.generatorSevice = generatorSevice;
+        this.generatorService = generatorService;
         this.allParagraphs = allParagraphs;
     }
 
@@ -50,7 +50,7 @@ public class ProjectSignerVisitor extends SimpleFileVisitor<Path> {
             return SKIP_SUBTREE;
         }
         if (ObjectUtils.isEmpty(e)) {
-            generatorSevice.processReadmeFile(dir, allParagraphs);
+            generatorService.processReadmeFile(dir, allParagraphs);
         } else {
             log.error("Failed on file {}", dir, e);
         }

@@ -19,8 +19,8 @@ import java.nio.file.Path;
 @Slf4j
 public class ReadmeServiceImpl implements ReadmeService {
 
-    private MergeService mergeService;
-    private OptionsService optionsService;
+    private final MergeService mergeService;
+    private final OptionsService optionsService;
 
     public  ReadmeServiceImpl(MergeService mergeService, OptionsService optionsService) {
         this.mergeService = mergeService;

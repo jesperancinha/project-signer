@@ -22,8 +22,8 @@ import static java.util.EnumSet.of;
 @Service
 public class FinderServiceImpl implements FinderService {
 
-    private GeneratorService generatorService;
-    private TemplateService templateService;
+    private final GeneratorService generatorService;
+    private final TemplateService templateService;
 
     public FinderServiceImpl(
             final GeneratorService generatorService, final TemplateService templateService) {

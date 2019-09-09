@@ -17,7 +17,7 @@ import java.nio.file.Path;
 @Service
 public class MergeServiceImpl implements MergeService {
 
-    private FileWriterService fileWriterService;
+    private final FileWriterService fileWriterService;
 
     public MergeServiceImpl(FileWriterService fileWriterService) {
         this.fileWriterService = fileWriterService;

@@ -17,7 +17,7 @@ import java.io.InputStream;
 @Service
 public class TemplateServiceImpl implements TemplateService {
 
-    private OptionsService optionsService;
+    private final OptionsService optionsService;
 
     public TemplateServiceImpl(OptionsService optionsService) {
         this.optionsService = optionsService;

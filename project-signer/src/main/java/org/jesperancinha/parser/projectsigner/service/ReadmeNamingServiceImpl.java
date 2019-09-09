@@ -15,8 +15,8 @@ import java.nio.file.Path;
 @Service
 public class ReadmeNamingServiceImpl implements ReadmeNamingService {
 
-    private OptionsService optionsService;
-    private FileFilterChain fileFilterChain;
+    private final OptionsService optionsService;
+    private final FileFilterChain fileFilterChain;
 
     public ReadmeNamingServiceImpl(final FileFilterChain fileFilterChain,
                                    final OptionsService optionsService) {

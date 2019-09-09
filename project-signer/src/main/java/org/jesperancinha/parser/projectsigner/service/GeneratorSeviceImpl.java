@@ -23,8 +23,8 @@ import java.util.Objects;
 @Service
 public class GeneratorSeviceImpl implements GeneratorService {
 
-    private ReadmeNamingService readmeNamingService;
-    private ReadmeService readmeService;
+    private final ReadmeNamingService readmeNamingService;
+    private final ReadmeService readmeService;
 
     public GeneratorSeviceImpl(ReadmeNamingService readmeNamingService,
                                ReadmeService readmeService) {
