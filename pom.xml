@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>project-signer-root</artifactId>
-    <version>1.1.0</version>
+    <version>2.0.0</version>
     <packaging>pom</packaging>
     <properties>
-        <markdowner-core.version>1.0.1</markdowner-core.version>
-        <project-signer-api.version>1.1.0</project-signer-api.version>
+        <markdowner.version>1.0.1</markdowner.version>
+        <project-signer-api.version>2.0.0</project-signer-api.version>
     </properties>
     <parent>
         <groupId>org.jesperancinha.parser</groupId>
@@ -20,7 +20,7 @@
             <dependency>
                 <groupId>org.jesperancinha.parser</groupId>
                 <artifactId>markdowner-core</artifactId>
-                <version>${markdowner-core.version}</version>
+                <version>${markdowner.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jesperancinha.parser</groupId>
