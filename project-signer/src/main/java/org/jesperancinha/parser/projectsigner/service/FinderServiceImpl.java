@@ -20,11 +20,11 @@ import static java.util.EnumSet.of;
 @Service
 public class FinderServiceImpl implements FinderService {
 
-    private final GeneratorService generatorService;
-    private final TemplateService templateService;
+    private final GeneratorService<Paragraphs> generatorService;
+    private final TemplateService<Paragraphs> templateService;
 
     public FinderServiceImpl(
-            final GeneratorService generatorService, final TemplateService templateService) {
+            final GeneratorService<Paragraphs> generatorService, final TemplateService<Paragraphs> templateService) {
         this.generatorService = generatorService;
         this.templateService = templateService;
     }

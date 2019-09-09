@@ -1,6 +1,7 @@
 package org.jesperancinha.parser.projectsigner.service;
 
 import org.jesperancinha.parser.markdowner.ReadmeNamingParser;
+import org.jesperancinha.parser.markdowner.ReadmeNamingParser.ReadmeNamingParserBuilder;
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.jesperancinha.parser.projectsigner.inteface.OptionsService;
 import org.springframework.context.annotation.Profile;
@@ -9,11 +10,11 @@ import picocli.CommandLine;
 
 @Service
 @Profile({"dev", "prod"})
-public class OptionsServiceImpl implements OptionsService<ProjectSignerOptions> {
+public class OptionsServiceImpl implements OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> {
 
-    protected ProjectSignerOptions projectSignerOptions;
+    private ProjectSignerOptions projectSignerOptions;
 
-    protected ReadmeNamingParser.ReadmeNamingParserBuilder commonBuilder;
+    private ReadmeNamingParserBuilder commonBuilder;
 
     @Override
     public ProjectSignerOptions processOptions(final String[] args) {
@@ -32,7 +33,7 @@ public class OptionsServiceImpl implements OptionsService<ProjectSignerOptions> 
     }
 
     @Override
-    public ReadmeNamingParser.ReadmeNamingParserBuilder getCommonNamingParser() {
+    public ReadmeNamingParserBuilder getCommonNamingParser() {
         return commonBuilder;
     }
 

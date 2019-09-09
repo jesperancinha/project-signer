@@ -1,6 +1,8 @@
 package org.jesperancinha.parser.projectsigner.service;
 
 import org.jesperancinha.parser.markdowner.ReadmeNamingParser;
+import org.jesperancinha.parser.markdowner.ReadmeNamingParser.ReadmeNamingParserBuilder;
+import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.jesperancinha.parser.projectsigner.inteface.OptionsService;
 import org.mockito.Mockito;
@@ -14,9 +16,9 @@ import static org.mockito.Mockito.when;
 
 @Service
 @Profile({"test", "localtest", "default"})
-public class OptionsServiceMock implements OptionsService {
+public class OptionsServiceMock implements OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> {
     private ProjectSignerOptions projectSignerOptions;
-    private ReadmeNamingParser.ReadmeNamingParserBuilder commonBuilder;
+    private ReadmeNamingParserBuilder commonBuilder;
 
     public void setNoEmptyUp() {
         Mockito.clearInvocations(projectSignerOptions);
@@ -47,7 +49,7 @@ public class OptionsServiceMock implements OptionsService {
     }
 
     @Override
-    public ReadmeNamingParser.ReadmeNamingParserBuilder getCommonNamingParser() {
+    public ReadmeNamingParserBuilder getCommonNamingParser() {
         return commonBuilder;
     }
 

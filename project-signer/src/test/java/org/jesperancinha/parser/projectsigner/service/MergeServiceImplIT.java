@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class MergeServiceImplIT {
 
     @Autowired
-    private MergeService mergeService;
+    private MergeService<Paragraphs> mergeService;
 
     @Test
     public void mergeDocumentWithFooterTemplate() {

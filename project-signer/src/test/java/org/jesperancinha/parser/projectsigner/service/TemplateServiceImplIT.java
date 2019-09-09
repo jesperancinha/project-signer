@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class TemplateServiceImplIT {
 
     @Autowired
-    private TemplateService templateService;
+    private TemplateService<Paragraphs> templateService;
 
     @Test
     public void testFindAllParagraphs() throws IOException {

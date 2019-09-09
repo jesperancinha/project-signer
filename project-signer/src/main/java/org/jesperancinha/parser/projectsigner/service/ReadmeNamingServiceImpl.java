@@ -1,6 +1,11 @@
 package org.jesperancinha.parser.projectsigner.service;
 
+import org.jesperancinha.parser.markdowner.ReadmeNamingParser;
+import org.jesperancinha.parser.markdowner.ReadmeNamingParser.ReadmeNamingParserBuilder;
 import org.jesperancinha.parser.markdowner.filter.FileFilterChain;
+import org.jesperancinha.parser.markdowner.model.Paragraphs;
+import org.jesperancinha.parser.markdowner.model.Paragraphs.ParagraphsBuilder;
+import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.jesperancinha.parser.projectsigner.inteface.OptionsService;
 import org.jesperancinha.parser.projectsigner.inteface.ReadmeNamingService;
 import org.springframework.stereotype.Service;
@@ -15,11 +20,11 @@ import java.nio.file.Path;
 @Service
 public class ReadmeNamingServiceImpl implements ReadmeNamingService {
 
-    private final OptionsService optionsService;
+    private final OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService;
     private final FileFilterChain fileFilterChain;
 
     public ReadmeNamingServiceImpl(final FileFilterChain fileFilterChain,
-                                   final OptionsService optionsService) {
+                                   final OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService) {
         this.fileFilterChain = fileFilterChain;
         this.optionsService = optionsService;
     }

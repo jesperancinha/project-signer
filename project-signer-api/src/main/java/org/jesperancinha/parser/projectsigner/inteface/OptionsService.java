@@ -1,12 +1,10 @@
 package org.jesperancinha.parser.projectsigner.inteface;
 
-import org.jesperancinha.parser.markdowner.ReadmeNamingParser;
-
-public interface OptionsService<T> {
+public interface OptionsService<T, P> {
 
     T processOptions(String[] args);
 
     T getProjectSignerOptions();
 
-    ReadmeNamingParser.ReadmeNamingParserBuilder getCommonNamingParser();
+    P getCommonNamingParser();
 }

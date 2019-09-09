@@ -21,10 +21,10 @@ import static org.jesperancinha.parser.projectsigner.filter.ProjectSignerFilterH
 @Builder
 public class ProjectSignerVisitor extends SimpleFileVisitor<Path> {
 
-    private final GeneratorService generatorService;
+    private final GeneratorService<Paragraphs> generatorService;
     private final Paragraphs allParagraphs;
 
-    public ProjectSignerVisitor(GeneratorService generatorService, Paragraphs allParagraphs) {
+    public ProjectSignerVisitor(GeneratorService<Paragraphs> generatorService, Paragraphs allParagraphs) {
 
         this.generatorService = generatorService;
         this.allParagraphs = allParagraphs;

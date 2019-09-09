@@ -21,13 +21,13 @@ import java.util.Objects;
  */
 @Slf4j
 @Service
-public class GeneratorSeviceImpl implements GeneratorService {
+public class GeneratorSeviceImpl implements GeneratorService<Paragraphs> {
 
     private final ReadmeNamingService readmeNamingService;
-    private final ReadmeService readmeService;
+    private final ReadmeService<Paragraphs> readmeService;
 
     public GeneratorSeviceImpl(ReadmeNamingService readmeNamingService,
-                               ReadmeService readmeService) {
+                               ReadmeService<Paragraphs> readmeService) {
         this.readmeNamingService = readmeNamingService;
         this.readmeService = readmeService;
     }

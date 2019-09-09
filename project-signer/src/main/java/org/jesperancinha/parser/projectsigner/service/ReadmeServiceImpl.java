@@ -1,8 +1,10 @@
 package org.jesperancinha.parser.projectsigner.service;
 
 import lombok.extern.slf4j.Slf4j;
+import org.jesperancinha.parser.markdowner.ReadmeNamingParser.ReadmeNamingParserBuilder;
 import org.jesperancinha.parser.markdowner.ReadmeParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
+import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.jesperancinha.parser.projectsigner.inteface.MergeService;
 import org.jesperancinha.parser.projectsigner.inteface.OptionsService;
 import org.jesperancinha.parser.projectsigner.inteface.ReadmeService;
@@ -17,12 +19,12 @@ import java.nio.file.Path;
  */
 @Service
 @Slf4j
-public class ReadmeServiceImpl implements ReadmeService {
+public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
 
-    private final MergeService mergeService;
-    private final OptionsService optionsService;
+    private final MergeService<Paragraphs> mergeService;
+    private final OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService;
 
-    public ReadmeServiceImpl(MergeService mergeService, OptionsService optionsService) {
+    public ReadmeServiceImpl(MergeService<Paragraphs> mergeService, OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService) {
         this.mergeService = mergeService;
         this.optionsService = optionsService;
     }

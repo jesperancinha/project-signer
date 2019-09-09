@@ -3,27 +3,32 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>project-signer-root</artifactId>
+    <version>1.1.0</version>
+    <packaging>pom</packaging>
+    <properties>
+        <markdowner-core.version>1.0.1</markdowner-core.version>
+        <project-signer-api.version>1.1.0</project-signer-api.version>
+    </properties>
     <parent>
         <groupId>org.jesperancinha.parser</groupId>
         <artifactId>markdowner</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </parent>
-    <version>1.0-SNAPSHOT</version>
-
-    <packaging>pom</packaging>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.jesperancinha.parser</groupId>
+                <artifactId>markdowner-core</artifactId>
+                <version>${markdowner-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jesperancinha.parser</groupId>
                 <artifactId>project-signer-api</artifactId>
-                <version>${project.version}</version>
+                <version>${project-signer-api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
-
     <modules>
         <module>project-signer-api</module>
         <module>project-signer</module>

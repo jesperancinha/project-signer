@@ -1,7 +1,9 @@
 package org.jesperancinha.parser.projectsigner.service;
 
+import org.jesperancinha.parser.markdowner.ReadmeNamingParser.ReadmeNamingParserBuilder;
 import org.jesperancinha.parser.markdowner.TemplateParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
+import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.jesperancinha.parser.projectsigner.inteface.OptionsService;
 import org.jesperancinha.parser.projectsigner.inteface.TemplateService;
 import org.springframework.stereotype.Service;
@@ -16,9 +18,9 @@ import java.io.IOException;
 @Service
 public class TemplateServiceImpl implements TemplateService {
 
-    private final OptionsService optionsService;
+    private final OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService;
 
-    public TemplateServiceImpl(OptionsService optionsService) {
+    public TemplateServiceImpl(OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService) {
         this.optionsService = optionsService;
     }
 

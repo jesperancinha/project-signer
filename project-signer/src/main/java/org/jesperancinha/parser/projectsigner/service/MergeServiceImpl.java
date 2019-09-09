@@ -15,7 +15,7 @@ import java.nio.file.Path;
  */
 @Slf4j
 @Service
-public class MergeServiceImpl implements MergeService {
+public class MergeServiceImpl implements MergeService<Paragraphs> {
 
     private final FileWriterService fileWriterService;
 
