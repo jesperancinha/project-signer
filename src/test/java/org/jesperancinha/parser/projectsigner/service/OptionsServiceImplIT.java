@@ -1,9 +1,9 @@
 package org.jesperancinha.parser.projectsigner.service;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class OptionsServiceImplIT {
 
@@ -17,12 +17,12 @@ public class OptionsServiceImplIT {
     @Test
     public void testProcessOptions() {
         final String[] args = new String[]{
-            "-t",
-            TEMPLATE_LOCATION,
-            LICENSE,
-            ABOUT_ME,
-            "-d",
-            ROOT_LOCATION
+                "-t",
+                TEMPLATE_LOCATION,
+                LICENSE,
+                ABOUT_ME,
+                "-d",
+                ROOT_LOCATION
         };
 
         final ProjectSignerOptions projectSignerOptions = optionsService.processOptions(args);
@@ -36,13 +36,13 @@ public class OptionsServiceImplIT {
     @Test
     public void testProcessOptionsNE() {
         final String[] args = new String[]{
-            "-t",
-            TEMPLATE_LOCATION,
-            LICENSE,
-            ABOUT_ME,
-            "-d",
-            ROOT_LOCATION,
-            "-ne"
+                "-t",
+                TEMPLATE_LOCATION,
+                LICENSE,
+                ABOUT_ME,
+                "-d",
+                ROOT_LOCATION,
+                "-ne"
         };
 
         final ProjectSignerOptions projectSignerOptions = optionsService.processOptions(args);
@@ -56,12 +56,12 @@ public class OptionsServiceImplIT {
     @Test
     public void testProcessLongOptions() {
         final String[] args = new String[]{
-            "--template-location",
-            TEMPLATE_LOCATION,
-            LICENSE,
-            ABOUT_ME,
-            "--root-directory",
-            ROOT_LOCATION
+                "--template-location",
+                TEMPLATE_LOCATION,
+                LICENSE,
+                ABOUT_ME,
+                "--root-directory",
+                ROOT_LOCATION
         };
 
         final ProjectSignerOptions projectSignerOptions = optionsService.processOptions(args);
@@ -75,13 +75,13 @@ public class OptionsServiceImplIT {
     @Test
     public void testProcessLongOptionsNE() {
         final String[] args = new String[]{
-            "--template-location",
-            TEMPLATE_LOCATION,
-            LICENSE,
-            ABOUT_ME,
-            "--root-directory",
-            ROOT_LOCATION,
-            "--no-empty"
+                "--template-location",
+                TEMPLATE_LOCATION,
+                LICENSE,
+                ABOUT_ME,
+                "--root-directory",
+                ROOT_LOCATION,
+                "--no-empty"
         };
 
         final ProjectSignerOptions projectSignerOptions = optionsService.processOptions(args);
