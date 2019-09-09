@@ -22,7 +22,7 @@ public class ReadmeServiceImpl implements ReadmeService {
     private final MergeService mergeService;
     private final OptionsService optionsService;
 
-    public  ReadmeServiceImpl(MergeService mergeService, OptionsService optionsService) {
+    public ReadmeServiceImpl(MergeService mergeService, OptionsService optionsService) {
         this.mergeService = mergeService;
         this.optionsService = optionsService;
     }

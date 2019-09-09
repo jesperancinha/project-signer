@@ -9,10 +9,8 @@ import org.jesperancinha.parser.projectsigner.inteface.TemplateService;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.nio.file.FileVisitOption;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.EnumSet;
 
 import static java.lang.Integer.MAX_VALUE;
 import static java.nio.file.FileVisitOption.FOLLOW_LINKS;

@@ -14,7 +14,10 @@ import static org.mockito.Mockito.when;
 
 @Service
 @Profile({"test", "localtest", "default"})
-public class OptionsServiceMock extends OptionsService {
+public class OptionsServiceMock implements OptionsService {
+    private ProjectSignerOptions projectSignerOptions;
+    private ReadmeNamingParser.ReadmeNamingParserBuilder commonBuilder;
+
     public void setNoEmptyUp() {
         Mockito.clearInvocations(projectSignerOptions);
         when(projectSignerOptions.isNoEmpty()).thenReturn(true);
@@ -32,10 +35,20 @@ public class OptionsServiceMock extends OptionsService {
         when(projectSignerOptions.getTemplateLocation()).thenReturn(Path.of(template));
         when(projectSignerOptions.getTagNames()).thenReturn(new String[]{"License", "About me"});
         this.projectSignerOptions = projectSignerOptions;
-        commonBuilder = ReadmeNamingParser.builder()
+        this.commonBuilder = ReadmeNamingParser.builder()
                 .templateLocation(this.projectSignerOptions.getTemplateLocation())
                 .isNoEmpty(this.projectSignerOptions.isNoEmpty());
         return projectSignerOptions;
+    }
+
+    @Override
+    public ProjectSignerOptions getProjectSignerOptions() {
+        return projectSignerOptions;
+    }
+
+    @Override
+    public ReadmeNamingParser.ReadmeNamingParserBuilder getCommonNamingParser() {
+        return commonBuilder;
     }
 
     public void setNoEmptyDown() {

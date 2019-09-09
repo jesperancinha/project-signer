@@ -9,7 +9,11 @@ import picocli.CommandLine;
 
 @Service
 @Profile({"dev", "prod"})
-public class OptionsServiceImpl extends OptionsService {
+public class OptionsServiceImpl implements OptionsService {
+
+    protected ProjectSignerOptions projectSignerOptions;
+
+    protected ReadmeNamingParser.ReadmeNamingParserBuilder commonBuilder;
 
     @Override
     public ProjectSignerOptions processOptions(final String[] args) {
@@ -20,6 +24,16 @@ public class OptionsServiceImpl extends OptionsService {
                 .templateLocation(this.projectSignerOptions.getTemplateLocation())
                 .isNoEmpty(this.projectSignerOptions.isNoEmpty());
         return projectSignerOptions;
+    }
+
+    @Override
+    public ProjectSignerOptions getProjectSignerOptions() {
+        return projectSignerOptions;
+    }
+
+    @Override
+    public ReadmeNamingParser.ReadmeNamingParserBuilder getCommonNamingParser() {
+        return commonBuilder;
     }
 
 }
