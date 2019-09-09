@@ -16,6 +16,7 @@ import java.util.EnumSet;
 
 import static java.lang.Integer.MAX_VALUE;
 import static java.nio.file.FileVisitOption.FOLLOW_LINKS;
+import static java.util.EnumSet.of;
 
 @Slf4j
 @Service
@@ -33,8 +34,7 @@ public class FinderServiceImpl implements FinderService {
     @Override
     public void iterateThroughFilesAndFolders(Path rootPath) throws IOException {
         final Paragraphs allParagraphs = templateService.findAllParagraphs();
-        final EnumSet<FileVisitOption> opts = EnumSet.of(FOLLOW_LINKS);
-        Files.walkFileTree(rootPath, opts, MAX_VALUE, new ProjectSignerVisitor(
+        Files.walkFileTree(rootPath, of(FOLLOW_LINKS), MAX_VALUE, new ProjectSignerVisitor(
                 generatorService,
                 allParagraphs
         ));

@@ -45,7 +45,7 @@ Once you finally run the above command, please make sure to double check the giv
 The most common form of using this plugin would be something like this as command line parameters:
 
 ```text
--t "project-signer-templates/Readme.md" License "About me" -d ../
+-t "--/project-signer-templates/Readme.md" License "About me" -d ../../
 ```
 
 Remember to user profiles dev/prod. No difference at the moment between the different profiles.
