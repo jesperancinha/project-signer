@@ -32,9 +32,7 @@ public class FinderServiceImpl implements FinderService {
 
     @Override
     public void iterateThroughFilesAndFolders(Path rootPath) throws IOException {
-
         final Paragraphs allParagraphs = templateService.findAllParagraphs();
-
         final EnumSet<FileVisitOption> opts = EnumSet.of(FOLLOW_LINKS);
         Files.walkFileTree(rootPath, opts, MAX_VALUE, new ProjectSignerVisitor(
                 generatorService,

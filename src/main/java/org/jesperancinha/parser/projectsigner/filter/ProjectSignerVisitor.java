@@ -15,6 +15,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 import static java.nio.file.FileVisitResult.CONTINUE;
 import static java.nio.file.FileVisitResult.SKIP_SUBTREE;
+import static org.jesperancinha.parser.projectsigner.filter.ProjectSignerFilterHelper.isIgnorableFolder;
 
 @Slf4j
 @Builder
@@ -65,15 +66,6 @@ public class ProjectSignerVisitor extends SimpleFileVisitor<Path> {
             log.error("Error on file {}", file, exc);
         }
         return CONTINUE;
-    }
-
-    private boolean isIgnorableFolder(Path dir) {
-        final String directoryName = dir.getFileName().toString();
-        return directoryName.equalsIgnoreCase("resources")
-                ||
-                directoryName.equalsIgnoreCase("project-signer-templates")
-                ||
-                directoryName.equalsIgnoreCase("test-classes");
     }
 
 }

@@ -12,6 +12,13 @@ import java.io.InputStream;
 import java.nio.file.Path;
 import java.util.Objects;
 
+/**
+ * This is a generator service which is responsible for the generation of the new Readme.md file
+ * It includes extra functions:
+ * <p>
+ * - Denies creation of Readme.md files where no project exists
+ * - Creates matching Readme.me files where they don't exists in spite of existing package managing system files
+ */
 @Slf4j
 @Service
 public class GeneratorSeviceImpl implements GeneratorService {
