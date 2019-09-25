@@ -28,11 +28,11 @@ Contains the Java library
 [![Maven Central](https://img.shields.io/maven-central/v/org.jesperancinha.itf/itf-chartizate-modules)](https://search.maven.org/search?q=itf.itf-chartizate-modules)
 [![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/itf-chartizate-modules.svg)](https://github.com/jesperancinha/itf-chartizate-modules/releases)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/02c2cdb0fecb4c1b84f70b214d020f80)](https://www.codacy.com/manual/jofisaes/itf-chartizate-modules?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/itf-chartizate-modules&amp;utm_campaign=Badge_Grade)
-[![CircleCI](https://circleci.com/gh/jesperancinha/itf-chartizate-modules.svg?style=svg)](https://circleci.com/gh/jesperancinha/itf-chartizate-modules)
-[![Build Status](https://travis-ci.org/jesperancinha/itf-chartizate-modules.svg?branch=master)](https://travis-ci.org/jesperancinha/itf-chartizate-modules)
-[![codebeat badge](https://codebeat.co/badges/139626a2-c697-4c7b-8522-396084796844)](https://codebeat.co/projects/github-com-jesperancinha-itf-chartizate-modules-master)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/itf-chartizate-modules?branch=master)](https://bettercodehub.com/)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a6846d4ad04548919d61b93a97acf27a)](https://www.codacy.com/manual/jofisaes/itf-chartizate-modules?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JEsperancinhaOrg/itf-chartizate-modules&amp;utm_campaign=Badge_Grade)
+[![CircleCI](https://circleci.com/gh/JEsperancinhaOrg/itf-chartizate-modules.svg?style=svg)](https://circleci.com/gh/JEsperancinhaOrg/itf-chartizate-modules)
+[![Build Status](https://travis-ci.org/JEsperancinhaOrg/itf-chartizate-modules.svg?branch=master)](https://travis-ci.org/jesperancinha/itf-chartizate-modules)
+[![codebeat badge](https://codebeat.co/badges/b35ccc5a-1324-4ad1-a89a-da4edb58b186)](https://codebeat.co/projects/github-com-jesperancinhaorg-itf-chartizate-modules-master)
+[![BCH compliance](https://bettercodehub.com/edge/badge/JEsperancinhaOrg/itf-chartizate-modules?branch=master)](https://bettercodehub.com/)
 
 [![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/itf-chartizate-modules.svg)](#)
 [![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/itf-chartizate-modules.svg)](#)
