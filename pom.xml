@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
     <properties>
         <markdowner.version>1.0.1</markdowner.version>
-        <project-signer-api.version>2.0.0</project-signer-api.version>
+        <project-signer-api.version>2.0.1-SNAPSHOT</project-signer-api.version>
     </properties>
     <parent>
         <groupId>org.jesperancinha.parser</groupId>
