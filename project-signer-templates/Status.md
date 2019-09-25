@@ -1,4 +1,4 @@
-# jesperancinha.org project statuses
+# jesperancinha.org user project statuses
 
 [![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Project%20Signer&color=informational)](https://github.com/jesperancinha/project-signer)
 [![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/project-signer.svg)](https://github.com/jesperancinha/project-signer/releases)
@@ -13,24 +13,6 @@
 [![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/project-signer.svg)]()
 [![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/project-signer.svg)]()
 [![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/project-signer.svg)]()
-
----
----
-
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Markdowner&color=informational)](https://github.com/jesperancinha/markdowner)
-[![Maven Central](https://img.shields.io/maven-central/v/org.jesperancinha.parser/markdowner)](https://search.maven.org/search?q=parser.markdowner)
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/markdowner.svg)](https://github.com/jesperancinha/markdowner/releases)
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c423c85288eb45c883e2f721bb611a3f)](https://www.codacy.com/manual/jofisaes/markdowner?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/markdowner&amp;utm_campaign=Badge_Grade)
-[![CircleCI](https://circleci.com/gh/jesperancinha/markdowner.svg?style=svg)](https://circleci.com/gh/jesperancinha/markdowner)
-[![Build Status](https://travis-ci.org/jesperancinha/markdowner.svg?branch=master)](https://travis-ci.org/jesperancinha/markdowner)
-[![codebeat badge](https://codebeat.co/badges/b6f714fa-6632-473e-9eb5-c481c776d415)](https://codebeat.co/projects/github-com-jesperancinha-markdowner-master)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/markdowner?branch=master)](https://bettercodehub.com/)
-[![Build status](https://ci.appveyor.com/api/projects/status/kuedmakr9bbne46q/branch/master?svg=true)](https://ci.appveyor.com/project/jesperancinha/markdowner/branch/master)
-
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/markdowner.svg)]()
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/markdowner.svg)]()
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/markdowner.svg)]()
 
 ---
 ---
@@ -66,55 +48,6 @@
 [![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/image-train-filters-scala.svg)]()
 [![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/image-train-filters-scala.svg)]()
 [![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/image-train-filters-scala.svg)]()
-
----
----
-
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Bridge%20Logistics&color=informational)](https://github.com/jesperancinha/bridge-logistics)
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/318e7f47f8944b3d97a83d2fd2402b85)](https://www.codacy.com/app/jofisaes/bridge-logistics?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/bridge-logistics&amp;utm_campaign=Badge_Grade)
-[![CircleCI](https://circleci.com/gh/jesperancinha/bridge-logistics.svg?style=svg)](https://circleci.com/gh/jesperancinha/bridge-logistics)
-[![Build Status](https://travis-ci.org/jesperancinha/bridge-logistics.svg?branch=master)](https://travis-ci.org/jesperancinha/bridge-logistics)
-[![codebeat badge](https://codebeat.co/badges/a81b5c40-aeca-4b8d-9015-1ed1004617e5)](https://codebeat.co/projects/github-com-jesperancinha-bridge-logistics-master)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/bridge-logistics?branch=master)](https://bettercodehub.com/)
-
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/bridge-logistics.svg)]()
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/bridge-logistics.svg)]()
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/bridge-logistics.svg)]()
-
----
----
-
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate&color=informational)](https://github.com/jesperancinha/itf-chartizate)
-[![Maven Central](https://img.shields.io/maven-central/v/org.jesperancinha.itf/itf-chartizate)](https://search.maven.org/search?q=itf.itf-chartizate)
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/itf-chartizate.svg)](https://github.com/jesperancinha/itf-chartizate/releases)
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f1ccef42562a4e338846f103c7549955)](https://www.codacy.com/app/jofisaes/itf-chartizate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/itf-chartizate&amp;utm_campaign=Badge_Grade)
-[![CircleCI](https://circleci.com/gh/jesperancinha/itf-chartizate.svg?style=svg)](https://circleci.com/gh/jesperancinha/itf-chartizate)
-[![Build Status](https://travis-ci.org/jesperancinha/itf-chartizate.svg?branch=master)](https://travis-ci.org/jesperancinha/itf-chartizate)
-[![codebeat badge](https://codebeat.co/badges/38f795d1-c092-4aac-976d-ec193651cd49)](https://codebeat.co/projects/github-com-jesperancinha-itf-chartizate-master)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/itf-chartizate?branch=master)](https://bettercodehub.com/)
-
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/itf-chartizate.svg)]()
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/itf-chartizate.svg)]()
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/itf-chartizate.svg)]()
-
----
----
-
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate%20Modules&color=informational)](https://github.com/jesperancinha/itf-chartizate-modules)
-[![Maven Central](https://img.shields.io/maven-central/v/org.jesperancinha.itf/itf-chartizate-modules)](https://search.maven.org/search?q=itf.itf-chartizate-modules)
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/itf-chartizate-modules.svg)](https://github.com/jesperancinha/itf-chartizate-modules/releases)
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/02c2cdb0fecb4c1b84f70b214d020f80)](https://www.codacy.com/manual/jofisaes/itf-chartizate-modules?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/itf-chartizate-modules&amp;utm_campaign=Badge_Grade)
-[![CircleCI](https://circleci.com/gh/jesperancinha/itf-chartizate-modules.svg?style=svg)](https://circleci.com/gh/jesperancinha/itf-chartizate-modules)
-[![Build Status](https://travis-ci.org/jesperancinha/itf-chartizate-modules.svg?branch=master)](https://travis-ci.org/jesperancinha/itf-chartizate-modules)
-[![codebeat badge](https://codebeat.co/badges/139626a2-c697-4c7b-8522-396084796844)](https://codebeat.co/projects/github-com-jesperancinha-itf-chartizate-modules-master)
-[![BCH compliance](https://bettercodehub.com/edge/badge/jesperancinha/itf-chartizate-modules?branch=master)](https://bettercodehub.com/)
-
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/itf-chartizate-modules.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/itf-chartizate-modules.svg)](#)
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/itf-chartizate-modules.svg)](#)
 
 ---
 ---
