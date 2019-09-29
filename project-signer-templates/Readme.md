@@ -54,5 +54,7 @@ limitations under the License.
 ---
 
 -   Badges:
-<script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
+
+<script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js">
+</script>
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="92e036f5-4e11-4cff-9935-3e62266d2074"></div>
