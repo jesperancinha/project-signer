@@ -74,6 +74,7 @@ mvn nexus-staging:release  -Prelease
 ## References
 
 -   [App Icon Maker](https://appiconmaker.co/)
+-   [Dillinger](https://dillinger.io/)
 
 ## License
 
