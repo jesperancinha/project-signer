@@ -51,3 +51,8 @@ limitations under the License.
 -   Status page:
     -   [![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Project%20Status&color=informational)](https://github.com/jesperancinha/project-signer/blob/master/project-signer-templates/Status.md)
 
+---
+
+-   Badges:
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="92e036f5-4e11-4cff-9935-3e62266d2074"></div><script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
