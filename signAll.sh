@@ -11,6 +11,7 @@ then
     for item in *; do
         cd "$item"
         echo "----------------- Signing (committing) $item -----------------"
+        git add .
         git commit -a -m "Project Signing - Auto generated commit"
         git push
         cd ..
