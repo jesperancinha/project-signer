@@ -7,19 +7,18 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     user=$1
     pages=$2
-    repos=$(curl https://api.github.com/users/$user/repos?per_page=$2)
+    repos=$(curl https://api.github.com/users/${user}/repos?per_page=${pages})
+    cd ..
     for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
         _jq() {
             echo ${row} | base64 --decode | jq -r ${1}
         }
         if [[ $(_jq '.fork') =~ ^'false'$ ]]
         then
-            cd ..
             repoAddress=$(_jq '.ssh_url')
             echo ${repoAddress}
             git clone ${repoAddress}
-            cd project-signer
         fi
     done
-
+    cd project-signer
 fi
