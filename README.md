@@ -75,6 +75,7 @@ mvn nexus-staging:release  -Prelease
 
 -   [App Icon Maker](https://appiconmaker.co/)
 -   [Dillinger](https://dillinger.io/)
+-   [JQ](https://stedolan.github.io/jq/download/)
 
 ## License
 
