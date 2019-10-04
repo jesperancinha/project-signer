@@ -23,7 +23,8 @@ then
         else
              echo "commit message ${commitMessage}"
         fi
-         git commit -a -m "${commitMessage}"
+        git pull
+        git commit -a -m "${commitMessage}"
         git push
         cd ..
     done
