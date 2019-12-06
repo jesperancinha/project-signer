@@ -78,3 +78,9 @@
 [![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/coffee-paradigms.svg)]()
 [![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/coffee-paradigms.svg)]()
 [![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/coffee-paradigms.svg)]()
+
+---
+---
+
+[![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Project%20Status%20Android&color=informational)](https://github.com/jesperancinha/project-signer/blob/master/project-signer-templates/StatusAndroid.md)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Project%20Status%20Org&color=informational)](https://github.com/jesperancinha/project-signer/blob/master/project-signer-templates/StatusOrg.md)
