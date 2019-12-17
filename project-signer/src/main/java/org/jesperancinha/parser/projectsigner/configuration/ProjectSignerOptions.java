@@ -7,14 +7,18 @@ import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
 import java.nio.file.Path;
+import java.util.Objects;
 
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProjectSignerOptions {
 
-    @Option(names = {"-t", "--template-location"}, paramLabel = "Template location", description = "Location of the signin template", required = true)
+    @Option(names = {"-t", "--template-location"}, paramLabel = "Template location", description = "Location of the signing template", required = true)
     private String templateLocation;
+
+    @Option(names = {"-l", "--license-location"}, paramLabel = "License location", description = "Location of the License template")
+    private String licenseLocation;
 
     @Parameters(paramLabel = "Start tags", description = "Start of paragraph replace. This will remove all paragraphs with these names. It only applies to rules with '#' title markdown notation")
     private String[] tagNames;
@@ -31,5 +35,12 @@ public class ProjectSignerOptions {
 
     public Path getTemplateLocation() {
         return Path.of(templateLocation);
+    }
+
+    public Path getLicenseLocation(){
+        if(Objects.isNull(licenseLocation)){
+            return null;
+        }
+        return Path.of(licenseLocation);
     }
 }

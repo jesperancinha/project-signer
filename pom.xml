@@ -9,6 +9,7 @@
     <properties>
         <markdowner.version>1.0.1</markdowner.version>
         <project-signer-api.version>2.0.1-SNAPSHOT</project-signer-api.version>
+        <commons-io.version>2.6</commons-io.version>
     </properties>
     <parent>
         <groupId>org.jesperancinha.parser</groupId>
@@ -26,6 +27,11 @@
                 <groupId>org.jesperancinha.parser</groupId>
                 <artifactId>project-signer-api</artifactId>
                 <version>${project-signer-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

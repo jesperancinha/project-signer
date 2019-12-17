@@ -11,12 +11,13 @@ import org.springframework.stereotype.Service;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 /**
  * A markdown template service to handle markdown texts
  */
 @Service
-public class TemplateServiceImpl implements TemplateService {
+public class TemplateServiceImpl implements TemplateService<Paragraphs> {
 
     private final OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService;
 
@@ -35,5 +36,12 @@ public class TemplateServiceImpl implements TemplateService {
         final File fileTemplate = optionsService.getProjectSignerOptions().getTemplateLocation().toFile();
         final FileInputStream templateInputStream = new FileInputStream(fileTemplate);
         return TemplateParserHelper.findAllParagraphs(templateInputStream);
+    }
+
+    @Override
+    public String readAllLicense() throws IOException {
+        final File fileTemplate = optionsService.getProjectSignerOptions().getLicenseLocation().toFile();
+        final FileInputStream templateInputStream = new FileInputStream(fileTemplate);
+        return new String(templateInputStream.readAllBytes(), StandardCharsets.UTF_8);
     }
 }

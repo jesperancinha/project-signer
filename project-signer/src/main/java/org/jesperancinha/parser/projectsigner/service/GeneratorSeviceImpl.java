@@ -7,6 +7,8 @@ import org.jesperancinha.parser.projectsigner.inteface.ReadmeNamingService;
 import org.jesperancinha.parser.projectsigner.inteface.ReadmeService;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Path;
@@ -37,6 +39,18 @@ public class GeneratorSeviceImpl implements GeneratorService<Paragraphs> {
         final InputStream inputStream = readmeNamingService.buildReadmeStream(readmePath);
         if (Objects.nonNull(inputStream)) {
             readmeService.exportNewReadme(readmePath, inputStream, allParagraphs);
+        }
+    }
+
+    @Override
+    public void processLicenseFile(Path licencePath, String license) throws IOException {
+        final File f = new File(licencePath.toFile(), "Readme.md");
+        final File licenseFile = new File(licencePath.toFile(), "License.txt");
+        if(f.exists()) {
+            final FileWriter fileWriter = new FileWriter(licenseFile);
+            fileWriter.write(license);
+            fileWriter.flush();
+            fileWriter.close();
         }
     }
 }

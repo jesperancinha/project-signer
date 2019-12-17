@@ -32,10 +32,13 @@ public class FinderServiceImpl implements FinderService {
     @Override
     public void iterateThroughFilesAndFolders(Path rootPath) throws IOException {
         final Paragraphs allParagraphs = templateService.findAllParagraphs();
-        Files.walkFileTree(rootPath, of(FOLLOW_LINKS), MAX_VALUE, new ProjectSignerVisitor(
-                generatorService,
-                allParagraphs
-        ));
+       final  String readAllLicense = templateService.readAllLicense();
+        Files.walkFileTree(rootPath, of(FOLLOW_LINKS), MAX_VALUE,
+                ProjectSignerVisitor.builder()
+                        .generatorService(generatorService)
+                        .allParagraphs(allParagraphs)
+                        .readAllLicense(readAllLicense)
+                        .build());
     }
 
 }

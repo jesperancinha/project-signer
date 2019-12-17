@@ -12,6 +12,7 @@ import java.nio.file.FileVisitResult;
 import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.util.Objects;
 
 import static java.nio.file.FileVisitResult.CONTINUE;
 import static java.nio.file.FileVisitResult.SKIP_SUBTREE;
@@ -23,12 +24,7 @@ public class ProjectSignerVisitor extends SimpleFileVisitor<Path> {
 
     private final GeneratorService<Paragraphs> generatorService;
     private final Paragraphs allParagraphs;
-
-    public ProjectSignerVisitor(GeneratorService<Paragraphs> generatorService, Paragraphs allParagraphs) {
-
-        this.generatorService = generatorService;
-        this.allParagraphs = allParagraphs;
-    }
+    private final String readAllLicense;
 
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
@@ -51,6 +47,9 @@ public class ProjectSignerVisitor extends SimpleFileVisitor<Path> {
         }
         if (ObjectUtils.isEmpty(e)) {
             generatorService.processReadmeFile(dir, allParagraphs);
+            if (Objects.nonNull(readAllLicense)) {
+                generatorService.processLicenseFile(dir, readAllLicense);
+            }
         } else {
             log.error("Failed on file {}", dir, e);
         }

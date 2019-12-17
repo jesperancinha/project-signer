@@ -15,6 +15,8 @@ then
     cd ..
     for item in *; do
         cd "${item}"
+        year="$(git log --reverse | sed -n -e "3,3p" | sed 's/\(.*\)\ \([0-9]*\)\ \(.*\)/\2/')"
+        sed -i "" 's/\[yyyy\]/'${year}'/g' License.txt
         echo "----------------- Signing (committing) ${item} -----------------"
         git add .
         if [[ -z "$1" ]]
