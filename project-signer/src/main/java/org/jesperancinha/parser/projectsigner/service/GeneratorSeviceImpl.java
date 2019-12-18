@@ -45,7 +45,22 @@ public class GeneratorSeviceImpl implements GeneratorService<Paragraphs> {
     @Override
     public void processLicenseFile(Path licencePath, String license) throws IOException {
         final File f = new File(licencePath.toFile(), "Readme.md");
-        final File licenseFile = new File(licencePath.toFile(), "License.txt");
+        final File licenseLegacyFileText = new File(licencePath.toFile(), "License.txt");
+        if(licenseLegacyFileText.exists()){
+            boolean delete = licenseLegacyFileText.delete();
+            if(!delete){
+                log.error("Could not delete existing legacy file License.txt. Exiting...");
+                System.exit(1);
+            }
+        }
+        final File licenseFile = new File(licencePath.toFile(), "LICENSE");
+        if(licenseFile.exists()){
+            boolean delete = licenseFile.delete();
+            if(!delete){
+                log.error("Could not delete existing licence file LICENSE. Exiting...");
+                System.exit(1);
+            }
+        }
         if(f.exists()) {
             final FileWriter fileWriter = new FileWriter(licenseFile);
             fileWriter.write(license);

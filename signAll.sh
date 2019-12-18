@@ -16,7 +16,7 @@ then
     for item in *; do
         cd "${item}"
         year="$(git log --reverse | sed -n -e "3,3p" | sed 's/\(.*\)\ \([0-9]*\)\ \(.*\)/\2/')"
-        sed -i "" 's/\[yyyy\]/'${year}'/g' License.txt
+        find . -iname "License" | xargs sed -i "" 's/\[yyyy\]/'${year}'/g'
         echo "----------------- Signing (committing) ${item} -----------------"
         git add .
         if [[ -z "$1" ]]

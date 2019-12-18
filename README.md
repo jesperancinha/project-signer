@@ -29,6 +29,12 @@ java -jar project-signer.jar -t <template> <tag1>...<tagn> -d <root_path> -ne <n
 java -jar project-signer.jar --template-location <template> <tag1>...<tagn> --root-directory <root_path> --no-empty <no empty>
 ```
 
+Current example:
+
+```bash
+-l "../project-signer-templates/LICENSE.template" -t "../project-signer-templates/Readme.md" License "About me" -d ../../ 
+```
+
 To summarize, this program will scan all your readme files and standardize name. You may want a generic signature in all your projects and this little runner will do just that!
 
 This command line runner will complete several boiler plate tasks:
@@ -36,6 +42,9 @@ This command line runner will complete several boiler plate tasks:
 -   Creates all Readme.md files missing - Wherever there is a pom or a package.json file, there should be a Readme.md to explain the purpose of your project. Title will be calculated according to your architecture. The title string is to be extracted from the build files. If multiple build files are present, it will find the name of the project by prioritizing the name of the project in detriment of the artifact name. In order of priority it will look for a title according to the following priority list: Maven, Gradle, SBT and finally NPM.
 -   All indicated paragraph which start on a certain tag will be removed - We consider a whole paragraph according to the '#' notation of the markdown.
 -   Once all Readme.md files have been created or updated, we will finally add the template signature AS IS to the footer of all found cases.
+-   If a Readme file has been generated and a template option (-l) is not null, the it will copy the template file literally to the same destination.
+-   It will also make sure the all legacy License.txt files will be removed.
+-   When running the [signAll.sh](signAll.sh) script, the [yyyy] variable in all licenses will be replaced with the year of the first commit in that repo
 
 All tags are case sensitive, which means you do need to add extra tags in case you have issues with word casing.
 Once you finally run the above command, please make sure to double check the given signature before committing and pushing to your repos.
