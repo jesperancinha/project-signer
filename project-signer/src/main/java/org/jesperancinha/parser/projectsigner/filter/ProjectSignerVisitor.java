@@ -24,7 +24,7 @@ public class ProjectSignerVisitor extends SimpleFileVisitor<Path> {
 
     private final GeneratorService<Paragraphs> generatorService;
     private final Paragraphs allParagraphs;
-    private final String readAllLicense;
+    private final String allLicenseText;
 
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
@@ -47,8 +47,8 @@ public class ProjectSignerVisitor extends SimpleFileVisitor<Path> {
         }
         if (ObjectUtils.isEmpty(e)) {
             generatorService.processReadmeFile(dir, allParagraphs);
-            if (Objects.nonNull(readAllLicense)) {
-                generatorService.processLicenseFile(dir, readAllLicense);
+            if (Objects.nonNull(allLicenseText)) {
+                generatorService.processLicenseFile(dir, allLicenseText);
             }
         } else {
             log.error("Failed on file {}", dir, e);

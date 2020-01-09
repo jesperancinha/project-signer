@@ -1,7 +1,7 @@
 package org.jesperancinha.parser.projectsigner.service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.jesperancinha.parser.markdowner.MergeParserHelper;
+import org.jesperancinha.parser.markdowner.helper.MergeParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.inteface.FileWriterService;
 import org.jesperancinha.parser.projectsigner.inteface.MergeService;

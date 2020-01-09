@@ -37,7 +37,7 @@ public class FinderServiceImpl implements FinderService {
                 ProjectSignerVisitor.builder()
                         .generatorService(generatorService)
                         .allParagraphs(allParagraphs)
-                        .readAllLicense(readAllLicense)
+                        .allLicenseText(readAllLicense)
                         .build());
     }
 

@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 import static org.jesperancinha.parser.markdowner.filter.FileFilterChain.createDefaultChain;
 
+
 @Configuration
 public class ProjectSignerConfiguration {
 

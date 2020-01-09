@@ -20,6 +20,14 @@
             <artifactId>project-signer-api</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.jesperancinha.parser</groupId>
+            <artifactId>markdowner-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jesperancinha.parser</groupId>
+            <artifactId>markdowner-filter</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
@@ -38,10 +46,6 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jesperancinha.parser</groupId>
-            <artifactId>markdowner-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
