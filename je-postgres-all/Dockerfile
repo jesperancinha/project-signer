@@ -18,6 +18,14 @@ RUN apt-get -y install vim
 
 RUN apt-get -y install maven
 
+RUN apt-get -y install nginx
+
+RUN ["/bin/bash", "-c", "debconf-set-selections <<< \"postfix postfix/mailname string test\""]
+
+RUN ["/bin/bash", "-c", "debconf-set-selections <<< \"postfix postfix/main_mailer_type string 'No configuration'\""]
+
+RUN apt-get install -y --assume-yes postfix
+
 RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
 
 RUN apt-get install -y nodejs
@@ -36,6 +44,3 @@ RUN apt -y install ./jdk-13.0.2_linux-x64_bin.deb
 
 RUN update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-13.0.2/bin/java 1
 
-ENV runningFolder /usr/local/bin/
-
-WORKDIR ${runningFolder}
