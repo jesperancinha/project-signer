@@ -1,10 +1,10 @@
-FROM nginx
+FROM library/postgres
 
 RUN apt -y update
 
-RUN apt -y install python3-pip
+RUN apt-get -y install apt-utils
 
-RUN pip3 install flask
+RUN apt -y install python3-pip
 
 RUN apt -y install curl
 
@@ -16,13 +16,15 @@ RUN apt-get -y install cron
 
 RUN apt-get -y install vim
 
-RUN mkdir -p /usr/share/man/man1
-
 RUN apt-get -y install maven
 
 RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
 
 RUN apt-get install -y nodejs
+
+RUN pip3 install flask
+
+RUN mkdir -p /usr/share/man/man1
 
 RUN npm install -g grunt-cli
 
@@ -33,3 +35,7 @@ RUN wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=acc
 RUN apt -y install ./jdk-13.0.2_linux-x64_bin.deb
 
 RUN update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-13.0.2/bin/java 1
+
+ENV runningFolder /usr/local/bin/
+
+WORKDIR ${runningFolder}
