@@ -17,6 +17,8 @@ Extended support to:
 - vim
 - cron
 - Maven
+- NGINX
+- Postfix
 
 ## Starting point
 
