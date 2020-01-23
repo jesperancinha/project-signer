@@ -14,6 +14,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     cd ..
     for item in *; do
+     if [[ -d "$item" ]]; then
         cd "${item}"
         year="$(git log --reverse | sed -n -e "3,3p" | sed 's/\(.*\)\ \([0-9]*\)\ \(.*\)/\2/')"
         find . -iname "License" | xargs sed -i "" 's/\[yyyy\]/'${year}'/g'
@@ -29,6 +30,7 @@ then
         git commit -a -m "${commitMessage}"
         git push
         cd ..
+     fi
     done
     cd project-signer
 fi
