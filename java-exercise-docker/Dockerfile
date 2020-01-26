@@ -16,6 +16,8 @@ RUN apt-get -y install cron
 
 RUN apt-get -y install vim
 
+RUN apt-get install zip unzip
+
 RUN mkdir -p /usr/share/man/man1
 
 RUN apt-get -y install maven
@@ -39,4 +41,16 @@ RUN wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=acc
 RUN apt -y install ./jdk-13.0.2_linux-x64_bin.deb
 
 RUN update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-13.0.2/bin/java 1
+
+RUN wget https://services.gradle.org/distributions/gradle-6.1.1-bin.zip -P /tmp
+
+RUN unzip -d /opt/gradle /tmp/gradle-*.zip
+
+RUN echo 'export GRADLE_HOME=/opt/gradle/gradle-6.1.1' >> /etc/profile.d/gradle.sh
+
+RUN echo 'export PATH=${GRADLE_HOME}/bin:${PATH}' >> /etc/profile.d/gradle.sh
+
+RUN chmod +x /etc/profile.d/gradle.sh
+
+RUN ./etc/profile.d/gradle.sh
 
