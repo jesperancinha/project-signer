@@ -17,6 +17,9 @@ Extended support to:
 - vim
 - cron
 - Maven
+- pm2
+- tsc
+- yarn
 
 ## Starting point
 
