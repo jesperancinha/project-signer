@@ -22,7 +22,7 @@ Extended support to:
 
 ## Starting point
 
-[![dockeri.co](https://dockeri.co/image/library/postgres)](https://hub.docker.com/r/jesperancinha/library/postgres)
+[![dockeri.co](https://dockeri.co/image/library/postgres)](https://hub.docker.com/r/library/postgres)
 
 ## About me
 
