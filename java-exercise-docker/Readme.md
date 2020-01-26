@@ -7,19 +7,20 @@ This images provides support to NGINX.
 Extended support to:
 
 - Java
-- Grunt
+- Maven
+- Gradle
 - NPM
+- yarn
+- rpm
+- Grunt
 - Python
 - pip
-- rpm
 - Flask
 - wget
 - vim
 - cron
-- Maven
 - pm2
 - tsc
-- yarn
 
 ## Starting point
 
