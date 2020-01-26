@@ -48,6 +48,18 @@ docker run "<container ID>" -d -p 8080:80 -p 5000:5000 "<image ID>"
 
 ```
 
+## Tools & Tips
+
+### Git tagging
+```bash
+git tag new-tag old-tag
+git tag -d old-tag
+git push origin :refs/tags/old-tag
+git push --tags
+git pull --prune --tags
+```
+
+
 ## About me
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/joaofse?label=João%20Esperancinha&style=social)](https://twitter.com/joaofse)
