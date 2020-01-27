@@ -1,73 +1,31 @@
-# Docker images
-
-In this repo you will find docker images for many different purposes with extended functionality.
-
-## Image List:
+# je-all-build--jdk-13
 
 [![dockeri.co](https://dockeri.co/image/jesperancinha/java-exercise-docker)](https://hub.docker.com/r/jesperancinha/java-exercise-docker)
 
-[![dockeri.co](https://dockeri.co/image/jesperancinha/je-postgres-all)](https://hub.docker.com/r/jesperancinha/je-postgres-all)
+This images provides support to NGINX and extended support to:
 
-[![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-build)](https://hub.docker.com/r/jesperancinha/je-all-build)
->  [![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-build-jdk-12)](https://hub.docker.com/r/jesperancinha/je-all-build-jdk-12)
->  [![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-build-jdk-13)](https://hub.docker.com/r/jesperancinha/je-all-build-jdk-13)
+- Java JDK 13
+- Maven
+- Gradle
+- NPM
+- yarn
+- rpm
+- Grunt
+- Python
+- pip
+- Flask
+- wget
+- vim
+- cron
+- pm2
+- tsc
 
-[![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-runtime)](https://hub.docker.com/r/jesperancinha/je-all-runtime)
+This is a base image for all sub-jdk's images
+This image is meant to be used in build pipelines, where a lot of utilities, package managers and run-times are needed.
 
-## Docker notes
+## Starting point
 
-```bash
-# If exists
-docker-machine rm dev 
-
-docker-machine create --driver virtualbox dev
-
-docker-machine env dev
-
-eval $(docker-machine env dev)
-
-# If not started
-docker-machine start dev
-
-docker build .
-
-docker-machine ssh dev
-
-docker ps -a
-
-#Container access
-docker exec -it <container ID> /bin/bash
-
-docker run -p 80:80 "<image ID>"
-
-docker run -d -v /webroot:/var/www/html -p 80:80 --name "<name of container>" "<image ID>"
-
-docker run -it ubuntu sh
-
-docker run ubuntu
-
-docker-machine ip dev
-
-docker build . -t "<image ID>"
-
-docker run "<container ID>" -d -p 8080:80 -p 5000:5000 "<image ID>"
-
-```
-
-## Tools & Tips
-
-### Git tagging
-```bash
-git tag new-tag old-tag
-git tag -d old-tag
-git push origin :refs/tags/old-tag
-git push --tags
-git pull --prune --tags
-```
-
-## References
-
--   [Use Bash Strict Mode (Unless You Love Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+[![dockeri.co](https://dockeri.co/image/nginx)](https://hub.docker.com/r/jesperancinha/nginx)
 
 ## About me
 

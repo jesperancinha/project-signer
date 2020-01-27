@@ -34,16 +34,14 @@ RUN npm install -g tsc
 
 RUN npm install -g yarn
 
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+RUN wget https://services.gradle.org/distributions/gradle-6.1.1-bin.zip -P /tmp
 
-RUN curl -s "https://get.sdkman.io" | bash
+RUN unzip -d /opt/gradle /tmp/gradle-*.zip
 
-RUN . "$HOME/.sdkman/bin/sdkman-init.sh"
+RUN echo 'export GRADLE_HOME=/opt/gradle/gradle-6.1.1' | tee -a ~/.bashrc /etc/profile
 
-RUN su - root -c "sdk install gradle 6.1.1"
+RUN echo 'export PATH=${GRADLE_HOME}/bin:${PATH}' | tee -a ~/.bashrc /etc/profile
 
-RUN su - root -c "sdk install java 11.0.6.hs-adpt"
+ENV GRADLE_HOME /opt/gradle/gradle-6.1.1
 
-RUN su - root -c "sdk install java 12.0.2.hs-adpt"
-
-RUN su - root -c "sdk install java 13.0.1.hs-adpt"
+ENV PATH $PATH:/opt/gradle/gradle-6.1.1/bin

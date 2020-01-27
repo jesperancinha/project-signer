@@ -1,11 +1,10 @@
-# java-exercise-docker
+# je-all-build
 
 [![dockeri.co](https://dockeri.co/image/jesperancinha/java-exercise-docker)](https://hub.docker.com/r/jesperancinha/java-exercise-docker)
 
 This images provides support to NGINX and extended support to:
 
-- Java 11/12/13 Switchable withg SDKMan
-- SDKMan
+- Java JDK 11
 - Maven
 - Gradle
 - NPM
@@ -21,6 +20,7 @@ This images provides support to NGINX and extended support to:
 - pm2
 - tsc
 
+This is only the base image for all sub-jdk images
 This image is meant to be used in build pipelines, where a lot of utilities, package managers and run-times are needed.
 
 ## Starting point
