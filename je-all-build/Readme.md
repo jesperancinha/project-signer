@@ -1,4 +1,4 @@
-# je-all-build
+# java-exercise-docker
 
 [![dockeri.co](https://dockeri.co/image/jesperancinha/java-exercise-docker)](https://hub.docker.com/r/jesperancinha/java-exercise-docker)
 
@@ -20,8 +20,7 @@ This images provides support to NGINX and extended support to:
 - pm2
 - tsc
 
-This image is meant to be used in build pipelines. It is no longer being updated.
-Please have a look at [je-all-build Readme](../je-all-build/Readme.md) for details on the new docker build pipeline image.
+This image is meant to be used in build pipelines, where a lot of utilities, package managers and runtimes are needed.
 
 ## Starting point
 
