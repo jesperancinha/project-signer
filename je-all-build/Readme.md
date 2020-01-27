@@ -4,7 +4,8 @@
 
 This images provides support to NGINX and extended support to:
 
-- Java
+- Java 11/12/13 Switchable withg SDKMan
+- SDKMan
 - Maven
 - Gradle
 - NPM
@@ -20,7 +21,7 @@ This images provides support to NGINX and extended support to:
 - pm2
 - tsc
 
-This image is meant to be used in build pipelines, where a lot of utilities, package managers and runtimes are needed.
+This image is meant to be used in build pipelines, where a lot of utilities, package managers and run-times are needed.
 
 ## Starting point
 

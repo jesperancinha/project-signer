@@ -8,6 +8,10 @@ In this repo you will find docker images for many different purposes with extend
 
 [![dockeri.co](https://dockeri.co/image/jesperancinha/je-postgres-all)](https://hub.docker.com/r/jesperancinha/je-postgres-all)
 
+[![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-build)](https://hub.docker.com/r/jesperancinha/je-all-build)
+
+[![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-runtime)](https://hub.docker.com/r/jesperancinha/je-all-runtime)
+
 ## Docker notes
 
 ```bash
