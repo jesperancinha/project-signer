@@ -1,26 +1,22 @@
-# java-exercise-docker
+# je-all-runtime
 
 [![dockeri.co](https://dockeri.co/image/jesperancinha/java-exercise-docker)](https://hub.docker.com/r/jesperancinha/java-exercise-docker)
 
 This images provides support to NGINX and extended support to:
 
 - Java
-- Maven
-- Gradle
 - NPM
 - yarn
-- rpm
 - Grunt
 - Python
 - pip
 - Flask
 - wget
-- vim
 - cron
 - pm2
 - tsc
 
-This image is meant to be used in build pipelines, where a lot of utilities, package managers and runtimes are needed.
+This image is meant to be used as a fast approach to use a multi runtime environment.
 
 ## Starting point
 
