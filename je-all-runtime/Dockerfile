@@ -26,11 +26,16 @@ RUN npm install -g tsc
 
 RUN npm install -g yarn
 
-RUN update-alternatives --remove java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
-RUN wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" https://download.oracle.com/otn-pub/java/jdk/13.0.2+8/d4173c853231432d94f001e99d882ca7/jdk-13.0.2_linux-x64_bin.deb
+RUN curl -s "https://get.sdkman.io" | bash
 
-RUN apt -y install ./jdk-13.0.2_linux-x64_bin.deb
+RUN . "$HOME/.sdkman/bin/sdkman-init.sh"
 
-RUN update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-13.0.2/bin/java 1
+RUN su - root -c "sdk install gradle 6.1.1"
 
+RUN su - root -c "sdk install java 11.0.6.hs-adpt"
+
+RUN su - root -c "sdk install java 12.0.2.hs-adpt"
+
+RUN su - root -c "sdk install java 13.0.1.hs-adpt"

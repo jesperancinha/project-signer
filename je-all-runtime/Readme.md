@@ -4,7 +4,7 @@
 
 This images provides support to NGINX and extended support to:
 
-- Java
+- Java 11/12/13 Switchable withg SDKMan
 - NPM
 - yarn
 - Grunt
