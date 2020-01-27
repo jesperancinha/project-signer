@@ -4,7 +4,6 @@
 
 This images provides support to NGINX and extended support to:
 
-- Java 11/12/13 Switchable withg SDKMan
 - NPM
 - yarn
 - Grunt
@@ -16,7 +15,9 @@ This images provides support to NGINX and extended support to:
 - pm2
 - tsc
 
-This image is meant to be used as a fast approach to use a multi runtime environment.
+This is only the base image for all sub-jdk images. ([under construcrtion](https://github.com/jesperancinha/project-signer/blob/master/project-signer-templates/UnderConstruction.md))
+
+This image is meant to be used as a fast approach to use in a multi runtime environment.
 
 ## Starting point
 
