@@ -17,7 +17,7 @@ This images provides support to NGINX and extended support to:
 - wget
 - vim
 - cron
-- pm2
+- pm2w
 - tsc
 
 This image is meant to be used in build pipelines. It is no longer being updated.

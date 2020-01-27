@@ -46,6 +46,10 @@ RUN wget https://services.gradle.org/distributions/gradle-6.1.1-bin.zip -P /tmp
 
 RUN unzip -d /opt/gradle /tmp/gradle-*.zip
 
-RUN echo 'export GRADLE_HOME=/opt/gradle/gradle-6.1.1' >> ~/.bashrc
+RUN echo 'export GRADLE_HOME=/opt/gradle/gradle-6.1.1' | tee -a ~/.bashrc /etc/profile
 
-RUN echo 'export PATH=${GRADLE_HOME}/bin:${PATH}' >> ~/.bashrc
+RUN echo 'export PATH=${GRADLE_HOME}/bin:${PATH}' | tee -a ~/.bashrc /etc/profile
+
+ENV GRADLE_HOME /opt/gradle/gradle-6.1.1
+
+ENV PATH $PATH:/opt/gradle/gradle-6.1.1/bin
