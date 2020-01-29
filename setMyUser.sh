@@ -11,11 +11,13 @@ then
     email=$2
     cd ..
     for item in *; do
+      if [[ -d "$item" ]]; then
         cd "$item"
         echo "----------------- Setting up user $username with email $email on repo $item -----------------"
         git config --replace-all --local user.name "$username"
         git config --replace-all --local user.email "$email"
         cd ..
+      fi
     done
     cd project-signer
 fi
