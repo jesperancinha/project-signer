@@ -1,27 +1,24 @@
-# je-all-build
+# je-all-runtime-jdk-11
 
 [![dockeri.co](https://dockeri.co/image/jesperancinha/java-exercise-docker)](https://hub.docker.com/r/jesperancinha/java-exercise-docker)
 
 This images provides support to NGINX and extended support to:
 
-- Java
-- Maven
-- Gradle
+- Java JDK 11
 - NPM
 - yarn
-- rpm
 - Grunt
 - Python
 - pip
 - Flask
 - wget
-- vim
 - cron
-- pm2w
+- pm2
 - tsc
 
-This image is meant to be used in build pipelines. It is no longer being updated.
-Please have a look at [je-all-build Readme](../je-all-build/Readme.md) for details on the new docker build pipeline image.
+This is only the base image for all sub-jdk images. ([under construcrtion](https://github.com/jesperancinha/project-signer/blob/master/project-signer-templates/UnderConstruction.md))
+
+This image is meant to be used as a fast approach to use in a multi runtime environment.
 
 ## Starting point
 

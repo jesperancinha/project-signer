@@ -16,11 +16,19 @@ RUN apt-get -y install cron
 
 RUN apt-get -y install vim
 
-RUN apt-get install zip unzip
+RUN apt-get -y install zip unzip
 
-RUN mkdir -p /usr/share/man/man1
+RUN apt-get -y install postgresql-client
 
 RUN apt-get -y install maven
+
+RUN ["/bin/bash", "-c", "debconf-set-selections <<< \"postfix postfix/mailname string test\""]
+
+RUN ["/bin/bash", "-c", "debconf-set-selections <<< \"postfix postfix/main_mailer_type string 'No configuration'\""]
+
+RUN apt-get install -y --assume-yes postfix
+
+RUN mkdir -p /usr/share/man/man1
 
 RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
 
@@ -45,3 +53,4 @@ RUN echo 'export PATH=${GRADLE_HOME}/bin:${PATH}' | tee -a ~/.bashrc /etc/profil
 ENV GRADLE_HOME /opt/gradle/gradle-6.1.1
 
 ENV PATH $PATH:/opt/gradle/gradle-6.1.1/bin
+
