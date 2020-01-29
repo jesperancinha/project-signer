@@ -12,6 +12,7 @@ This images provides support to NGINX and extended support to:
 - rpm
 - Grunt
 - Python
+- PostgreSQL Client
 - pip
 - Flask
 - wget
@@ -19,6 +20,7 @@ This images provides support to NGINX and extended support to:
 - cron
 - pm2
 - tsc
+
 
 This is only the base image for all sub-jdk images
 This image is meant to be used in build pipelines, where a lot of utilities, package managers and run-times are needed.
@@ -31,6 +33,8 @@ This image is meant to be used in build pipelines, where a lot of utilities, pac
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/joaofse?label=João%20Esperancinha&style=social)](https://twitter.com/joaofse)
 [![GitHub followers](https://img.shields.io/github/followers/jesperancinha.svg?label=jesperancinha&style=social)](https://github.com/jesperancinha)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=jesperancinha&color=navy)](https://bitbucket.org/jesperancinha)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=jesperancinha&color=navy)](https://gitlab.com/jesperancinha)
 [![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=joaofilipesabinoesperancinha.nl&color=6495ED)](http://joaofilipesabinoesperancinha.nl)
 [![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Time%20Disruption%20Studios&color=6495ED)](http://tds.joaofilipesabinoesperancinha.nl/)
 [![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Image%20Train%20Filters&color=6495ED)](http://itf.joaofilipesabinoesperancinha.nl/)
