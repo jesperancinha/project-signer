@@ -1,6 +1,6 @@
 # je-all-runtime
 
-[![dockeri.co](https://dockeri.co/image/jesperancinha/java-exercise-docker)](https://hub.docker.com/r/jesperancinha/java-exercise-docker)
+[![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-runtime)](https://hub.docker.com/r/jesperancinha/je-all-runtime)
 
 This images provides support to NGINX and extended support to:
 
