@@ -1,4 +1,4 @@
-FROM jesperancinha/je-all-build:0.0.1
+FROM jesperancinha/je-all-build:0.0.2
 
 RUN update-alternatives --remove java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
 
