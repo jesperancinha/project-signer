@@ -16,6 +16,6 @@
 [![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/image-train-filters-android.svg)]()
 ---
 ---
-[![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Project%20Status&color=informational)](Status.md)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Project%20Status&color=informational)](ProjectStatus.md)
 [![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Project%20Status%20Org&color=informational)](StatusOrg.md)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=Quick%20Statuses&message=Quick%20Status%20Org&color=informational)](QuicksStats.md)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Quick%20Status&color=informational)](QuicksStats.md)

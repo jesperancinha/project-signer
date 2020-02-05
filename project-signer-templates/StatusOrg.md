@@ -41,6 +41,6 @@ Contains the ITF library for android
 [![Build status](https://ci.appveyor.com/api/projects/status/59hue3nnb3hqpn5i?svg=true)](https://ci.appveyor.com/project/jesperancinha/itf-chartizate-android)
 ---
 ---
-[![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Project%20Status&color=informational)](Status.md)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Project%20Status&color=informational)](ProjectStatus.md)
 [![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Project%20Status%20Android&color=informational)](StatusAndroid.md)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=Quick%20Statuses&message=Quick%20Status%20Org&color=informational)](QuicksStats.md)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Quick%20Status&color=informational)](QuicksStats.md)
