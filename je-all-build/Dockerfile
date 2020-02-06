@@ -65,4 +65,17 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B
 RUN apt-get update
 
 RUN apt-get install sbt -y
-c
+
+RUN curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+
+RUN cd ~ && git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
+
+RUN echo "alias ll='ls -l -a --color=auto'" | tee -a ~/.bashrc /etc/profile
+
+RUN echo "if [ -f \"$HOME/.bash-git-prompt/gitprompt.sh\" ]; then" | tee -a ~/.bashrc /etc/profile
+
+RUN echo "    GIT_PROMPT_ONLY_IN_REPO=1" | tee -a ~/.bashrc /etc/profile
+
+RUN echo "    source $HOME/.bash-git-prompt/gitprompt.sh" | tee -a ~/.bashrc /etc/profile
+
+RUN echo "fi" | tee -a ~/.bashrc /etc/profile

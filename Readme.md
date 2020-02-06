@@ -68,6 +68,7 @@ git pull --prune --tags
 ## References
 
 -   [Use Bash Strict Mode (Unless You Love Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+-   [Linux containers](https://linuxcontainers.org/)
 
 ## About me
 

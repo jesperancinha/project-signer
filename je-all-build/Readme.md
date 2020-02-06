@@ -28,6 +28,12 @@ Tag 0.0.2
 - Scala 2.13 
 - SBT
 
+Tag 0.0.3
+
+- magicmonty/ash-git-prompt
+- alias ll='ls -l -a --color=auto'
+- yarn update
+
 This is only the base image for all sub-jdk images
 This image is meant to be used in build pipelines, where a lot of utilities, package managers and run-times are needed.
 
@@ -38,8 +44,8 @@ This image is meant to be used in build pipelines, where a lot of utilities, pac
 ## References
 
 -   [How to install sbt on Ubuntu For Scala and Java projects](https://www.techrepublic.com/article/how-to-install-sbt-on-ubuntu-for-scala-and-java-projects/)
-
 -   [How to install sbt on Linux](https://www.freecodecamp.org/news/how-to-install-sbt-on-linux/)
+-   [magicmonty/bash-git-prompt](https://github.com/magicmonty/bash-git-prompt)
 
 ## About me
 
