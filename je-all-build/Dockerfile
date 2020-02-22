@@ -66,6 +66,10 @@ RUN apt-get update
 
 RUN apt-get install sbt -y
 
+RUN apt-get install software-properties-common -y
+
+RUN apt-get update
+,
 RUN curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 RUN cd ~ && git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
