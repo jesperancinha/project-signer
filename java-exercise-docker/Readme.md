@@ -27,7 +27,7 @@ Please have a look at [je-all-build Readme](../je-all-build/Readme.md) for detai
 
 [![dockeri.co](https://dockeri.co/image/nginx)](https://hub.docker.com/r/jesperancinha/nginx)
 
-## About me
+## About me 👨🏽‍💻🚀
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/joaofse?label=João%20Esperancinha&style=social)](https://twitter.com/joaofse)
 [![GitHub followers](https://img.shields.io/github/followers/jesperancinha.svg?label=jesperancinha&style=social)](https://github.com/jesperancinha)
