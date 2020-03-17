@@ -1,6 +1,5 @@
 package org.jesperancinha.parser.projectsigner.inteface;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public interface TemplateService<T> {

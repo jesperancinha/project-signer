@@ -23,8 +23,6 @@ public class TemplateServiceImplIT {
 
     @Test
     public void testFindAllParagraphs() throws IOException {
-        final InputStream resourceAsStream = getClass().getResourceAsStream("/Readme.md");
-
         final Paragraphs allParagraphs = templateService.findAllParagraphs();
 
         assertThat(allParagraphs.getParagraphCount()).isEqualTo(2);
