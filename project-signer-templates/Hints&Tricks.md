@@ -82,3 +82,9 @@ git push origin :refs/tags/old-tag
 git push --tags
 git pull --prune --tags
 ```
+
+-   [pbcopy](http://sweetme.at/2013/11/17/copy-to-and-paste-from-the-clipboard-on-the-mac-osx-command-line/)
+
+```bash
+curl -L "http://coolsite.com" | pbcopy
+```

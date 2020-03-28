@@ -30,3 +30,6 @@ hs_err_pid*
 bin
 dist
 target
+
+# MACOS
+.DS_Store
