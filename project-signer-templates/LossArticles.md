@@ -11,3 +11,7 @@
 -   [Eonics Hack Night #21 Reactive programming in Spring Webflux - eventbrite](https://www.eventbrite.com/e/tickets-eonics-hack-night-21-reactive-programming-in-spring-webflux-91585581941)
 -   [Open Hack Night #21: Reactive programming in Spring Webflux](https://eonics.nl/inbox/open-hack-night-21-reactive-programming-in-spring-webflux/)
 
+##### [Baeldung](https://www.baeldung.com/)
+I work as an author for baeldung. Articles are all published under the name Baeldung. However authors write each their article. This is a list of my contributions to their website.
+
+-   [Guide to @CurrentSecurityContext in Spring Security](https://www.baeldung.com/spring-currentsecuritycontext)
