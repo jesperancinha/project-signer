@@ -1,5 +1,7 @@
 FROM centos:centos8
 
+ENV LANG=C.UTF-8
+
 WORKDIR /root
 
 RUN yum -y install epel-release
