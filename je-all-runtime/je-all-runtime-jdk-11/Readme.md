@@ -22,7 +22,7 @@ This image is meant to be used as a fast approach to use in a multi runtime envi
 
 ## Starting point
 
-[![dockeri.co](https://dockeri.co/image/nginx)](https://hub.docker.com/r/jesperancinha/nginx)
+[![dockeri.co](https://dockeri.co/image/_/nginx)](https://hub.docker.com/_/nginx)
 
 ## About me 👨🏽‍💻🚀
 
