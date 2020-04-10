@@ -32,7 +32,7 @@ This image is meant to be used in build pipelines, where a lot of utilities, pac
 
 ## Starting point
 
-[![dockeri.co](https://dockeri.co/image/nginx)](https://hub.docker.com/r/jesperancinha/nginx)
+[![dockeri.co](https://dockeri.co/image/_/nginx)](https://hub.docker.com/_/nginx)
 
 ## About me 👨🏽‍💻🚀
 

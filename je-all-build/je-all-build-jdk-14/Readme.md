@@ -1,27 +1,28 @@
-# je-node-build
+ # je-all-build--jdk-13
 
-[![dockeri.co](https://dockeri.co/image/jesperancinha/je-node-build)](https://hub.docker.com/r/jesperancinha/je-node-build)
+[![dockeri.co](https://dockeri.co/image/jesperancinha/java-exercise-docker)](https://hub.docker.com/r/jesperancinha/java-exercise-docker)
 
 This images provides support to NGINX and extended support to:
 
-Tag 0.0.1
+Version 0.0.1
 
+- Java JDK 14
+- Maven
+- Gradle
 - NPM
 - yarn
 - rpm
 - Grunt
 - Python
-- PostgreSQL Client
 - pip
+- Flask
 - wget
 - vim
 - cron
 - pm2
 - tsc
-- alias ll='ls -l -a --color=auto'
-- yarn update
 
-This is only the base image for all sub-jdk images
+This is a base image for all sub-jdk's images
 This image is meant to be used in build pipelines, where a lot of utilities, package managers and run-times are needed.
 
 ## Starting point
@@ -30,9 +31,7 @@ This image is meant to be used in build pipelines, where a lot of utilities, pac
 
 ## References
 
--   [How to install sbt on Ubuntu For Scala and Java projects](https://www.techrepublic.com/article/how-to-install-sbt-on-ubuntu-for-scala-and-java-projects/)
--   [How to install sbt on Linux](https://www.freecodecamp.org/news/how-to-install-sbt-on-linux/)
--   [magicmonty/bash-git-prompt](https://github.com/magicmonty/bash-git-prompt)
+-   [How To Install Oracle Java 14 (JDK 14) On Ubuntu, Debian Or Linux Mint From APT PPA Repository](https://www.linuxuprising.com/2020/03/how-to-install-oracle-java-14-jdk14-on.html) 
 
 ## About me 👨🏽‍💻🚀
 
