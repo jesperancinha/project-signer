@@ -93,9 +93,9 @@ curl -L "http://coolsite.com" | pbcopy
 
 ```bash
 git filter-branch --env-filter '
-WRONG_EMAIL="wrong@example.com"
-NEW_NAME="New Name Value"
-NEW_EMAIL="correct@example.com"
+WRONG_EMAIL="joao.esperancinha@eonics.nl"
+NEW_NAME="Joao Esperancinha"
+NEW_EMAIL="jofisaes@gmail.com"
 
 if [ "$GIT_COMMITTER_EMAIL" = "$WRONG_EMAIL" ]
 then
@@ -109,3 +109,7 @@ then
 fi
 ' --tag-name-filter cat -- --branches --tags
 ```
+
+## References
+
+-   [How can I change the author name / email of a commit?](https://www.git-tower.com/learn/git/faq/change-author-name-email)
