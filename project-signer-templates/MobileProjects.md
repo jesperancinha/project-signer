@@ -6,13 +6,13 @@
 
 -   [aim-and-destroy-android](https://github.com/jesperancinha/aim-and-destroy-android)
 
--   [base-converter-android](git@github.com:jesperancinha/base-converter-android.git)
+-   [base-converter-android](https://github.com/jesperancinha/base-converter-android.git)
 
--   [image-train-filters-android](git@github.com:jesperancinha/image-train-filters-android.git)
+-   [image-train-filters-android](https://github.com/jesperancinha/image-train-filters-android.git)
 
--   [ping-app-android](git@github.com:jesperancinha/ping-app-android.git)
+-   [ping-app-android](https://github.com/jesperancinha/ping-app-android.git)
 
--   [timezone-app-utility-android](git@github.com:jesperancinha/timezone-app-utility-android.git)
+-   [timezone-app-utility-android](https://github.com/jesperancinha/timezone-app-utility-android.git)
 
 # About me 👨🏽‍💻🚀
 
