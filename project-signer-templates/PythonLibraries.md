@@ -4,4 +4,5 @@
 pip install futures
 pip install pebble
 pip install pika
+pip install requests
 ```
