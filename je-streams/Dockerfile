@@ -56,4 +56,10 @@ RUN rpm -Uvh libwebsockets-2.4.2-1.el8.remi.x86_64.rpm
 
 RUN rpm -Uvh mosquitto-1.5.4-1.el8.remi.x86_64.rpm
 
+COPY cassandra.repo /etc/yum.repos.d/
+
+RUN dnf -y install dsc20
+
+COPY cassandra.service /etc/systemd/system/
+
 ENTRYPOINT ["tail", "-f", "/dev/null"]
