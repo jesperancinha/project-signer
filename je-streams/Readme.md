@@ -1,16 +1,29 @@
 # je-rabbitmq
 
-[![dockeri.co](https://dockeri.co/image/jesperancinha/je-rabbitmq)](https://hub.docker.com/r/jesperancinha/je-rabbitmq)
+[![dockeri.co](https://dockeri.co/image/jesperancinha/je-streams)](https://hub.docker.com/r/jesperancinha/je-streams)
+
+
+[je-streams](https://hub.docker.com/r/jesperancinha/je-streams) : 0.0.1:
 
 - NodeJS 13
 - RabbitMQ
 - ERLANG
 - Python 3
+- Kaka Streams [kafka_2.13-2.5.0.tgz](https://downloads.apache.org/kafka/2.5.0)
+- Mosquitto
+- CoAp
+- Cassandra
 
 ## Starting point
 
 [![dockeri.co](https://dockeri.co/image/_/centos)](https://hub.docker.com/r/_/centos)
 
+## References
+
+-   [How To Install Apache Kafka on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-centos-7)
+-   [CoAP](https://coap.technology/impls.html)
+-   [libcoap](https://libcoap.net/install.html)
+-   []
 ## About me 👨🏽‍💻🚀
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/joaofse?label=João%20Esperancinha&style=social)](https://twitter.com/joaofse)
