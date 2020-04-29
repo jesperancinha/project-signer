@@ -5,8 +5,8 @@ After=network.target remote-fs.target
 [Service]
 Type=simple
 User=kafka
-ExecStart=/usr/local/kafka/bin/zookeeper-server-start.sh /usr/local/kafka/config/zookeeper.properties
-ExecStop=/usr/local/kafka/bin/zookeeper-server-stop.sh
+ExecStart=/usr/local/etc/kafka/bin/zookeeper-server-start.sh /usr/local/etc/kafka/config/zookeeper.properties
+ExecStop=/usr/local/etc/kafka/bin/zookeeper-server-stop.sh
 Restart=on-abnormal
 
 [Install]
