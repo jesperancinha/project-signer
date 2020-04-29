@@ -42,7 +42,9 @@ RUN curl "https://downloads.apache.org/kafka/2.5.0/kafka_2.13-2.5.0.tgz" -o ~/Do
 
 RUN mkdir ~/kafka && cd ~/kafka
 
-RUN tar -xvzf ~/Downloads/kafka.tgz --strip 1
+RUN tar -xvzf ~/Downloads/kafka.tgz -C /usr/local
+
+RUN mv /usr/local/kafka_2.13-2.5.0 /usr/local/kafka
 
 COPY zookeeper.service /etc/systemd/system/zookeeper.service
 
@@ -61,5 +63,13 @@ COPY cassandra.repo /etc/yum.repos.d/
 RUN dnf -y install dsc20
 
 COPY cassandra.service /etc/systemd/system/
+
+RUN rm *.rpm
+
+RUN rm -r ~/Downloads
+
+COPY startKafka.sh /root
+
+COPY startZookeeper.sh /root
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]
