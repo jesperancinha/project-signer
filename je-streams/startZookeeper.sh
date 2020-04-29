@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-/usr/local/kafka/bin/zookeeper-server-start.sh /usr/local/kafka/config/zookeeper.properties
+/usr/local/etc/kafka/bin/zookeeper-server-start.sh /usr/local/etc/kafka/config/zookeeper.properties

@@ -42,9 +42,9 @@ RUN curl "https://downloads.apache.org/kafka/2.5.0/kafka_2.13-2.5.0.tgz" -o ~/Do
 
 RUN mkdir ~/kafka && cd ~/kafka
 
-RUN tar -xvzf ~/Downloads/kafka.tgz -C /usr/local
+RUN tar -xvzf ~/Downloads/kafka.tgz -C /usr/local/etc
 
-RUN mv /usr/local/kafka_2.13-2.5.0 /usr/local/kafka
+RUN mv /usr/local/etc/kafka_2.13-2.5.0 /usr/local/etc/kafka
 
 COPY zookeeper.service /etc/systemd/system/zookeeper.service
 
