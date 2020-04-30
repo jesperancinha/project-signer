@@ -46,10 +46,6 @@ RUN tar -xvzf ~/Downloads/kafka.tgz -C /usr/local/etc
 
 RUN mv /usr/local/etc/kafka_2.13-2.5.0 /usr/local/etc/kafka
 
-COPY zookeeper.service /etc/systemd/system/zookeeper.service
-
-COPY kafka.service /etc/systemd/system/kafka.service
-
 RUN wget http://rpms.remirepo.net/enterprise/8/remi/x86_64/mosquitto-1.5.4-1.el8.remi.x86_64.rpm
 
 RUN wget http://rpms.remirepo.net/enterprise/8/remi/x86_64/libwebsockets-2.4.2-1.el8.remi.x86_64.rpm
@@ -61,8 +57,6 @@ RUN rpm -Uvh mosquitto-1.5.4-1.el8.remi.x86_64.rpm
 COPY cassandra.repo /etc/yum.repos.d/
 
 RUN dnf -y install dsc20
-
-COPY cassandra.service /etc/systemd/system/
 
 RUN rm *.rpm
 
