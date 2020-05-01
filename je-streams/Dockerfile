@@ -36,16 +36,6 @@ RUN yum makecache -y --disablerepo='*' --enablerepo='rabbitmq_rabbitmq-server'
 
 RUN yum -y install rabbitmq-server
 
-RUN mkdir ~/Downloads
-
-RUN curl "https://downloads.apache.org/kafka/2.5.0/kafka_2.13-2.5.0.tgz" -o ~/Downloads/kafka.tgz
-
-RUN mkdir ~/kafka && cd ~/kafka
-
-RUN tar -xvzf ~/Downloads/kafka.tgz -C /usr/local/etc
-
-RUN mv /usr/local/etc/kafka_2.13-2.5.0 /usr/local/etc/kafka
-
 RUN wget http://rpms.remirepo.net/enterprise/8/remi/x86_64/mosquitto-1.5.4-1.el8.remi.x86_64.rpm
 
 RUN wget http://rpms.remirepo.net/enterprise/8/remi/x86_64/libwebsockets-2.4.2-1.el8.remi.x86_64.rpm
@@ -53,17 +43,5 @@ RUN wget http://rpms.remirepo.net/enterprise/8/remi/x86_64/libwebsockets-2.4.2-1
 RUN rpm -Uvh libwebsockets-2.4.2-1.el8.remi.x86_64.rpm
 
 RUN rpm -Uvh mosquitto-1.5.4-1.el8.remi.x86_64.rpm
-
-COPY cassandra.repo /etc/yum.repos.d/
-
-RUN dnf -y install dsc20
-
-RUN rm *.rpm
-
-RUN rm -r ~/Downloads
-
-COPY startKafka.sh /root
-
-COPY startZookeeper.sh /root
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]
