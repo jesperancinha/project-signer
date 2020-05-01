@@ -2,8 +2,13 @@
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/cent-os-50.png "CentOS")](https://www.centos.org/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/rabbit-mq-50.png "Rabbit MQ")](https://www.rabbitmq.com/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/mosquitto-50.png)](https://mosquitto.org/)
-
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/mosquitto-50.png "Mosquitto")](https://mosquitto.org/)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/cassandra-50.png "Cassandra")](http://cassandra.apache.org/)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/kafka-50.png "Kafka")](https://kafka.apache.org/documentation/streams/)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/zookeeper-50.png "Zookeeper")](https://zookeeper.apache.org/)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/erlang-50.png "Erlang")](https://www.erlang.org/)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/rpm-50.png "RPM")](https://en.wikipedia.org/wiki/RPM_Package_Manager)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/nodejs-50.png "NodeJS")](https://nodejs.org/en/)
 
 [![dockeri.co](https://dockeri.co/image/jesperancinha/je-streams)](https://hub.docker.com/r/jesperancinha/je-streams)
 
@@ -15,7 +20,11 @@
 - ERLANG
 - Python 3
 - Mosquitto
+- Zookeeper
+- Kafka
+- Cassandra
 
+NOTE: Because of the use of Cassandra, make sure that you can provide at least 2G for a container generated from this image!!
 ## Starting point
 
 [![dockeri.co](https://dockeri.co/image/_/centos)](https://hub.docker.com/r/_/centos)
