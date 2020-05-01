@@ -1,9 +1,8 @@
 # je-streams
 
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/cent-os-50.png "CentOS")](https://www.centos.org/)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/rabbit-mq-50.png "Rabbit MQ")](https://www.rabbitmq.com/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/mosquitto-50.png)](https://mosquitto.org/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/CoAP-50.png)](https://coap.technology/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/kafka-50.png "Kafka")](https://kafka.apache.org/documentation/streams/)
-[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/cassandra-50.png)](http://cassandra.apache.org/)
 
 
 [![dockeri.co](https://dockeri.co/image/jesperancinha/je-streams)](https://hub.docker.com/r/jesperancinha/je-streams)
@@ -15,10 +14,7 @@
 - RabbitMQ
 - ERLANG
 - Python 3
-- Kaka Streams [kafka_2.13-2.5.0.tgz](https://downloads.apache.org/kafka/2.5.0)
 - Mosquitto
-- CoAp
-- Cassandra
 
 ## Starting point
 
