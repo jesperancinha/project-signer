@@ -9,6 +9,7 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/erlang-50.png "Erlang")](https://www.erlang.org/)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/rpm-50.png "RPM")](https://en.wikipedia.org/wiki/RPM_Package_Manager)
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/nodejs-50.png "NodeJS")](https://nodejs.org/en/)
+[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/mqtt-50.png "MQTT")](https://mqtt.org//)
 
 [![dockeri.co](https://dockeri.co/image/jesperancinha/je-streams)](https://hub.docker.com/r/jesperancinha/je-streams)
 
