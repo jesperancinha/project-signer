@@ -11,7 +11,7 @@ then
     email=$2
     cd ..
     for item in *; do
-      if [[ -d "$item" ]]; then
+      if [[ -d "$item" ]] && [[ "$item" != ".git" ]] && [[ "$item" != "target" ]]; then
         cd "$item"
         echo "----------------- Setting up user $username with email $email on repo $item -----------------"
         git config --replace-all --local user.name "$username"
