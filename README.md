@@ -108,21 +108,11 @@ mvn nexus-staging:release  -Prelease
 |[CQRS — Command Query Responsibility Segregation](https://medium.com/swlh/cqrs-command-query-responsibility-segregation-72db08ee8282)|2019/12/17|
 |[Hexagonal Architecture - A Favorite Lyrics Spring Boot — Java Example](https://medium.com/swlh/hexagonal-architecture-a596390269fd)|2019/12/15|
 
-### [Eonics](https://eonics.nl)
--   [Hexagonal Architecture in Java](https://eonics.nl/inbox/hexagonal-architecture-in-java/)
-
 ### [Baeldung](https://www.baeldung.com/)
 I work as an author for baeldung. Articles are all published under the name Baeldung. However authors write each their article. This is a list of my contributions to their website.
 
 -   [Guide to @CurrentSecurityContext in Spring Security](https://www.baeldung.com/spring-currentsecuritycontext)
 -   [Introduction to DBUnit](https://www.baeldung.com/java-dbunit)
-
-## Presentations
-
-### [Eonics](https://eonics.nl)
--   [Eonics Hack Night #21 Reactive programming in Spring Webflux - eventbrite](https://www.eventbrite.com/e/tickets-eonics-hack-night-21-reactive-programming-in-spring-webflux-91585581941)
--   [Open Hack Night #21: Reactive programming in Spring Webflux](https://eonics.nl/inbox/open-hack-night-21-reactive-programming-in-spring-webflux/)
-
 
 ## References
 
