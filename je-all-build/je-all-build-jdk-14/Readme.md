@@ -1,4 +1,4 @@
- # je-all-build--jdk-13
+ # je-all-build--jdk-14
 
 [![dockeri.co](https://dockeri.co/image/jesperancinha/java-exercise-docker)](https://hub.docker.com/r/jesperancinha/java-exercise-docker)
 
@@ -21,6 +21,11 @@ Version 0.0.1
 - cron
 - pm2
 - tsc
+
+Version 0.0.2
+
+- Gradle 6.5
+
 
 This is a base image for all sub-jdk's images
 This image is meant to be used in build pipelines, where a lot of utilities, package managers and run-times are needed.
