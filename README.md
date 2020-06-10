@@ -32,7 +32,7 @@ java -jar project-signer.jar --template-location <template> <tag1>...<tagn> --ro
 Current example:
 
 ```bash
--l "../project-signer-templates/LICENSE.template" -t "../project-signer-templates/Readme.md" License "About me 👨🏽‍💻🚀" -d ../../ 
+-l "../project-signer-templates/licenses/APACHE2.template,../project-signer-templates/licenses/ISC.template" -t "../project-signer-templates/Readme.md" License "About me" -d ../../
 ```
 
 To summarize, this program will scan all your readme files and standardize name. You may want a generic signature in all your projects and this little runner will do just that!

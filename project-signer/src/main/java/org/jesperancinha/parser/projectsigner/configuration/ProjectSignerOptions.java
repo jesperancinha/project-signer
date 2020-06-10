@@ -7,6 +7,7 @@ import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
 import java.nio.file.Path;
+import java.util.Arrays;
 import java.util.Objects;
 
 @Getter
@@ -14,19 +15,30 @@ import java.util.Objects;
 @AllArgsConstructor
 public class ProjectSignerOptions {
 
-    @Option(names = {"-t", "--template-location"}, paramLabel = "Template location", description = "Location of the signing template", required = true)
+    @Option(names = {"-t", "--template-location"},
+            paramLabel = "Template location",
+            description = "Location of the signing template",
+            required = true)
     private String templateLocation;
 
-    @Option(names = {"-l", "--license-location"}, paramLabel = "License location", description = "Location of the License template")
-    private String licenseLocation;
+    @Option(names = {"-l", "--license-location"},
+            paramLabel = "License location",
+            description = "Location of the License template")
+    private String licenseLocations;
 
-    @Parameters(paramLabel = "Start tags", description = "Start of paragraph replace. This will remove all paragraphs with these names. It only applies to rules with '#' title markdown notation")
+    @Parameters(paramLabel = "Start tags",
+            description = "Start of paragraph replace. This will remove all paragraphs with these names. It only applies to rules with '#' title markdown notation")
     private String[] tagNames;
 
-    @Option(names = {"-d", "--root-directory"}, paramLabel = "Root directory", description = "Where to start searching for sub Readme.md files and/or empty projects")
+    @Option(names = {"-d", "--root-directory"},
+            paramLabel = "Root directory",
+            description = "Where to start searching for sub Readme.md files and/or empty projects")
     private String rootDirectory;
 
-    @Option(names = {"-ne", "--no-empty"}, paramLabel = "No Empty", description = "If set, it does not create empty signed Readme.md files", defaultValue = "false")
+    @Option(names = {"-ne", "--no-empty"},
+            paramLabel = "No Empty",
+            description = "If set, it does not create empty signed Readme.md files",
+            defaultValue = "false")
     private boolean noEmpty;
 
     public Path getRootDirectory() {
@@ -37,10 +49,10 @@ public class ProjectSignerOptions {
         return Path.of(templateLocation);
     }
 
-    public Path getLicenseLocation(){
-        if(Objects.isNull(licenseLocation)){
+    public Path[] getLicenseLocations() {
+        if (Objects.isNull(licenseLocations)) {
             return null;
         }
-        return Path.of(licenseLocation);
+        return Arrays.stream(licenseLocations.split(",")).map(Path::of).toArray(Path[]::new);
     }
 }

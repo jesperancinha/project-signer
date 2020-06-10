@@ -1,6 +1,7 @@
 package org.jesperancinha.parser.projectsigner.filter;
 
 import lombok.Builder;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.inteface.GeneratorService;
@@ -12,6 +13,7 @@ import java.nio.file.FileVisitResult;
 import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.util.List;
 import java.util.Objects;
 
 import static java.nio.file.FileVisitResult.CONTINUE;
@@ -24,7 +26,7 @@ public class ProjectSignerVisitor extends SimpleFileVisitor<Path> {
 
     private final GeneratorService<Paragraphs> generatorService;
     private final Paragraphs allParagraphs;
-    private final String allLicenseText;
+    private final List<String> allLicenseText;
 
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
@@ -40,8 +42,9 @@ public class ProjectSignerVisitor extends SimpleFileVisitor<Path> {
         return CONTINUE;
     }
 
+    @SneakyThrows
     @Override
-    public FileVisitResult postVisitDirectory(Path dir, IOException e) throws IOException {
+    public FileVisitResult postVisitDirectory(Path dir, IOException e) {
         if (isIgnorableFolder(dir)) {
             return SKIP_SUBTREE;
         }

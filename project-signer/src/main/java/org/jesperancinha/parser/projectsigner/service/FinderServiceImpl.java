@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 
 import static java.lang.Integer.MAX_VALUE;
 import static java.nio.file.FileVisitOption.FOLLOW_LINKS;
@@ -32,12 +33,12 @@ public class FinderServiceImpl implements FinderService {
     @Override
     public void iterateThroughFilesAndFolders(Path rootPath) throws IOException {
         final Paragraphs allParagraphs = templateService.findAllParagraphs();
-       final  String readAllLicense = templateService.readAllLicense();
+       final List<String> readAllLicenses = templateService.readAllLicenses();
         Files.walkFileTree(rootPath, of(FOLLOW_LINKS), MAX_VALUE,
                 ProjectSignerVisitor.builder()
                         .generatorService(generatorService)
                         .allParagraphs(allParagraphs)
-                        .allLicenseText(readAllLicense)
+                        .allLicenseText(readAllLicenses)
                         .build());
     }
 

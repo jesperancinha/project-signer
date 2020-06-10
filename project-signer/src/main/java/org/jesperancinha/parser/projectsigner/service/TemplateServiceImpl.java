@@ -1,22 +1,27 @@
 package org.jesperancinha.parser.projectsigner.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder;
 import org.jesperancinha.parser.markdowner.helper.TemplateParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.jesperancinha.parser.projectsigner.inteface.OptionsService;
-import org.jesperancinha.parser.projectsigner.inteface.TemplateService;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import org.jesperancinha.parser.projectsigner.inteface.TemplateService;
 
 /**
  * A markdown template service to handle markdown texts
  */
 @Service
+@Slf4j
 public class TemplateServiceImpl implements TemplateService<Paragraphs> {
 
     private final OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService;
@@ -39,9 +44,16 @@ public class TemplateServiceImpl implements TemplateService<Paragraphs> {
     }
 
     @Override
-    public String readAllLicense() throws IOException {
-        final File fileTemplate = optionsService.getProjectSignerOptions().getLicenseLocation().toFile();
-        final FileInputStream templateInputStream = new FileInputStream(fileTemplate);
-        return new String(templateInputStream.readAllBytes(), StandardCharsets.UTF_8);
+    public List<String> readAllLicenses() throws IOException {
+        return Arrays.stream(optionsService.getProjectSignerOptions().getLicenseLocations())
+                .map(path -> {
+                    try {
+                        final FileInputStream templateInputStream = new FileInputStream(path.toFile());
+                        return new String(templateInputStream.readAllBytes(), StandardCharsets.UTF_8);
+                    } catch (IOException e) {
+                        log.error("Failing to read template file {}. Error {}", path.getFileName().toString(), e.getMessage());
+                        return null;
+                    }
+                }).collect(Collectors.toList());
     }
 }
