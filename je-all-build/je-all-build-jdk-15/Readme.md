@@ -1,12 +1,12 @@
-# je-all-build
+ # je-all-build--jdk-14
 
-[![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-build)](https://hub.docker.com/r/jesperancinha/je-all-build)
+[![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-build-jdk-15)](https://hub.docker.com/r/jesperancinha/je-all-build-jdk-15)
 
 This images provides support to NGINX and extended support to:
 
-Tag 0.0.1
+Version 0.0.1
 
-- Java JDK 11
+- Java JDK 15 - Build 27
 - Maven
 - Gradle
 - NPM
@@ -14,7 +14,6 @@ Tag 0.0.1
 - rpm
 - Grunt
 - Python
-- PostgreSQL Client
 - pip
 - Flask
 - wget
@@ -23,32 +22,21 @@ Tag 0.0.1
 - pm2
 - tsc
 
-Tag 0.0.2
+Version 0.0.2
 
-- Scala 2.13 
-- SBT
+- Gradle 6.5
 
-Tag 0.0.3
 
-- magicmonty/ash-git-prompt
-- alias ll='ls -l -a --color=auto'
-- yarn update
-
-Tag 0.0.4 (under construction)
-- software properties common
-
-This is only the base image for all sub-jdk images
+This is a base image for all sub-jdk's images
 This image is meant to be used in build pipelines, where a lot of utilities, package managers and run-times are needed.
 
 ## Starting point
 
-[![dockeri.co](https://dockeri.co/image/_/nginx)](https://hub.docker.com/_/nginx)
+[![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-build)](https://hub.docker.com/r/jesperancinha/je-all-build)
 
 ## References
 
--   [How to install sbt on Ubuntu For Scala and Java projects](https://www.techrepublic.com/article/how-to-install-sbt-on-ubuntu-for-scala-and-java-projects/)
--   [How to install sbt on Linux](https://www.freecodecamp.org/news/how-to-install-sbt-on-linux/)
--   [magicmonty/bash-git-prompt](https://github.com/magicmonty/bash-git-prompt)
+-   [How To Install Oracle Java 14 (JDK 14) On Ubuntu, Debian Or Linux Mint From APT PPA Repository](https://www.linuxuprising.com/2020/03/how-to-install-oracle-java-14-jdk14-on.html)
 
 ## About me 👨🏽‍💻🚀
 

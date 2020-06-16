@@ -1,5 +1,5 @@
 # je-all-build--jdk-18
-[![dockeri.co](https://dockeri.co/image/jesperancinha/java-exercise-docker)](https://hub.docker.com/r/jesperancinha/java-exercise-docker)
+[![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-build-jdk-8)](https://hub.docker.com/r/jesperancinha/je-all-build-jdk-8)
 
 This images provides support to NGINX and extended support to:
 
