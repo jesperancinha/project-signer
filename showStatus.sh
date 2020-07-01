@@ -2,9 +2,11 @@
 
 cd ..
 for item in *; do
-    cd "$item"
-    echo "----------------- Status for repo $item -----------------"
-    git status
-    cd ..
+   if [[ -d "$item" ]] && [[ "$item" != ".git" ]] && [[ "$item" != "target" ]]; then
+      cd "$item" || exit
+      echo "----------------- Status for repo $item -----------------"
+      git status
+      cd ..
+   fi
 done
-cd project-signer
+cd project-signer || exit
