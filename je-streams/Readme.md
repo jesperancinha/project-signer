@@ -11,8 +11,6 @@
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/mqtt-50.png "MQTT")](https://mqtt.org//)
 
 [![dockeri.co](https://dockeri.co/image/jesperancinha/je-streams)](https://hub.docker.com/r/jesperancinha/je-streams)
-
-
 [je-streams](https://hub.docker.com/r/jesperancinha/je-streams) : 0.0.1:
 
 - NodeJS 13
