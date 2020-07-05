@@ -1,6 +1,7 @@
 package org.jesperancinha.parser.projectsigner.service;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.IOUtils;
 import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder;
 import org.jesperancinha.parser.markdowner.helper.ReadmeParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
@@ -12,7 +13,11 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * A Readme service to read and manipulate markdown files
@@ -20,6 +25,17 @@ import java.nio.file.Path;
 @Service
 @Slf4j
 public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
+
+    private static List<String> refsToRemove;
+
+    static {
+        try {
+            refsToRemove = Arrays.stream(IOUtils.toString(ReadmeServiceImpl.class.getResourceAsStream("/noref.txt"), StandardCharsets.UTF_8.name())
+                    .split("\n")).collect(Collectors.toList());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     private final MergeService<Paragraphs> mergeService;
     private final OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService;
@@ -49,6 +65,24 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
         log.trace("Visiting path {}", readmePath);
         final String readme = readDataSprippedOfTags(inputStream, optionsService.getProjectSignerOptions().getTagNames());
         final String newText = mergeService.mergeDocumentWithFooterTemplate(readme, allParagraphs);
-        mergeService.writeMergedResult(readmePath, newText);
+
+        mergeService.writeMergedResult(readmePath, removeNonRefs(newText));
+    }
+
+    private String removeNonRefs(String newText) {
+        return Arrays.stream(newText.split("\n"))
+                .filter(text -> !textIsRef(text))
+                .collect(Collectors.joining("\n"))
+                .concat("\n")
+                .replaceAll("[\r\n]{2}", "\n\n")
+                .replaceAll("[\r\n]{3}", "\n");
+    }
+
+    private boolean textIsRef(String text) {
+        return textHasWord(text);
+    }
+
+    private boolean textHasWord(String text) {
+        return refsToRemove.stream().anyMatch(ref -> text.toLowerCase().contains(ref.toLowerCase()));
     }
 }

@@ -27,9 +27,3 @@
 |[Reactive Programming applied to Legacy Services — A WebFlux example](https://medium.com/swlh/reactive-programming-applied-to-legacy-services-a-webflux-example-4d1c2ad40bd4)|2020/01/06|
 |[CQRS — Command Query Responsibility Segregation](https://medium.com/swlh/cqrs-command-query-responsibility-segregation-72db08ee8282)|2019/12/17|
 |[Hexagonal Architecture - A Favorite Lyrics Spring Boot — Java Example](https://medium.com/swlh/hexagonal-architecture-a596390269fd)|2019/12/15|
-
-### [Baeldung](https://www.baeldung.com/)
-I work as an author for baeldung. Articles are all published under the name Baeldung. However authors write each their article. This is a list of my contributions to their website.
-
--   [Guide to @CurrentSecurityContext in Spring Security](https://www.baeldung.com/spring-currentsecuritycontext)
--   [Introduction to DBUnit](https://www.baeldung.com/java-dbunit)
