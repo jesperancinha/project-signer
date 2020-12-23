@@ -29,10 +29,15 @@ java -jar project-signer.jar -t <template> <tag1>...<tagn> -d <root_path> -ne <n
 java -jar project-signer.jar --template-location <template> <tag1>...<tagn> --root-directory <root_path> --no-empty <no empty>
 ```
 
-Current example:
+Old example:
 
 ```bash
 -l "../project-signer-templates/licenses/APACHE2.template,../project-signer-templates/licenses/ISC.template,../project-signer-templates/licenses/MIT.template" -t "../project-signer-templates/Readme.md" License "About me" -d ../../ 
+```
+2020/12/23 Example:
+
+```bash
+-l "../project-signer-templates/licenses/APACHE2.template,../project-signer-templates/licenses/ISC.template,../project-signer-templates/licenses/MIT.template" -t "../project-signer-templates/Readme.md" License "About me" "Achievements" -d ../../
 ```
 
 To summarize, this program will scan all your readme files and standardize name. You may want a generic signature in all your projects and this little runner will do just that!
