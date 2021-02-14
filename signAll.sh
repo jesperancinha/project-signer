@@ -26,6 +26,7 @@ then
         else
              echo "commit message ${commitMessage}"
         fi
+        git config pull.rebase false
         git pull
         git commit -a -m "${commitMessage}"
         git push
