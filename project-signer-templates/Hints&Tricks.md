@@ -93,9 +93,9 @@ curl -L "http://coolsite.com" | pbcopy
 
 ```bash
 git filter-branch --env-filter '
-WRONG_EMAIL="joao.esperancinha@eonics.nl"
+WRONG_EMAIL="<old-mail>"
 NEW_NAME="Joao Esperancinha"
-NEW_EMAIL="jofisaes@gmail.com"
+NEW_EMAIL="<new-mail>
 
 if [ "$GIT_COMMITTER_EMAIL" = "$WRONG_EMAIL" ]
 then
