@@ -110,6 +110,12 @@ fi
 ' --tag-name-filter cat -- --branches --tags
 ```
 
+## Maven
+
+``bash
+mvn io.spring.javaformat:spring-javaformat-maven-plugin:0.0.27:apply
+``
+
 ## References
 
 -   [How can I change the author name / email of a commit?](https://www.git-tower.com/learn/git/faq/change-author-name-email)
