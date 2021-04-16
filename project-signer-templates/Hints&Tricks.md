@@ -1,14 +1,12 @@
 ## Hints and tricks
 
-All tricks I found to be vital so far:
-
--   Generating Certificates
+### Generating Certificates
 
 ```bash
 openssl req -new -newkey rsa:4096 -nodes -keyout yourfinance.key -out yourfinance.csr
 openssl x509 -req -sha256 -days 365 -in yourfinance.csr -signkey yourfinance.key -out yourfinance.pem
 ```
--   [SDKMAN!](https://sdkman.io/install)
+### Java installation via [SDKMAN!](https://sdkman.io/install)
 
 -   Install java versions with [SDKMan](https://sdkman.io/) for MAC-OS and Linux based systems
 
@@ -21,6 +19,8 @@ sdk install java 12.0.2.hs-adpt
 sdk install java 13.0.2.hs-adpt
 sdk install java 14.0.0.hs-adpt
 ```
+
+### Java installation via [APT](http://manpages.ubuntu.com/manpages/xenial/en/man8/apt.8.html)
 
 -   Install java versions without [SDKMan](https://sdkman.io/) for [ubuntu prompt for windows](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab).
 
@@ -36,6 +36,10 @@ sudo apt install openjdk-13-jdk
 sudo apt -y install adoptopenjdk-8-hotspot
 sudo apt -y autoremove
 ```
+
+### Aliases to switch version
+
+#### With [MinGW](http://www.mingw.org/)
 
 - .bashrc file to get GitPrompt, [SDKMAN](https://sdkman.io/) and some handy aliases in a Windows environment with [MinGW](http://www.mingw.org/) or just in a MAC-OS environment.
 
@@ -58,6 +62,8 @@ export SDKMAN_DIR="/root/.sdkman"
 [[ -s "/root/.sdkman/bin/sdkman-init.sh" ]] && source "/root/.sdkman/bin/sdkman-init.sh"
 ```
 
+#### With [ubuntu prompt for windows](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab)
+
 - .bashrc file to get GitPrompt and some handy aliases in a Windows environment with [ubuntu prompt for windows](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab).
 
 ```bash
@@ -74,7 +80,8 @@ alias m2disable="rm ~/.m2/settings.xml"
 alias m2enable="cp /your_repo_folder/settings.xml ~/.m2/"
 ```
 
--   Git tag change
+### Git tag change
+
 ```bash
 git tag new-tag old-tag
 git tag -d old-tag
@@ -83,13 +90,14 @@ git push --tags
 git pull --prune --tags
 ```
 
--   [pbcopy](http://sweetme.at/2013/11/17/copy-to-and-paste-from-the-clipboard-on-the-mac-osx-command-line/)
+
+### [pbcopy](http://sweetme.at/2013/11/17/copy-to-and-paste-from-the-clipboard-on-the-mac-osx-command-line/)
 
 ```bash
 curl -L "http://coolsite.com" | pbcopy
 ```
 
--   Git History Email Change
+### Git History Email Change
 
 ```bash
 git filter-branch --env-filter '
@@ -110,7 +118,7 @@ fi
 ' --tag-name-filter cat -- --branches --tags
 ```
 
-## Maven
+### Maven
 
 ``bash
 mvn io.spring.javaformat:spring-javaformat-maven-plugin:0.0.27:apply
