@@ -120,9 +120,9 @@ fi
 
 ### Maven
 
-``bash
+```bash
 mvn io.spring.javaformat:spring-javaformat-maven-plugin:0.0.27:apply
-``
+```
 
 ## References
 
