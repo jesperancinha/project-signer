@@ -1,5 +1,6 @@
 package org.jesperancinha.parser.projectsigner.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder;
@@ -9,6 +10,8 @@ import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions
 import org.jesperancinha.parser.projectsigner.inteface.MergeService;
 import org.jesperancinha.parser.projectsigner.inteface.OptionsService;
 import org.jesperancinha.parser.projectsigner.inteface.ReadmeService;
+import org.jesperancinha.parser.projectsigner.model.LintMatch;
+import org.jesperancinha.parser.projectsigner.model.LintPattern;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -17,6 +20,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
@@ -27,11 +32,20 @@ import java.util.stream.Collectors;
 public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
 
     private static List<String> refsToRemove;
+    private static List<LintPattern> lintMatches;
+    private static ObjectMapper objectMapper = new ObjectMapper();
 
     static {
         try {
-            refsToRemove = Arrays.stream(IOUtils.toString(ReadmeServiceImpl.class.getResourceAsStream("/noref.txt"), StandardCharsets.UTF_8.name())
+            refsToRemove = Arrays.stream(IOUtils.toString(ReadmeServiceImpl.class.getResourceAsStream("/references.txt"), StandardCharsets.UTF_8.name())
                     .split("\n")).collect(Collectors.toList());
+            final var jsonLint = IOUtils.toString(ReadmeServiceImpl.class.getResourceAsStream("/jeorg-lint.json"), StandardCharsets.UTF_8.name());
+            lintMatches = Arrays.stream(objectMapper.readValue(jsonLint, LintMatch[].class))
+                    .map(lintMatch -> LintPattern.builder()
+                            .find(Pattern.compile(lintMatch.getFind()))
+                            .replace(lintMatch.getReplace())
+                            .build())
+                    .collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -63,8 +77,16 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
     @Override
     public void exportNewReadme(Path readmePath, InputStream inputStream, Paragraphs allParagraphs) throws IOException {
         log.trace("Visiting path {}", readmePath);
-        final String readme = readDataSprippedOfTags(inputStream, optionsService.getProjectSignerOptions().getTagNames());
-        final String newText = mergeService.mergeDocumentWithFooterTemplate(readme, allParagraphs);
+        var ref = new Object() {
+            String readme = readDataSprippedOfTags(inputStream, optionsService.getProjectSignerOptions().getTagNames());
+        };
+        lintMatches.forEach(lintMatch -> {
+            Matcher m = lintMatch.getFind().matcher(ref.readme);
+            if (m.find()) {
+                ref.readme = m.replaceAll(lintMatch.getReplace());
+            }
+        });
+        final String newText = mergeService.mergeDocumentWithFooterTemplate(ref.readme, allParagraphs);
 
         mergeService.writeMergedResult(readmePath, removeNonRefs(newText));
     }

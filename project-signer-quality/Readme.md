@@ -30,12 +30,24 @@ A Collection of quality code files. More to come soon...
 \n$1\.  $3
 ```
 
+```text
+([\ ]+)([0-9])\.([\  ]+)(.)
+
+$1$2\.  $4
+```
+
 #### Number lists (2 Ciphers, 1 Space)
 
 ```text
 \n([0-9][0-9]+)\.([\  ]+)(.)
 
 \n$1\. $3
+```
+
+```text
+([\ ]+)([0-9][0-9]+)\.([\  ]+)(.)
+
+$1$2\. $4
 ```
 
 ### Java Test Files (*Test.java)
