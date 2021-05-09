@@ -2,7 +2,7 @@
 
 A Collection of quality code files. More to come soon...
 
-## Quick search and replaces:
+## Quick search and replaces
 
 ### Mardown (*.md)
 

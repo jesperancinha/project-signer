@@ -8,8 +8,6 @@ for item in *; do
     git checkout **/Readme.*
     git checkout README.*
     git checkout Readme.*
-    git checkout **/LICENSE.*
-    git checkout LICENSE.*
     cd ..
  fi
 done

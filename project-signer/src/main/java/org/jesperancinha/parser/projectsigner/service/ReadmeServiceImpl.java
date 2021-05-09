@@ -20,6 +20,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -48,6 +49,7 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
                     .collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
+            System.exit(1);
         }
     }
 
@@ -77,8 +79,10 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
     @Override
     public void exportNewReadme(Path readmePath, InputStream inputStream, Paragraphs allParagraphs) throws IOException {
         log.trace("Visiting path {}", readmePath);
+        final var readme = readDataSprippedOfTags(inputStream, optionsService.getProjectSignerOptions().getTagNames());
+        final String newText = mergeService.mergeDocumentWithFooterTemplate(readme, allParagraphs);
         var ref = new Object() {
-            String readme = readDataSprippedOfTags(inputStream, optionsService.getProjectSignerOptions().getTagNames());
+            String readme =newText;
         };
         lintMatches.forEach(lintMatch -> {
             Matcher m = lintMatch.getFind().matcher(ref.readme);
@@ -86,12 +90,13 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
                 ref.readme = m.replaceAll(lintMatch.getReplace());
             }
         });
-        final String newText = mergeService.mergeDocumentWithFooterTemplate(ref.readme, allParagraphs);
-
-        mergeService.writeMergedResult(readmePath, removeNonRefs(newText));
+        mergeService.writeMergedResult(readmePath, removeNonRefs(ref.readme));
     }
 
     private String removeNonRefs(String newText) {
+        if(Objects.isNull(newText) || refsToRemove.size()==1 && refsToRemove.get(0).isEmpty()){
+            return newText;
+        }
         return Arrays.stream(newText.split("\n"))
                 .filter(text -> !textIsRef(text))
                 .collect(Collectors.joining("\n"))
