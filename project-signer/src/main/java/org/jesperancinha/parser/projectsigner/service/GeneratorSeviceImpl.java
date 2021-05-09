@@ -59,7 +59,7 @@ public class GeneratorSeviceImpl implements GeneratorService<Paragraphs> {
             }
         }
         final File expectedLegactyFile = new File(licencePath.toFile(), "License");
-        if (expectedLegactyFile.exists()){
+        if (expectedLegactyFile.exists()) {
             final FileInputStream templateInputStream = new FileInputStream(expectedLegactyFile);
             licenseText = new String(templateInputStream.readAllBytes(), StandardCharsets.UTF_8);
         }

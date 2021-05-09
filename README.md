@@ -23,10 +23,13 @@ This project serves the purpose of automatically signing all projects from the r
 The idea is to use something like:
 
 -   Short switches
+
 ```text
 java -jar project-signer.jar -t <template> <tag1>...<tagn> -d <root_path> -ne <no empty>
 ```
+
 -   Long switches
+
 ```text
 java -jar project-signer.jar --template-location <template> <tag1>...<tagn> --root-directory <root_path> --no-empty <no empty>
 ```
@@ -36,6 +39,7 @@ Old example:
 ```bash
 -l "../project-signer-templates/licenses/APACHE2.template,../project-signer-templates/licenses/ISC.template,../project-signer-templates/licenses/MIT.template" -t "../project-signer-templates/Readme.md" License "About me" -d ../../ 
 ```
+
 2020/12/23 Example:
 
 ```bash
@@ -53,8 +57,7 @@ This command line runner will complete several boiler plate tasks:
 -   It will also make sure the all legacy License.txt files will be removed.
 -   When running the [signAll.sh](signAll.sh) script, the [yyyy] variable in all licenses will be replaced with the year of the first commit in that repo
 
-All tags are case sensitive, which means you do need to add extra tags in case you have issues with word casing.
-Once you finally run the above command, please make sure to double check the given signature before committing and pushing to your repos.
+All tags are case sensitive, which means you do need to add extra tags in case you have issues with word casing. Once you finally run the above command, please make sure to double check the given signature before committing and pushing to your repos.
 
 ### Usage in an IDE
 
@@ -75,7 +78,9 @@ export GPG_TTY=$(tty)
 mvn clean deploy -Prelease
 mvn nexus-staging:release  -Prelease
 ```
+
 ```xml
+
 <settings>
     <servers>
         <server>

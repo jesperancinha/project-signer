@@ -4,12 +4,12 @@ Under construction means that the project is not complete. This means that the p
 
 This status means in other words that:
 
-- No conclusion should be made about the project.
-- The project will change very often.
-- Code coverage may or may not be a goal of the project
-- There are no written articles about it yet.
-- There could be code drafts on it that just don't work yet.
-- The only possible goal yet is just to consult and follow changes.
+-   No conclusion should be made about the project.
+-   The project will change very often.
+-   Code coverage may or may not be a goal of the project
+-   There are no written articles about it yet.
+-   There could be code drafts on it that just don't work yet.
+-   The only possible goal yet is just to consult and follow changes.
 
 The reason behind this document is to clearly inform about the meaning of being under construction.
 

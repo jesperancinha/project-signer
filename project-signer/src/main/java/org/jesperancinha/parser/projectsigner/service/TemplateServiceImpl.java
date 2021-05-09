@@ -6,6 +6,7 @@ import org.jesperancinha.parser.markdowner.helper.TemplateParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.jesperancinha.parser.projectsigner.inteface.OptionsService;
+import org.jesperancinha.parser.projectsigner.inteface.TemplateService;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -15,7 +16,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.jesperancinha.parser.projectsigner.inteface.TemplateService;
 
 /**
  * A markdown template service to handle markdown texts

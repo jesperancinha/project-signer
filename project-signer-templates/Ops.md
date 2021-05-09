@@ -20,16 +20,13 @@ create database mancalajedb
 ## Setting up Virtual Machines 💻
 
 ### Setting up OpenShift
+
 [![alt text](Documentation/mje-openshift-s.png)](https://manage.openshift.com/)
 
 -   Open an account
-
-    -   [Openshift online](https://manage.openshift.com/)
-
+	-   [Openshift online](https://manage.openshift.com/)
 -   Setup OKD (Original Community Distribution of Kubernetes)
-
-    -   [OKD](https://www.okd.io/index.html)
-
+	-   [OKD](https://www.okd.io/index.html)
 -   Install Minishift
 
 ```bash
@@ -65,6 +62,7 @@ Error starting the VM: Error creating the VM. Error with pre-create check: "This
 NOTE: If you want to run this with vmware please install [VMWare Fusion](https://www.vmware.com/products/fusion/fusion-evaluation.html). You will need this to use the vmrun command. 📝
 
 ### Configure minikube ⌨️
+
 ```bash
 minikube delete # Just in case 😉
 minikube config set vm-driver virtualbox
@@ -81,6 +79,7 @@ cd /mancalaje/mancalaje-fe/docker-files
 docker build --file=Dockerfile --tag=mancalaje-fe:latest --rm=true .
 exit
 ```
+
 ### Configure deployment ⌨️
 
 ```bash
@@ -131,18 +130,19 @@ install minikube /usr/local/bin/
 ```
 
 -   Install minikube for Windows (not fully tested)
-
-    -   Please install:
-        -   [VMWare Workstation Player](https://www.vmware.com/products/workstation-player.html)
-        -   [VMWare Workstation](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
-        -   [VMware VIX 1.15.7](https://my.vmware.com/web/vmware/details?productId=640&downloadGroup=PLAYER-1253-VIX1157) (This may be optional. Check your VMWare folder for the presence of vmrun.exe)
-    -   Add this to your $PATH: C:\Program Files (x86)\VMware\VMware VIX
+	-   Please install:
+		-   [VMWare Workstation Player](https://www.vmware.com/products/workstation-player.html)
+		-   [VMWare Workstation](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
+		-   [VMware VIX 1.15.7](https://my.vmware.com/web/vmware/details?productId=640&downloadGroup=PLAYER-1253-VIX1157) (This may be optional. Check your VMWare folder for the presence of vmrun.exe)
+	-   Add this to your $PATH: C:\Program Files (x86)\VMware\VMware VIX
 
 ```bash
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 choco install -y docker-machine-vmware -pre
 ```
+
 -   VMWare runs
+
 ```bash
 bcdedit /set hypervisorlaunchtype off
 minikube start --alsologtostderr -v=7 --vm-driver vmware
@@ -162,6 +162,7 @@ docker build --file=Dockerfile --tag=mancalaje:latest --rm=true .
 ```
 
 -   Running jar with minikube (not fully tested)
+
 ```bash
 kubectl config use-context minikube
 kubectl cluster-info
@@ -237,6 +238,7 @@ alias java13="export JAVA_HOME=/usr/lib/jvm/java-13-oracle && update-java-altern
 export SDKMAN_DIR="/root/.sdkman"
 [[ -s "/root/.sdkman/bin/sdkman-init.sh" ]] && source "/root/.sdkman/bin/sdkman-init.sh"
 ```
+
 -   Update Alternatives
 
 ```bash
@@ -250,6 +252,7 @@ dpkg --configure -a
 ```
 
 -   Git tag change
+
 ```bash
 git tag new-tag old-tag
 git tag -d old-tag

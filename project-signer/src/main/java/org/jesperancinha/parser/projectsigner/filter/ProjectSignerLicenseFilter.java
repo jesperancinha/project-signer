@@ -18,7 +18,7 @@ public class ProjectSignerLicenseFilter {
         } else if (license.contains(ISC_LICENSE_MARK)) {
             return rawLicenses.stream().filter(lic -> lic.contains(ISC_LICENSE_MARK))
                     .findFirst().orElseThrow((Supplier<Throwable>) () -> new RuntimeException("No license found!"));
-        }else if (license.contains(MIT_LICENSE_MARK)) {
+        } else if (license.contains(MIT_LICENSE_MARK)) {
             return rawLicenses.stream().filter(lic -> lic.contains(MIT_LICENSE_MARK))
                     .findFirst().orElseThrow((Supplier<Throwable>) () -> new RuntimeException("No license found!"));
         }

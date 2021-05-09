@@ -82,7 +82,7 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
         final var readme = readDataSprippedOfTags(inputStream, optionsService.getProjectSignerOptions().getTagNames());
         final String newText = mergeService.mergeDocumentWithFooterTemplate(readme, allParagraphs);
         var ref = new Object() {
-            String readme =newText;
+            String readme = newText;
         };
         lintMatches.forEach(lintMatch -> {
             Matcher m = lintMatch.getFind().matcher(ref.readme);
@@ -94,7 +94,7 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
     }
 
     private String removeNonRefs(String newText) {
-        if(Objects.isNull(newText) || refsToRemove.size()==1 && refsToRemove.get(0).isEmpty()){
+        if (Objects.isNull(newText) || refsToRemove.size() == 1 && refsToRemove.get(0).isEmpty()) {
             return newText;
         }
         return Arrays.stream(newText.split("\n"))

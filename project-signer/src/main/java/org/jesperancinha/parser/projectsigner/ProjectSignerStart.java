@@ -1,7 +1,6 @@
 package org.jesperancinha.parser.projectsigner;
 
 import lombok.extern.slf4j.Slf4j;
-import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser;
 import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder;
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.jesperancinha.parser.projectsigner.inteface.OptionsService;

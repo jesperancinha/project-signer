@@ -2,10 +2,10 @@
 
 cd ..
 for item in *; do
- if [[ -d "$item" ]]; then
+  if [[ -d "$item" ]]; then
     cd "${item}"
     git pull
     cd ..
- fi
+  fi
 done
 cd project-signer
