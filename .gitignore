@@ -33,3 +33,9 @@ target
 
 # MACOS
 .DS_Store
+
+# Coveralls
+.coveralls.yml
+
+# Codecov
+codecov.yml
