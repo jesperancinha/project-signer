@@ -5,7 +5,7 @@ jobs:
       jdk:
         - openjdk11
       install:
-        - mvn dependency:resolve
+        - mvn clean install
       script:
         - mvn install coveralls:report -Dconsolerizer.show=false -DrepoToken=${COVERALLS_TOKEN}
         - bash <(curl -s https://codecov.io/bash)
