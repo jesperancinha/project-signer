@@ -30,5 +30,9 @@
   {
     "find": "\\<\\/div\\>\n\\#\\#\\#",
     "replace": "\\<\\/div\\>\n\n\\#\\#\\#"
+  },
+  {
+    "find": "(travis-ci).org",
+    "replace": "$1.com"
   }
 ]

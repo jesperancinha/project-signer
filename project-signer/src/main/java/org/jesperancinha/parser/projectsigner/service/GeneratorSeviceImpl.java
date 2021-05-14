@@ -6,6 +6,7 @@ import org.jesperancinha.parser.projectsigner.filter.ProjectSignerLicenseFilter;
 import org.jesperancinha.parser.projectsigner.inteface.GeneratorService;
 import org.jesperancinha.parser.projectsigner.inteface.ReadmeNamingService;
 import org.jesperancinha.parser.projectsigner.inteface.ReadmeService;
+import org.jesperancinha.parser.projectsigner.model.ProjectData;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -30,10 +31,10 @@ import java.util.Objects;
 public class GeneratorSeviceImpl implements GeneratorService<Paragraphs> {
 
     private final ReadmeNamingService readmeNamingService;
-    private final ReadmeService<Paragraphs> readmeService;
+    private final ReadmeService<Paragraphs, ProjectData> readmeService;
 
     public GeneratorSeviceImpl(ReadmeNamingService readmeNamingService,
-                               ReadmeService<Paragraphs> readmeService) {
+                               ReadmeService<Paragraphs, ProjectData> readmeService) {
         this.readmeNamingService = readmeNamingService;
         this.readmeService = readmeService;
     }

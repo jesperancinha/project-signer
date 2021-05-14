@@ -3,6 +3,7 @@ package org.jesperancinha.parser.projectsigner.service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
+import org.jesperancinha.parser.markdowner.badges.parser.BadgeParser;
 import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder;
 import org.jesperancinha.parser.markdowner.helper.ReadmeParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
@@ -12,12 +13,14 @@ import org.jesperancinha.parser.projectsigner.inteface.OptionsService;
 import org.jesperancinha.parser.projectsigner.inteface.ReadmeService;
 import org.jesperancinha.parser.projectsigner.model.LintMatch;
 import org.jesperancinha.parser.projectsigner.model.LintPattern;
+import org.jesperancinha.parser.projectsigner.model.ProjectData;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -30,11 +33,11 @@ import java.util.stream.Collectors;
  */
 @Service
 @Slf4j
-public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
+public class ReadmeServiceImpl implements ReadmeService<Paragraphs, ProjectData> {
 
     private static List<String> refsToRemove;
     private static List<LintPattern> lintMatches;
-    private static ObjectMapper objectMapper = new ObjectMapper();
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
     static {
         try {
@@ -55,6 +58,7 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
 
     private final MergeService<Paragraphs> mergeService;
     private final OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService;
+    private final List<ProjectData> allProjectData = new ArrayList<>();
 
     public ReadmeServiceImpl(MergeService<Paragraphs> mergeService, OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService) {
         this.mergeService = mergeService;
@@ -78,9 +82,23 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
 
     @Override
     public void exportNewReadme(Path readmePath, InputStream inputStream, Paragraphs allParagraphs) throws IOException {
-        log.trace("Visiting path {}", readmePath);
+        log.info("Visiting path {}", readmePath);
         final var readme = readDataSprippedOfTags(inputStream, optionsService.getProjectSignerOptions().getTagNames());
-        final String newText = mergeService.mergeDocumentWithFooterTemplate(readme, allParagraphs);
+        final var newText = mergeService.mergeDocumentWithFooterTemplate(readme, allParagraphs);
+        final var lintedText = createLintedText(newText);
+        final var nonRefText = removeNonRefs(lintedText);
+        if (!optionsService.getProjectSignerOptions().getRootDirectory().relativize(readmePath).toString().contains("/")) {
+            allProjectData.add(
+                    ProjectData
+                            .builder()
+                            .title(readme.split("\n")[0].replace("#", "").strip())
+                            .badgeGroupMap(BadgeParser.parse(nonRefText))
+                            .build());
+        }
+        mergeService.writeMergedResult(readmePath, nonRefText);
+    }
+
+    private String createLintedText(String newText) {
         var ref = new Object() {
             String readme = newText;
         };
@@ -90,7 +108,7 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
                 ref.readme = m.replaceAll(lintMatch.getReplace());
             }
         });
-        mergeService.writeMergedResult(readmePath, removeNonRefs(ref.readme));
+        return ref.readme;
     }
 
     private String removeNonRefs(String newText) {
@@ -111,5 +129,10 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs> {
 
     private boolean textHasWord(String text) {
         return refsToRemove.stream().anyMatch(ref -> text.toLowerCase().contains(ref.toLowerCase()));
+    }
+
+    @Override
+    public List<ProjectData> getAllProjectData() {
+        return allProjectData;
     }
 }

@@ -13,9 +13,14 @@ public class InterfacesTest {
 
     @Test
     public void testAllInterfacesWhenCreatingImplementationThenAllow() {
-        final var fileWriterService = new FileWriterService() {
+        final var fileWriterService = new FileWriterService<String>() {
             @Override
             public void exportReadmeFile(Path path, String text) throws IOException {
+
+            }
+
+            @Override
+            public void exportReportFile(Path path, List<String> projectDataList) throws IOException {
 
             }
         };
@@ -74,15 +79,21 @@ public class InterfacesTest {
             }
         };
 
-        final var readmeService = new ReadmeService<>() {
+        final var readmeService = new ReadmeService<String,String>() {
+
             @Override
             public String readDataSprippedOfTags(InputStream templateInputStream, String... tags) throws IOException {
                 return null;
             }
 
             @Override
-            public void exportNewReadme(Path readmePath, InputStream inputStream, Object allParagraphs) throws IOException {
+            public void exportNewReadme(Path readmePath, InputStream inputStream, String allParagraphs) throws IOException {
 
+            }
+
+            @Override
+            public List<String> getAllProjectData() {
+                return null;
             }
         };
 

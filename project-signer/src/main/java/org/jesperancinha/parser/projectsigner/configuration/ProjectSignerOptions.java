@@ -26,6 +26,12 @@ public class ProjectSignerOptions {
             description = "Location of the License template")
     private String licenseLocations;
 
+    @Option(names = {"-r", "--report-location"},
+            paramLabel = "Report location",
+            description = "Destination of report files",
+            defaultValue = "../project-signer-quality")
+    private String reportLocation;
+
     @Parameters(paramLabel = "Start tags",
             description = "Start of paragraph replace. This will remove all paragraphs with these names. It only applies to rules with '#' title markdown notation")
     private String[] tagNames;
@@ -54,5 +60,9 @@ public class ProjectSignerOptions {
             return null;
         }
         return Arrays.stream(licenseLocations.split(",")).map(Path::of).toArray(Path[]::new);
+    }
+
+    public Path getReportLocation(){
+        return Path.of(reportLocation);
     }
 }

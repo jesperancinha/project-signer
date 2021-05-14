@@ -5,6 +5,7 @@ import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.filter.ProjectSignerVisitor;
 import org.jesperancinha.parser.projectsigner.inteface.FinderService;
 import org.jesperancinha.parser.projectsigner.inteface.GeneratorService;
+import org.jesperancinha.parser.projectsigner.inteface.ReadmeService;
 import org.jesperancinha.parser.projectsigner.inteface.TemplateService;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +26,8 @@ public class FinderServiceImpl implements FinderService {
     private final TemplateService<Paragraphs> templateService;
 
     public FinderServiceImpl(
-            final GeneratorService<Paragraphs> generatorService, final TemplateService<Paragraphs> templateService) {
+            final GeneratorService<Paragraphs> generatorService,
+            final TemplateService<Paragraphs> templateService) {
         this.generatorService = generatorService;
         this.templateService = templateService;
     }
@@ -40,6 +42,7 @@ public class FinderServiceImpl implements FinderService {
                         .allParagraphs(allParagraphs)
                         .allLicenseText(readAllLicenses)
                         .build());
+
     }
 
 }

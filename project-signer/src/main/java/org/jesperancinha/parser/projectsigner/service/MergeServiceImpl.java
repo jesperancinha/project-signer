@@ -5,6 +5,7 @@ import org.jesperancinha.parser.markdowner.helper.MergeParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.inteface.FileWriterService;
 import org.jesperancinha.parser.projectsigner.inteface.MergeService;
+import org.jesperancinha.parser.projectsigner.model.ProjectData;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -17,9 +18,9 @@ import java.nio.file.Path;
 @Service
 public class MergeServiceImpl implements MergeService<Paragraphs> {
 
-    private final FileWriterService fileWriterService;
+    private final FileWriterService<ProjectData> fileWriterService;
 
-    public MergeServiceImpl(FileWriterService fileWriterService) {
+    public MergeServiceImpl(FileWriterService<ProjectData> fileWriterService) {
         this.fileWriterService = fileWriterService;
     }
 
