@@ -1,3 +1,7 @@
+# INFO Report
+
+## [Build](./Build.md) - [Content](./Content.md) - [Coverage](./Coverage.md) - [Info](./Info.md) - [Quality](./Quality.md)
+
 |Project Name|Project|Maven Central|
 |---|---|---|
 |Markdowner|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Markdowner&color=informational)](https://github.com/jesperancinha/markdowner)|[![Maven Central](https://img.shields.io/maven-central/v/org.jesperancinha.parser/markdowner)](https://search.maven.org/search?q=parser.markdowner)|
@@ -83,3 +87,5 @@
 |Video Series App|---|---|
 |Note manager WebApp|---|---|
 |camel-test-drives|---|---|
+## [Build](./Build.md) - [Content](./Content.md) - [Coverage](./Coverage.md) - [Info](./Info.md) - [Quality](./Quality.md)
+

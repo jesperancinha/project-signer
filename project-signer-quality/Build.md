@@ -1,3 +1,7 @@
+# BUILD Report
+
+## [Build](./Build.md) - [Content](./Content.md) - [Coverage](./Coverage.md) - [Info](./Info.md) - [Quality](./Quality.md)
+
 |Project Name|Project|Travis|App Surveyor|Circle CI|Bitbucket Pipeline|GitLab Pipeline|
 |---|---|---|---|---|---|---|
 |Markdowner|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Markdowner&color=informational)](https://github.com/jesperancinha/markdowner)|[![Build Status](https://travis-ci.com/jesperancinha/markdowner.svg?branch=master)](https://travis-ci.com/jesperancinha/markdowner)|[![Build status](https://ci.appveyor.com/api/projects/status/kuedmakr9bbne46q/branch/master?svg=true)](https://ci.appveyor.com/project/jesperancinha/markdowner/branch/master)|[![CircleCI](https://circleci.com/gh/jesperancinha/markdowner.svg?style=svg)](https://circleci.com/gh/jesperancinha/markdowner)|---|---|
@@ -83,3 +87,5 @@
 |Video Series App|---|---|---|---|---|---|
 |Note manager WebApp|---|---|---|---|---|---|
 |camel-test-drives|---|---|---|---|---|---|
+## [Build](./Build.md) - [Content](./Content.md) - [Coverage](./Coverage.md) - [Info](./Info.md) - [Quality](./Quality.md)
+
