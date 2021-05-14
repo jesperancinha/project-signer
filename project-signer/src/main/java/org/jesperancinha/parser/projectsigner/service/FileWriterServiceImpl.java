@@ -38,7 +38,8 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
             final var f = new File(path.toFile(), badgeType.getDestinationFile());
             try {
                 final var fileWriter = new FileWriter(f);
-
+                fileWriter.write(String.format("# %s Report\n\n", badgeType));
+                writeHyperLinks(fileWriter);
                 writeTitles(badgeType, fileWriter);
                 writeTopTable(badgeType, fileWriter);
                 projectDataList.sort((o1, o2) -> {
@@ -47,6 +48,7 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
                     return nBadges2 - nBadges1;
                 });
                 projectDataList.forEach(projectData -> writeProjectData(badgeType, fileWriter, projectData));
+                writeHyperLinks(fileWriter);
                 fileWriter.close();
             } catch (IOException e) {
                 log.error("Error!", e);
@@ -54,6 +56,14 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
             }
         });
 
+    }
+
+    private void writeHyperLinks(FileWriter fileWriter) throws IOException {
+        fileWriter.write("## [Build](./Build.md) - ");
+        fileWriter.write("[Content](./Content.md) - ");
+        fileWriter.write("[Coverage](./Coverage.md) - ");
+        fileWriter.write("[Info](./Info.md) - ");
+        fileWriter.write("[Quality](./Quality.md)\n\n");
     }
 
     private void writeTitles(BadgeType badgeType, FileWriter fileWriter) throws IOException {
