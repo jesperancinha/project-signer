@@ -13,14 +13,14 @@
 [![dockeri.co](https://dockeri.co/image/jesperancinha/je-streams)](https://hub.docker.com/r/jesperancinha/je-streams)
 [je-streams](https://hub.docker.com/r/jesperancinha/je-streams) : 0.0.1:
 
-- NodeJS 13
-- RabbitMQ
-- ERLANG
-- Python 3
-- Mosquitto
-- Zookeeper
-- Kafka
-- Cassandra
+-   NodeJS 13
+-   RabbitMQ
+-   ERLANG
+-   Python 3
+-   Mosquitto
+-   Zookeeper
+-   Kafka
+-   Cassandra
 
 NOTE: Because of the use of Cassandra, make sure that you can provide at least 2G for a container generated from this image!!
 ## Starting point

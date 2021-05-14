@@ -2,7 +2,7 @@
 
 In this repo you will find docker images for many different purposes with extended functionality.
 
-## Image List:
+## Image List
 
 [![dockeri.co](https://dockeri.co/image/jesperancinha/java-exercise-docker)](https://hub.docker.com/r/jesperancinha/java-exercise-docker)
 

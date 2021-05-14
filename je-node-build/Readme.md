@@ -6,20 +6,20 @@ This images provides support to NGINX and extended support to:
 
 Tag 0.0.1
 
-- NPM
-- yarn
-- rpm
-- Grunt
-- Python
-- PostgreSQL Client
-- pip
-- wget
-- vim
-- cron
-- pm2
-- tsc
-- alias ll='ls -l -a --color=auto'
-- yarn update
+-   NPM
+-   yarn
+-   rpm
+-   Grunt
+-   Python
+-   PostgreSQL Client
+-   pip
+-   wget
+-   vim
+-   cron
+-   pm2
+-   tsc
+-   alias ll='ls -l -a --color=auto'
+-   yarn update
 
 This is only the base image for all sub-jdk images
 This image is meant to be used in build pipelines, where a lot of utilities, package managers and run-times are needed.

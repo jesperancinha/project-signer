@@ -5,23 +5,23 @@ This images provides support to NGINX and extended support to:
 
 Tag 0.0.1
 
-- Java JDK 8
-- Maven
-- Gradle
-- NPM
-- yarn
-- rpm
-- Grunt
-- Python
-- pip
-- Flask
-- wget
-- vim
-- cron
-- pm2
-- tsc
-- Scala 2.13 
-- SBT
+-   Java JDK 8
+-   Maven
+-   Gradle
+-   NPM
+-   yarn
+-   rpm
+-   Grunt
+-   Python
+-   pip
+-   Flask
+-   wget
+-   vim
+-   cron
+-   pm2
+-   tsc
+-   Scala 2.13 
+-   SBT
 
 This is a base image for all sub-jdk's images
 This image is meant to be used in build pipelines, where a lot of utilities, package managers and run-times are needed.

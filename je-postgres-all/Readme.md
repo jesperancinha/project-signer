@@ -13,19 +13,19 @@ This images provides support to PostgreSQL.
 
 Extended support to:
 
-- Java
-- Grunt
-- NPM
-- Python
-- pip
-- rpm
-- Flask
-- wget
-- vim
-- cron
-- Maven
-- NGINX
-- Postfix
+-   Java
+-   Grunt
+-   NPM
+-   Python
+-   pip
+-   rpm
+-   Flask
+-   wget
+-   vim
+-   cron
+-   Maven
+-   NGINX
+-   Postfix
 
 ## Starting point
 

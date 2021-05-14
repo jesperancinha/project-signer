@@ -6,36 +6,36 @@ This images provides support to NGINX and extended support to:
 
 Tag 0.0.1
 
-- Java JDK 11
-- Maven
-- Gradle
-- NPM
-- yarn
-- rpm
-- Grunt
-- Python
-- PostgreSQL Client
-- pip
-- Flask
-- wget
-- vim
-- cron
-- pm2
-- tsc
+-   Java JDK 11
+-   Maven
+-   Gradle
+-   NPM
+-   yarn
+-   rpm
+-   Grunt
+-   Python
+-   PostgreSQL Client
+-   pip
+-   Flask
+-   wget
+-   vim
+-   cron
+-   pm2
+-   tsc
 
 Tag 0.0.2
 
-- Scala 2.13 
-- SBT
+-   Scala 2.13 
+-   SBT
 
 Tag 0.0.3
 
-- magicmonty/ash-git-prompt
-- alias ll='ls -l -a --color=auto'
-- yarn update
+-   magicmonty/ash-git-prompt
+-   alias ll='ls -l -a --color=auto'
+-   yarn update
 
 Tag 0.0.4 (under construction)
-- software properties common
+-   software properties common
 
 This is only the base image for all sub-jdk images
 This image is meant to be used in build pipelines, where a lot of utilities, package managers and run-times are needed.
