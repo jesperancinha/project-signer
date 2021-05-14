@@ -10,6 +10,11 @@
     "codePrefix": "img.shields.io/maven-central"
   },
   {
+    "title": "GitHub Pre-Release",
+    "badge": "GitHub release",
+    "codePrefix": "img.shields.io/github/release-pre"
+  },
+  {
     "title": "GitHub Release",
     "badge": "GitHub release \\(latest SemVer\\)",
     "codePrefix": "img.shields.io/github/v/release"
