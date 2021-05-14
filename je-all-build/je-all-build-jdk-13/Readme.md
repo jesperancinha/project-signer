@@ -4,21 +4,21 @@
 
 This images provides support to NGINX and extended support to:
 
-- Java JDK 13
-- Maven
-- Gradle
-- NPM
-- yarn
-- rpm
-- Grunt
-- Python
-- pip
-- Flask
-- wget
-- vim
-- cron
-- pm2
-- tsc
+-   Java JDK 13
+-   Maven
+-   Gradle
+-   NPM
+-   yarn
+-   rpm
+-   Grunt
+-   Python
+-   pip
+-   Flask
+-   wget
+-   vim
+-   cron
+-   pm2
+-   tsc
 
 This is a base image for all sub-jdk's images
 This image is meant to be used in build pipelines, where a lot of utilities, package managers and run-times are needed.

@@ -4,16 +4,16 @@
 
 This images provides support to NGINX and extended support to:
 
-- NPM
-- yarn
-- Grunt
-- Python
-- pip
-- Flask
-- wget
-- cron
-- pm2
-- tsc
+-   NPM
+-   yarn
+-   Grunt
+-   Python
+-   pip
+-   Flask
+-   wget
+-   cron
+-   pm2
+-   tsc
 
 This is only the base image for all sub-jdk images. ([under construcrtion](https://github.com/jesperancinha/project-signer/blob/master/project-signer-templates/UnderConstruction.md))
 
