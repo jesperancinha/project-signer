@@ -35,6 +35,7 @@
 |Kitten House Care|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Kitten%20House%20Care&color=informational)](https://bitbucket.org/jesperancinha/kitten-house-care-parent/src/master/)|---|---|---|---|
 |Geo Calculator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|---|---|
 |agent-network|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|---|
+|Favourite lyrics app|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|---|---|---|---|
 |Time Disruption Studios|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|---|
 |Buy Odd React|---|---|---|---|[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/buy-odd-react/badge.svg)](https://snyk.io/test/github/jesperancinha/buy-odd-react)|
 |Joao Esperancinha Homepage Parent|---|---|---|---|---|
@@ -50,7 +51,6 @@
 |Social Media Private Data Zapper|---|---|---|---|---|
 |Matrix Anywhere|---|---|---|---|---|
 |xml-adder|---|---|---|---|---|
-|Favourite lyrics app|---|---|---|---|---|
 |med_dicom_service|---|---|---|---|---|
 |our airports app|---|---|---|---|---|
 |2b2bAndroidTests|---|---|---|---|---|

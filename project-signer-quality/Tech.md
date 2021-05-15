@@ -26,6 +26,7 @@
 |String Array Paradigms|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)|---|---|---|---|---|---|---|
 |Your Finance App|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Your%20finance%20JE&color=informational)](https://github.com/jesperancinha/your-finance-je)|---|---|---|---|---|---|---|
 |Portuguese recipes with [Baker](https://ing-bank.github.io/baker/)|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Baker%20portuguese%20recipes&color=informational)](https://github.com/jesperancinha/portuguese-recipes)|---|---|---|---|---|---|---|
+|Favourite lyrics app|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|---|---|---|---|---|---|---|
 |Image Train Filters For Android|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|---|---|---|---|---|
 |vma-archiver|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)|---|---|---|---|---|---|---|
 |ITF Chartizate modules|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate%20Modules&color=informational)](https://github.com/jesperancinha/itf-chartizate-modules)|---|---|---|---|---|---|---|
@@ -48,7 +49,6 @@
 |Social Media Private Data Zapper|---|---|---|---|---|---|---|---|
 |Matrix Anywhere|---|---|---|---|---|---|---|---|
 |xml-adder|---|---|---|---|---|---|---|---|
-|Favourite lyrics app|---|---|---|---|---|---|---|---|
 |med_dicom_service|---|---|---|---|---|---|---|---|
 |our airports app|---|---|---|---|---|---|---|---|
 |2b2bAndroidTests|---|---|---|---|---|---|---|---|
