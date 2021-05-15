@@ -1,6 +1,6 @@
 # INFO Report
 
-## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) 
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
 
 |Project Name|Project|License|Maven Central|GitHub Pre-Release|GitHub Release|PyPI Release|Twitter Share|
 |---|---|---|---|---|---|---|---|
@@ -31,13 +31,13 @@
 |International Airports Service|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=International%20Airports&color=informational)](https://bitbucket.org/jesperancinha/international-airports-service-root)|---|---|---|---|---|---|
 |Kitten House Care|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Kitten%20House%20Care&color=informational)](https://bitbucket.org/jesperancinha/kitten-house-care-parent/src/master/)|---|---|---|---|---|---|
 |Time Disruption Studios|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|---|---|---|
+|Bridge Management Logistics|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Bridge%20Management%20Logistics&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|---|---|---|---|---|---|
 |Twitter Explorer|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Twitter%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/twitter-explorer)|---|---|---|---|---|---|
 |Video Series App|---|---|---|---|---|---|[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=Checkout%20this%20%40gitlab%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//gitlab.com/jesperancinha/video-series-app)|
 |bisca-je|---|---|---|---|---|---|---|
 |performance-projects|---|---|---|---|---|---|---|
 |Favourite lyrics app|---|---|---|---|---|---|---|
 |json-to-builder-pattern|---|---|---|---|---|---|---|
-|Bridge Management Logistics|---|---|---|---|---|---|---|
 |multi-image-comparer|---|---|---|---|---|---|---|
 |Buy Odd React|---|---|---|---|---|---|---|
 |Joao Esperancinha Homepage Parent|---|---|---|---|---|---|---|
@@ -87,5 +87,5 @@
 ||---|---|---|---|---|---|---|
 |Note manager WebApp|---|---|---|---|---|---|---|
 |camel-test-drives|---|---|---|---|---|---|---|
-## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) 
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
 

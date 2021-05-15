@@ -1,6 +1,6 @@
 # COVERAGE Report
 
-## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) 
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
 
 |Project Name|Project|Codacy|Codecov|Coveralls|
 |---|---|---|---|---|
@@ -25,15 +25,15 @@
 |String Array Paradigms|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)|---|---|---|
 |Image Train Filters For Android|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|---|
 |Coffee paradigms simulator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)|---|---|---|
+|Bridge Management Logistics|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Bridge%20Management%20Logistics&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|---|---|---|
 |International Airports Service|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=International%20Airports&color=informational)](https://bitbucket.org/jesperancinha/international-airports-service-root)|---|---|---|
 |Twitter Explorer|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Twitter%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/twitter-explorer)|---|---|---|
-|agent-network|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|
 |Kitten House Care|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Kitten%20House%20Care&color=informational)](https://bitbucket.org/jesperancinha/kitten-house-care-parent/src/master/)|---|---|---|
 |Geo Calculator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|---|
+|agent-network|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|
 |Time Disruption Studios|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|
 |Favourite lyrics app|---|---|[![codecov](https://codecov.io/gl/jesperancinha/favourite-lyrics-app/branch/master/graph/badge.svg?token=7IA2J24R6H)](https://codecov.io/gl/jesperancinha/favourite-lyrics-app)|---|
 |bisca-je|---|---|---|---|
-|Bridge Management Logistics|---|---|---|---|
 |performance-projects|---|---|---|---|
 |multi-image-comparer|---|---|---|---|
 |Buy Odd React|---|---|---|---|
@@ -87,5 +87,5 @@
 |Video Series App|---|---|---|---|
 |Note manager WebApp|---|---|---|---|
 |camel-test-drives|---|---|---|---|
-## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) 
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
 

@@ -1,6 +1,6 @@
 # SERVERS Report
 
-## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) 
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
 
 |Project Name|Project|Tomcat|Wildfly|Jetty|Spring Boot|Spring Webflux|Spring Reactor|
 |---|---|---|---|---|---|---|---|
@@ -9,6 +9,7 @@
 |International Airports Service|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=International%20Airports&color=informational)](https://bitbucket.org/jesperancinha/international-airports-service-root)|---|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-webflux-50.png "Spring Webfllux")](https://spring.io/projects/spring-boot)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-reactor-50.png "Spring Reactor")](https://www.docker.com/)|
 |Kitten House Care|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Kitten%20House%20Care&color=informational)](https://bitbucket.org/jesperancinha/kitten-house-care-parent/src/master/)|---|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-webflux-50.png "Spring Webfllux")](https://spring.io/projects/spring-boot)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-reactor-50.png "Spring Reactor")](https://spring.io/reactive)|
 |jeorg-java-ee-7-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%207%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-7-test-drives)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/tomcat-50.png "Tomcat")](https://tomcat.apache.org/whichversion.html)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)|---|---|---|---|
+|Bridge Management Logistics|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Bridge%20Management%20Logistics&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|---|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)|---|---|
 |Twitter Explorer|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Twitter%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/twitter-explorer)|---|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png)](https://spring.io/projects/spring-boot)|---|---|
 |Markdowner|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Markdowner&color=informational)](https://github.com/jesperancinha/markdowner)|---|---|---|---|---|---|
 |jeorg-java-11-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%2011%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-11-test-drives)|---|---|---|---|---|---|
@@ -31,7 +32,6 @@
 |agent-network|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|---|---|---|
 |String Array Paradigms|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)|---|---|---|---|---|---|
 |Time Disruption Studios|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|---|---|---|
-|Bridge Management Logistics|---|---|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)|---|---|
 |Joao Esperancinha Homepage Parent|---|---|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)|---|---|
 |jeorg-algorithms-test-drives|---|---|---|---|---|---|---|
 |Video Series App|---|---|---|---|---|---|---|
@@ -87,5 +87,5 @@
 ||---|---|---|---|---|---|---|
 |Note manager WebApp|---|---|---|---|---|---|---|
 |camel-test-drives|---|---|---|---|---|---|---|
-## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) 
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
 

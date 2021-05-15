@@ -1,6 +1,6 @@
 # BUILD Report
 
-## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) 
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
 
 |Project Name|Project|Travis|App Surveyor|Circle CI|GitHub Pipeline|GitLab Pipeline|Bitbucket Pipeline|
 |---|---|---|---|---|---|---|---|
@@ -28,14 +28,14 @@
 |Image Train Filters For Android|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|[![Build Status](https://travis-ci.com/jesperancinha/image-train-filters-android.svg?branch=master)](https://travis-ci.com/jesperancinha/image-train-filters-android)|---|[![CircleCI](https://circleci.com/gh/jesperancinha/image-train-filters-android.svg?style=svg)](https://circleci.com/gh/jesperancinha/image-train-filters-android)|---|---|---|
 |Coffee paradigms simulator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)|[![Build Status](https://travis-ci.com/jesperancinha/coffee-paradigms.svg?branch=master)](https://travis-ci.com/jesperancinha/coffee-paradigms)|---|[![CircleCI](https://circleci.com/gh/jesperancinha/coffee-paradigms.svg?style=svg)](https://circleci.com/gh/jesperancinha/coffee-paradigms)|---|---|---|
 |Time Disruption Studios|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|[![CircleCI](https://circleci.com/bb/jesperancinha/tds-portal.svg?style=svg)](https://circleci.com/bb/jesperancinha/tds-portal)|---|---|[![Bitbucket Pipelines branch](https://img.shields.io/bitbucket/pipelines/jesperancinha/tds-portal/master)](https://bitbucket.org/jesperancinha/tds-portal/addon/pipelines/home)|
+|Bridge Management Logistics|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Bridge%20Management%20Logistics&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|[![Build Status](https://travis-ci.com/jesperancinha/bridge-logistics.svg?branch=master)](https://travis-ci.com/jesperancinha/bridge-logistics)|---|---|---|---|---|
 |Twitter Explorer|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Twitter%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/twitter-explorer)|---|---|[![CircleCI](https://circleci.com/bb/jesperancinha/twitter-explorer.svg?style=svg)](https://circleci.com/bb/jesperancinha/twitter-explorer)|---|---|---|
 |bisca-je|---|[![Build Status](https://travis-ci.com/jesperancinha/biscaje.svg?branch=master)](https://travis-ci.com/jesperancinha/biscaje)|---|[![CircleCI](https://circleci.com/gh/jesperancinha/biscaje.svg?style=svg)](https://circleci.com/gh/jesperancinha/biscaje)|---|---|---|
 |performance-projects|---|[![Build Status](https://travis-ci.com/jesperancinha/performance-projects.svg?branch=master)](https://travis-ci.com/jesperancinha/performance-projects)|---|[![CircleCI](https://circleci.com/gh/jesperancinha/performance-projects.svg?style=svg)](https://circleci.com/gh/jesperancinha/performance-projects)|---|---|---|
-|agent-network|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|---|---|---|
 |Geo Calculator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|---|---|---|---|
+|agent-network|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|---|---|---|
 |Favourite lyrics app|---|---|---|---|---|[![Gitlab pipeline status (branch)](https://img.shields.io/gitlab/pipeline/jesperancinha/favourite-lyrics-app/master)](https://gitlab.com/jesperancinha/favourite-lyrics-app/pipelines)|---|
 |json-to-builder-pattern|---|---|---|[![CircleCI](https://circleci.com/gh/jesperancinha/json-to-builder-pattern.svg?style=svg)](https://circleci.com/gh/jesperancinha/json-to-builder-pattern)|---|---|---|
-|Bridge Management Logistics|---|---|---|---|---|---|---|
 |multi-image-comparer|---|---|---|---|---|---|---|
 |Buy Odd React|---|---|---|---|---|---|---|
 |jeorg-algorithms-test-drives|---|---|---|---|---|---|---|
@@ -87,5 +87,5 @@
 |Video Series App|---|---|---|---|---|---|---|
 |Note manager WebApp|---|---|---|---|---|---|---|
 |camel-test-drives|---|---|---|---|---|---|---|
-## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) 
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
 
