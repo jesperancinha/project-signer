@@ -13,12 +13,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -34,11 +31,11 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
 
     @Override
     public void exportReportFile(Path path, final List<ProjectData> projectDataList) throws IOException {
-        Arrays.stream(BadgeType.values()).forEach(badgeType -> {
+        BadgeParser.badgeTypes.values().forEach(badgeType -> {
             final var f = new File(path.toFile(), badgeType.getDestinationFile());
             try {
                 final var fileWriter = new FileWriter(f);
-                fileWriter.write(String.format("# %s Report\n\n", badgeType));
+                fileWriter.write(String.format("# %s Report\n\n", badgeType.getType()));
                 writeHyperLinks(fileWriter);
                 writeTitles(badgeType, fileWriter);
                 writeTopTable(badgeType, fileWriter);
@@ -59,11 +56,12 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
     }
 
     private void writeHyperLinks(FileWriter fileWriter) throws IOException {
-        fileWriter.write("## [Build](./Build.md) - ");
-        fileWriter.write("[Content](./Content.md) - ");
-        fileWriter.write("[Coverage](./Coverage.md) - ");
-        fileWriter.write("[Info](./Info.md) - ");
-        fileWriter.write("[Quality](./Quality.md)\n\n");
+        final var links = BadgeParser.badgeTypes.values().stream()
+                .map(badgeType -> String.format("[%s](./%s)",
+                        badgeType.getDestinationFile().replace(".md", ""),
+                        badgeType.getDestinationFile()))
+                .collect(Collectors.joining(" - "));
+        fileWriter.write(String.format("## %s \n\n", links));
     }
 
     private void writeTitles(BadgeType badgeType, FileWriter fileWriter) throws IOException {
