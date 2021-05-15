@@ -5,6 +5,11 @@
     "codePrefix": "img.shields.io/static"
   },
   {
+    "title": "License",
+    "badge": "GitHub License",
+    "codePrefix": "img.shields.io/badge"
+  },
+  {
     "title": "Maven Central",
     "badge": "Maven Central",
     "codePrefix": "img.shields.io/maven-central"

@@ -37,6 +37,7 @@
 |performance-projects|---|---|---|---|
 |multi-image-comparer|---|---|---|---|
 |Buy Odd React|---|---|---|---|
+|jeorg-algorithms-test-drives|---|---|---|---|
 |Joao Esperancinha Homepage Parent|---|---|---|---|
 ||---|---|---|---|
 |web-parser-php|---|---|---|---|
@@ -64,7 +65,6 @@
 |rucola-generator|---|---|---|---|
 |microArduinoMe|---|---|---|---|
 |string.distance|---|---|---|---|
-|jeorg-algorithms-test-drives|---|---|---|---|
 |ReviewNinja-Welcome|---|---|---|---|
 |vertex-osgi-testdrive|---|---|---|---|
 |Parent of the test drives module for JEsperancinhaOrg|---|---|---|---|

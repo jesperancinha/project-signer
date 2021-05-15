@@ -33,8 +33,8 @@
 |Time Disruption Studios|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|---|---|---|
 |Bridge Management Logistics|---|---|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)|---|---|
 |Joao Esperancinha Homepage Parent|---|---|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png "Spring Boot")](https://spring.io/projects/spring-boot)|---|---|
-|Video Series App|---|---|---|---|---|---|---|
 |jeorg-algorithms-test-drives|---|---|---|---|---|---|---|
+|Video Series App|---|---|---|---|---|---|---|
 |bisca-je|---|---|---|---|---|---|---|
 |performance-projects|---|---|---|---|---|---|---|
 |Favourite lyrics app|---|---|---|---|---|---|---|

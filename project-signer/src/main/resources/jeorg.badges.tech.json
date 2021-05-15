@@ -10,6 +10,11 @@
     "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/kotlin-50.png"
   },
   {
+    "title": "Groovy",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/groovy-50.png"
+  },
+  {
     "title": "Java",
     "badge": "alt text",
     "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/java-50.png"
@@ -30,6 +35,11 @@
     "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png"
   },
   {
+    "title": "Lombok",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png"
+  },
+  {
     "title": "NodeJS",
     "badge": "alt text",
     "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/nodejs-50.png"
@@ -48,10 +58,5 @@
     "title": "GraphQL",
     "badge": "alt text",
     "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/(graphql|graph-ql)-50.png"
-  },
-  {
-    "title": "Groovy",
-    "badge": "alt text",
-    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/groovy-50.png"
   }
 ]
