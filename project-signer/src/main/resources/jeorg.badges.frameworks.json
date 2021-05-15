@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Project",
+    "badge": "Generic badge",
+    "codePrefix": "img.shields.io/static"
+  },
+  {
+    "title": "Spring",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png"
+  },
+  {
+    "title": "Lombok",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png"
+  },
+  {
+    "title": "NodeJS",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/nodejs-50.png"
+  },
+  {
+    "title": "Angular",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/(angular|angularjs)-50.png"
+  },
+  {
+    "title": "ReactJS",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/(react|reactjs)-50.png"
+  }
+]
