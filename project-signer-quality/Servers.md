@@ -1,6 +1,6 @@
 # SERVERS Report
 
-## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Streaming](./Streaming.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
 
 |Project Name|Project|Tomcat|Wildfly|Jetty|Spring Boot|Spring Webflux|Spring Reactor|
 |---|---|---|---|---|---|---|---|
@@ -13,6 +13,7 @@
 |Twitter Explorer|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Twitter%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/twitter-explorer)|---|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png)](https://spring.io/projects/spring-boot)|---|---|
 |Markdowner|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Markdowner&color=informational)](https://github.com/jesperancinha/markdowner)|---|---|---|---|---|---|
 |jeorg-java-11-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%2011%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-11-test-drives)|---|---|---|---|---|---|
+|Image Train Filters|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Image%20Train%20Filters%20Services&color=informational)](https://github.com/jesperancinha/image-train-filters-scala)|---|---|---|---|---|---|
 |consolerizer-root|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Consolerizer&color=informational)](https://github.com/JEsperancinhaOrg/consolerizer-root)|---|---|---|---|---|---|
 |jeorg-java-15-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-15-test-drives)|---|---|---|---|---|---|
 |vma-archiver|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)|---|---|---|---|---|---|
@@ -22,7 +23,6 @@
 |jeorg-algorithms-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|---|---|---|---|---|---|
 |ITF chartizate android|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=itf-chartizate-android&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)|---|---|---|---|---|---|
 |Geo Calculator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|---|---|---|---|
-|Image Train Filters|[![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Image%20Train%20Filters&color=informational)](http://itf.joaofilipesabinoesperancinha.nl/)|---|---|---|---|---|---|
 |Your Finance App|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Your%20finance%20JE&color=informational)](https://github.com/jesperancinha/your-finance-je)|---|---|---|---|---|---|
 |Project Signer|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Project%20Signer&color=informational)](https://github.com/jesperancinha/project-signer)|---|---|---|---|---|---|
 |Concert Demos|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Concert%20Demos&color=informational)](https://github.com/jesperancinha/concert-demos-root)|---|---|---|---|---|---|
@@ -87,5 +87,5 @@
 ||---|---|---|---|---|---|---|
 |Note manager WebApp|---|---|---|---|---|---|---|
 |camel-test-drives|---|---|---|---|---|---|---|
-## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Streaming](./Streaming.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
 

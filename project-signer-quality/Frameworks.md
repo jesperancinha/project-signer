@@ -1,6 +1,6 @@
 # FRAMEWORKS Report
 
-## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Streaming](./Streaming.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
 
 |Project Name|Project|Spring|Lombok|NodeJS|Angular|ReactJS|
 |---|---|---|---|---|---|---|
@@ -15,9 +15,9 @@
 |Kitten House Care|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Kitten%20House%20Care&color=informational)](https://bitbucket.org/jesperancinha/kitten-house-care-parent/src/master/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png "Spring Framework")](https://spring.io/projects/spring-framework)|---|---|---|---|
 |jeorg-java-ee-7-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%207%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-7-test-drives)|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)|---|---|---|
 |jeorg-java-11-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%2011%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-11-test-drives)|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)|---|---|---|
+|Image Train Filters|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Image%20Train%20Filters%20Services&color=informational)](https://github.com/jesperancinha/image-train-filters-scala)|---|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/angular-50.png "Angular")](https://angular.io/)|---|
 |jeorg-algorithms-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/nodejs-50.png "NodeJS")](https://nodejs.org/en/)|---|---|
 |Geo Calculator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/nodejs-50.png "NodeJS")](https://nodejs.org/en/)|---|---|
-|Image Train Filters|[![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Image%20Train%20Filters&color=informational)](http://itf.joaofilipesabinoesperancinha.nl/)|---|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/angular-50.png "Angular")](https://angular.io/)|---|
 |Concert Demos|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Concert%20Demos&color=informational)](https://github.com/jesperancinha/concert-demos-root)|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png "Lombok")](https://projectlombok.org/)|---|---|---|
 |Markdowner|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Markdowner&color=informational)](https://github.com/jesperancinha/markdowner)|---|---|---|---|---|
 |consolerizer-root|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Consolerizer&color=informational)](https://github.com/JEsperancinhaOrg/consolerizer-root)|---|---|---|---|---|
@@ -87,5 +87,5 @@
 ||---|---|---|---|---|---|
 |Note manager WebApp|---|---|---|---|---|---|
 |camel-test-drives|---|---|---|---|---|---|
-## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Streaming](./Streaming.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) - [Frameworks](./Frameworks.md) 
 

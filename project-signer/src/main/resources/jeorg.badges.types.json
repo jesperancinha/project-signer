@@ -48,5 +48,10 @@
     "type": "FRAMEWORKS",
     "badgeFile": "jeorg.badges.frameworks.json",
     "destinationFile": "Frameworks.md"
+  },
+  {
+    "type": "STREAMING",
+    "badgeFile": "jeorg.badges.streaming.json",
+    "destinationFile": "Streaming.md"
   }
 ]

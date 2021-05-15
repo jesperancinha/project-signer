@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Project",
+    "badge": "Generic badge",
+    "codePrefix": "img.shields.io/static"
+  },
+  {
+    "title": "Kafka",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/kafka-50.png"
+  },
+  {
+    "title": "Apache Spark",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/apache-spark-50.png"
+  },
+  {
+    "title": "RabbitMQ",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/rabbit-mq-50.png"
+  },
+  {
+    "title": "Zookeeper",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/zookeeper-50.png"
+  },
+  {
+    "title": "Mosquitto",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/mosquitto-50.png"
+  },
+  {
+    "title": "CoAP",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/CoAP-50.png"
+  },
+  {
+    "title": "MQTT",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/mqtt-50.png"
+  },
+  {
+    "title": "AMQP",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/amqp-50.png"
+  }
+]
