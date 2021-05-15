@@ -23,15 +23,5 @@
     "title": "Spring Boot",
     "badge": "alt text",
     "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-boot-50.png"
-  },
-  {
-    "title": "Spring Webflux",
-    "badge": "alt text",
-    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-webflux-50.png"
-  },
-  {
-    "title": "Spring Reactor",
-    "badge": "alt text",
-    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-reactor-50.png"
   }
 ]
