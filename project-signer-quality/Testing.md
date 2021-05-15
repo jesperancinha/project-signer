@@ -1,0 +1,91 @@
+# TESTING Report
+
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) 
+
+|Project Name|Project|Arquillian|Junit Jupiter 5|Mockito|Hamcrest|AssertJ|Spock|
+|---|---|---|---|---|---|---|---|
+|Twitter Explorer|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Twitter%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/twitter-explorer)|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/jupiter5-50.png "Jupiter 5")](https://junit.org/junit5/docs/current/user-guide/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/mockito-50.png "Mockito")](https://site.mockito.org/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/hamcrest-50.png "Hamcrest")](http://hamcrest.org/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/assertj-50.png "AssertJ")](https://assertj.github.io/doc/)|---|
+|Concert Demos|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Concert%20Demos&color=informational)](https://github.com/jesperancinha/concert-demos-root)|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/jupiter5-50.png "Jupiter 5")](https://junit.org/junit5/docs/current/user-guide/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/mockito-50.png "Mockito")](https://site.mockito.org/)|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/assertj-50.png "AssertJ")](https://assertj.github.io/doc/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spock-50.png "Spock")](http://spockframework.org/)|
+|jeorg-java-ee-7-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%207%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-7-test-drives)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/arquillian-50.png "Arquillian")](https://github.com/arquillian)|---|---|---|---|---|
+|International Airports Service|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=International%20Airports&color=informational)](https://bitbucket.org/jesperancinha/international-airports-service-root)|---|---|---|---|---|---|
+|sea-shell-archiver|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Sea%20Shell%20Archiver&color=informational)](https://github.com/jesperancinha/sea-shell-archiver)|---|---|---|---|---|---|
+|Kalah-Coffee-Mugs|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Kalah%20Coffee%20Mugs&color=informational)](https://github.com/jesperancinha/mancalaje)|---|---|---|---|---|---|
+|agent-network|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|---|---|---|
+|Kitten House Care|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Kitten%20House%20Care&color=informational)](https://bitbucket.org/jesperancinha/kitten-house-care-parent/src/master/)|---|---|---|---|---|---|
+|Spring-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%205%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)|---|---|---|---|---|---|
+|Geo Calculator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|---|---|---|---|
+|jeorg-java-11-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%2011%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-11-test-drives)|---|---|---|---|---|---|
+|kotlin-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Kotlin%20Test%20Drives&color=informational)](https://github.com/jesperancinha/kotlin-test-drives)|---|---|---|---|---|---|
+|jeorg-java-15-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-15-test-drives)|---|---|---|---|---|---|
+|Markdowner|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Markdowner&color=informational)](https://github.com/jesperancinha/markdowner)|---|---|---|---|---|---|
+|Image Train Filters|[![Generic badge](https://img.shields.io/static/v1.svg?label=Homepage&message=Image%20Train%20Filters&color=informational)](http://itf.joaofilipesabinoesperancinha.nl/)|---|---|---|---|---|---|
+|ITF chartizate android|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=itf-chartizate-android&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)|---|---|---|---|---|---|
+|ITF Chartizate|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate&color=informational)](https://github.com/jesperancinha/itf-chartizate)|---|---|---|---|---|---|
+|String Array Paradigms|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)|---|---|---|---|---|---|
+|Your Finance App|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Your%20finance%20JE&color=informational)](https://github.com/jesperancinha/your-finance-je)|---|---|---|---|---|---|
+|Portuguese recipes with [Baker](https://ing-bank.github.io/baker/)|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Baker%20portuguese%20recipes&color=informational)](https://github.com/jesperancinha/portuguese-recipes)|---|---|---|---|---|---|
+|Image Train Filters For Android|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|---|---|---|---|
+|vma-archiver|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)|---|---|---|---|---|---|
+|ITF Chartizate modules|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate%20Modules&color=informational)](https://github.com/jesperancinha/itf-chartizate-modules)|---|---|---|---|---|---|
+|Time Disruption Studios|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|---|---|---|
+|Project Signer|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Project%20Signer&color=informational)](https://github.com/jesperancinha/project-signer)|---|---|---|---|---|---|
+|Coffee paradigms simulator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)|---|---|---|---|---|---|
+|consolerizer-root|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Consolerizer&color=informational)](https://github.com/JEsperancinhaOrg/consolerizer-root)|---|---|---|---|---|---|
+|Bridge Management Logistics|---|---|---|---|---|---|---|
+|Joao Esperancinha Homepage Parent|---|---|---|---|---|---|---|
+|performance-projects|---|---|---|---|---|---|---|
+||---|---|---|---|---|---|---|
+|web-parser-php|---|---|---|---|---|---|---|
+|Ping App|---|---|---|---|---|---|---|
+|performance-xml-csv-json|---|---|---|---|---|---|---|
+|Docker images|---|---|---|---|---|---|---|
+|Rockstars Manager|---|---|---|---|---|---|---|
+|performance-misc|---|---|---|---|---|---|---|
+|hazelcast-reactive-conf|---|---|---|---|---|---|---|
+|bisca-je|---|---|---|---|---|---|---|
+|ws-math-service|---|---|---|---|---|---|---|
+|Social Media Private Data Zapper|---|---|---|---|---|---|---|
+|Matrix Anywhere|---|---|---|---|---|---|---|
+|xml-adder|---|---|---|---|---|---|---|
+|Favourite lyrics app|---|---|---|---|---|---|---|
+|med_dicom_service|---|---|---|---|---|---|---|
+|our airports app|---|---|---|---|---|---|---|
+|2b2bAndroidTests|---|---|---|---|---|---|---|
+|sz-catcher-app-android|---|---|---|---|---|---|---|
+|json-to-builder-pattern|---|---|---|---|---|---|---|
+|Buy Odd React|---|---|---|---|---|---|---|
+|Orbit simulator|---|---|---|---|---|---|---|
+|snmp-board-controller|---|---|---|---|---|---|---|
+|Auto Phishing Reporter|---|---|---|---|---|---|---|
+|inner-text-searcher|---|---|---|---|---|---|---|
+|java-test-drives-2|---|---|---|---|---|---|---|
+|jesperancinha-atm-finder|---|---|---|---|---|---|---|
+|rucola-generator|---|---|---|---|---|---|---|
+|microArduinoMe|---|---|---|---|---|---|---|
+|string.distance|---|---|---|---|---|---|---|
+|jeorg-algorithms-test-drives|---|---|---|---|---|---|---|
+|ReviewNinja-Welcome|---|---|---|---|---|---|---|
+|vertex-osgi-testdrive|---|---|---|---|---|---|---|
+|Parent of the test drives module for JEsperancinhaOrg|---|---|---|---|---|---|---|
+|map-reduce-jobs-tests|---|---|---|---|---|---|---|
+|xml-searcher-client|---|---|---|---|---|---|---|
+|sound-garage|---|---|---|---|---|---|---|
+|goblins-tale-strongswordfell|---|---|---|---|---|---|---|
+|airflights-clojure|---|---|---|---|---|---|---|
+|security-test-drives|---|---|---|---|---|---|---|
+|microPythonMe|---|---|---|---|---|---|---|
+|Xml searcher service:|---|---|---|---|---|---|---|
+|math-lib|---|---|---|---|---|---|---|
+|image-sizer|---|---|---|---|---|---|---|
+|formula-parser|---|---|---|---|---|---|---|
+|multi-image-comparer|---|---|---|---|---|---|---|
+|rust-test-drive|---|---|---|---|---|---|---|
+|android-joai-universitybaseconverter|---|---|---|---|---|---|---|
+|Images GoLang Library|---|---|---|---|---|---|---|
+|timezone-app-utility-android|---|---|---|---|---|---|---|
+||---|---|---|---|---|---|---|
+|Video Series App|---|---|---|---|---|---|---|
+|Note manager WebApp|---|---|---|---|---|---|---|
+|camel-test-drives|---|---|---|---|---|---|---|
+## [Tech](./Tech.md) - [Deployment](./Deployment.md) - [Testing](./Testing.md) - [Quality](./Quality.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Content](./Content.md) - [Info](./Info.md) - [Servers](./Servers.md) 
+

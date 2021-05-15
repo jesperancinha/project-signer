@@ -38,5 +38,10 @@
     "type": "DEPLOYMENT",
     "badgeFile": "jeorg.badges.deployment.json",
     "destinationFile": "Deployment.md"
+  },
+  {
+    "type": "TESTING",
+    "badgeFile": "jeorg.badges.testing.json",
+    "destinationFile": "Testing.md"
   }
 ]

@@ -35,13 +35,23 @@
     "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/nodejs-50.png"
   },
   {
-    "title": "Docker",
+    "title": "Angular",
     "badge": "alt text",
-    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/docker-50.png"
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/(angular|angularjs)-50.png"
   },
   {
-    "title": "Docker Compose",
+    "title": "ReactJS",
     "badge": "alt text",
-    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/docker-compose-50.png"
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/(react|reactjs)-50.png"
+  },
+  {
+    "title": "GraphQL",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/(graphql|graph-ql)-50.png"
+  },
+  {
+    "title": "Groovy",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/groovy-50.png"
   }
 ]
