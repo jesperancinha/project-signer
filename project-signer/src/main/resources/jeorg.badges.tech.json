@@ -30,11 +30,6 @@
     "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/python-50.png"
   },
   {
-    "title": "Spring",
-    "badge": "alt text",
-    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png"
-  },
-  {
     "title": "GraphQL",
     "badge": "alt text",
     "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/(graphql|graph-ql)-50.png"

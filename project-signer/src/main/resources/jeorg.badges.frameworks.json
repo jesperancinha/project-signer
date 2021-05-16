@@ -5,6 +5,11 @@
     "codePrefix": "img.shields.io/static"
   },
   {
+    "title": "Apache Camel",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/apache-camel-50.png"
+  },
+  {
     "title": "Spring",
     "badge": "alt text",
     "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png"
