@@ -32,7 +32,7 @@
   {
     "type": "TECH_JVM",
     "badgeFile": "jeorg.badges.techjvm.json",
-    "destinationFile": "Tech.md"
+    "destinationFile": "TechJVM.md"
   },
   {
     "type": "SERVERS",
