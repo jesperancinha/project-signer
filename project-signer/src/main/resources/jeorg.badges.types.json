@@ -30,6 +30,11 @@
     "destinationFile": "Tech.md"
   },
   {
+    "type": "TECH_JVM",
+    "badgeFile": "jeorg.badges.techjvm.json",
+    "destinationFile": "Tech.md"
+  },
+  {
     "type": "SERVERS",
     "badgeFile": "jeorg.badges.servers.json",
     "destinationFile": "Servers.md"
