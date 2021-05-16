@@ -21,7 +21,9 @@
 |jeorg-java-15-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-15-test-drives)|---|---|---|---|
 |jeorg-java-ee-7-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%207%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-7-test-drives)|---|---|---|---|
 |Geo Calculator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|---|---|
+|multi-image-comparer|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Multi%20Image%20Comparer&color=informational)](https://github.com/jesperancinha/multi-image-comparer)|---|---|---|---|
 |agent-network|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|---|
+|Images GoLang Library|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Images%20Go&color=informational)](https://github.com/jesperancinha/images-go)|---|---|---|---|
 |Markdowner|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Markdowner&color=informational)](https://github.com/jesperancinha/markdowner)|---|---|---|---|
 |ITF chartizate android|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=itf-chartizate-android&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)|---|---|---|---|
 |ITF Chartizate|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate&color=informational)](https://github.com/jesperancinha/itf-chartizate)|---|---|---|---|
@@ -60,7 +62,6 @@
 |Auto Phishing Reporter|---|---|---|---|---|
 |inner-text-searcher|---|---|---|---|---|
 |java-test-drives-2|---|---|---|---|---|
-|jesperancinha-atm-finder|---|---|---|---|---|
 |rucola-generator|---|---|---|---|---|
 |Joao Esperancinha Homepage Parent|---|---|---|---|---|
 |microArduinoMe|---|---|---|---|---|
@@ -79,10 +80,8 @@
 |math-lib|---|---|---|---|---|
 |image-sizer|---|---|---|---|---|
 |formula-parser|---|---|---|---|---|
-|multi-image-comparer|---|---|---|---|---|
 |rust-test-drive|---|---|---|---|---|
 |android-joai-universitybaseconverter|---|---|---|---|---|
-|Images GoLang Library|---|---|---|---|---|
 |timezone-app-utility-android|---|---|---|---|---|
 ||---|---|---|---|---|
 |Video Series App|---|---|---|---|---|

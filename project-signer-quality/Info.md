@@ -28,7 +28,9 @@
 |Image Train Filters For Android|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/image-train-filters-android.svg)](https://github.com/jesperancinha/image-train-filters-android/releases)|---|---|---|
 |Coffee paradigms simulator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)|---|---|---|---|---|[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/coffee-paradigms)|
 |Favourite lyrics app|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|[![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)|---|---|---|---|---|
+|multi-image-comparer|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Multi%20Image%20Comparer&color=informational)](https://github.com/jesperancinha/multi-image-comparer)|---|---|---|---|---|[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/multi-image-comparer)|
 |agent-network|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|---|---|[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/agent-network "agent-network")|
+|Images GoLang Library|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Images%20Go&color=informational)](https://github.com/jesperancinha/images-go)|---|---|---|---|---|[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/images-go)|
 |String Array Paradigms|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)|---|---|---|---|---|---|
 |Bridge Management Logistics|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Bridge%20Management%20Logistics&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|---|---|---|---|---|---|
 |International Airports Service|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=International%20Airports&color=informational)](https://bitbucket.org/jesperancinha/international-airports-service-root)|---|---|---|---|---|---|
@@ -39,7 +41,6 @@
 |bisca-je|---|---|---|---|---|---|---|
 |performance-projects|---|---|---|---|---|---|---|
 |json-to-builder-pattern|---|---|---|---|---|---|---|
-|multi-image-comparer|---|---|---|---|---|---|---|
 |Buy Odd React|---|---|---|---|---|---|---|
 ||---|---|---|---|---|---|---|
 |web-parser-php|---|---|---|---|---|---|---|
@@ -62,7 +63,6 @@
 |Auto Phishing Reporter|---|---|---|---|---|---|---|
 |inner-text-searcher|---|---|---|---|---|---|---|
 |java-test-drives-2|---|---|---|---|---|---|---|
-|jesperancinha-atm-finder|---|---|---|---|---|---|---|
 |rucola-generator|---|---|---|---|---|---|---|
 |Joao Esperancinha Homepage Parent|---|---|---|---|---|---|---|
 |microArduinoMe|---|---|---|---|---|---|---|
@@ -83,7 +83,6 @@
 |formula-parser|---|---|---|---|---|---|---|
 |rust-test-drive|---|---|---|---|---|---|---|
 |android-joai-universitybaseconverter|---|---|---|---|---|---|---|
-|Images GoLang Library|---|---|---|---|---|---|---|
 |timezone-app-utility-android|---|---|---|---|---|---|---|
 ||---|---|---|---|---|---|---|
 |Note manager WebApp|---|---|---|---|---|---|---|

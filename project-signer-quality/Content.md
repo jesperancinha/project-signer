@@ -33,12 +33,13 @@
 |Time Disruption Studios|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|
 |Favourite lyrics app|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|---|---|---|
 |Twitter Explorer|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Twitter%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/twitter-explorer)|---|---|---|
+|multi-image-comparer|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Multi%20Image%20Comparer&color=informational)](https://github.com/jesperancinha/multi-image-comparer)|---|---|---|
 |Geo Calculator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|---|
 |agent-network|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|
+|Images GoLang Library|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Images%20Go&color=informational)](https://github.com/jesperancinha/images-go)|---|---|---|
 |bisca-je|---|---|---|---|
 |performance-projects|---|---|---|---|
 |json-to-builder-pattern|---|---|---|---|
-|multi-image-comparer|---|---|---|---|
 |Buy Odd React|---|---|---|---|
 ||---|---|---|---|
 |web-parser-php|---|---|---|---|
@@ -61,7 +62,6 @@
 |Auto Phishing Reporter|---|---|---|---|
 |inner-text-searcher|---|---|---|---|
 |java-test-drives-2|---|---|---|---|
-|jesperancinha-atm-finder|---|---|---|---|
 |rucola-generator|---|---|---|---|
 |Joao Esperancinha Homepage Parent|---|---|---|---|
 |microArduinoMe|---|---|---|---|
@@ -82,7 +82,6 @@
 |formula-parser|---|---|---|---|
 |rust-test-drive|---|---|---|---|
 |android-joai-universitybaseconverter|---|---|---|---|
-|Images GoLang Library|---|---|---|---|
 |timezone-app-utility-android|---|---|---|---|
 ||---|---|---|---|
 |Video Series App|---|---|---|---|

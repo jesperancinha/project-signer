@@ -34,11 +34,12 @@
 |Twitter Explorer|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Twitter%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/twitter-explorer)|---|---|[![CircleCI](https://circleci.com/bb/jesperancinha/twitter-explorer.svg?style=svg)](https://circleci.com/bb/jesperancinha/twitter-explorer)|---|---|---|
 |bisca-je|---|[![Build Status](https://travis-ci.com/jesperancinha/biscaje.svg?branch=master)](https://travis-ci.com/jesperancinha/biscaje)|---|[![CircleCI](https://circleci.com/gh/jesperancinha/biscaje.svg?style=svg)](https://circleci.com/gh/jesperancinha/biscaje)|---|---|---|
 |performance-projects|---|[![Build Status](https://travis-ci.com/jesperancinha/performance-projects.svg?branch=master)](https://travis-ci.com/jesperancinha/performance-projects)|---|[![CircleCI](https://circleci.com/gh/jesperancinha/performance-projects.svg?style=svg)](https://circleci.com/gh/jesperancinha/performance-projects)|---|---|---|
+|multi-image-comparer|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Multi%20Image%20Comparer&color=informational)](https://github.com/jesperancinha/multi-image-comparer)|---|---|---|---|---|---|
 |jeorg-algorithms-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|---|---|---|---|---|---|
 |Geo Calculator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|---|---|---|---|
 |agent-network|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|---|---|---|
+|Images GoLang Library|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Images%20Go&color=informational)](https://github.com/jesperancinha/images-go)|---|---|---|---|---|---|
 |json-to-builder-pattern|---|---|---|[![CircleCI](https://circleci.com/gh/jesperancinha/json-to-builder-pattern.svg?style=svg)](https://circleci.com/gh/jesperancinha/json-to-builder-pattern)|---|---|---|
-|multi-image-comparer|---|---|---|---|---|---|---|
 |Buy Odd React|---|---|---|---|---|---|---|
 ||---|---|---|---|---|---|---|
 |web-parser-php|---|---|---|---|---|---|---|
@@ -61,7 +62,6 @@
 |Auto Phishing Reporter|---|---|---|---|---|---|---|
 |inner-text-searcher|---|---|---|---|---|---|---|
 |java-test-drives-2|---|---|---|---|---|---|---|
-|jesperancinha-atm-finder|---|---|---|---|---|---|---|
 |rucola-generator|---|---|---|---|---|---|---|
 |Joao Esperancinha Homepage Parent|---|---|---|---|---|---|---|
 |microArduinoMe|---|---|---|---|---|---|---|
@@ -82,7 +82,6 @@
 |formula-parser|---|---|---|---|---|---|---|
 |rust-test-drive|---|---|---|---|---|---|---|
 |android-joai-universitybaseconverter|---|---|---|---|---|---|---|
-|Images GoLang Library|---|---|---|---|---|---|---|
 |timezone-app-utility-android|---|---|---|---|---|---|---|
 ||---|---|---|---|---|---|---|
 |Video Series App|---|---|---|---|---|---|---|

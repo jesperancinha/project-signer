@@ -34,13 +34,14 @@
 |Image Train Filters For Android|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|---|---|---|---|---|---|
 |Coffee paradigms simulator|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)|---|---|---|---|---|---|---|---|
 |Favourite lyrics app|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|---|---|---|---|---|---|---|---|
+|multi-image-comparer|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Multi%20Image%20Comparer&color=informational)](https://github.com/jesperancinha/multi-image-comparer)|---|---|---|---|---|---|---|---|
+|Images GoLang Library|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Images%20Go&color=informational)](https://github.com/jesperancinha/images-go)|---|---|---|---|---|---|---|---|
 |String Array Paradigms|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)|---|---|---|---|---|---|---|---|
 |Time Disruption Studios|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|---|---|---|---|---|
 |Video Series App|---|---|---|---|---|---|---|---|---|
 |bisca-je|---|---|---|---|---|---|---|---|---|
 |performance-projects|---|---|---|---|---|---|---|---|---|
 |json-to-builder-pattern|---|---|---|---|---|---|---|---|---|
-|multi-image-comparer|---|---|---|---|---|---|---|---|---|
 |Buy Odd React|---|---|---|---|---|---|---|---|---|
 ||---|---|---|---|---|---|---|---|---|
 |web-parser-php|---|---|---|---|---|---|---|---|---|
@@ -63,7 +64,6 @@
 |Auto Phishing Reporter|---|---|---|---|---|---|---|---|---|
 |inner-text-searcher|---|---|---|---|---|---|---|---|---|
 |java-test-drives-2|---|---|---|---|---|---|---|---|---|
-|jesperancinha-atm-finder|---|---|---|---|---|---|---|---|---|
 |rucola-generator|---|---|---|---|---|---|---|---|---|
 |microArduinoMe|---|---|---|---|---|---|---|---|---|
 |string.distance|---|---|---|---|---|---|---|---|---|
@@ -83,7 +83,6 @@
 |formula-parser|---|---|---|---|---|---|---|---|---|
 |rust-test-drive|---|---|---|---|---|---|---|---|---|
 |android-joai-universitybaseconverter|---|---|---|---|---|---|---|---|---|
-|Images GoLang Library|---|---|---|---|---|---|---|---|---|
 |timezone-app-utility-android|---|---|---|---|---|---|---|---|---|
 ||---|---|---|---|---|---|---|---|---|
 |Note manager WebApp|---|---|---|---|---|---|---|---|---|
