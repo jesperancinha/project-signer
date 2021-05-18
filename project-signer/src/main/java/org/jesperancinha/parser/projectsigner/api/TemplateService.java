@@ -1,4 +1,4 @@
-package org.jesperancinha.parser.projectsigner.inteface;
+package org.jesperancinha.parser.projectsigner.api;
 
 import java.io.IOException;
 import java.util.List;

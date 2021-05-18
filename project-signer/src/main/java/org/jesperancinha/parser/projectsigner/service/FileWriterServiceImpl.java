@@ -5,7 +5,7 @@ import org.jesperancinha.parser.markdowner.badges.model.Badge;
 import org.jesperancinha.parser.markdowner.badges.model.BadgeSettingGroup;
 import org.jesperancinha.parser.markdowner.badges.model.BadgeType;
 import org.jesperancinha.parser.markdowner.badges.parser.BadgeParser;
-import org.jesperancinha.parser.projectsigner.inteface.FileWriterService;
+import org.jesperancinha.parser.projectsigner.api.FileWriterService;
 import org.jesperancinha.parser.projectsigner.model.ProjectData;
 import org.springframework.stereotype.Service;
 

@@ -3,8 +3,8 @@ package org.jesperancinha.parser.projectsigner.service;
 
 import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser;
 import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder;
+import org.jesperancinha.parser.projectsigner.api.OptionsService;
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
-import org.jesperancinha.parser.projectsigner.inteface.OptionsService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import picocli.CommandLine;

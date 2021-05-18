@@ -62,7 +62,7 @@ public class ProjectSignerOptions {
         return Arrays.stream(licenseLocations.split(",")).map(Path::of).toArray(Path[]::new);
     }
 
-    public Path getReportLocation(){
+    public Path getReportLocation() {
         return Path.of(reportLocation);
     }
 }

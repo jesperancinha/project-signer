@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
-import org.jesperancinha.parser.projectsigner.inteface.GeneratorService;
+import org.jesperancinha.parser.projectsigner.api.GeneratorService;
 import org.springframework.util.ObjectUtils;
 
 import java.io.IOException;

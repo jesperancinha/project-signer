@@ -4,9 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder;
 import org.jesperancinha.parser.markdowner.helper.TemplateParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
+import org.jesperancinha.parser.projectsigner.api.OptionsService;
+import org.jesperancinha.parser.projectsigner.api.TemplateService;
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
-import org.jesperancinha.parser.projectsigner.inteface.OptionsService;
-import org.jesperancinha.parser.projectsigner.inteface.TemplateService;
 import org.springframework.stereotype.Service;
 
 import java.io.File;

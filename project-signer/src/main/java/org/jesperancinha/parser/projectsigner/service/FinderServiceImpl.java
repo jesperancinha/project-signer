@@ -2,11 +2,10 @@ package org.jesperancinha.parser.projectsigner.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
+import org.jesperancinha.parser.projectsigner.api.FinderService;
+import org.jesperancinha.parser.projectsigner.api.GeneratorService;
+import org.jesperancinha.parser.projectsigner.api.TemplateService;
 import org.jesperancinha.parser.projectsigner.filter.ProjectSignerVisitor;
-import org.jesperancinha.parser.projectsigner.inteface.FinderService;
-import org.jesperancinha.parser.projectsigner.inteface.GeneratorService;
-import org.jesperancinha.parser.projectsigner.inteface.ReadmeService;
-import org.jesperancinha.parser.projectsigner.inteface.TemplateService;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;

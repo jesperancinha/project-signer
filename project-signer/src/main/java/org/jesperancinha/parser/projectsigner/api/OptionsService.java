@@ -1,4 +1,4 @@
-package org.jesperancinha.parser.projectsigner.inteface;
+package org.jesperancinha.parser.projectsigner.api;
 
 public interface OptionsService<T, P> {
 

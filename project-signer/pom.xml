@@ -17,10 +17,6 @@
     <dependencies>
         <dependency>
             <groupId>org.jesperancinha.parser</groupId>
-            <artifactId>project-signer-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jesperancinha.parser</groupId>
             <artifactId>markdowner-core</artifactId>
         </dependency>
         <dependency>

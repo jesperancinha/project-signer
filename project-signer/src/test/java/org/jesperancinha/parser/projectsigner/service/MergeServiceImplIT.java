@@ -1,7 +1,7 @@
 package org.jesperancinha.parser.projectsigner.service;
 
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
-import org.jesperancinha.parser.projectsigner.inteface.MergeService;
+import org.jesperancinha.parser.projectsigner.api.MergeService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

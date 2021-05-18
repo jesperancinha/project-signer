@@ -1,4 +1,4 @@
-package org.jesperancinha.parser.projectsigner.inteface;
+package org.jesperancinha.parser.projectsigner.api;
 
 import org.junit.jupiter.api.Test;
 
@@ -79,7 +79,7 @@ public class InterfacesTest {
             }
         };
 
-        final var readmeService = new ReadmeService<String,String>() {
+        final var readmeService = new ReadmeService<String, String>() {
 
             @Override
             public String readDataSprippedOfTags(InputStream templateInputStream, String... tags) throws IOException {

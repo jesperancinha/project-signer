@@ -1,7 +1,7 @@
 package org.jesperancinha.parser.projectsigner.service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.jesperancinha.parser.projectsigner.inteface.ReadmeService;
+import org.jesperancinha.parser.projectsigner.api.ReadmeService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
