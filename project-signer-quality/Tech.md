@@ -20,6 +20,7 @@
 |jeorg-camel-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Camel%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-camel-test-drives)|---|---|---|---|---|
 |Kitten House Care|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Kitten%20House%20Care&color=informational)](https://bitbucket.org/jesperancinha/kitten-house-care-parent/src/master/)|---|---|---|---|---|
 |jeorg-java-11-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%2011%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-11-test-drives)|---|---|---|---|---|
+|Your Finance App|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Your%20finance%20JE&color=informational)](https://github.com/jesperancinha/your-finance-je)|---|---|---|---|---|
 |kotlin-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Kotlin%20Test%20Drives&color=informational)](https://github.com/jesperancinha/kotlin-test-drives)|---|---|---|---|---|
 |Project Signer|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Project%20Signer&color=informational)](https://github.com/jesperancinha/project-signer)|---|---|---|---|---|
 |jeorg-java-15-test-drives|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-15-test-drives)|---|---|---|---|---|
@@ -30,7 +31,6 @@
 |ITF chartizate android|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=itf-chartizate-android&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)|---|---|---|---|---|
 |ITF Chartizate|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate&color=informational)](https://github.com/jesperancinha/itf-chartizate)|---|---|---|---|---|
 |String Array Paradigms|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)|---|---|---|---|---|
-|Your Finance App|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Your%20finance%20JE&color=informational)](https://github.com/jesperancinha/your-finance-je)|---|---|---|---|---|
 |Favourite lyrics app|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|---|---|---|---|---|
 |Image Train Filters For Android|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|---|---|---|
 |vma-archiver|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)|---|---|---|---|---|
