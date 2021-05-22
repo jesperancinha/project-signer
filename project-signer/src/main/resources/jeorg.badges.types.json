@@ -58,5 +58,10 @@
     "type": "STREAMING",
     "badgeFile": "jeorg.badges.streaming.json",
     "destinationFile": "Streaming.md"
+  },
+  {
+    "type": "ARTICLES",
+    "badgeFile": "jeorg.badges.articles.json",
+    "destinationFile": "Articles.md"
   }
 ]
