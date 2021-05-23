@@ -30,6 +30,11 @@
     "codePrefix": "img.shields.io/pypi/pyversions"
   },
   {
+    "title": "JavaDoc",
+    "badge": "javadoc",
+    "codePrefix": "javadoc.io/badge2"
+  },
+  {
     "title": "Twitter Share",
     "badge": "Twitter URL",
     "codePrefix": "img.shields.io/twitter/url"
