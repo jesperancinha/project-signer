@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Project",
+    "badge": "Generic badge",
+    "codePrefix": "img.shields.io/static"
+  },
+  {
+    "title": "Cassandra",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/cassandra-50.png"
+  },
+  {
+    "title": "H2",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/h2-50.png"
+  },
+  {
+    "title": "PostgreSQL",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/postgres-50.png"
+  },
+  {
+    "title": "Neo4J",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/neo4j-50.png"
+  }
+]

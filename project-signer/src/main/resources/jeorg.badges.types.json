@@ -76,5 +76,11 @@
     "type": "ENTERPRISE",
     "badgeFile": "jeorg.badges.enterprise.json",
     "destinationFile": "Enterprise.md"
+  },
+  {
+    "title": "Databases",
+    "type": "DATABASES",
+    "badgeFile": "jeorg.badges.databases.json",
+    "destinationFile": "Databases.md"
   }
 ]
