@@ -25,11 +25,13 @@
     "destinationFile": "Content.md"
   },
   {
+    "title": "Technologies",
     "type": "TECH",
     "badgeFile": "jeorg.badges.tech.json",
     "destinationFile": "Tech.md"
   },
   {
+    "title": "JVM Technologies",
     "type": "TECH_JVM",
     "badgeFile": "jeorg.badges.techjvm.json",
     "destinationFile": "TechJVM.md"
