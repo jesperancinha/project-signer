@@ -5,31 +5,6 @@
     "codePrefix": "img.shields.io/static"
   },
   {
-    "title": "Apache Camel",
-    "badge": "alt text",
-    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/apache-camel-50.png"
-  },
-  {
-    "title": "Spring",
-    "badge": "alt text",
-    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png"
-  },
-  {
-    "title": "Spring Webflux",
-    "badge": "alt text",
-    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-webflux-50.png"
-  },
-  {
-    "title": "Spring Reactor",
-    "badge": "alt text",
-    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-reactor-50.png"
-  },
-  {
-    "title": "KumuluzEE",
-    "badge": "alt text",
-    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/kumuluzee-50.png"
-  },
-  {
     "title": "Lombok",
     "badge": "alt text",
     "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/lombok-50.png"

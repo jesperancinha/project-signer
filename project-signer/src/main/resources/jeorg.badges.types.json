@@ -68,5 +68,11 @@
     "type": "RELEASES",
     "badgeFile": "jeorg.badges.releases.json",
     "destinationFile": "Releases.md"
+  },
+  {
+    "title": "Enterprise Frameworks",
+    "type": "ENTERPRISE",
+    "badgeFile": "jeorg.badges.enterprise.json",
+    "destinationFile": "Enterprise.md"
   }
 ]

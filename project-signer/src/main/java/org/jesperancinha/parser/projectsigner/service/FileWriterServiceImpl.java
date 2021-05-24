@@ -30,12 +30,12 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
     }
 
     @Override
-    public void exportReportFile(Path path, final List<ProjectData> projectDataList) throws IOException {
+    public void exportReportFile(Path path, final List<ProjectData> projectDataList) {
         BadgeParser.badgeTypes.values().forEach(badgeType -> {
             final var f = new File(path.toFile(), badgeType.getDestinationFile());
             try {
                 final var fileWriter = new FileWriter(f);
-                fileWriter.write(String.format("# %s Report\n\n", badgeType.getType()));
+                fileWriter.write(String.format("# %s Report\n\n", getTitle(badgeType)));
                 writeHyperLinks(fileWriter);
                 writeTitles(badgeType, fileWriter);
                 writeTopTable(badgeType, fileWriter);
@@ -57,11 +57,21 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
 
     private void writeHyperLinks(FileWriter fileWriter) throws IOException {
         final var links = BadgeParser.badgeTypes.values().stream()
-                .map(badgeType -> String.format("[%s](./%s)",
-                        badgeType.getDestinationFile().replace(".md", ""),
-                        badgeType.getDestinationFile()))
+                .map(badgeType -> {
+                    final String title = getTitle(badgeType);
+                    return String.format("[%s](./%s)",
+                            title,
+                            badgeType.getDestinationFile());
+                })
                 .collect(Collectors.joining(" - "));
         fileWriter.write(String.format("## %s \n\n", links));
+    }
+
+    private String getTitle(BadgeType badgeType) {
+        if (Objects.isNull(badgeType.getTitle())) {
+            return badgeType.getDestinationFile().replace(".md", "");
+        }
+        return badgeType.getTitle();
     }
 
     private void writeTitles(BadgeType badgeType, FileWriter fileWriter) throws IOException {
