@@ -38,7 +38,7 @@
 
 ## Description
 
-You can find all project statuses here [Project Statuse](./statuses/Build.md)
+You can find all project statuses here [Project Statuses](./statuses/Build.md)
 
 This project serves the purpose of automatically signing all projects from the root
 
