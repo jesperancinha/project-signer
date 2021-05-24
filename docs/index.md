@@ -38,6 +38,8 @@
 
 ## Description
 
+You can find all project statuses here [Project Statuse](./statuses/Build.md)
+
 This project serves the purpose of automatically signing all projects from the root
 
 The idea is to use something like:
