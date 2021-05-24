@@ -63,5 +63,10 @@
     "type": "ARTICLES",
     "badgeFile": "jeorg.badges.articles.json",
     "destinationFile": "Articles.md"
+  },
+  {
+    "type": "RELEASES",
+    "badgeFile": "jeorg.badges.releases.json",
+    "destinationFile": "Releases.md"
   }
 ]
