@@ -76,11 +76,13 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
 
     private void writeTitles(BadgeType badgeType, FileWriter fileWriter) throws IOException {
         final var badgeSettingGroup = BadgeParser.badgeSettingGroups.get(badgeType);
-        fileWriter.write("|Project Name");
+        fileWriter.write("|Project");
         badgeSettingGroup.getBadgeSettingList().forEach(badgePattern -> {
             try {
-                fileWriter.write("|");
-                fileWriter.write(badgePattern.getTitle());
+                if (!badgePattern.getTitle().equals("Project")) {
+                    fileWriter.write("|");
+                    fileWriter.write(badgePattern.getTitle());
+                }
             } catch (IOException e) {
                 log.error("Error!", e);
                 System.exit(1);
@@ -92,14 +94,22 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
 
     private void writeProjectData(BadgeType badgeType, FileWriter fileWriter, ProjectData projectData) {
         try {
-            fileWriter.write("|");
-            fileWriter.write(projectData.getTitle());
             final var badgeGroup = projectData.getBadgeGroupMap().get(badgeType);
 
             BadgeParser.badgeSettingGroups.get(badgeType).getBadgeSettingList()
                     .forEach(badgePattern -> {
                         final Badge badge = badgeGroup.getBadgeHashMap().get(badgePattern.getPattern());
-                        writeBadgeElement(fileWriter, badge);
+                        if (badgePattern.getTitle().equals("Project") && Objects.isNull(badge)) {
+                            try {
+                                fileWriter.write("|");
+                                fileWriter.write(projectData.getTitle());
+                            } catch (IOException e) {
+                                log.error("Error!", e);
+                                System.exit(1);
+                            }
+                        } else {
+                            writeBadgeElement(fileWriter, badge);
+                        }
                     });
             fileWriter.write("|\n");
             fileWriter.flush();
@@ -125,9 +135,7 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
 
     private void writeTopTable(BadgeType badgeType, FileWriter fileWriter) throws IOException {
         final BadgeSettingGroup badgeSettingGroup = BadgeParser.badgeSettingGroups.get(badgeType);
-        fileWriter.write("|---");
-        badgeSettingGroup.getBadgeSettingList().forEach(badgePattern
-                -> {
+        badgeSettingGroup.getBadgeSettingList().forEach(badgePattern -> {
             try {
                 fileWriter.write("|---");
             } catch (IOException e) {
