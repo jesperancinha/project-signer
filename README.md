@@ -142,6 +142,8 @@ mvn nexus-staging:release  -Prelease
 
 ## References
 
+-   [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)
+-   [github-profile-views-counter](https://github.com/antonkomarev/github-profile-views-counter)
 -   [App Icon Maker](https://appiconmaker.co/)
 -   [Dillinger](https://dillinger.io/)
 -   [JQ](https://stedolan.github.io/jq/download/)
