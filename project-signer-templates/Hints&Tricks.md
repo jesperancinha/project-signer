@@ -6,6 +6,19 @@
 openssl req -new -newkey rsa:4096 -nodes -keyout yourfinance.key -out yourfinance.csr
 openssl x509 -req -sha256 -days 365 -in yourfinance.csr -signkey yourfinance.key -out yourfinance.pem
 ```
+
+### NodeJS Update NPM Update
+
+```bash
+npm install npm@latest -g
+npm update -g
+npm install npm@latest -g
+npm update -g
+npm install -g npm-check-updates
+ncu -u
+npm update
+```
+
 ### Java installation via [SDKMAN!](https://sdkman.io/install)
 
 -   Install java versions with [SDKMan](https://sdkman.io/) for MAC-OS and Linux based systems
