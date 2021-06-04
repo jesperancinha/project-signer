@@ -17,6 +17,7 @@ npm update -g
 npm install -g npm-check-updates
 ncu -u
 npm update
+npm update --legacy-peer-deps
 ```
 
 ### Java installation via [SDKMAN!](https://sdkman.io/install)
