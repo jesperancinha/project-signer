@@ -7,7 +7,7 @@
   {
     "title": "Travis",
     "badge": "Build Status",
-    "codePrefix": "travis-ci.com"
+    "codePrefix": "(www.)*travis-ci.com"
   },
   {
     "title": "App Surveyor",
