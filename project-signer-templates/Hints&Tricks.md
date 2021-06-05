@@ -10,6 +10,7 @@ openssl x509 -req -sha256 -days 365 -in yourfinance.csr -signkey yourfinance.key
 ### NodeJS Update NPM Update
 
 ```bash
+npm audit fix
 npm install npm@latest -g
 npm update -g
 npm install npm@latest -g
@@ -18,6 +19,7 @@ npm install -g npm-check-updates
 ncu -u
 npm update
 npm update --legacy-peer-deps
+yarn install
 ```
 
 ### Java installation via [SDKMAN!](https://sdkman.io/install)
