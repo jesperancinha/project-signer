@@ -86,7 +86,11 @@
 |rust-test-drive|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/@jofisaes)|
 |android-joai-universitybaseconverter|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/@jofisaes)|
 |timezone-app-utility-android|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/@jofisaes)|
+|Kotlin for Java Developers. Week 2|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/@jofisaes)|
 ||[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/@jofisaes)|
+|Kotlin for Java Developers. Week 5|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/@jofisaes)|
 |Note manager WebApp|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/@jofisaes)|
+|Kotlin for Java Developers. Week 4|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/@jofisaes)|
+|Kotlin for Java Developers. Week 3|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/@jofisaes)|
 ## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 

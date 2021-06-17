@@ -85,8 +85,12 @@
 |rust-test-drive|---|---|---|---|---|---|
 |android-joai-universitybaseconverter|---|---|---|---|---|---|
 |timezone-app-utility-android|---|---|---|---|---|---|
+|Kotlin for Java Developers. Week 2|---|---|---|---|---|---|
 ||---|---|---|---|---|---|
 |Video Series App|---|---|---|---|---|---|
+|Kotlin for Java Developers. Week 5|---|---|---|---|---|---|
 |Note manager WebApp|---|---|---|---|---|---|
+|Kotlin for Java Developers. Week 4|---|---|---|---|---|---|
+|Kotlin for Java Developers. Week 3|---|---|---|---|---|---|
 ## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 
