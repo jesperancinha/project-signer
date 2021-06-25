@@ -33,15 +33,16 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Med%20Dicom%20Service&color=informational)](https://github.com/jesperancinha/med_dicom_service)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver&color=informational)](https://github.com/jesperancinha/vma-archiver)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEOrg%20Cloud%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-cloud-test-drives)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Multi%20Image%20Comparer&color=informational)](https://github.com/jesperancinha/multi-image-comparer)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Images%20Go&color=informational)](https://github.com/jesperancinha/images-go)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=itf-chartizate-android&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)|---|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Security%20Test%20Drives&color=informational)](https://github.com/jesperancinha/security-test-drives)|---|---|---|---|---|
 |Joao Esperancinha Homepage Parent|---|---|---|---|---|
 |Video Series App|---|---|---|---|---|
 |performance-projects|---|---|---|---|---|
@@ -77,7 +78,6 @@
 |xml-searcher-client|---|---|---|---|---|
 |sound-garage|---|---|---|---|---|
 |goblins-tale-strongswordfell|---|---|---|---|---|
-|security-test-drives|---|---|---|---|---|
 |microPythonMe|---|---|---|---|---|
 |Xml searcher service:|---|---|---|---|---|
 |math-lib|---|---|---|---|---|
