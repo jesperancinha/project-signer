@@ -5,11 +5,6 @@
     "codePrefix": "img.shields.io/static"
   },
   {
-    "title": "Travis",
-    "badge": "Build Status",
-    "codePrefix": "(www.)*travis-ci.com"
-  },
-  {
     "title": "App Surveyor",
     "badge": "Build status",
     "codePrefix": "ci.appveyor.com"
