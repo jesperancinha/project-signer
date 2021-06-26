@@ -82,5 +82,11 @@
     "type": "DATABASES",
     "badgeFile": "jeorg.badges.databases.json",
     "destinationFile": "Databases.md"
+  },
+  {
+    "title": "Package Manager",
+    "type": "PKGMANAGER",
+    "badgeFile": "jeorg.badges.pkgmanager.json",
+    "destinationFile": "PkgManager.md"
   }
 ]
