@@ -1,6 +1,6 @@
 # Content Report
 
-## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
+## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 
 |Project|Language Count|Top Language|Code Size|
 |---|---|---|---|
@@ -15,6 +15,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Consolerizer&color=informational)](https://github.com/JEsperancinhaOrg/consolerizer-root)|[![GitHub language count](https://img.shields.io/github/languages/count/JEsperancinhaOrg/consolerizer-root.svg)](#)|[![GitHub top language](https://img.shields.io/github/languages/top/JEsperancinhaOrg/consolerizer-root.svg)](#)|[![GitHub top language](https://img.shields.io/github/languages/code-size/JEsperancinhaOrg/consolerizer-root.svg)](#)|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate)|[![GitHub language count](https://img.shields.io/github/languages/count/JEsperancinhaOrg/itf-chartizate.svg)](#)|[![GitHub top language](https://img.shields.io/github/languages/top/JEsperancinhaOrg/itf-chartizate.svg)](#)|[![GitHub top language](https://img.shields.io/github/languages/code-size/JEsperancinhaOrg/itf-chartizate.svg)](#)|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate%20Modules&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-modules)|[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/itf-chartizate-modules.svg)](#)|[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/itf-chartizate-modules.svg)](#)|[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/itf-chartizate-modules.svg)](#)|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JSON%20to%20Builder%20Pattern&color=informational)](https://github.com/jesperancinha/json-to-builder-pattern)|[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/json-to-builder-pattern.svg)]()|[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/json-to-builder-pattern.svg)]()|[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/json-to-builder-pattern.svg)]()|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%207%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-7-test-drives)|[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/jeorg-java-ee-7-test-drives.svg)](#)|[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/jeorg-java-ee-7-test-drives.svg)](#)|[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/jeorg-java-ee-7-test-drives.svg)](#)|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Kalah%20Coffee%20Mugs&color=informational)](https://github.com/jesperancinha/mancalaje)|[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/mancalaje.svg)](#)|[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/mancalaje.svg)](#)|[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/mancalaje.svg)](#)|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/jeorg-algorithms-test-drives.svg)](#)|[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/jeorg-algorithms-test-drives.svg)](#)|[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/jeorg-algorithms-test-drives.svg)](#)|
@@ -46,7 +47,6 @@
 |Joao Esperancinha Homepage Parent|---|---|---|
 |Video Series App|---|---|---|
 |performance-projects|---|---|---|
-|json-to-builder-pattern|---|---|---|
 |Buy Odd React|---|---|---|
 ||---|---|---|
 |web-parser-php|---|---|---|
@@ -92,5 +92,5 @@
 |Note manager WebApp|---|---|---|
 |Kotlin for Java Developers. Week 4|---|---|---|
 |Kotlin for Java Developers. Week 3|---|---|---|
-## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
+## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 
