@@ -9,7 +9,7 @@
     <properties>
         <markdowner.version>${parent.version}</markdowner.version>
         <project-signer-api.version>${parent.version}</project-signer-api.version>
-        <commons-io.version>2.9.0</commons-io.version>
+        <commons-io.version>2.10.0</commons-io.version>
         <java.version>11</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
