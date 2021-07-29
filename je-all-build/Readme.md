@@ -34,8 +34,9 @@ Tag 0.0.3
 -   alias ll='ls -l -a --color=auto'
 -   yarn update
 
-Tag 0.0.4 (under construction)
+Tag 0.0.4
 -   software properties common
+-   SDKMAN for Scala and SBT
 
 This is only the base image for all sub-jdk images
 This image is meant to be used in build pipelines, where a lot of utilities, package managers and run-times are needed.

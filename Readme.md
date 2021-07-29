@@ -55,6 +55,9 @@ docker build . -t "<image ID>"
 
 docker run "<container ID>" -d -p 8080:80 -p 5000:5000 "<image ID>"
 
+docker system prune -a
+
+docker builder prune
 ```
 
 ## Tools & Tips
