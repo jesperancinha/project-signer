@@ -106,6 +106,11 @@ git push --tags
 git pull --prune --tags
 ```
 
+### Git tag datetime listing
+
+```bash
+git for-each-ref --format="%(refname:short) | %(creatordate)" "refs/tags/*"
+```
 
 ### [pbcopy](http://sweetme.at/2013/11/17/copy-to-and-paste-from-the-clipboard-on-the-mac-osx-command-line/)
 
@@ -142,4 +147,5 @@ mvn io.spring.javaformat:spring-javaformat-maven-plugin:0.0.27:apply
 
 ## References
 
--   [How can I change the author name / email of a commit?](https://www.git-tower.com/learn/git/faq/change-author-name-email)
+- [How can I change the author name / email of a commit?](https://www.git-tower.com/learn/git/faq/change-author-name-email)
+- [Get the time and date of git tags](https://stackoverflow.com/questions/13208734/get-the-time-and-date-of-git-tags/13208830)
