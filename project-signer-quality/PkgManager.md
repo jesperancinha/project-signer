@@ -4,7 +4,9 @@
 
 |Project|Maven|Gradle|SBT|NPM|
 |---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Kalah%20Coffee%20Mugs&color=informational)](https://github.com/jesperancinha/mancalaje)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/apache-maven-50.png "Maven")](https://maven.apache.org/)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Kotlin%20Test%20Drives&color=informational)](https://github.com/jesperancinha/kotlin-test-drives)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/apache-maven-50.png "Maven")](https://maven.apache.org/)|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Concert%20Demos&color=informational)](https://github.com/jesperancinha/concert-demos-root)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/apache-maven-50.png "Maven")](https://maven.apache.org/)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Scala%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-scala-test-drives)|---|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/sbt-50.png "Scala")](https://www.scala-sbt.org/)|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Project%20Signer&color=informational)](https://github.com/jesperancinha/project-signer)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/apache-maven-50.png "Maven")](https://maven.apache.org/)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JSON%20to%20Builder%20Pattern&color=informational)](https://github.com/jesperancinha/json-to-builder-pattern)|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/gradle-50.png "Gradle")](https://gradle.org/)|---|---|
@@ -16,7 +18,6 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate%20Modules&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-modules)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Consolerizer&color=informational)](https://github.com/JEsperancinhaOrg/consolerizer-root)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Markdowner&color=informational)](https://github.com/jesperancinha/markdowner)|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Kalah%20Coffee%20Mugs&color=informational)](https://github.com/jesperancinha/mancalaje)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%205%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Sea%20Shell%20Archiver&color=informational)](https://github.com/jesperancinha/sea-shell-archiver)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Master%205%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-master-5-test-drives)|---|---|---|---|
@@ -25,7 +26,6 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Your%20finance%20JE&color=informational)](https://github.com/jesperancinha/your-finance-je)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%207%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-7-test-drives)|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Concert%20Demos&color=informational)](https://github.com/jesperancinha/concert-demos-root)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Camel%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-camel-test-drives)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Twitter%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/twitter-explorer)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Kitten%20House%20Care&color=informational)](https://bitbucket.org/jesperancinha/kitten-house-care-parent/src/master/)|---|---|---|---|
