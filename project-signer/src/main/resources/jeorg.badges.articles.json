@@ -9,5 +9,11 @@
     "badge": "alt text",
     "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png",
     "linkPrefix": "medium.com/swlh"
+  },
+  {
+    "title": "Blogs",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png",
+    "linkPrefix": "joaofilipesabinoesperancinha.nl/blog"
   }
 ]
