@@ -39,6 +39,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Kitten%20House%20Care&color=informational)](https://bitbucket.org/jesperancinha/kitten-house-care-parent/src/master/)|[![Codacy Badge](https://app.codacy.com/project/badge/Grade/7a61b7f1783d4394a183d53c2564c728)](https://www.codacy.com/manual/jofisaes/kitten-house-care-parent?utm_source=jesperancinha@bitbucket.org&amp;utm_medium=referral&amp;utm_content=jesperancinha/kitten-house-care-parent&amp;utm_campaign=Badge_Grade)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App&color=informational)](https://gitlab.com/jesperancinha/favourite-lyrics-app)|[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f58be73117224ce0848b951e3a446b45)](https://www.codacy.com/gl/jesperancinha/favourite-lyrics-app/dashboard?utm_source=gitlab.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/favourite-lyrics-app&amp;utm_campaign=Badge_Grade)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Buy%20Odd%20React&color=informational)](https://github.com/jesperancinha/buy-odd-react)|---|---|---|[![Known Vulnerabilities](https://snyk.io/test/github/jesperancinha/buy-odd-react/badge.svg)](https://snyk.io/test/github/jesperancinha/buy-odd-react)|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Video%20Series%20Apps&color=informational)](https://gitlab.com/jesperancinha/video-series-app)|[![Codacy Badge](https://app.codacy.com/project/badge/Grade/c591f713eab546b0a7ff4150017bca8a)](https://www.codacy.com/gl/jesperancinha/video-series-app/dashboard?utm_source=gitlab.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/video-series-app&amp;utm_campaign=Badge_Grade)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Web%20Parser%20CSV&color=informational)](https://github.com/jesperancinha/web-parser-csv)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=StaCo%20App%20&color=informational)](https://github.com/jesperancinha/staco-app)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEOrg%20Cloud%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-cloud-test-drives)|---|---|---|---|
@@ -88,7 +89,6 @@
 |android-joai-universitybaseconverter|---|---|---|---|
 |timezone-app-utility-android|---|---|---|---|
 ||---|---|---|---|
-|Video Series App|---|---|---|---|
 |Note manager WebApp|---|---|---|---|
 ## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 
