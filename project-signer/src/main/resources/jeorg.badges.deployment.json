@@ -23,5 +23,10 @@
     "title": "Mini Kube",
     "badge": "alt text",
     "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/(mini-kube|minikube)-50.png"
+  },
+  {
+    "title": "Test containers",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/testcontainers-50.png"
   }
 ]
