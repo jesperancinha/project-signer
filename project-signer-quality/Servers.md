@@ -18,10 +18,10 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Sea%20Shell%20Archiver&color=informational)](https://github.com/jesperancinha/sea-shell-archiver)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-15-test-drives)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Twitter%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/twitter-explorer)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Video%20Series%20Apps&color=informational)](https://gitlab.com/jesperancinha/video-series-app)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App&color=informational)](https://gitlab.com/jesperancinha/favourite-lyrics-app)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=International%20Airports&color=informational)](https://bitbucket.org/jesperancinha/international-airports-service-root)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Video%20Series%20Apps&color=informational)](https://gitlab.com/jesperancinha/video-series-app)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JSON%20to%20Builder%20Pattern&color=informational)](https://github.com/jesperancinha/json-to-builder-pattern)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Project%20Signer&color=informational)](https://github.com/jesperancinha/project-signer)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Markdowner&color=informational)](https://github.com/jesperancinha/markdowner)|---|---|---|---|---|
