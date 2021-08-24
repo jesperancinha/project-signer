@@ -118,6 +118,24 @@ git for-each-ref --format="%(refname:short) | %(creatordate)" "refs/tags/*"
 curl -L "http://coolsite.com" | pbcopy
 ```
 
+
+## Upgrade [YARN](https://yarnpkg.com/)
+
+```bash
+curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+```
+
+## Remove Docker-machine
+
+NOTE: This process will remove old docker-machine installations.
+User [Docker-Desktop](https://www.docker.com/products/docker-desktop) instead.
+
+```bash
+brew uninstall docker-machine-driver-vmware
+brew uninstall --force docker-machine
+docker system prune -a
+```
+
 ### Git History Email Change
 
 ```bash
