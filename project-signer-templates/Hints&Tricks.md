@@ -106,6 +106,30 @@ git push --tags
 git pull --prune --tags
 ```
 
+### Setting up OpenShift [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/openshift-50.png)](https://manage.openshift.com/)
+
+-   Open an account
+	
+	-   [Openshift online](https://manage.openshift.com/)
+
+-   Setup OKD (Original Community Distribution of Kubernetes)
+	
+	-   [OKD](https://www.okd.io/index.html)
+
+## Install Minishift
+
+```bash
+brew cask install minishift
+brew cask install --force minishift
+minishift addons install --defaults
+minishift addons enable admin-user
+minishift start --vm-driver=virtualbox
+brew install openshift-cli
+oc adm policy --as system:admin add-cluster-role-to-user cluster-admin developer
+minishift console
+oc create rolebinding default-view --clusterrole=view --serviceaccount=mancalaje:default --namespace=mancalaje
+```
+
 ### Git tag datetime listing
 
 ```bash
