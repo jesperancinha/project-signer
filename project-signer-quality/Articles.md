@@ -18,11 +18,11 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Master%205%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-master-5-test-drives)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Camel%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-camel-test-drives)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=City%20Library%20Management%20🏢&color=informational)](https://github.com/jesperancinha/advanced-library-management)|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=From%20Paris%20to%20Berlin&color=informational)](https://github.com/jesperancinha/from-paris-to-berlin-circuit-breaker)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=From%20Paris%20to%20Berlin%20🛣&color=informational)](https://github.com/jesperancinha/from-paris-to-berlin-circuit-breaker)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JSON%20to%20Builder%20Pattern&color=informational)](https://github.com/jesperancinha/json-to-builder-pattern)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%205%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Project%%20Signer%20🖋&color=informational)](https://github.com/jesperancinha/project-signer)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Project%20Signer%20🖋&color=informational)](https://github.com/jesperancinha/project-signer)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Markdowner&color=informational)](https://github.com/jesperancinha/markdowner)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Consolerizer&color=informational)](https://github.com/JEsperancinhaOrg/consolerizer-root)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate)|---|---|
