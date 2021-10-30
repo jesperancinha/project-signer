@@ -2,7 +2,7 @@
 
 ---
 
-[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Project%20Signer&color=informational)](https://github.com/jesperancinha/project-signer)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Project%%20Signer%20🖋&color=informational)](https://github.com/jesperancinha/project-signer)
 [![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/project-signer.svg)](https://github.com/jesperancinha/project-signer/releases)
 [![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
 
