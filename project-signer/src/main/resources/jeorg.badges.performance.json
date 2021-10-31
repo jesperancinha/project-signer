@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Project",
+    "badge": "Generic badge",
+    "codePrefix": "img.shields.io/static"
+  },
+  {
+    "title": "Locust",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/locust-50.png"
+  },
+  {
+    "title": "JMeter",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/jmeter-50.png"
+  }
+]

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>project-signer-root</artifactId>
-    <version>3.0.3</version>
+    <version>3.0.4</version>
     <packaging>pom</packaging>
     <properties>
         <markdowner.version>${parent.version}</markdowner.version>
@@ -19,12 +19,12 @@
         <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
         <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
         <jaxb-api.version>2.3.1</jaxb-api.version>
-        <spring-boot-maven-plugin.version>2.4.5</spring-boot-maven-plugin.version>
+        <spring-boot-maven-plugin.version>2.5.5</spring-boot-maven-plugin.version>
     </properties>
     <parent>
         <groupId>org.jesperancinha.parser</groupId>
         <artifactId>markdowner</artifactId>
-        <version>3.0.3</version>
+        <version>3.0.4</version>
     </parent>
     <dependencyManagement>
         <dependencies>

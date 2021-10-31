@@ -88,5 +88,11 @@
     "type": "PKGMANAGER",
     "badgeFile": "jeorg.badges.pkgmanager.json",
     "destinationFile": "PkgManager.md"
+  },
+  {
+    "title": "Performance Tools",
+    "type": "PERFORMANCE",
+    "badgeFile": "jeorg.badges.performance.json",
+    "destinationFile": "Performance.md"
   }
 ]

@@ -92,7 +92,7 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs, ProjectData>
                     ProjectData
                             .builder()
                             .title(readme.split("\n")[0].replace("#", "").strip())
-                            .badgeGroupMap(BadgeParser.parse(nonRefText))
+                            .badgeGroupMap(BadgeParser.parse(readme))
                             .build());
         }
         mergeService.writeMergedResult(readmePath, nonRefText);

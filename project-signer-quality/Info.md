@@ -1,6 +1,6 @@
 # Info Report
 
-## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
+## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Performance Tools](./Performance.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 
 |Project|License|JavaDoc|Twitter Share|
 |---|---|---|---|
@@ -93,5 +93,5 @@
 |timezone-app-utility-android|---|---|---|
 ||---|---|---|
 |Note manager WebApp|---|---|---|
-## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
+## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Performance Tools](./Performance.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 
