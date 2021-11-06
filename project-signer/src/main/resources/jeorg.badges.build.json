@@ -5,6 +5,11 @@
     "codePrefix": "img.shields.io/static"
   },
   {
+    "title": "Ready",
+    "badge": "Status badge",
+    "codePrefix": "img.shields.io/static"
+  },
+  {
     "title": "App Surveyor",
     "badge": "Build status",
     "codePrefix": "ci.appveyor.com"
