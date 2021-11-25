@@ -5,8 +5,8 @@
 [![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Project%20Signer%20🖋&color=informational)](https://github.com/jesperancinha/project-signer)
 [![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/project-signer.svg)](https://github.com/jesperancinha/project-signer/releases)
 [![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
-
 [![CircleCI](https://circleci.com/gh/jesperancinha/project-signer.svg?style=svg)](https://circleci.com/gh/jesperancinha/project-signer)
+
 [![Build status](https://ci.appveyor.com/api/projects/status/eyx7uhjenc7m6s9j/branch/master?svg=true)](https://ci.appveyor.com/project/jesperancinha/project-signer/branch/master)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d423415df34f42bf821ae13a078094c9)](https://www.codacy.com/app/jofisaes/project-signer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/project-signer&amp;utm_campaign=Badge_Grade)
