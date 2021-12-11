@@ -1,0 +1,18 @@
+services:
+
+  postgres:
+    hostname: postgres
+    container_name: postgres
+    image: postgres:14.1
+    volumes:
+      - ./init-scripts:/docker-entrypoint-initdb.d
+      - ./init-scripts/multiple:/docker-entrypoint-initdb.d/multiple
+      - ./init-scripts/multiple/stacos:/docker-entrypoint-initdb.d/multiple/stacos
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_MULTIPLE_DATABASES=staco:stacos,stacky
+    ports:
+      - "5432:5432"
+    expose:
+      - "5432"
