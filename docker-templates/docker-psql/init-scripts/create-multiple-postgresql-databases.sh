@@ -14,7 +14,7 @@
 # You can specify a bundle of scripts to execute in a certain folder per database like so <database>:<folder> as one of these elements
 # To specify the user use POSTGRES_USER
 # To specify the database use POSTGRES_PASSWORD
-# This script is available to download in a small example I've created in
+# This script is available to download in a small example I've created in https://github.com/jesperancinha/project-signer/tree/master/docker-templates/docker-psql
 
 
 set -e
