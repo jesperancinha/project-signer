@@ -8,10 +8,12 @@ services:
       - ./init-scripts:/docker-entrypoint-initdb.d
       - ./init-scripts/multiple:/docker-entrypoint-initdb.d/multiple
       - ./init-scripts/multiple/stacos:/docker-entrypoint-initdb.d/multiple/stacos
+      - ./init-scripts/multiple/furniture:/docker-entrypoint-initdb.d/multiple/furniture
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_MULTIPLE_DATABASES=staco:stacos,stacky
+      - POSTGRES_MULTIPLE_DATABASES=staco:stacos,stacky,furniture
+      - POSTGRES_FOLDER_MAPPING=true
     ports:
       - "5432:5432"
     expose:

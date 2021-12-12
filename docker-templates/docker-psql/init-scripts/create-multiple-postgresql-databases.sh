@@ -12,32 +12,53 @@
 # You can disable this by setting variable POSTGRES_SCAN_DISABLED to true
 # Databases are declared in POSTGRES_MULTIPLE_DATABASES as a comma separated string of database tags
 # You can specify a bundle of scripts to execute in a certain folder per database like so <database>:<folder> as one of these elements
-# To specify the user use POSTGRES_USER
-# To specify the database use POSTGRES_PASSWORD
+# If you wish to use folders with the same name as the database and don't want to use this notation then you have to set POSTGRES_FOLDER_MAPPING to true
+# To specify the database user use POSTGRES_USER
+# To specify the database password use POSTGRES_PASSWORD
+# The script creates a user with the given name who has the given password
+# It also creates another user with the database name and the given password per database created
+# If both match, then only one user is created with the database name and the given password
 # This script is available to download in a small example I've created in https://github.com/jesperancinha/project-signer/tree/master/docker-templates/docker-psql
 
 
 set -e
 set -u
 
-POSTGRES_SCAN_DISABLED="${POSTGRES_SCAN_DISABLED:-false}"  # If variable not set or null, use default.
+POSTGRES_SCAN_DISABLED="${POSTGRES_SCAN_DISABLED:-false}"
+POSTGRES_FOLDER_MAPPING="${POSTGRES_FOLDER_MAPPING:-false}"
 
 function create_user_and_database() {
   database=$(echo "$command" | awk -F':' '{print $1}')
 	echo "  Creating user and database '$database'"
-	psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
-	    CREATE USER $database;
+	psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" -tc "SELECT 1 FROM pg_user WHERE usename = '$database'" | \
+	  grep -q 1 || \
+	  psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
+	    CREATE USER $database with PASSWORD '$POSTGRES_PASSWORD';
 	    CREATE DATABASE $database;
 	    GRANT ALL PRIVILEGES ON DATABASE $database TO $database;
 EOSQL
 }
 
-function importFileToDatabase() {
+function import_file_to_database() {
   echo "Importing file $2 to database $1..."
   psql -U "$POSTGRES_USER" -d "$1" -f "$2"
 }
 
-function createAndImportFiles(){
+function import_files_from_folder() {
+  directory=$1
+  database=$2
+  echo "Database bundle $directory for database $database requested"
+  if [ -d "$directory" ]; then
+    for script in "$directory"/*.sql; do
+        echo "Request importing file $script to database $database"
+        import_file_to_database "$database" "$script"
+    done
+  else
+    echo "WARNING: No script bundle directory found for database $database"
+  fi
+}
+
+function create_and_import_files(){
   local rootDir="docker-entrypoint-initdb.d/multiple/"
   if [ -n "$POSTGRES_MULTIPLE_DATABASES" ]; then
     echo "Multiple database creation requested: $POSTGRES_MULTIPLE_DATABASES"
@@ -46,23 +67,23 @@ function createAndImportFiles(){
       if [[ "$command" == *":"* ]]; then
         database=$(echo "$command" | awk -F':' '{print $1}')
         directory=$rootDir$(echo "$command" | awk -F':' '{print $2}')
-        echo "Database bundle $directory for database $database requested"
-        for script in "$directory"/*.sql; do
-            echo "Request importing file $script to database $database"
-            importFileToDatabase "$database" "$script"
-        done
+        import_files_from_folder "$directory" "$database"
+      elif [ "$POSTGRES_FOLDER_MAPPING" == true ]; then
+         if [[ "$command" != *":"* ]]; then
+           import_files_from_folder "$rootDir$database" "$database"
+         fi
       fi
       if [ "$POSTGRES_SCAN_DISABLED" != true ]; then
         database=$(echo "$command" | awk -F':' '{print $1}')
         echo "Auto-scanning files for database $database"
         echo "Auto-scanning schema files"
-        schemaFile=$rootDir"schema-$database.sql"
-        if [ -f "$schemaFile" ]; then
-                importFileToDatabase "$database" "$schemaFile"
+        schema_file=$rootDir"schema-$database.sql"
+        if [ -f "$schema_file" ]; then
+                import_file_to_database "$database" "$schema_file"
                 echo "Auto-scanning data files"
-                schemaData=$rootDir"data-$database.sql"
-                if [ -f "$schemaData" ]; then
-                        importFileToDatabase "$database" "$schemaData"
+                schema_data=$rootDir"data-$database.sql"
+                if [ -f "$schema_data" ]; then
+                        import_file_to_database "$database" "$schema_data"
                 else
                   echo "WARNING: No data file detected for database $database"
                 fi
@@ -75,4 +96,4 @@ function createAndImportFiles(){
   fi
 }
 
-createAndImportFiles;
+create_and_import_files;

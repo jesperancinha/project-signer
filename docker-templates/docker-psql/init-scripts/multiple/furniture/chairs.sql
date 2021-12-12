@@ -1,6 +1,8 @@
-create table if not exists stacos_sta_co
+create table if not exists chairs_sta_co_staco
 (
-    id                  varchar(255) not null primary key,
+    id                  varchar(255) not null
+        constraint staco_pkey
+            primary key,
     description         varchar(255),
     year                varchar(255),
     value               varchar(255),
