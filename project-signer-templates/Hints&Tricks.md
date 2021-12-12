@@ -22,6 +22,17 @@ npm update --legacy-peer-deps
 yarn install
 ```
 
+### Node JS installation via [NVM](https://github.com/nvm-sh/nvm)
+
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" c
+nvm install 16.13.0
+```
+
+> HOME is your home directory. This may change according to the system you are running this script in.
+
 ### Java installation via [SDKMAN!](https://sdkman.io/install)
 
 -   Install java versions with [SDKMan](https://sdkman.io/) for MAC-OS and Linux based systems
@@ -29,11 +40,16 @@ yarn install
 ```bash
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
+```
+
+```shell
 sdk install java 8.0.242.hs-adpt
 sdk install java 11.0.6.hs-adpt
 sdk install java 12.0.2.hs-adpt
 sdk install java 13.0.2.hs-adpt
 sdk install java 14.0.0.hs-adpt
+sdk install java 16.0.1.hs-adpt
+sdk install java java 17-open
 ```
 
 ### Java installation via [APT](http://manpages.ubuntu.com/manpages/xenial/en/man8/apt.8.html)
@@ -55,27 +71,21 @@ sudo apt -y autoremove
 
 ### Aliases to switch version
 
-#### With [MinGW](http://www.mingw.org/)
+#### General aliases
 
 - .bashrc file to get GitPrompt, [SDKMAN](https://sdkman.io/) and some handy aliases in a Windows environment with [MinGW](http://www.mingw.org/) or just in a MAC-OS environment.
 
 ```bash
-if [ -f "/root/.bash-git-prompt/gitprompt.sh" ]; then
-    GIT_PROMPT_ONLY_IN_REPO=1
-    source /root/.bash-git-prompt/gitprompt.sh
-fi
-
-alias java8="sdk use java 8.0.242.hs-adpt"
-alias java11="sdk use java  11.0.6.hs-adpt"
-alias java12="sdk use java 12.0.2.hs-adpt"
-alias java13="sdk use java 13.0.2.hs-adpt"
-alias java14="sdk use java 14.0.0.hs-adpt"
-alias m2disable="rm ~/.m2/settings.xml"
-alias m2enable="cp /your_repo_folder/settings.xml ~/.m2/"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/root/.sdkman"
-[[ -s "/root/.sdkman/bin/sdkman-init.sh" ]] && source "/root/.sdkman/bin/sdkman-init.sh"
+alias jdk8="sdk use java 8.0.242.hs-adpt"
+alias jdk11="sdk use java  11.0.6.hs-adpt"
+alias jdk12="sdk use java 12.0.2.hs-adpt"
+alias jdk13="sdk use java 13.0.2.hs-adpt"
+alias jdk14="sdk use java 14.0.0.hs-adpt"
+alias jdk16="sdk use java 16.0.1.hs-adpt"
+alias jdk17="sdk use java 17-open"
+alias node16='export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" c && nvm install 16.13.0 && nvm use 16.13.0'
+alias m2enable="mv ~/.m2/settings.backup ~/.m2/settings.xml"
+alias m2disable="mv ~/.m2/settings.xml ~/.m2/settings.backup"
 ```
 
 #### With [ubuntu prompt for windows](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab)

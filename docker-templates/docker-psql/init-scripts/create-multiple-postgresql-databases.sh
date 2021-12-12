@@ -20,7 +20,6 @@
 # If both match, then only one user is created with the database name and the given password
 # This script is available to download in a small example I've created in https://github.com/jesperancinha/project-signer/tree/master/docker-templates/docker-psql
 
-
 set -e
 set -u
 
