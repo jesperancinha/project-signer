@@ -21,7 +21,7 @@ import java.nio.file.Path;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyZeroInteractions;
+import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
 
 @Slf4j
@@ -64,10 +64,10 @@ class FinderServiceImplTest {
 
         verify(templateService).findAllParagraphs();
         verify(generatorService).processReadmeFile(tempDirectory, mockParagraphs);
-        verifyZeroInteractions(readmeNamingService);
-        verifyZeroInteractions(optionsService);
-        verifyZeroInteractions(fileWriterService);
-        verifyZeroInteractions(readmeService);
-        verifyZeroInteractions(mergeService);
+        verifyNoInteractions(readmeNamingService);
+        verifyNoInteractions(optionsService);
+        verifyNoInteractions(fileWriterService);
+        verifyNoInteractions(readmeService);
+        verifyNoInteractions(mergeService);
     }
 }
