@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: cimg/openjdk:17.0
+      - image: maven:3.8.2-openjdk-17
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
