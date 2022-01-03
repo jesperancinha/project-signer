@@ -33,6 +33,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JSON%20to%20Builder%20Pattern&color=informational)](https://github.com/jesperancinha/json-to-builder-pattern)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver%20📼%20&color=informational)](https://github.com/jesperancinha/vma-archiver)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=spring-xml-bean-to-java-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/spring-xml-bean-to-java-maven-plugin)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEOrg%20Cloud%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-cloud-test-drives)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate%20Modules&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-modules)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|---|---|
@@ -45,13 +46,15 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Airflights%20Clojure&color=informational)](https://github.com/jesperancinha/airflights-clojure)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Security%20Test%20Drives&color=informational)](https://github.com/jesperancinha/security-test-drives)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Finantial%20Transactions%20in%20Akka%20💶&color=informational)](https://github.com/jesperancinha/portuguese-recipes)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Finantial%20Transactions%20in%20Akka%20💶&color=informational)](https://github.com/jesperancinha/finantial-transactions-akka)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Multi%20Image%20Comparer&color=informational)](https://github.com/jesperancinha/multi-image-comparer)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=unit-test-exchange-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/unit-test-exchange-maven-plugin)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Concert%20Demos%20🎸%20&color=informational)](https://github.com/jesperancinha/concert-demos-root)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Images%20Go&color=informational)](https://github.com/jesperancinha/images-go)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Consolerizer&color=informational)](https://github.com/JEsperancinhaOrg/consolerizer-root)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-maven-plugin)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Camel%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-camel-test-drives)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Scala%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-scala-test-drives)|---|---|---|---|---|
 ||---|---|---|---|---|
