@@ -19,7 +19,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%2011%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-11-test-drives)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-java-11-test-drives.svg)](#)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Image%20Train%20Filters%20Services&color=informational)](https://github.com/jesperancinha/image-train-filters-scala)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/image-train-filters-scala.svg)](#)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Your%20finance%20JE&color=informational)](https://github.com/jesperancinha/your-finance-je)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/your-finance-je.svg)](#)|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-17-test-drives)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-java-17-test-drives.svg)](#)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%2017%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-17-test-drives)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-java-17-test-drives.svg)](#)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%207%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-7-test-drives)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-java-ee-7-test-drives.svg)](#)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=image-sizer&color=informational)](https://github.com/jesperancinha/image-sizer)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/image-sizer.svg)](#)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Finantial%20Transactions%20in%20Akka%20💶&color=informational)](https://github.com/jesperancinha/finantial-transactions-akka)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/finantial-transactions-akka.svg)](#)|---|---|
@@ -28,6 +28,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Scala%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-scala-test-drives)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-scala-test-drives.svg)](#)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Kotlin%20Test%20Drives&color=informational)](https://github.com/jesperancinha/kotlin-test-drives)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/kotlin-test-drives.svg)](#)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/image-train-filters-android.svg)](https://github.com/jesperancinha/image-train-filters-android/releases)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-test-drives)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-java-ee-test-drives.svg)](#)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Project%20Signer%20🖋&color=informational)](https://github.com/jesperancinha/project-signer)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/project-signer.svg)](https://github.com/jesperancinha/project-signer/releases)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Performance%20Objects%20&color=informational)](https://github.com/jesperancinha/performance-projects)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/performance-projects.svg)](#)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=StaCo%20App%20🪙%20&color=informational)](https://github.com/jesperancinha/staco-app)|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/kotlin-test-drives.svg)](#)|---|---|
@@ -48,7 +49,6 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=International%20Airports&color=informational)](https://bitbucket.org/jesperancinha/international-airports-service-root)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Kitten%20House%20Care&color=informational)](https://bitbucket.org/jesperancinha/kitten-house-care-parent)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App&color=informational)](https://gitlab.com/jesperancinha/favourite-lyrics-app)|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Buy%20Odd%20Yucca%20Concert🌴&color=informational)](https://github.com/jesperancinha/buy-odd-yucca-concert)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=unit-test-exchange-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/unit-test-exchange-maven-plugin)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Web%20Parser%20CSV&color=informational)](https://github.com/jesperancinha/web-parser-csv)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=spring-xml-bean-to-java-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/spring-xml-bean-to-java-maven-plugin)|---|---|---|---|
@@ -59,6 +59,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Security%20Test%20Drives&color=informational)](https://github.com/jesperancinha/security-test-drives)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Images%20Go&color=informational)](https://github.com/jesperancinha/images-go)|---|---|---|---|
+|Buy Odd Yucca Concert|---|---|---|---|
 ||---|---|---|---|
 |Ping App|---|---|---|---|
 |performance-xml-csv-json|---|---|---|---|
@@ -77,7 +78,6 @@
 |snmp-board-controller|---|---|---|---|
 |Auto Phishing Reporter|---|---|---|---|
 |inner-text-searcher|---|---|---|---|
-|java-test-drives-2|---|---|---|---|
 |rucola-generator|---|---|---|---|
 |microArduinoMe|---|---|---|---|
 |string.distance|---|---|---|---|

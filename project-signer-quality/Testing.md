@@ -37,17 +37,17 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Images%20Go&color=informational)](https://github.com/jesperancinha/images-go)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Sea%20Shell%20Archiver&color=informational)](https://github.com/jesperancinha/sea-shell-archiver)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver%20📼%20&color=informational)](https://github.com/jesperancinha/vma-archiver)|---|---|---|---|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Buy%20Odd%20Yucca%20Concert🌴&color=informational)](https://github.com/jesperancinha/buy-odd-yucca-concert)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ISBN%20Stacks%20📚%20&color=informational)](https://github.com/jesperancinha/isbn-stacks)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Your%20finance%20JE&color=informational)](https://github.com/jesperancinha/your-finance-je)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Joao%20Filipe%20Sabino%20Esperancinha%20Home&color=informational)](https://gitlab.com/jesperancinha/joao-filipe-sabino-esperancinha-home)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%2011%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-11-test-drives)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Performance%20Objects%20&color=informational)](https://github.com/jesperancinha/performance-projects)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Scala%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-scala-test-drives)|---|---|---|---|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-17-test-drives)|---|---|---|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%2017%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-17-test-drives)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Finantial%20Transactions%20in%20Akka%20💶&color=informational)](https://github.com/jesperancinha/finantial-transactions-akka)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Airflights%20Clojure&color=informational)](https://github.com/jesperancinha/airflights-clojure)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-maven-plugin)|---|---|---|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-test-drives)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=image-sizer&color=informational)](https://github.com/jesperancinha/image-sizer)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=unit-test-exchange-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/unit-test-exchange-maven-plugin)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)|---|---|---|---|---|---|---|---|
@@ -55,10 +55,11 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=android-action🤖&color=informational)](https://github.com/JEsperancinhaOrg/android-action)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEOrg%20Cloud%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-cloud-test-drives)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=itf-chartizate-android&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)|---|---|---|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|---|---|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Security%20Test%20Drives&color=informational)](https://github.com/jesperancinha/security-test-drives)|---|---|---|---|---|---|---|---|
+|Buy Odd Yucca Concert|---|---|---|---|---|---|---|---|
 ||---|---|---|---|---|---|---|---|
 |Ping App|---|---|---|---|---|---|---|---|
 |performance-xml-csv-json|---|---|---|---|---|---|---|---|
@@ -77,7 +78,6 @@
 |snmp-board-controller|---|---|---|---|---|---|---|---|
 |Auto Phishing Reporter|---|---|---|---|---|---|---|---|
 |inner-text-searcher|---|---|---|---|---|---|---|---|
-|java-test-drives-2|---|---|---|---|---|---|---|---|
 |rucola-generator|---|---|---|---|---|---|---|---|
 |microArduinoMe|---|---|---|---|---|---|---|---|
 |string.distance|---|---|---|---|---|---|---|---|
