@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>project-signer-root</artifactId>
-    <version>3.0.5</version>
+    <version>3.0.6</version>
     <packaging>pom</packaging>
     <properties>
         <markdowner.version>${parent.version}</markdowner.version>
@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.jesperancinha.parser</groupId>
         <artifactId>markdowner</artifactId>
-        <version>3.0.5</version>
+        <version>3.0.6</version>
     </parent>
     <dependencyManagement>
         <dependencies>
