@@ -57,7 +57,7 @@ See https://github.com/reactor/BlockHound/issues/33 for more info.
 
 In build.json:
 
-```json
+```kotlin
 test {
     jvmArgs '-XX:+AllowRedefinitionToAddDeleteMethods'
 }
