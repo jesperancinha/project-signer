@@ -19,7 +19,7 @@
         <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
         <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
         <jaxb-api.version>2.3.1</jaxb-api.version>
-        <spring-boot-maven-plugin.version>2.6.2</spring-boot-maven-plugin.version>
+        <spring-boot-maven-plugin.version>2.6.3</spring-boot-maven-plugin.version>
     </properties>
     <parent>
         <groupId>org.jesperancinha.parser</groupId>
