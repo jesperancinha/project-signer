@@ -23,6 +23,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=City%20Library%20Management%20🏢&color=informational)](https://github.com/jesperancinha/advanced-library-management)|---|---|[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=Checkout%20this%20@bitbucket%20repo%20by%20@joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB:%20https://github.com/jesperancinha/advanced-library-management)|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=From%20Paris%20to%20Berlin%20🛣&color=informational)](https://github.com/jesperancinha/from-paris-to-berlin-circuit-breaker)|---|---|[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=Checkout%20this%20@bitbucket%20repo%20by%20@joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB:%20https://github.com/jesperancinha/from-paris-to-berlin-circuit-breaker)|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Newscast%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/news-cast-explorer)|---|---|[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=Checkout%20this%20@bitbucket%20repo%20by%20@joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB:%20https://bitbucket.org/jesperancinha/news-cast-explorer/src/master/)|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Newscast%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/news-cast-explorer)|---|---|[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=Checkout%20this%20@bitbucket%20repo%20by%20@joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB:%20https://bitbucket.org/jesperancinha/news-cast-explorer/src/master/)|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App&color=informational)](https://gitlab.com/jesperancinha/favourite-lyrics-app)|[![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/jesperancinha/agent-network "agent-network")|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ISBN%20Stacks%20📚%20&color=informational)](https://github.com/jesperancinha/isbn-stacks)|[![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)|---|---|
@@ -58,8 +59,10 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Joao%20Filipe%20Sabino%20Esperancinha%20Home&color=informational)](https://gitlab.com/jesperancinha/joao-filipe-sabino-esperancinha-home)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-gradle-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-gradle-plugin)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Airflights%20Clojure&color=informational)](https://github.com/jesperancinha/airflights-clojure)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Security%20Test%20Drives&color=informational)](https://github.com/jesperancinha/security-test-drives)|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-maven-plugin)|---|---|---|
 ||---|---|---|
 |Ping App|---|---|---|
 |performance-xml-csv-json|---|---|---|
@@ -75,7 +78,6 @@
 |2b2bAndroidTests|---|---|---|
 |sz-catcher-app-android|---|---|---|
 |Orbit simulator|---|---|---|
-|snmp-board-controller|---|---|---|
 |Auto Phishing Reporter|---|---|---|
 |inner-text-searcher|---|---|---|
 |rucola-generator|---|---|---|

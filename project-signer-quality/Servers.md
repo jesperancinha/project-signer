@@ -20,6 +20,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ISBN%20Stacks%20📚%20&color=informational)](https://github.com/jesperancinha/isbn-stacks)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEOrg%20Cloud%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-cloud-test-drives)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Newscast%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/news-cast-explorer)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Newscast%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/news-cast-explorer)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Video%20Series%20Apps&color=informational)](https://gitlab.com/jesperancinha/video-series-app)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Bridge%20Management%20Logistics&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App&color=informational)](https://gitlab.com/jesperancinha/favourite-lyrics-app)|---|---|---|---|---|
@@ -59,7 +60,9 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=android-action🤖&color=informational)](https://github.com/JEsperancinhaOrg/android-action)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=itf-chartizate-android&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-gradle-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-gradle-plugin)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Security%20Test%20Drives&color=informational)](https://github.com/jesperancinha/security-test-drives)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-maven-plugin)|---|---|---|---|---|
 ||---|---|---|---|---|
 |Ping App|---|---|---|---|---|
 |performance-xml-csv-json|---|---|---|---|---|
@@ -75,7 +78,6 @@
 |2b2bAndroidTests|---|---|---|---|---|
 |sz-catcher-app-android|---|---|---|---|---|
 |Orbit simulator|---|---|---|---|---|
-|snmp-board-controller|---|---|---|---|---|
 |Auto Phishing Reporter|---|---|---|---|---|
 |inner-text-searcher|---|---|---|---|---|
 |rucola-generator|---|---|---|---|---|

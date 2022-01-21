@@ -14,6 +14,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Your%20finance%20JE&color=informational)](https://github.com/jesperancinha/your-finance-je)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Understanding JWT in REST Services — Improving performance with authentication and authorization")](https://medium.com/swlh/understanding-jwt-in-rest-services-lets-improve-performance-and-let-s-get-physical-cfd42921d4da)|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEOrg%20Cloud%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-cloud-test-drives)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/swlh/chrome-os-guide-to-go-from-zero-to-devops-hero-in-a-nutshell-f66c4bc5782f)|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Newscast%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/news-cast-explorer)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/@jofisaes/newscast-using-sagas-in-choreography-and-orchestration-patterns-a-java-17-and-kotlin-example-e3d0ec17b910)|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Newscast%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/news-cast-explorer)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/@jofisaes/newscast-using-sagas-in-choreography-and-orchestration-patterns-a-java-17-and-kotlin-example-e3d0ec17b910)|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Video%20Series%20Apps&color=informational)](https://gitlab.com/jesperancinha/video-series-app)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/swlh/cqrs-command-query-responsibility-segregation-72db08ee8282)|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Bridge%20Management%20Logistics&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/swlh/the-streaming-bridges-a-kafka-rabbitmq-mqtt-and-coap-example-9077a598169)|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App&color=informational)](https://gitlab.com/jesperancinha/favourite-lyrics-app)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/swlh/hexagonal-architecture-a596390269fd)|---|
@@ -59,7 +60,9 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=android-action🤖&color=informational)](https://github.com/JEsperancinhaOrg/android-action)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=itf-chartizate-android&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Time%20Disruption%20Studios&color=informational)](https://bitbucket.org/jesperancinha/tds-portal)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-gradle-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-gradle-plugin)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Security%20Test%20Drives&color=informational)](https://github.com/jesperancinha/security-test-drives)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-maven-plugin)|---|---|
 ||---|---|
 |Ping App|---|---|
 |performance-xml-csv-json|---|---|
@@ -75,7 +78,6 @@
 |2b2bAndroidTests|---|---|
 |sz-catcher-app-android|---|---|
 |Orbit simulator|---|---|
-|snmp-board-controller|---|---|
 |Auto Phishing Reporter|---|---|
 |inner-text-searcher|---|---|
 |rucola-generator|---|---|
