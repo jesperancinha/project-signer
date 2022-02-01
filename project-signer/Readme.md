@@ -1,7 +1,7 @@
 # project-signer
 
 [![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Project%20Signer&color=informational)](https://github.com/jesperancinha/project-signer)
-[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/project-signer.svg)](https://github.com/jesperancinha/project-signer/releases)
+[![GitHub release](https://img.shields.io/github/release/jesperancinha/project-signer.svg)](https://github.com/jesperancinha/project-signer/releases)
 
 ## About me 👨🏽‍💻🚀🏳️‍🌈
 

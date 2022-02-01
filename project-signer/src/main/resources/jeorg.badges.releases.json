@@ -10,18 +10,23 @@
     "codePrefix": "img.shields.io/maven-central"
   },
   {
+    "title": "Sonatype Nexus",
+    "badge": "Sonatype Nexus",
+    "codePrefix": "img.shields.io/nexus"
+  },
+  {
     "title": "GitHub Pre-Release",
     "badge": "GitHub release",
     "codePrefix": "img.shields.io/github/release-pre"
   },
   {
     "title": "GitHub Release",
-    "badge": "GitHub release \\(latest SemVer\\)",
-    "codePrefix": "img.shields.io/github/v/release"
+    "badge": "GitHub release",
+    "codePrefix": "img.shields.io/github/(v/)*release"
   },
   {
     "title": "PyPI Release",
-    "badge": "PyPI - Python Version",
-    "codePrefix": "img.shields.io/pypi/pyversions"
+    "badge": "PyPI",
+    "codePrefix": "img.shields.io/pypi"
   }
 ]
