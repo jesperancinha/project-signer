@@ -48,7 +48,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=image-sizer&color=informational)](https://github.com/jesperancinha/image-sizer)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android🧿&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Kitten%20House%20Care&color=informational)](https://bitbucket.org/jesperancinha/kitten-house-care-parent)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Bisca%20JE&color=informational)](https://github.com/jesperancinha/biscaje)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|
