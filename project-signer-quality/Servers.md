@@ -32,7 +32,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate%20Modules&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-modules)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Kotlin%20Test%20Drives&color=informational)](https://github.com/jesperancinha/kotlin-test-drives)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Cups%20Kalah%20☕️%20&color=informational)](https://github.com/jesperancinha/mancalaje)|---|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives🧮&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Image%20Train%20Filters%20Services&color=informational)](https://github.com/jesperancinha/image-train-filters-scala)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Web%20Parser%20CSV&color=informational)](https://github.com/jesperancinha/web-parser-csv)|---|---|---|---|---|

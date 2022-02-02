@@ -30,7 +30,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%207%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-7-test-drives)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Kotlin%20Test%20Drives&color=informational)](https://github.com/jesperancinha/kotlin-test-drives)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Cups%20Kalah%20☕️%20&color=informational)](https://github.com/jesperancinha/mancalaje)|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives🧮&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Image%20Train%20Filters%20Services&color=informational)](https://github.com/jesperancinha/image-train-filters-scala)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Med%20Dicom%20Service🏥&color=informational)](https://github.com/jesperancinha/med_dicom_service)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|
