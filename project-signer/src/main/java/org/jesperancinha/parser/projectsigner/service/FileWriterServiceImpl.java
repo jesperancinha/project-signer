@@ -16,6 +16,7 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 @Slf4j
@@ -40,8 +41,22 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
                 writeTitles(badgeType, fileWriter);
                 writeTopTable(badgeType, fileWriter);
                 projectDataList.sort((o1, o2) -> {
-                    final var nBadges1 = (int) o1.getBadgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).count();
-                    final var nBadges2 = (int) o2.getBadgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).count();
+                    final List<Badge> badgeList1 = o1.getBadgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).toList();
+                    final List<Badge> badgeList2 = o2.getBadgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).toList();
+                    final var nBadges1 = badgeList1.size();
+                    final var nBadges2 = badgeList2.size();
+                    if (nBadges1 == nBadges2) {
+                        if(badgeList1.size()>0) {
+                            final String badgeText1 = badgeList1.get(0).getBadgeText();
+                            final String badgeText2 = badgeList2.get(0).getBadgeText();
+                            if (badgeText1.contains("message=") && badgeText2.contains("message=")) {
+                                final var message1 = badgeText1.split("message=")[1].substring(0,3);
+                                final var message2 = badgeText2.split("message=")[1].substring(0,3);
+                                return message1.compareTo(message2);
+                            }
+                        }
+                        return o1.getTitle().compareTo(o2.getTitle());
+                    }
                     return nBadges2 - nBadges1;
                 });
                 projectDataList.forEach(projectData -> writeProjectData(badgeType, fileWriter, projectData));
