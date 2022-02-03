@@ -33,6 +33,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Markdowner&color=informational)](https://github.com/jesperancinha/markdowner)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-test-drives)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Kitten%20House%20Care&color=informational)](https://bitbucket.org/jesperancinha/kitten-house-care-parent)|---|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=nowje-spring-xml-to-code-maven-plugin%20🍃&color=informational)](https://github.com/JEsperancinhaOrg/nowje-spring-xml-to-code-maven-plugin)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Finantial%20Transactions%20in%20Akka%20💶&color=informational)](https://github.com/jesperancinha/finantial-transactions-akka)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Kotlin%20Test%20Drives&color=informational)](https://github.com/jesperancinha/kotlin-test-drives)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Geo%20Calculator&color=informational)](https://github.com/JEsperancinhaOrg/geo-calculator)|---|---|---|---|---|---|
@@ -54,7 +55,6 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Video%20Series%20Apps&color=informational)](https://gitlab.com/jesperancinha/video-series-app)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives🧮&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|---|---|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=spring-xml-bean-to-java-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/spring-xml-bean-to-java-maven-plugin)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=android-action🤖&color=informational)](https://github.com/JEsperancinhaOrg/android-action)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Multi%20Image%20Comparer&color=informational)](https://github.com/jesperancinha/multi-image-comparer)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Web%20Parser%20CSV&color=informational)](https://github.com/jesperancinha/web-parser-csv)|---|---|---|---|---|---|

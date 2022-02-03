@@ -51,13 +51,13 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Video%20Series%20Apps&color=informational)](https://gitlab.com/jesperancinha/video-series-app)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Kitten%20House%20Care&color=informational)](https://bitbucket.org/jesperancinha/kitten-house-care-parent)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App🎶&color=informational)](https://gitlab.com/jesperancinha/favourite-lyrics-app)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=nowje-spring-xml-to-code-maven-plugin%20🍃&color=informational)](https://github.com/JEsperancinhaOrg/nowje-spring-xml-to-code-maven-plugin)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives🧮&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=unit-test-exchange-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/unit-test-exchange-maven-plugin)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Finantial%20Transactions%20in%20Akka%20💶&color=informational)](https://github.com/jesperancinha/finantial-transactions-akka)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=android-action🤖&color=informational)](https://github.com/JEsperancinhaOrg/android-action)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Multi%20Image%20Comparer&color=informational)](https://github.com/jesperancinha/multi-image-comparer)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Web%20Parser%20CSV&color=informational)](https://github.com/jesperancinha/web-parser-csv)|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=spring-xml-bean-to-java-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/spring-xml-bean-to-java-maven-plugin)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEOrg%20Cloud%20Test%20Drives%20☁️&color=informational)](https://github.com/jesperancinha/jeorg-cloud-test-drives)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Airflights%20Clojure&color=informational)](https://github.com/jesperancinha/airflights-clojure)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Security%20Test%20Drives&color=informational)](https://github.com/jesperancinha/security-test-drives)|---|---|

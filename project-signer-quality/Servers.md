@@ -46,6 +46,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-maven-plugin)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-gradle-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-gradle-plugin)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-test-drives)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=nowje-spring-xml-to-code-maven-plugin%20🍃&color=informational)](https://github.com/JEsperancinhaOrg/nowje-spring-xml-to-code-maven-plugin)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=image-sizer&color=informational)](https://github.com/jesperancinha/image-sizer)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)|---|---|---|---|---|
@@ -58,7 +59,6 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Airflights%20Clojure&color=informational)](https://github.com/jesperancinha/airflights-clojure)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=unit-test-exchange-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/unit-test-exchange-maven-plugin)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-python&color=informational)](https://github.com/JEsperancinhaOrg/omni-coveragereporter-python)|---|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=spring-xml-bean-to-java-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/spring-xml-bean-to-java-maven-plugin)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=android-action🤖&color=informational)](https://github.com/JEsperancinhaOrg/android-action)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=itf-chartizate-android🧿&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Security%20Test%20Drives&color=informational)](https://github.com/jesperancinha/security-test-drives)|---|---|---|---|---|

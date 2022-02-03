@@ -34,7 +34,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android🧿&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JSON%20to%20Builder%20Pattern&color=informational)](https://github.com/jesperancinha/json-to-builder-pattern)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%2017%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-17-test-drives)|---|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=spring-xml-bean-to-java-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/spring-xml-bean-to-java-maven-plugin)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=nowje-spring-xml-to-code-maven-plugin%20🍃&color=informational)](https://github.com/JEsperancinhaOrg/nowje-spring-xml-to-code-maven-plugin)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEOrg%20Cloud%20Test%20Drives%20☁️&color=informational)](https://github.com/jesperancinha/jeorg-cloud-test-drives)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate%20Modules&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-modules)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-python&color=informational)](https://github.com/JEsperancinhaOrg/omni-coveragereporter-python)|---|---|---|---|---|
