@@ -69,6 +69,12 @@ Old example:
 -l "../project-signer-templates/licenses/APACHE2.template,../project-signer-templates/licenses/ISC.template,../project-signer-templates/licenses/MIT.template" -t "../project-signer-templates/Readme.md" License "About me" "Achievements" -d ../../
 ```
 
+2020/02/04 Example:
+
+```bash
+-l "../project-signer-templates/licenses/APACHE2.template,../project-signer-templates/licenses/ISC.template,../project-signer-templates/licenses/MIT.template" -t "../project-signer-templates/Readme.md" License "About me" "Achievements" "Buy me a coffee" -d ../../
+```
+
 To summarize, this program will scan all your readme files and standardize name. You may want a generic signature in all your projects and this little runner will do just that!
 
 This command line runner will complete several boiler plate tasks:
@@ -123,6 +129,12 @@ mvn nexus-staging:release  -Prelease
 -   [App Icon Maker](https://appiconmaker.co/)
 -   [Dillinger](https://dillinger.io/)
 -   [JQ](https://stedolan.github.io/jq/download/)
+
+## Buy me a coffee
+
+I hope you enjoyed this repository. If you did, you can optionally please buy me a coffee, which supports me in constantly improve and make new free content regularly for everyone. Thank you so much!
+
+[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=jesperancinha&button_colour=046c46&font_colour=ffffff&font_family=Cookie&outline_colour=ffffff&coffee_colour=FFDD00 "title")](https://www.buymeacoffee.com/jesperancinha)
 
 ## About me 👨🏽‍💻🚀🏳️‍🌈
 
