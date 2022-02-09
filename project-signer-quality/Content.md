@@ -70,7 +70,6 @@
 |Matrix Anywhere|---|---|---|
 |Note manager WebApp|---|---|---|
 |Orbit simulator|---|---|---|
-|Parent of the test drives module for JEsperancinhaOrg|---|---|---|
 |Ping App|---|---|---|
 |ReviewNinja-Welcome|---|---|---|
 |Rockstars Manager|---|---|---|
@@ -82,7 +81,6 @@
 |hazelcast-reactive-conf|---|---|---|
 |inner-text-searcher|---|---|---|
 |map-reduce-jobs-tests|---|---|---|
-|math-lib|---|---|---|
 |microArduinoMe|---|---|---|
 |microPythonMe|---|---|---|
 |our airports app|---|---|---|
