@@ -75,7 +75,6 @@
 |ReviewNinja-Welcome|---|---|---|---|---|---|
 |Rockstars Manager|---|---|---|---|---|---|
 |Social Media Private Data Zapper|---|---|---|---|---|---|
-|Xml searcher service:|---|---|---|---|---|---|
 |android-joai-universitybaseconverter|---|---|---|---|---|---|
 |formula-parser|---|---|---|---|---|---|
 |goblins-tale-strongswordfell|---|---|---|---|---|---|
@@ -95,6 +94,5 @@
 |timezone-app-utility-android|---|---|---|---|---|---|
 |vertex-osgi-testdrive|---|---|---|---|---|---|
 |ws-math-service|---|---|---|---|---|---|
-|xml-searcher-client|---|---|---|---|---|---|
 ## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Performance Tools](./Performance.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 
