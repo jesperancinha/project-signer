@@ -78,11 +78,9 @@
 |Ping App|---|---|---|---|---|---|---|---|
 |ReviewNinja-Welcome|---|---|---|---|---|---|---|---|
 |Rockstars Manager|---|---|---|---|---|---|---|---|
-|Social Media Private Data Zapper|---|---|---|---|---|---|---|---|
 |android-joai-universitybaseconverter|---|---|---|---|---|---|---|---|
 |formula-parser|---|---|---|---|---|---|---|---|
 |goblins-tale-strongswordfell|---|---|---|---|---|---|---|---|
-|hazelcast-reactive-conf|---|---|---|---|---|---|---|---|
 |inner-text-searcher|---|---|---|---|---|---|---|---|
 |map-reduce-jobs-tests|---|---|---|---|---|---|---|---|
 |microArduinoMe|---|---|---|---|---|---|---|---|
