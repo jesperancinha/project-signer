@@ -19,7 +19,6 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Image%20Train%20Filters%20Services&color=informational)](https://github.com/jesperancinha/image-train-filters-scala)|---|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/image-train-filters-scala.svg)](#)|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/image-train-filters-scala.svg)](#)|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Scala%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-scala-test-drives)|---|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-scala-test-drives.svg)](#)|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-scala-test-drives.svg)](#)|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Master%205%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-master-5-test-drives)|---|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-spring-master-5-test-drives.svg)](#)|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-spring-master-5-test-drives.svg)](#)|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%205%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)|---|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-spring-5-test-drives.svg)](#)|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/jeorg-spring-5-test-drives.svg)](#)|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=StaCo%20App%20🪙%20&color=informational)](https://github.com/jesperancinha/staco-app)|---|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/kotlin-test-drives.svg)](#)|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/kotlin-test-drives.svg)](#)|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Your%20finance%20JE&color=informational)](https://github.com/jesperancinha/your-finance-je)|---|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/your-finance-je.svg)](#)|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/your-finance-je.svg)](#)|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=image-sizer&color=informational)](https://github.com/jesperancinha/image-sizer)|---|---|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/image-sizer.svg)](#)|[![GitHub release](https://img.shields.io/github/release-pre/jesperancinha/image-sizer.svg)](#)|---|
@@ -60,7 +59,9 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Newscast%20Explorer&color=informational)](https://bitbucket.org/jesperancinha/news-cast-explorer)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Performance%20Objects%20&color=informational)](https://github.com/jesperancinha/performance-projects)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Security%20Test%20Drives&color=informational)](https://github.com/jesperancinha/security-test-drives)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%205%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-5-test-drives)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Vertext%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-vertex-osgi-testdrives)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Video%20Series%20Apps&color=informational)](https://gitlab.com/jesperancinha/video-series-app)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Web%20Parser%20CSV&color=informational)](https://github.com/jesperancinha/web-parser-csv)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=math-service-scala%20🧮&color=informational)](https://github.com/jesperancinha/math-service-scala)|---|---|---|---|---|
@@ -88,12 +89,10 @@
 |our airports app|---|---|---|---|---|
 |performance-misc|---|---|---|---|---|
 |performance-xml-csv-json|---|---|---|---|---|
-|rucola-generator|---|---|---|---|---|
 |rust-test-drive|---|---|---|---|---|
 |sound-garage|---|---|---|---|---|
 |string.distance|---|---|---|---|---|
 |sz-catcher-app-android|---|---|---|---|---|
 |timezone-app-utility-android|---|---|---|---|---|
-|vertex-osgi-testdrive|---|---|---|---|---|
 ## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Performance Tools](./Performance.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 
