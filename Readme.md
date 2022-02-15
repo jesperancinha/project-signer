@@ -1,5 +1,14 @@
 # Docker images
 
+---
+
+[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//bitbucket.org/jesperancinha/docker-images/src/master/)
+[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Docker%20Images20🐳&color=informational)](https://bitbucket.org/jesperancinha/docker-images/src/master/)
+
+---
+
+## Introduction
+
 In this repo you will find docker images for many different purposes with extended functionality.
 
 ## Image List
@@ -75,6 +84,12 @@ git pull --prune --tags
 
 -   [Use Bash Strict Mode (Unless You Love Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
 -   [Linux containers](https://linuxcontainers.org/)
+
+## Buy me a coffee
+
+I hope you enjoyed this repository. If you did, you can optionally please buy me a coffee, which supports me in constantly improve and make new free content regularly for everyone. Thank you so much!
+
+[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=jesperancinha&button_colour=046c46&font_colour=ffffff&font_family=Cookie&outline_colour=ffffff&coffee_colour=FFDD00 "title")](https://www.buymeacoffee.com/jesperancinha)
 
 ## About me 👨🏽‍💻🚀🏳️‍🌈
 
