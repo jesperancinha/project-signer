@@ -20,7 +20,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Concert%20Demos%20🎸%20&color=informational)](https://github.com/jesperancinha/concert-demos-root)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Consolerizer&color=informational)](https://github.com/JEsperancinhaOrg/consolerizer-root)|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Docker%20Images20🐳&color=informational)](https://bitbucket.org/jesperancinha/docker-images/src/master/)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Docker%20Images%20🐳&color=informational)](https://bitbucket.org/jesperancinha/docker-images/src/master/)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Favourite%20Lyrics%20App🎶&color=informational)](https://gitlab.com/jesperancinha/favourite-lyrics-app)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Finantial%20Transactions%20in%20Akka%20💶&color=informational)](https://github.com/jesperancinha/finantial-transactions-akka)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=From%20Paris%20to%20Berlin%20🛣&color=informational)](https://github.com/jesperancinha/from-paris-to-berlin-circuit-breaker)|---|---|
@@ -69,10 +69,11 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=nowje-unit-test-exchange-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/nowje-unit-test-exchange-maven-plugin)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-lein&color=informational)](https://github.com/jesperancinhaorg/omni-coveragereporter-lein)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-maven-plugin)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-python&color=informational)](https://github.com/JEsperancinhaOrg/omni-coveragereporter-python)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-reporter-commons&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-commons)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-gradle-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-gradle-plugin)|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-python&color=informational)](https://github.com/JEsperancinhaOrg/omni-coveragereporter-python)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-reporter-sbt-plugin&color=informational)](https://github.com/jesperancinhaorg/omni-reporter-sbt-plugin)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=orbit-simulator%20🪐&color=informational)](https://github.com/jesperancinha/orbit-simulator)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=performance-parsers%20🗄&color=informational)](https://github.com/jesperancinha/performance-parsers)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=rust-test-drive%20⚙️&color=informational)](https://github.com/jesperancinha/rust-test-drive)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=sound-garage%20🎸&color=informational)](https://github.com/jesperancinha/sound-garage)|---|---|
@@ -80,7 +81,6 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=xml-adder🌿&color=informational)](https://github.com/jesperancinha/xml-adder)|---|---|
 ||---|---|
 |Matrix Anywhere|---|---|
-|Orbit simulator|---|---|
 |Ping App|---|---|
 |Rockstars Manager|---|---|
 |android-joai-universitybaseconverter|---|---|
