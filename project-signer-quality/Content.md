@@ -84,7 +84,6 @@
 |formula-parser|---|---|---|
 |goblins-tale-strongswordfell|---|---|---|
 |inner-text-searcher|---|---|---|
-|map-reduce-jobs-tests|---|---|---|
 |microArduinoMe|---|---|---|
 |microPythonMe|---|---|---|
 |rust-test-drive|---|---|---|
