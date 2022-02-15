@@ -81,7 +81,6 @@
 |Ping App|---|---|---|---|---|---|---|---|
 |Rockstars Manager|---|---|---|---|---|---|---|---|
 |android-joai-universitybaseconverter|---|---|---|---|---|---|---|---|
-|formula-parser|---|---|---|---|---|---|---|---|
 |goblins-tale-strongswordfell|---|---|---|---|---|---|---|---|
 |inner-text-searcher|---|---|---|---|---|---|---|---|
 |microArduinoMe|---|---|---|---|---|---|---|---|
