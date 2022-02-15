@@ -27,6 +27,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Bisca%20JE%20🃏&color=informational)](https://github.com/jesperancinha/biscaje)|---|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/spring-50.png "Spring Framework")](https://spring.io/projects/spring-framework)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network%20👀&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Airflights%20Clojure%20✈️&color=informational)](https://github.com/jesperancinha/airflights-clojure)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Airports%20App%20🛬&color=informational)](https://bitbucket.org/jesperancinha/airports-app/src/master/)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives🧮&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Android%20Test%20Drives&color=informational)](https://github.com/JEsperancinha/jeorg-android-test-drives)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)|---|---|---|---|---|
@@ -86,7 +87,6 @@
 |map-reduce-jobs-tests|---|---|---|---|---|
 |microArduinoMe|---|---|---|---|---|
 |microPythonMe|---|---|---|---|---|
-|our airports app|---|---|---|---|---|
 |rust-test-drive|---|---|---|---|---|
 |sz-catcher-app-android|---|---|---|---|---|
 |timezone-app-utility-android|---|---|---|---|---|

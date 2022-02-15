@@ -8,6 +8,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ISBN%20Stacks%20📚%20&color=informational)](https://github.com/jesperancinha/isbn-stacks)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/locust-50.png "Locust")](https://locust.io/)|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver%20📼%20&color=informational)](https://github.com/jesperancinha/vma-archiver)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/locust-50.png "Locust")](https://locust.io/)|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network%20👀&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Airports%20App%20🛬&color=informational)](https://bitbucket.org/jesperancinha/airports-app/src/master/)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Airflights%20Clojure%20✈️&color=informational)](https://github.com/jesperancinha/airflights-clojure)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives🧮&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Android%20Test%20Drives&color=informational)](https://github.com/JEsperancinha/jeorg-android-test-drives)|---|---|
@@ -63,9 +64,9 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=nowje-unit-test-exchange-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/nowje-unit-test-exchange-maven-plugin)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-lein&color=informational)](https://github.com/jesperancinhaorg/omni-coveragereporter-lein)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-maven-plugin)|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-python&color=informational)](https://github.com/JEsperancinhaOrg/omni-coveragereporter-python)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-reporter-commons&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-commons)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-gradle-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-gradle-plugin)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-python&color=informational)](https://github.com/JEsperancinhaOrg/omni-coveragereporter-python)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-reporter-sbt-plugin&color=informational)](https://github.com/jesperancinhaorg/omni-reporter-sbt-plugin)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=performance-parsers%20🗄&color=informational)](https://github.com/jesperancinha/performance-parsers)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=sound-garage%20🎸&color=informational)](https://github.com/jesperancinha/sound-garage)|---|---|
@@ -86,7 +87,6 @@
 |map-reduce-jobs-tests|---|---|
 |microArduinoMe|---|---|
 |microPythonMe|---|---|
-|our airports app|---|---|
 |rust-test-drive|---|---|
 |sz-catcher-app-android|---|---|
 |timezone-app-utility-android|---|---|

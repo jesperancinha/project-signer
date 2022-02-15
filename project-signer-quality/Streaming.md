@@ -6,6 +6,7 @@
 |---|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Bridge%20Management%20Logistics%20🌉&color=informational)](https://gitlab.com/jesperancinha/bridge-logistics)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/kafka-50.png "Kafka")](https://kafka.apache.org/documentation/streams/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/apache-spark-50.png "Apache Spark")](https://spark.apache.org/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/rabbit-mq-50.png "Rabbit MQ")](https://www.rabbitmq.com/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/zookeeper-50.png "Zookeeper")](https://zookeeper.apache.org/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/mosquitto-50.png "Mosquitto")](https://mosquitto.org/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/CoAP-50.png "CoAP")](https://coap.technology/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/mqtt-50.png "MQTT")](https://mqtt.org//)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/amqp-50.png "AMQP")](https://www.amqp.org/)|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network%20👀&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)|---|---|---|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Airports%20App%20🛬&color=informational)](https://bitbucket.org/jesperancinha/airports-app/src/master/)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Airflights%20Clojure%20✈️&color=informational)](https://github.com/jesperancinha/airflights-clojure)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives🧮&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Android%20Test%20Drives&color=informational)](https://github.com/JEsperancinha/jeorg-android-test-drives)|---|---|---|---|---|---|---|---|
@@ -86,7 +87,6 @@
 |map-reduce-jobs-tests|---|---|---|---|---|---|---|---|
 |microArduinoMe|---|---|---|---|---|---|---|---|
 |microPythonMe|---|---|---|---|---|---|---|---|
-|our airports app|---|---|---|---|---|---|---|---|
 |rust-test-drive|---|---|---|---|---|---|---|---|
 |sz-catcher-app-android|---|---|---|---|---|---|---|---|
 |timezone-app-utility-android|---|---|---|---|---|---|---|---|
