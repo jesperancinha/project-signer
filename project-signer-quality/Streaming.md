@@ -28,6 +28,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android🧿&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Image%20Train%20Filters%20Services&color=informational)](https://github.com/jesperancinha/image-train-filters-scala)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Images%20Go%20🏞&color=informational)](https://github.com/jesperancinha/images-go)|---|---|---|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Inner%20Text%20Searcher%20Go%20📖&color=informational)](https://github.com/jesperancinha/inner-text-searcher-go)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=International%20Airports✈️&color=informational)](https://bitbucket.org/jesperancinha/international-airports-service-root)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEOrg%20Cloud%20Test%20Drives%20☁️&color=informational)](https://github.com/jesperancinha/jeorg-cloud-test-drives)|---|---|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JSON%20to%20Builder%20Pattern&color=informational)](https://github.com/jesperancinha/json-to-builder-pattern)|---|---|---|---|---|---|---|---|
@@ -82,7 +83,6 @@
 |Rockstars Manager|---|---|---|---|---|---|---|---|
 |android-joai-universitybaseconverter|---|---|---|---|---|---|---|---|
 |goblins-tale-strongswordfell|---|---|---|---|---|---|---|---|
-|inner-text-searcher|---|---|---|---|---|---|---|---|
 |microArduinoMe|---|---|---|---|---|---|---|---|
 |microPythonMe|---|---|---|---|---|---|---|---|
 |rust-test-drive|---|---|---|---|---|---|---|---|
