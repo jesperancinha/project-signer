@@ -78,7 +78,6 @@
 |Note manager WebApp|---|---|
 |Orbit simulator|---|---|
 |Ping App|---|---|
-|ReviewNinja-Welcome|---|---|
 |Rockstars Manager|---|---|
 |android-joai-universitybaseconverter|---|---|
 |formula-parser|---|---|
