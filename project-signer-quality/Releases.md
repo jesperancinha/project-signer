@@ -68,6 +68,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Video%20Series%20Apps&color=informational)](https://gitlab.com/jesperancinha/video-series-app)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Web%20Parser%20CSV&color=informational)](https://github.com/jesperancinha/web-parser-csv)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=auto-phishing-reporter%20🔬&color=informational)](https://github.com/jesperancinha/auto-phishing-reporter)|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=base-converter-android%20⏹&color=informational)](https://github.com/jesperancinha/base-converter-android)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=goblins-tale-strongswordfell%20👹&color=informational)](https://github.com/jesperancinha/goblins-tale-strongswordfell)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=math-service-scala%20🧮&color=informational)](https://github.com/jesperancinha/math-service-scala)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=matrix-anywhere-android%20⏹&color=informational)](https://github.com/jesperancinha/matrix-anywhere-android)|---|---|---|---|---|
@@ -83,7 +84,6 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=xml-adder🌿&color=informational)](https://github.com/jesperancinha/xml-adder)|---|---|---|---|---|
 ||---|---|---|---|---|
 |Rockstars Manager|---|---|---|---|---|
-|android-joai-universitybaseconverter|---|---|---|---|---|
 |microArduinoMe|---|---|---|---|---|
 |microPythonMe|---|---|---|---|---|
 |sz-catcher-app-android|---|---|---|---|---|
