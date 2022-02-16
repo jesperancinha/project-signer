@@ -76,12 +76,12 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-reporter-sbt-plugin&color=informational)](https://github.com/jesperancinhaorg/omni-reporter-sbt-plugin)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=orbit-simulator%20🪐&color=informational)](https://github.com/jesperancinha/orbit-simulator)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=performance-parsers%20🗄&color=informational)](https://github.com/jesperancinha/performance-parsers)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ping-app-android%20🏓&color=informational)](https://github.com/jesperancinha/ping-app-android)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=rust-test-drive%20⚙️&color=informational)](https://github.com/jesperancinha/rust-test-drive)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=sound-garage%20🎸&color=informational)](https://github.com/jesperancinha/sound-garage)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=string.distance%20📜&color=informational)](https://github.com/jesperancinha/string.distance)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=xml-adder🌿&color=informational)](https://github.com/jesperancinha/xml-adder)|---|---|
 ||---|---|
-|Ping App|---|---|
 |Rockstars Manager|---|---|
 |android-joai-universitybaseconverter|---|---|
 |microArduinoMe|---|---|
