@@ -63,6 +63,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=goblins-tale-strongswordfell%20👹&color=informational)](https://github.com/jesperancinha/goblins-tale-strongswordfell)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=image-sizer&color=informational)](https://github.com/jesperancinha/image-sizer)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=itf-chartizate-android🧿&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=matrix-anywhere-android%20⏹&color=informational)](https://github.com/jesperancinha/matrix-anywhere-android)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=math-service-scala%20🧮&color=informational)](https://github.com/jesperancinha/math-service-scala)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=note-manager-app%20📝&color=informational)](https://github.com/jesperancinha/note-manager-app)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=nowje-spring-xml-to-code-maven-plugin%20🍃&color=informational)](https://github.com/JEsperancinhaOrg/nowje-spring-xml-to-code-maven-plugin)|---|---|
@@ -80,7 +81,6 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=string.distance%20📜&color=informational)](https://github.com/jesperancinha/string.distance)|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=xml-adder🌿&color=informational)](https://github.com/jesperancinha/xml-adder)|---|---|
 ||---|---|
-|Matrix Anywhere|---|---|
 |Ping App|---|---|
 |Rockstars Manager|---|---|
 |android-joai-universitybaseconverter|---|---|
