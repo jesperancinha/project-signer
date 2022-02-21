@@ -28,5 +28,10 @@
     "title": "PyPI Release",
     "badge": "PyPI",
     "codePrefix": "img.shields.io/pypi"
+  },
+  {
+    "title": "Sbt Release",
+    "badge": "Scala version support",
+    "codePrefix": "index.scala-lang.org"
   }
 ]
