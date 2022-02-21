@@ -23,5 +23,10 @@
     "title": "Vulnerabilities",
     "badge": "Known Vulnerabilities",
     "codePrefix": "snyk.io/test"
+  },
+  {
+    "title": "Snyk Score",
+    "badge": "Snyk Score",
+    "codePrefix": "snyk-widget"
   }
 ]
