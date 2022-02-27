@@ -16,7 +16,7 @@ jobs:
         distribution: 'adopt'
 
     - name: Check JEsperancinha.Org
-    - run:  curl https://gitlab.com/jesperancinha/joao-filipe-sabino-esperancinha-home/-/raw/master/jesperancinha.org.check.sh -o jesperancinha.org.check.sh &&
+      run:  curl https://gitlab.com/jesperancinha/joao-filipe-sabino-esperancinha-home/-/raw/master/jesperancinha.org.check.sh -o jesperancinha.org.check.sh &&
             chmod +x jesperancinha.org.check.sh &&
             ./jesperancinha.org.check.sh
 
