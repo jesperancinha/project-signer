@@ -1,9 +1,3 @@
-## Buy me a coffee
-
-I hope you enjoyed this repository. If you did, you can optionally please buy me a coffee, which supports me in constantly improve and make new free content regularly for everyone. Thank you so much!
-
-<a href="https://www.buymeacoffee.com/jesperancinha"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=💡&slug=jesperancinha&button_colour=248910&font_colour=ffffff&font_family=Arial&outline_colour=ffffff&coffee_colour=FFDD00" /></a>
-
 ## About me 👨🏽‍💻🚀🏳️‍🌈
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
