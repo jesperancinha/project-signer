@@ -2,7 +2,7 @@
 
 I hope you enjoyed this repository. If you did, you can optionally please buy me a coffee, which supports me in constantly improve and make new free content regularly for everyone. Thank you so much!
 
-[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&slug=jesperancinha&button_colour=248910&font_colour=ffffff&font_family=Arial&outline_colour=ffffff&coffee_colour=FFDD00 "title")](https://www.buymeacoffee.com/jesperancinha)
+<a href="https://www.buymeacoffee.com/jesperancinha"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=💡&slug=jesperancinha&button_colour=248910&font_colour=ffffff&font_family=Arial&outline_colour=ffffff&coffee_colour=FFDD00" /></a>
 
 ## About me 👨🏽‍💻🚀🏳️‍🌈
 
