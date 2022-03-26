@@ -6,6 +6,7 @@ for item in *; do
     cd "${item}" || exit
     echo "---*** Pulling $item ***---"
     git pull
+    git fetch -p
     cd ..
   fi
 done
