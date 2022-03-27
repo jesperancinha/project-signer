@@ -16,7 +16,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
       cd "${item}" || exit
       echo "---*** Cleaning $item ***---"
       find . -type d -name 'target' | xargs rm -rf
-      find . -type d -name 'node_modules' | xargs rm -rf
+      find . -type d -name 'target' | xargs -I {} ls {}/../pom.xml 2> /dev/null | sed -r 's/\/..\/pom.xml//g' | xargs rm -rf
       cd ..
     fi
   done
