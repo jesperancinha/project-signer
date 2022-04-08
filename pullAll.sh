@@ -7,6 +7,7 @@ for item in *; do
     echo "---*** Pulling $item ***---"
     git pull
     git fetch -p
+    git gc --prune
     cd ..
   fi
 done

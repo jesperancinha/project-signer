@@ -25,7 +25,11 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     if [[ -d "$item" ]]; then
       cd "${item}" || exit
       echo -e "\n\e[31m---*** Cleaning $item ***---\e[0m"
+      echo -e "\n\e[31m---*** Compressing Repo ***---\e[0m"
+      git gc --aggressive
+      echo -e "\n\e[31m---*** Removing target(s) folder(s) ***---\e[0m"
       find . -type d -name 'target' | xargs -I {} ls {}/../pom.xml 2> /dev/null | sed -r 's/\/..\/pom.xml//g' | xargs rm -rf
+      echo -e "\n\e[31m---*** Removing node_modules folder(s) ***---\e[0m"
       find . -type d -name 'node_modules' | xargs rm -rf
       cd ..
     fi
