@@ -31,6 +31,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
       find . -type d -name 'target' | xargs -I {} ls {}/../pom.xml 2> /dev/null | sed -r 's/\/..\/pom.xml//g' | xargs rm -rf
       echo -e "\n\e[31m---*** Removing node_modules folder(s) ***---\e[0m"
       find . -type d -name 'node_modules' | xargs rm -rf
+      echo -e "\n\e[31m---*** Cleaning non versioned files ***---\e[0m"
+      git clean -xdf
       cd ..
     fi
   done
