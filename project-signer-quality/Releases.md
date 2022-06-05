@@ -75,8 +75,8 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=catcher-app-android%20🔮&color=informational)](https://github.com/jesperancinha/catcher-app-android)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=goblins-tale-strongswordfell%20👹&color=informational)](https://github.com/jesperancinha/goblins-tale-strongswordfell)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=jeorg-micro-test-drives%20💽&color=informational)](https://github.com/jesperancinha/jeorg-micro-test-drives)|---|---|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=matrix-anywhere-android%20⏹&color=informational)](https://github.com/jesperancinha/matrix-anywhere-android)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=math-service-scala%20🧮&color=informational)](https://github.com/jesperancinha/math-service-scala)|---|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=matrix-anywhere-android%20⏹&color=informational)](https://github.com/jesperancinha/matrix-anywhere-android)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=note-manager-app%20📝&color=informational)](https://github.com/jesperancinha/note-manager-app)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=nowje-spring-xml-to-code-maven-plugin%20🍃&color=informational)](https://github.com/JEsperancinhaOrg/nowje-spring-xml-to-code-maven-plugin)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=nowje-unit-test-exchange-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/nowje-unit-test-exchange-maven-plugin)|---|---|---|---|---|---|
