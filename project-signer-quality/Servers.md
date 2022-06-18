@@ -88,6 +88,8 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=string.distance%20📜&color=informational)](https://github.com/jesperancinha/string.distance)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=timezone-app-utility-android%20⏳&color=informational)](https://github.com/jesperancinha/timezone-app-utility-android)|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=xml-adder🌿&color=informational)](https://github.com/jesperancinha/xml-adder)|---|---|---|---|---|
+|**FreeCodeCamp**- Information Security and Quality Assurance|---|---|---|---|---|
+|**FreeCodeCamp**- Information Security and Quality Assurance|---|---|---|---|---|
 |Project Armona|---|---|---|---|---|
 ## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Performance Tools](./Performance.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 
