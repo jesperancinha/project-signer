@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+#TODO: rm ~/Library/Containers/com.docker.docker/Data/vms/0/data/
+
 echo -e '\e[31m'----****!!!!! WARNING \!!!!!****----'\e[0m'
 echo -e '\e[32mCareful when using this script!!\e[0m'
 echo -e '\e[32mIt will remove all known binaries in you maven folder (assuming you are using ~/.m2)\e[0m'
