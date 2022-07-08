@@ -197,6 +197,12 @@ fi
 mvn io.spring.javaformat:spring-javaformat-maven-plugin:0.0.27:apply
 ```
 
+## Find something in files
+
+```shell
+grep -R --include="*.xml" "springdoc" .
+```
+
 ## References
 
 - [How can I change the author name / email of a commit?](https://www.git-tower.com/learn/git/faq/change-author-name-email)
