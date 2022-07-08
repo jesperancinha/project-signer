@@ -1,6 +1,6 @@
 # Frameworks Report
 
-## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Performance Tools](./Performance.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
+## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Performance Tools](./Performance.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [End to End Testing](./E2E.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 
 |Project|Lombok|NodeJS|Angular|ReactJS|Python Dicom|Spring Boot|
 |---|---|---|---|---|---|---|
@@ -46,6 +46,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Docker%20Images%20🐳&color=informational)](https://bitbucket.org/jesperancinha/docker-images/src/master/)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Finantial%20Transactions%20in%20Akka%20💶&color=informational)](https://github.com/jesperancinha/finantial-transactions-akka)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Good%20Story%20🐉&color=informational)](https://github.com/jesperancinha/good-story)|---|---|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Healthy%20Cameras%20📹&color=informational)](https://github.com/jesperancinha/healthy-cameras)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android🧿&color=informational)](https://github.com/jesperancinha/image-train-filters-android)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Images%20Go%20🏞&color=informational)](https://github.com/jesperancinha/images-go)|---|---|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Inner%20Text%20Searcher%20Go%20📖&color=informational)](https://github.com/jesperancinha/inner-text-searcher-go)|---|---|---|---|---|---|
@@ -91,6 +92,5 @@
 |**FreeCodeCamp**- Information Security and Quality Assurance|---|---|---|---|---|---|
 |Project Armona|---|---|---|---|---|---|
 |boilerplate-project-metricimpconverter|---|---|---|---|---|---|
-|healthy-cameras|---|---|---|---|---|---|
-## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Performance Tools](./Performance.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
+## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Performance Tools](./Performance.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [End to End Testing](./E2E.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 
