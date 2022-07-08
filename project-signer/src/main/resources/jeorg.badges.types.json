@@ -94,5 +94,11 @@
     "type": "PERFORMANCE",
     "badgeFile": "jeorg.badges.performance.json",
     "destinationFile": "Performance.md"
+  },
+  {
+    "title": "End to End Testing",
+    "type": "E2E",
+    "badgeFile": "jeorg.badges.e2e.json",
+    "destinationFile": "E2E.md"
   }
 ]

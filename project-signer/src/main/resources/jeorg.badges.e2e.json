@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Project",
+    "badge": "Generic badge",
+    "codePrefix": "img.shields.io/static"
+  },
+  {
+    "title": "Cypress",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/cypress-50.png"
+  },
+  {
+    "title": "Swagger",
+    "badge": "alt text",
+    "codePrefix": "raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/swagger-50.png"
+  }
+]
