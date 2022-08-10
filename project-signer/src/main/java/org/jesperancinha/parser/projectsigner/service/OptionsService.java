@@ -1,6 +1,7 @@
 package org.jesperancinha.parser.projectsigner.service;
 
 
+import lombok.val;
 import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser;
 import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder;
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
@@ -17,7 +18,7 @@ public class OptionsService {
     private ReadmeNamingParserBuilder commonBuilder;
 
     public ProjectSignerOptions processOptions(final String[] args) {
-        final ProjectSignerOptions projectSignerOptions = new ProjectSignerOptions();
+        val projectSignerOptions = new ProjectSignerOptions();
         new CommandLine(projectSignerOptions).parseArgs(args);
         this.projectSignerOptions = projectSignerOptions;
         commonBuilder = ReadmeNamingParser.builder()

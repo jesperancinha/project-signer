@@ -1,6 +1,7 @@
 package org.jesperancinha.parser.projectsigner.service;
 
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.jesperancinha.parser.markdowner.badges.model.Badge;
 import org.jesperancinha.parser.markdowner.badges.model.BadgeSettingGroup;
 import org.jesperancinha.parser.markdowner.badges.model.BadgeType;
@@ -22,8 +23,8 @@ import java.util.stream.Collectors;
 public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
     @Override
     public void exportReadmeFile(Path path, String text) throws IOException {
-        final File f = new File(path.toFile(), "Readme.md");
-        final FileWriter fileWriter = new FileWriter(f);
+        val readmeFile = new File(path.toFile(), "Readme.md");
+        val fileWriter = new FileWriter(readmeFile);
         fileWriter.write(text);
         fileWriter.flush();
         fileWriter.close();
@@ -32,25 +33,25 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
     @Override
     public void exportReportFile(Path path, final List<ProjectData> projectDataList) {
         BadgeParser.badgeTypes.values().forEach(badgeType -> {
-            final var f = new File(path.toFile(), badgeType.getDestinationFile());
+            val file = new File(path.toFile(), badgeType.getDestinationFile());
             try {
-                final var fileWriter = new FileWriter(f);
+                val fileWriter = new FileWriter(file);
                 fileWriter.write(String.format("# %s Report\n\n", getTitle(badgeType)));
                 writeHyperLinks(fileWriter);
                 writeTitles(badgeType, fileWriter);
                 writeTopTable(badgeType, fileWriter);
                 projectDataList.sort((o1, o2) -> {
-                    final List<Badge> badgeList1 = o1.badgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).toList();
-                    final List<Badge> badgeList2 = o2.badgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).toList();
-                    final var nBadges1 = badgeList1.size();
-                    final var nBadges2 = badgeList2.size();
+                    val badgeList1 = o1.badgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).toList();
+                    val badgeList2 = o2.badgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).toList();
+                    val nBadges1 = badgeList1.size();
+                    val nBadges2 = badgeList2.size();
                     if (nBadges1 == nBadges2) {
-                        if(badgeList1.size()>0) {
-                            final String badgeText1 = badgeList1.get(0).getBadgeText();
-                            final String badgeText2 = badgeList2.get(0).getBadgeText();
+                        if (badgeList1.size() > 0) {
+                            val badgeText1 = badgeList1.get(0).getBadgeText();
+                            val badgeText2 = badgeList2.get(0).getBadgeText();
                             if (badgeText1.contains("message=") && badgeText2.contains("message=")) {
-                                final var message1 = badgeText1.split("message=")[1].substring(0,3);
-                                final var message2 = badgeText2.split("message=")[1].substring(0,3);
+                                final var message1 = badgeText1.split("message=")[1].substring(0, 3);
+                                final var message2 = badgeText2.split("message=")[1].substring(0, 3);
                                 return message1.compareTo(message2);
                             }
                         }

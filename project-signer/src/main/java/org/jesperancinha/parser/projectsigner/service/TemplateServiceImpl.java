@@ -1,12 +1,12 @@
 package org.jesperancinha.parser.projectsigner.service;
 
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.jesperancinha.parser.markdowner.helper.TemplateParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.api.TemplateService;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -35,8 +35,8 @@ public class TemplateServiceImpl implements TemplateService<Paragraphs> {
      */
     @Override
     public Paragraphs findAllParagraphs() throws IOException {
-        final File fileTemplate = optionsService.getProjectSignerOptions().getTemplateLocation().toFile();
-        final FileInputStream templateInputStream = new FileInputStream(fileTemplate);
+        val fileTemplate = optionsService.getProjectSignerOptions().getTemplateLocation().toFile();
+        val templateInputStream = new FileInputStream(fileTemplate);
         return TemplateParserHelper.findAllParagraphs(templateInputStream);
     }
 
