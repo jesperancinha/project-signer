@@ -9,16 +9,15 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 class LintMatchTest {
 
-    private static List<LintPattern> lintMatches;
-    private static ObjectMapper objectMapper = new ObjectMapper();
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
     void testMatchAndReplaceWhenPatterReplacedThenGetDocumentWithStandards() throws IOException {
@@ -32,14 +31,13 @@ class LintMatchTest {
 
     private String formatText(final String test) throws IOException {
         final var jsonLint =
-                IOUtils.toString(ReadmeServiceImpl.class.getResourceAsStream("/jeorg-lint.json"),
-                        StandardCharsets.UTF_8.name());
-        lintMatches = Arrays.stream(objectMapper.readValue(jsonLint, LintMatch[].class))
+                IOUtils.toString(Objects.requireNonNull(ReadmeServiceImpl.class.getResourceAsStream("/jeorg-lint.json")),
+                        StandardCharsets.UTF_8);
+        List<LintPattern> lintMatches = Arrays.stream(objectMapper.readValue(jsonLint, LintMatch[].class))
                 .map(lintMatch -> LintPattern.builder()
                         .find(Pattern.compile(lintMatch.find()))
                         .replace(lintMatch.replace())
-                        .build())
-                .collect(Collectors.toList());
+                        .build()).toList();
         var ref = new Object() {
             String readme = test;
         };

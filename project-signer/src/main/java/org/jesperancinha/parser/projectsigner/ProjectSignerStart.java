@@ -7,6 +7,7 @@ import org.jesperancinha.parser.projectsigner.api.ReadmeService;
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.jesperancinha.parser.projectsigner.model.ProjectData;
 import org.jesperancinha.parser.projectsigner.service.FinderServiceImpl;
+import org.jesperancinha.parser.projectsigner.service.OptionsService;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -19,7 +20,7 @@ public class ProjectSignerStart implements ApplicationRunner {
 
     private final FinderServiceImpl finderServiceImpl;
     private final FileWriterService<ProjectData> fileWriterService;
-    private final org.jesperancinha.parser.projectsigner.service.OptionsService optionsService;
+    private final OptionsService optionsService;
     private final ReadmeService<Paragraphs, ProjectData> readmeService;
 
     public static void main(String[] args) {
@@ -28,7 +29,7 @@ public class ProjectSignerStart implements ApplicationRunner {
 
     public ProjectSignerStart(final FinderServiceImpl finderServiceImpl,
                               final FileWriterService<ProjectData> fileWriterService,
-                              final org.jesperancinha.parser.projectsigner.service.OptionsService optionsService,
+                              final OptionsService optionsService,
                               final ReadmeService<Paragraphs, ProjectData> readmeService) {
         this.finderServiceImpl = finderServiceImpl;
         this.fileWriterService = fileWriterService;

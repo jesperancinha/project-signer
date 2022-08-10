@@ -41,7 +41,7 @@ public class TemplateServiceImpl implements TemplateService<Paragraphs> {
     }
 
     @Override
-    public List<String> readAllLicenses() throws IOException {
+    public List<String> readAllLicenses() {
         return Arrays.stream(optionsService.getProjectSignerOptions().getLicenseLocations())
                 .map(path -> {
                     try {
