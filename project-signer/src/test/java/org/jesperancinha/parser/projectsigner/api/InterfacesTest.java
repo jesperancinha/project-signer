@@ -1,5 +1,6 @@
 package org.jesperancinha.parser.projectsigner.api;
 
+import org.jesperancinha.parser.projectsigner.service.OptionsService;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -8,6 +9,7 @@ import java.nio.file.Path;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
 
 public class InterfacesTest {
 
@@ -55,22 +57,7 @@ public class InterfacesTest {
             }
         };
 
-        final var optionsService = new OptionsService<>() {
-            @Override
-            public Object processOptions(String[] args) {
-                return null;
-            }
-
-            @Override
-            public Object getProjectSignerOptions() {
-                return null;
-            }
-
-            @Override
-            public Object getCommonNamingParser() {
-                return null;
-            }
-        };
+        final var optionsService = mock(OptionsService.class);
 
         final var readmeNamingService = new ReadmeNamingService() {
             @Override

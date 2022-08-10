@@ -1,12 +1,9 @@
 package org.jesperancinha.parser.projectsigner.service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder;
 import org.jesperancinha.parser.markdowner.helper.TemplateParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
-import org.jesperancinha.parser.projectsigner.api.OptionsService;
 import org.jesperancinha.parser.projectsigner.api.TemplateService;
-import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -24,9 +21,9 @@ import java.util.stream.Collectors;
 @Slf4j
 public class TemplateServiceImpl implements TemplateService<Paragraphs> {
 
-    private final OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService;
+    private final org.jesperancinha.parser.projectsigner.service.OptionsService optionsService;
 
-    public TemplateServiceImpl(OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService) {
+    public TemplateServiceImpl(org.jesperancinha.parser.projectsigner.service.OptionsService optionsService) {
         this.optionsService = optionsService;
     }
 

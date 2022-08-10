@@ -9,10 +9,6 @@ import org.jesperancinha.parser.markdowner.badges.model.BadgeType;
 
 import java.util.Map;
 
-@Value
 @Builder
-@AllArgsConstructor(onConstructor_ = @JsonCreator)
-public class ProjectData {
-    String title;
-    Map<BadgeType, BadgeGroup> badgeGroupMap;
+public record ProjectData(String title, Map<BadgeType, BadgeGroup> badgeGroupMap) {
 }

@@ -1,10 +1,8 @@
 package org.jesperancinha.parser.projectsigner;
 
 import lombok.extern.slf4j.Slf4j;
-import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.api.FileWriterService;
-import org.jesperancinha.parser.projectsigner.api.OptionsService;
 import org.jesperancinha.parser.projectsigner.api.ReadmeService;
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.jesperancinha.parser.projectsigner.model.ProjectData;
@@ -21,7 +19,7 @@ public class ProjectSignerStart implements ApplicationRunner {
 
     private final FinderServiceImpl finderServiceImpl;
     private final FileWriterService<ProjectData> fileWriterService;
-    private final OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService;
+    private final org.jesperancinha.parser.projectsigner.service.OptionsService optionsService;
     private final ReadmeService<Paragraphs, ProjectData> readmeService;
 
     public static void main(String[] args) {
@@ -30,7 +28,7 @@ public class ProjectSignerStart implements ApplicationRunner {
 
     public ProjectSignerStart(final FinderServiceImpl finderServiceImpl,
                               final FileWriterService<ProjectData> fileWriterService,
-                              final OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService,
+                              final org.jesperancinha.parser.projectsigner.service.OptionsService optionsService,
                               final ReadmeService<Paragraphs, ProjectData> readmeService) {
         this.finderServiceImpl = finderServiceImpl;
         this.fileWriterService = fileWriterService;

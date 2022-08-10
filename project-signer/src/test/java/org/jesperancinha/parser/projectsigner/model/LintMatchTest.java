@@ -36,8 +36,8 @@ class LintMatchTest {
                         StandardCharsets.UTF_8.name());
         lintMatches = Arrays.stream(objectMapper.readValue(jsonLint, LintMatch[].class))
                 .map(lintMatch -> LintPattern.builder()
-                        .find(Pattern.compile(lintMatch.getFind()))
-                        .replace(lintMatch.getReplace())
+                        .find(Pattern.compile(lintMatch.find()))
+                        .replace(lintMatch.replace())
                         .build())
                 .collect(Collectors.toList());
         var ref = new Object() {
@@ -45,9 +45,9 @@ class LintMatchTest {
         };
 
         lintMatches.forEach(lintMatch -> {
-            Matcher m = lintMatch.getFind().matcher(ref.readme);
+            Matcher m = lintMatch.find().matcher(ref.readme);
             if (m.find()) {
-                ref.readme = m.replaceAll(lintMatch.getReplace());
+                ref.readme = m.replaceAll(lintMatch.replace());
             }
         });
         return ref.readme;

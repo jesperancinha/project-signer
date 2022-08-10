@@ -16,7 +16,6 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 @Slf4j
@@ -41,8 +40,8 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
                 writeTitles(badgeType, fileWriter);
                 writeTopTable(badgeType, fileWriter);
                 projectDataList.sort((o1, o2) -> {
-                    final List<Badge> badgeList1 = o1.getBadgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).toList();
-                    final List<Badge> badgeList2 = o2.getBadgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).toList();
+                    final List<Badge> badgeList1 = o1.badgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).toList();
+                    final List<Badge> badgeList2 = o2.badgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).toList();
                     final var nBadges1 = badgeList1.size();
                     final var nBadges2 = badgeList2.size();
                     if (nBadges1 == nBadges2) {
@@ -55,7 +54,7 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
                                 return message1.compareTo(message2);
                             }
                         }
-                        return o1.getTitle().compareTo(o2.getTitle());
+                        return o1.title().compareTo(o2.title());
                     }
                     return nBadges2 - nBadges1;
                 });
@@ -109,7 +108,7 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
 
     private void writeProjectData(BadgeType badgeType, FileWriter fileWriter, ProjectData projectData) {
         try {
-            final var badgeGroup = projectData.getBadgeGroupMap().get(badgeType);
+            final var badgeGroup = projectData.badgeGroupMap().get(badgeType);
 
             BadgeParser.badgeSettingGroups.get(badgeType).getBadgeSettingList()
                     .forEach(badgePattern -> {
@@ -117,7 +116,7 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
                         if (badgePattern.getTitle().equals("Project") && Objects.isNull(badge)) {
                             try {
                                 fileWriter.write("|");
-                                fileWriter.write(projectData.getTitle());
+                                fileWriter.write(projectData.title());
                             } catch (IOException e) {
                                 log.error("Error!", e);
                                 System.exit(1);

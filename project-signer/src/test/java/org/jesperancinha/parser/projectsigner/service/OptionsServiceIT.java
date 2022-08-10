@@ -5,14 +5,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class OptionsServiceImplIT {
+public class OptionsServiceIT {
 
     private static final String TEMPLATE_LOCATION = "../project-signer-templates/Readme.md";
     private static final String ROOT_LOCATION = "../..";
     private static final String LICENSE = "License";
     private static final String ABOUT_ME = "About me";
 
-    private OptionsServiceImpl optionsService = new OptionsServiceImpl();
+    private OptionsService optionsService = new OptionsService();
 
     @Test
     public void testProcessOptions() {

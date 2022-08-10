@@ -2,7 +2,6 @@ package org.jesperancinha.parser.projectsigner.service;
 
 import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser;
 import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder;
-import org.jesperancinha.parser.projectsigner.api.OptionsService;
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.mockito.Mockito;
 import org.springframework.context.annotation.Profile;
@@ -15,7 +14,7 @@ import static org.mockito.Mockito.when;
 
 @Service
 @Profile({"test", "localtest", "default"})
-public class OptionsServiceMock implements OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> {
+public class OptionsServiceMock {
     private ProjectSignerOptions projectSignerOptions;
     private ReadmeNamingParserBuilder commonBuilder;
 
@@ -27,7 +26,6 @@ public class OptionsServiceMock implements OptionsService<ProjectSignerOptions, 
                 .isNoEmpty(this.projectSignerOptions.isNoEmpty());
     }
 
-    @Override
     public ProjectSignerOptions processOptions(final String[] args) {
         final String rootPath = getClass().getResource("/dummyDirectory").getPath();
         final String template = getClass().getResource("/Readme.md").getPath();
@@ -42,12 +40,10 @@ public class OptionsServiceMock implements OptionsService<ProjectSignerOptions, 
         return projectSignerOptions;
     }
 
-    @Override
     public ProjectSignerOptions getProjectSignerOptions() {
         return projectSignerOptions;
     }
 
-    @Override
     public ReadmeNamingParserBuilder getCommonNamingParser() {
         return commonBuilder;
     }

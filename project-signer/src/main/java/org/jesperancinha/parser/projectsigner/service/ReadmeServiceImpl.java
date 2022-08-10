@@ -4,13 +4,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.jesperancinha.parser.markdowner.badges.parser.BadgeParser;
-import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder;
 import org.jesperancinha.parser.markdowner.helper.ReadmeParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.api.MergeService;
-import org.jesperancinha.parser.projectsigner.api.OptionsService;
 import org.jesperancinha.parser.projectsigner.api.ReadmeService;
-import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.jesperancinha.parser.projectsigner.model.LintMatch;
 import org.jesperancinha.parser.projectsigner.model.LintPattern;
 import org.jesperancinha.parser.projectsigner.model.ProjectData;
@@ -46,8 +43,8 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs, ProjectData>
             final var jsonLint = IOUtils.toString(ReadmeServiceImpl.class.getResourceAsStream("/jeorg-lint.json"), StandardCharsets.UTF_8.name());
             lintMatches = Arrays.stream(objectMapper.readValue(jsonLint, LintMatch[].class))
                     .map(lintMatch -> LintPattern.builder()
-                            .find(Pattern.compile(lintMatch.getFind()))
-                            .replace(lintMatch.getReplace())
+                            .find(Pattern.compile(lintMatch.find()))
+                            .replace(lintMatch.replace())
                             .build())
                     .collect(Collectors.toList());
         } catch (IOException e) {
@@ -57,10 +54,10 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs, ProjectData>
     }
 
     private final MergeService<Paragraphs> mergeService;
-    private final OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService;
+    private final OptionsService optionsService;
     private final List<ProjectData> allProjectData = new ArrayList<>();
 
-    public ReadmeServiceImpl(MergeService<Paragraphs> mergeService, OptionsService<ProjectSignerOptions, ReadmeNamingParserBuilder> optionsService) {
+    public ReadmeServiceImpl(MergeService<Paragraphs> mergeService, OptionsService optionsService) {
         this.mergeService = mergeService;
         this.optionsService = optionsService;
     }
@@ -103,9 +100,9 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs, ProjectData>
             String readme = newText;
         };
         lintMatches.forEach(lintMatch -> {
-            Matcher m = lintMatch.getFind().matcher(ref.readme);
+            Matcher m = lintMatch.find().matcher(ref.readme);
             if (m.find()) {
-                ref.readme = m.replaceAll(lintMatch.getReplace());
+                ref.readme = m.replaceAll(lintMatch.replace());
             }
         });
         return ref.readme;

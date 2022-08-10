@@ -5,7 +5,6 @@ import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.api.FileWriterService;
 import org.jesperancinha.parser.projectsigner.api.GeneratorService;
 import org.jesperancinha.parser.projectsigner.api.MergeService;
-import org.jesperancinha.parser.projectsigner.api.OptionsService;
 import org.jesperancinha.parser.projectsigner.api.ReadmeNamingService;
 import org.jesperancinha.parser.projectsigner.api.ReadmeService;
 import org.jesperancinha.parser.projectsigner.api.TemplateService;
@@ -44,7 +43,7 @@ class FinderServiceImplTest {
     private ReadmeService readmeService;
 
     @Mock
-    private OptionsService optionsService;
+    private OptionsServiceMock optionsService;
 
     @Mock
     private FileWriterService fileWriterService;
