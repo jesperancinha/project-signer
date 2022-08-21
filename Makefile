@@ -6,7 +6,7 @@ test:
 local:
 	mkdir -p bin
 no-test:
-	mvn clean install -DskipTests
+	mvn clean install spring-boot:repackage -DskipTests
 release:
 	export GPG_TTY=$(tty)
 	mvn clean deploy -Prelease
@@ -19,3 +19,5 @@ prune-all: docker-delete
 	docker system prune --all -f
 	docker builder prune -f
 	docker system prune --all --volumes -f
+sign-all: no-test
+	java -jar -Dspring.profiles.active=prod project-signer/target/project-signer.jar -l "project-signer-templates/licenses/APACHE2.template,project-signer-templates/licenses/ISC.template,project-signer-templates/licenses/MIT.template" -t "project-signer-templates/Readme.md" -d ../ -r project-signer-quality "License" "About me ?????????????????????????????????" "About me" "Achievements"

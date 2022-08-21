@@ -17,10 +17,12 @@
         <maven-compiler-plugin.source>${java.version}</maven-compiler-plugin.source>
         <maven-compiler-plugin.target>${java.version}</maven-compiler-plugin.target>
         <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
+        <maven-failsafe-plugin.version>3.0.0-M7</maven-failsafe-plugin.version>
         <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
         <jaxb-api.version>2.3.1</jaxb-api.version>
         <spring-boot-maven-plugin.version>2.7.3</spring-boot-maven-plugin.version>
         <junit-jupiter-api.version>5.9.0</junit-jupiter-api.version>
+        <jackson-databind.version>2.13.2.1</jackson-databind.version>
     </properties>
     <parent>
         <groupId>org.jesperancinha.parser</groupId>
@@ -48,6 +50,11 @@
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-databind.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.assertj</groupId>

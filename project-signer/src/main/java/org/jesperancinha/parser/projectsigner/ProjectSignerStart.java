@@ -18,7 +18,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ProjectSignerStart implements ApplicationRunner {
 
 
-    private final FinderServiceImpl finderServiceImpl;
+    private final FinderServiceImpl finderService;
     private final FileWriterService<ProjectData> fileWriterService;
     private final OptionsService optionsService;
     private final ReadmeService<Paragraphs, ProjectData> readmeService;
@@ -27,11 +27,11 @@ public class ProjectSignerStart implements ApplicationRunner {
         SpringApplication.run(ProjectSignerStart.class, args);
     }
 
-    public ProjectSignerStart(final FinderServiceImpl finderServiceImpl,
+    public ProjectSignerStart(final FinderServiceImpl finderService,
                               final FileWriterService<ProjectData> fileWriterService,
                               final OptionsService optionsService,
                               final ReadmeService<Paragraphs, ProjectData> readmeService) {
-        this.finderServiceImpl = finderServiceImpl;
+        this.finderService = finderService;
         this.fileWriterService = fileWriterService;
         this.optionsService = optionsService;
         this.readmeService = readmeService;
@@ -40,7 +40,7 @@ public class ProjectSignerStart implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         final ProjectSignerOptions projectSignerOptions = optionsService.processOptions(args.getSourceArgs());
-        finderServiceImpl.iterateThroughFilesAndFolders(projectSignerOptions.getRootDirectory());
+        finderService.iterateThroughFilesAndFolders(projectSignerOptions.getRootDirectory());
         fileWriterService.exportReportFile(optionsService.getProjectSignerOptions().getReportLocation()
                 , readmeService.getAllProjectData());
 
