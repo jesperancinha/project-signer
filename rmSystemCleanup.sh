@@ -17,11 +17,11 @@ echo -e "Type Nn or Ctr-C to leave."
 read -p "Are you sure? (Yy/Nn)" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo -e "\n\e[31m---*** Pruning /tmp folder ***---\e[0m"
-  rm -rf /tmp/*
+  sudo rm -rf /tmp/*
   echo -e "\n\e[31m---*** Pruning all Docker elements ***---\e[0m"
   make prune-all
   echo -e "\n\e[31m---*** Cleaning ~/.m2/repository ***---\e[0m"
-  rm -rf ~/.m2/repository/*
+  sudo rm -rf ~/.m2/repository/*
   cd ..
   for item in *; do
     if [[ -d "$item" ]]; then
