@@ -7,6 +7,7 @@
     <version>3.0.7</version>
     <packaging>pom</packaging>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <markdowner.version>${parent.version}</markdowner.version>
         <project-signer-api.version>${parent.version}</project-signer-api.version>
         <commons-io.version>2.11.0</commons-io.version>
