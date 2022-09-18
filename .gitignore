@@ -30,6 +30,7 @@ hs_err_pid*
 bin
 dist
 target
+build
 
 # MACOS
 .DS_Store
@@ -40,25 +41,9 @@ target
 # Codecov
 codecov.yml
 
-# Intellij
-.idea
-*.iml
-
 # Eclipse
 .classpath
 .project
 
-# Build
-target
-bin
-build
-dist
-
-# OS
-.DS_Store
-
 # Front end
 node_modules
-
-# Logs
-*.log

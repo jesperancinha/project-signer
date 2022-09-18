@@ -92,12 +92,14 @@ jvmver=`echo "$java_ver_output" | grep '[openjdk|java] version' | awk -F'"' 'NR=
 JVM_VERSION=${jvmver%_*}
 JVM_PATCH_VERSION=${jvmver#*_}
 
+# shellcheck disable=SC2072
 if [ "$JVM_VERSION" \< "1.8" ] ; then
     echo "Cassandra 3.0 and later require Java 8u40 or later."
     exit 1;
 fi
 
-if [ "$JVM_VERSION" \< "1.8" ] && [ "$JVM_PATCH_VERSION" -lt 40 ] ; then
+# shellcheck disable=SC2072
+if [ "$JVM_VERSION" \< "1 .8" ] && [ "$JVM_PATCH_VERSION" -lt 40 ] ; then
     echo "Cassandra 3.0 and later require Java 8u40 or later."
     exit 1;
 fi
@@ -116,6 +118,7 @@ case "$jvm" in
         ;;
     *)
         # Help fill in other JVM values
+        # shellcheck disable=SC2034
         JVM_VENDOR=other
         JVM_ARCH=unknown
         ;;
@@ -173,6 +176,7 @@ USING_G1=$?
 #export MALLOC_ARENA_MAX=4
 
 # only calculate the size if it's not set manually
+# shellcheck disable=SC2166
 if [ "x$MAX_HEAP_SIZE" = "x" ] && [ "x$HEAP_NEWSIZE" = "x" -o $USING_G1 -eq 0 ]; then
     calculate_heap_sizes
 elif [ "x$MAX_HEAP_SIZE" = "x" ] ||  [ "x$HEAP_NEWSIZE" = "x" -a $USING_G1 -ne 0 ]; then
@@ -226,6 +230,7 @@ fi
 # on white spaces without taking quotes into account
 # JVM_OPTS="$JVM_OPTS -XX:+ExitOnOutOfMemoryError"
 # JVM_OPTS="$JVM_OPTS -XX:+CrashOnOutOfMemoryError"
+# shellcheck disable=SC2034
 JVM_ON_OUT_OF_MEMORY_ERROR_OPT="-XX:OnOutOfMemoryError=kill -9 %p"
 
 # print an heap histogram on OutOfMemoryError

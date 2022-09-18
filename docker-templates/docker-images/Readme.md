@@ -1,30 +1,14 @@
 # Docker images
 
----
-
-[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//bitbucket.org/jesperancinha/docker-images/src/master/)
-[![Generic badge](https://img.shields.io/static/v1.svg?label=BitBucket&message=Docker%20Images%20🐳&color=informational)](https://bitbucket.org/jesperancinha/docker-images/src/master/)
-
----
-
 ## Introduction
 
-In this repo you will find docker images for many different purposes with extended functionality.
+>Hi there, this directory and its contents contain image definitions and specifications I created in the past to help me
+>create docker environments.
+>However, I ended up not needing this images and for a long time I have already found ways to use existing docker-images
+>to serve multiple requirements.
+>This whole directory is no longer in use, but feel free to have a look at it.
 
-## Image List
-
-[![dockeri.co](https://dockeri.co/image/jesperancinha/java-exercise-docker)](https://hub.docker.com/r/jesperancinha/java-exercise-docker)
-
-[![dockeri.co](https://dockeri.co/image/jesperancinha/je-postgres-all)](https://hub.docker.com/r/jesperancinha/je-postgres-all)
-
-[![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-build)](https://hub.docker.com/r/jesperancinha/je-all-build)
->  [![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-build-jdk-12)](https://hub.docker.com/r/jesperancinha/je-all-build-jdk-12)
->  [![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-build-jdk-13)](https://hub.docker.com/r/jesperancinha/je-all-build-jdk-13)
->  [![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-build-jdk-14)](https://hub.docker.com/r/jesperancinha/je-all-build-jdk-14)
-
-[![dockeri.co](https://dockeri.co/image/jesperancinha/je-all-runtime)](https://hub.docker.com/r/jesperancinha/je-all-runtime)
-
-[![dockeri.co](https://dockeri.co/image/jesperancinha/je-streams)](https://hub.docker.com/r/jesperancinha/je-streams;)
+In this repo you will find docker images for many purposes with extended functionality.
 
 ## Docker notes
 
@@ -72,6 +56,7 @@ docker builder prune
 ## Tools & Tips
 
 ### Git tagging
+
 ```bash
 git tag new-tag old-tag
 git tag -d old-tag
@@ -82,8 +67,8 @@ git pull --prune --tags
 
 ## References
 
--   [Use Bash Strict Mode (Unless You Love Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
--   [Linux containers](https://linuxcontainers.org/)
+- [Use Bash Strict Mode (Unless You Love Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+- [Linux containers](https://linuxcontainers.org/)
 
 ## About me 👨🏽‍💻🚀🏳️‍🌈
 
