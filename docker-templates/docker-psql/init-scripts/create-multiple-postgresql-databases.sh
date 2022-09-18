@@ -33,6 +33,7 @@ function create_user_and_database() {
 	  grep -q 1 || \
 	  psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
 	    CREATE USER $database with PASSWORD '$POSTGRES_PASSWORD';
+	    DROP DATABASE IF EXISTS $database;
 	    CREATE DATABASE $database;
 	    GRANT ALL PRIVILEGES ON DATABASE $database TO $database;
 EOSQL
