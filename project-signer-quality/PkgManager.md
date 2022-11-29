@@ -55,6 +55,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Vertext%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-vertex-osgi-testdrives)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Video%20Series%20Apps&color=informational)](https://gitlab.com/jesperancinha/video-series-app)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Web%20Parser%20CSV&color=informational)](https://github.com/jesperancinha/web-parser-csv)|---|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Whiskers%20Kotlin%20Native%20🐈&color=informational)](https://github.com/jesperancinha/whiskers-kotlin-native-command-line)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Your%20finance%20JE&color=informational)](https://github.com/jesperancinha/your-finance-je)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=android-action🤖&color=informational)](https://github.com/JEsperancinhaOrg/android-action)|---|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=base-converter-android%20⏹&color=informational)](https://github.com/jesperancinha/base-converter-android)|---|---|---|---|
@@ -87,6 +88,5 @@
 |.github|---|---|---|---|
 |<div align="center">|---|---|---|---|
 |Project Armona|---|---|---|---|
-|whiskas-kotlin-native-command-line|---|---|---|---|
 ## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Performance Tools](./Performance.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [End to End Testing](./E2E.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 

@@ -79,6 +79,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Finantial%20Transactions%20in%20Akka%20💶&color=informational)](https://github.com/jesperancinha/finantial-transactions-akka)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Healthy%20Cameras%20📹&color=informational)](https://github.com/jesperancinha/healthy-cameras)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEOrg%20Cloud%20Test%20Drives%20☁️&color=informational)](https://github.com/jesperancinha/jeorg-cloud-test-drives)|---|---|---|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Whiskers%20Kotlin%20Native%20🐈&color=informational)](https://github.com/jesperancinha/whiskers-kotlin-native-command-line)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=android-action🤖&color=informational)](https://github.com/JEsperancinhaOrg/android-action)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=goblins-tale-strongswordfell%20👹&color=informational)](https://github.com/jesperancinha/goblins-tale-strongswordfell)|---|---|---|
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=jeorg-micro-test-drives%20💽&color=informational)](https://github.com/jesperancinha/jeorg-micro-test-drives)|---|---|---|
@@ -87,6 +88,5 @@
 |.github|---|---|---|
 |<div align="center">|---|---|---|
 |Project Armona|---|---|---|
-|whiskas-kotlin-native-command-line|---|---|---|
 ## [Deployment](./Deployment.md) - [Quality](./Quality.md) - [Releases](./Releases.md) - [Coverage](./Coverage.md) - [Package Manager](./PkgManager.md) - [Performance Tools](./Performance.md) - [Build](./Build.md) - [Databases](./Databases.md) - [Streaming](./Streaming.md) - [Info](./Info.md) - [Frameworks](./Frameworks.md) - [JVM Technologies](./TechJVM.md) - [Enterprise Frameworks](./Enterprise.md) - [Technologies](./Tech.md) - [Testing](./Testing.md) - [End to End Testing](./E2E.md) - [Content](./Content.md) - [Articles](./Articles.md) - [Servers](./Servers.md) 
 
