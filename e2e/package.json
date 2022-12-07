@@ -1,0 +1,14 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "description": "This is not a real Node project. This is just a keeper of the latest cypress version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "João Esperancinha",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.0.1"
+  }
+}
