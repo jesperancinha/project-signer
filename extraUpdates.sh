@@ -39,7 +39,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
         sed -E 's/image: "cypress\/included:.*"/image: "cypress\/included:'"$cypress_docker"'/g' "e2e/docker-compose.yml" > e2e/docker-composetmp.yml
         rm e2e/packagetmp.json
         mv e2e/docker-composetmp.yml e2e/docker-compose.yml
-        if [[ -d .github/workflows ]]; then
+      fi
+      if [[ -d .github/workflows ]]; then
           rm .github/workflows/*.*01
           WORKFLOWS=".github/workflows/*"
           for f in $WORKFLOWS
