@@ -31,6 +31,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   for item in *; do
     if [[ -d "$item" ]] && [[ "$item" != ".git" ]] && [[ "$item" != "target" ]]; then
       cd "${item}" || exit
+      git checkout .
       if [[ -f e2e/package.json ]]; then
         echo "----------------- Updating Cypress In ${item} -----------------"
         echo "Cypress from $(cat < "e2e/package.json" | grep -v cypress-pipe | grep cypress | tail -1 | cut -d'"' -f4- | rev | cut -c 2- | rev)"
@@ -54,7 +55,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
             sed -E 's/'$oldsetupnode02'/'$newsetupnode'/g' "$f""01" > "$f"
             rm "$f""01"
           done
-        fi
       fi
       cd ..
     fi
