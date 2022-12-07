@@ -34,9 +34,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
       if [[ -f e2e/package.json ]]; then
         echo "----------------- Updating Cypress In ${item} -----------------"
         echo "Cypress from $(cat < "e2e/package.json" | grep -v cypress-pipe | grep cypress | tail -1 | cut -d'"' -f4- | rev | cut -c 2- | rev)"
-        sed -E 's/"cypress": .*"/"cypress": "'"$cypress"'"/g' "e2e/package.json" > e2e/packagetmp.json
+        sed -E 's/"cypress": "1.*"/"cypress": "'"$cypress"'"/g' "e2e/package.json" > e2e/packagetmp.json
+        sed -E 's/"cypress": "^.*"/"cypress": "'"$cypress"'"/g' "e2e/packagetmp.json" > e2e/package.json
         sed -E 's/image: "cypress\/included:.*"/image: "cypress\/included:'"$cypress_docker"'/g' "e2e/docker-compose.yml" > e2e/docker-composetmp.yml
-        mv e2e/packagetmp.json e2e/package.json
+        rm e2e/packagetmp.json
         mv e2e/docker-composetmp.yml e2e/docker-compose.yml
         if [[ -d .github/workflows ]]; then
           rm .github/workflows/*.*01
