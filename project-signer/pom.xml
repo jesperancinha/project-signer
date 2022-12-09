@@ -5,6 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>project-signer</artifactId>
+    <name>Project Signer :: Runnable</name>
 
     <parent>
         <groupId>org.jesperancinha.parser</groupId>
@@ -78,7 +79,7 @@
     </dependencies>
 
     <build>
-        <finalName>${artifactId}</finalName>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -110,7 +111,7 @@
                         </path>
                     </annotationProcessorPaths>
                     <compilerArgs>
-                        <arg>-Aproject=${groupId}/${artifactId}</arg>
+                        <arg>-Aproject=${project.groupId}/${project.artifactId}</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>
