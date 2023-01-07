@@ -3,9 +3,6 @@ package org.jesperancinha.parser.projectsigner.service;
 import lombok.extern.slf4j.Slf4j;
 import org.jesperancinha.parser.markdowner.helper.MergeParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
-import org.jesperancinha.parser.projectsigner.api.FileWriterService;
-import org.jesperancinha.parser.projectsigner.api.MergeService;
-import org.jesperancinha.parser.projectsigner.model.ProjectData;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -16,11 +13,11 @@ import java.nio.file.Path;
  */
 @Slf4j
 @Service
-public class MergeServiceImpl implements MergeService<Paragraphs> {
+public class MergeService {
 
-    private final FileWriterService<ProjectData> fileWriterService;
+    private final FileWriterService fileWriterService;
 
-    public MergeServiceImpl(FileWriterService<ProjectData> fileWriterService) {
+    public MergeService(FileWriterService fileWriterService) {
         this.fileWriterService = fileWriterService;
     }
 
@@ -31,12 +28,10 @@ public class MergeServiceImpl implements MergeService<Paragraphs> {
      * @param footer   A {@link Paragraphs} instance which will add all paragraphs to the end of the markdown text
      * @return The complete String merge between a {@link String} text and a {@link Paragraphs} instances
      */
-    @Override
     public String mergeDocumentWithFooterTemplate(String readmeMd, Paragraphs footer) {
         return MergeParserHelper.mergeDocumentWithFooterTemplate(readmeMd, footer);
     }
 
-    @Override
     public void writeMergedResult(Path readmePath, String newText) throws IOException {
         log.trace("New readme:\n {}", newText);
         fileWriterService.exportReadmeFile(readmePath, newText);

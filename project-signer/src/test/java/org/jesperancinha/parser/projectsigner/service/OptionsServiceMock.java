@@ -8,7 +8,10 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.nio.file.Path;
+import java.util.Objects;
 
+import static org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.README_MD;
+import static org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.TEMPLATE_LOCATION_README_MD;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -26,12 +29,11 @@ public class OptionsServiceMock {
                 .isNoEmpty(this.projectSignerOptions.isNoEmpty());
     }
 
-    public ProjectSignerOptions processOptions(final String[] args) {
-        final String rootPath = getClass().getResource("/dummyDirectory").getPath();
-        final String template = getClass().getResource("/Readme.md").getPath();
+    public ProjectSignerOptions processOptions() {
+        final String rootPath = Objects.requireNonNull(getClass().getResource("/dummyDirectory")).getPath();
         final ProjectSignerOptions projectSignerOptions = mock(ProjectSignerOptions.class);
         when(projectSignerOptions.getRootDirectory()).thenReturn(Path.of(rootPath));
-        when(projectSignerOptions.getTemplateLocation()).thenReturn(Path.of(template));
+        when(projectSignerOptions.getTemplateLocation()).thenReturn(Path.of(README_MD));
         when(projectSignerOptions.getTagNames()).thenReturn(new String[]{"License", "About me"});
         this.projectSignerOptions = projectSignerOptions;
         this.commonBuilder = ReadmeNamingParser.builder()

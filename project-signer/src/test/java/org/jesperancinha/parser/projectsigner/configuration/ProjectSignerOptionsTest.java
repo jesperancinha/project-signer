@@ -11,6 +11,9 @@ public class ProjectSignerOptionsTest {
     private static final String TEST_LABEL_1 = "label1";
     private static final String TEST_LABEL_2 = "label2";
     private static final String TEST_ROOT = "root";
+    public static final String README_MD ="target/test-classes/Readme.md";
+    public static final String TEMPLATE_LOCATION_README_MD = "--template-location=" + README_MD;
+    public static final String ROOT_DIRECTORY = "--root-directory=/target/test-classes/";
 
     @Test
     public void parseOptions() {

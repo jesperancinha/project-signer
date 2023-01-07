@@ -6,7 +6,6 @@ import org.jesperancinha.parser.markdowner.badges.model.Badge;
 import org.jesperancinha.parser.markdowner.badges.model.BadgeSettingGroup;
 import org.jesperancinha.parser.markdowner.badges.model.BadgeType;
 import org.jesperancinha.parser.markdowner.badges.parser.BadgeParser;
-import org.jesperancinha.parser.projectsigner.api.FileWriterService;
 import org.jesperancinha.parser.projectsigner.model.ProjectData;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +19,7 @@ import java.util.stream.Collectors;
 
 @Service
 @Slf4j
-public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
-    @Override
+public class FileWriterService {
     public void exportReadmeFile(Path path, String text) throws IOException {
         val readmeFile = new File(path.toFile(), "Readme.md");
         val fileWriter = new FileWriter(readmeFile);
@@ -30,8 +28,7 @@ public class FileWriterServiceImpl implements FileWriterService<ProjectData> {
         fileWriter.close();
     }
 
-    @Override
-    public void exportReportFile(Path path, final List<ProjectData> projectDataList) {
+    public void exportReportFiles(Path path, final List<ProjectData> projectDataList) {
         BadgeParser.badgeTypes.values().forEach(badgeType -> {
             val file = new File(path.toFile(), badgeType.getDestinationFile());
             try {
