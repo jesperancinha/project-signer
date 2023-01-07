@@ -23,7 +23,7 @@ public class InterfacesTest {
 
             }
 
-            public void exportReportFile(Path path, List<ProjectData> projectDataList) {
+            public void exportReportFiles(Path path, List<ProjectData> projectDataList) {
 
             }
         };

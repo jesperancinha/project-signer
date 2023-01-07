@@ -28,7 +28,7 @@ public class FileWriterService {
         fileWriter.close();
     }
 
-    public void exportReportFile(Path path, final List<ProjectData> projectDataList) {
+    public void exportReportFiles(Path path, final List<ProjectData> projectDataList) {
         BadgeParser.badgeTypes.values().forEach(badgeType -> {
             val file = new File(path.toFile(), badgeType.getDestinationFile());
             try {

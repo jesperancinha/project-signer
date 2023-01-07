@@ -29,7 +29,7 @@ public class TemplateServiceImpl implements TemplateService<Paragraphs> {
     }
 
     /**
-     * Receives an input markdown text stream nd parses its content to a Paragraphs object see {@link Paragraphs}
+     * Receives an input Markdown text stream nd parses its content to a Paragraphs object see {@link Paragraphs}
      *
      * @return A {@link Paragraphs} parsed object
      * @throws IOException Any kind of IO Exception
@@ -44,13 +44,12 @@ public class TemplateServiceImpl implements TemplateService<Paragraphs> {
     @Override
     public List<String> readAllLicenses() {
         val licenseLocations = optionsService.getProjectSignerOptions().getLicenseLocations();
-        if(licenseLocations==null){
+        if (licenseLocations == null) {
             return Collections.emptyList();
         }
         return Arrays.stream(licenseLocations)
                 .map(path -> {
-                    try {
-                        final FileInputStream templateInputStream = new FileInputStream(path.toFile());
+                    try (final FileInputStream templateInputStream = new FileInputStream(path.toFile())) {
                         return new String(templateInputStream.readAllBytes(), StandardCharsets.UTF_8);
                     } catch (IOException e) {
                         log.error("Failing to read template file {}. Error {}", path.getFileName().toString(), e.getMessage());

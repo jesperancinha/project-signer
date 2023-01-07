@@ -8,12 +8,13 @@ import org.jesperancinha.parser.projectsigner.model.ProjectData;
 import org.jesperancinha.parser.projectsigner.service.FileWriterService;
 import org.jesperancinha.parser.projectsigner.service.FinderServiceImpl;
 import org.jesperancinha.parser.projectsigner.service.OptionsService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
+
+import java.util.Arrays;
 
 @Slf4j
 @SpringBootApplication
@@ -42,11 +43,13 @@ public class ProjectSignerStart implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        if(environment.getActiveProfiles().length > 0) {
+        if (environment.getActiveProfiles().length > 0) {
             final ProjectSignerOptions projectSignerOptions = optionsService.processOptions(args.getSourceArgs());
             finderService.iterateThroughFilesAndFolders(projectSignerOptions.getRootDirectory());
-            fileWriterService.exportReportFile(
-                    optionsService.getProjectSignerOptions().getReportLocation(), readmeService.getAllProjectData());
+            if (Arrays.asList(environment.getActiveProfiles()).contains("prod") || Arrays.asList(environment.getActiveProfiles()).contains("dev")) {
+                fileWriterService.exportReportFiles(
+                        optionsService.getProjectSignerOptions().getReportLocation(), readmeService.getAllProjectData());
+            }
         }
     }
 }
