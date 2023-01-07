@@ -1,6 +1,7 @@
 package org.jesperancinha.parser.projectsigner;
 
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.api.ReadmeService;
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
@@ -15,6 +16,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Slf4j
 @SpringBootApplication
@@ -46,7 +48,8 @@ public class ProjectSignerStart implements ApplicationRunner {
         if (environment.getActiveProfiles().length > 0) {
             final ProjectSignerOptions projectSignerOptions = optionsService.processOptions(args.getSourceArgs());
             finderService.iterateThroughFilesAndFolders(projectSignerOptions.getRootDirectory());
-            if (Arrays.asList(environment.getActiveProfiles()).contains("prod") || Arrays.asList(environment.getActiveProfiles()).contains("dev")) {
+            val profiles = Arrays.asList(environment.getActiveProfiles());
+            if (profiles.contains("prod") || profiles.contains("dev")) {
                 fileWriterService.exportReportFiles(
                         optionsService.getProjectSignerOptions().getReportLocation(), readmeService.getAllProjectData());
             }
