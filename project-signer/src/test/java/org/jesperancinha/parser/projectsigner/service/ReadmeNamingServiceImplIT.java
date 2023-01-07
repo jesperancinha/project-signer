@@ -18,7 +18,8 @@ import java.nio.file.Path;
 import java.util.Objects;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.*;
+import static org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.ROOT_DIRECTORY;
+import static org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.TEMPLATE_LOCATION_README_MD;
 import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.verify;
 

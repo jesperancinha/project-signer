@@ -11,7 +11,6 @@ import java.nio.file.Path;
 import java.util.Objects;
 
 import static org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.README_MD;
-import static org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.TEMPLATE_LOCATION_README_MD;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
