@@ -1,98 +1,68 @@
-package org.jesperancinha.parser.projectsigner.api;
+package org.jesperancinha.parser.projectsigner.api
 
-import org.jesperancinha.parser.markdowner.filter.FileFilterChain;
-import org.jesperancinha.parser.markdowner.model.Paragraphs;
-import org.jesperancinha.parser.projectsigner.model.ProjectData;
-import org.jesperancinha.parser.projectsigner.service.*;
-import org.junit.jupiter.api.Test;
+import org.assertj.core.api.AssertionsForClassTypes.assertThat
+import org.jesperancinha.parser.markdowner.filter.FileFilterChain
+import org.jesperancinha.parser.markdowner.model.Paragraphs
+import org.jesperancinha.parser.projectsigner.model.ProjectData
+import org.jesperancinha.parser.projectsigner.service.*
+import org.junit.jupiter.api.Test
+import org.mockito.Mockito.mock
+import java.io.IOException
+import java.io.InputStream
+import java.nio.file.Path
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Path;
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
-
-public class InterfacesTest {
-
+class InterfacesTest {
     @Test
-    public void testAllInterfacesWhenCreatingImplementationThenAllow() {
-        final var fileWriterService = new FileWriterService() {
-            public void exportReadmeFile(Path path, String text) {
-
+    fun testAllInterfacesWhenCreatingImplementationThenAllow() {
+        val fileWriterService: FileWriterService = object : FileWriterService() {
+            override fun exportReadmeFile(path: Path, text: String?) {}
+            override fun exportReportFiles(path: Path?, projectDataList: List<ProjectData>) {}
+        }
+        val mergeService: MergeService = object : MergeService(fileWriterService) {
+            override fun writeMergedResult(readmePath: Path, newText: String?) {}
+        }
+        val optionsService: OptionsService = mock(OptionsService::class.java)
+        val readmeService: ReadmeService = object : ReadmeService(mergeService, optionsService) {
+            override fun readDataSprippedOfTags(templateInputStream: InputStream?, vararg tags: String): String? {
+                return null
             }
 
-            public void exportReportFiles(Path path, List<ProjectData> projectDataList) {
-
+            @Throws(IOException::class)
+            override fun exportNewReadme(readmePath: Path, inputStream: InputStream?, allParagraphs: Paragraphs?) {
             }
-        };
-
-        final var mergeService = new MergeService(fileWriterService) {
-
-            public void writeMergedResult(Path readmePath, String newText) {
-
+        }
+        val readmeNamingService: ReadmeNamingService =
+            object : ReadmeNamingService(FileFilterChain.builder().build(), optionsService) {
+                @Throws(IOException::class)
+                override fun buildReadmeStream(path: Path?): InputStream? {
+                    return null
+                }
             }
-        };
-
-        final var optionsService = mock(OptionsService.class);
-
-        final var readmeService = new ReadmeService(mergeService, optionsService) {
-
-            public String readDataSprippedOfTags(InputStream templateInputStream, String... tags) {
-                return null;
-            }
-
-            public void exportNewReadme(Path readmePath, InputStream inputStream, Paragraphs allParagraphs) throws IOException {
-
+        val generatorService: GeneratorSevice = object : GeneratorSevice(readmeNamingService, readmeService) {
+            override fun processReadmeFile(readmePath: Path, allParagraphs: Paragraphs?) {}
+            override fun processLicenseFile(licencePath: Path, license: List<String>?) {}
+        }
+        val templateService: TemplateService = object : TemplateService(optionsService) {
+            override fun findAllParagraphs(): Paragraphs? {
+                return null
             }
 
-            public List<ProjectData> getAllProjectData() {
-                return null;
+            override fun readAllLicenses(): List<String>? {
+                return null
             }
-        };
-
-        final var readmeNamingService = new ReadmeNamingService(FileFilterChain.builder().build(), optionsService) {
-            public InputStream buildReadmeStream(Path path) throws IOException {
-                return null;
+        }
+        val finderService: FinderService = object : FinderService(generatorService, templateService) {
+            override fun iterateThroughFilesAndFolders(rootPath: Path?): Path? {
+                return null
             }
-        };
-
-        final var generatorService = new GeneratorSevice(readmeNamingService, readmeService) {
-            public void processReadmeFile(Path readmePath, Paragraphs allParagraphs) {
-
-            }
-
-            public void processLicenseFile(Path licencePath, List<String> license) {
-
-            }
-
-        };
-
-        final var templateService = new TemplateService(optionsService) {
-            public Paragraphs findAllParagraphs() {
-                return null;
-            }
-
-            public List<String> readAllLicenses() {
-                return null;
-            }
-        };
-
-        final var finderService = new FinderService(generatorService, templateService) {
-            public void iterateThroughFilesAndFolders(Path rootPath) {
-
-            }
-        };
-
-        assertThat(fileWriterService).isNotNull();
-        assertThat(finderService).isNotNull();
-        assertThat(generatorService).isNotNull();
-        assertThat(mergeService).isNotNull();
-        assertThat(optionsService).isNotNull();
-        assertThat(readmeNamingService).isNotNull();
-        assertThat(readmeService).isNotNull();
-        assertThat(templateService).isNotNull();
-
+        }
+        assertThat(fileWriterService).isNotNull
+        assertThat(finderService).isNotNull
+        assertThat(generatorService).isNotNull
+        assertThat(mergeService).isNotNull
+        assertThat(optionsService).isNotNull
+        assertThat(readmeNamingService).isNotNull
+        assertThat(readmeService).isNotNull
+        assertThat(templateService).isNotNull
     }
 }

@@ -1,38 +1,27 @@
-package org.jesperancinha.parser.projectsigner.service;
+package org.jesperancinha.parser.projectsigner.service
 
-
-import lombok.val;
-import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser;
-import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder;
-import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Service;
-import picocli.CommandLine;
+import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser
+import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder
+import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions
+import org.springframework.context.annotation.Profile
+import org.springframework.stereotype.Service
+import picocli.CommandLine
 
 @Service
-@Profile({"dev", "prod", "test"})
-public class OptionsService {
+@Profile("dev", "prod", "test")
+open class OptionsService {
+    var projectSignerOptions: ProjectSignerOptions? = null
+        private set
+    var commonNamingParser: ReadmeNamingParserBuilder? = null
+        private set
 
-    private ProjectSignerOptions projectSignerOptions;
-
-    private ReadmeNamingParserBuilder commonBuilder;
-
-    public ProjectSignerOptions processOptions(final String[] args) {
-        val projectSignerOptions = new ProjectSignerOptions();
-        new CommandLine(projectSignerOptions).parseArgs(args);
-        this.projectSignerOptions = projectSignerOptions;
-        commonBuilder = ReadmeNamingParser.builder()
-                .templateLocation(this.projectSignerOptions.getTemplateLocation())
-                .isNoEmpty(this.projectSignerOptions.isNoEmpty());
-        return projectSignerOptions;
+    fun processOptions(args: Array<String?>): ProjectSignerOptions {
+        val projectSignerOptions = ProjectSignerOptions()
+        CommandLine(projectSignerOptions).parseArgs(*args)
+        this.projectSignerOptions = projectSignerOptions
+        commonNamingParser = ReadmeNamingParser.builder()
+            .templateLocation(this.projectSignerOptions!!.templateLocation)
+            .isNoEmpty(this.projectSignerOptions != null)
+        return projectSignerOptions
     }
-
-    public ProjectSignerOptions getProjectSignerOptions() {
-        return projectSignerOptions;
-    }
-
-    public ReadmeNamingParserBuilder getCommonNamingParser() {
-        return commonBuilder;
-    }
-
 }

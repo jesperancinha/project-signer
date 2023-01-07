@@ -1,46 +1,43 @@
-package org.jesperancinha.parser.projectsigner.filter;
+package org.jesperancinha.parser.projectsigner.filter
 
-import lombok.val;
+import java.nio.file.Path
+import java.util.*
 
-import java.nio.file.Path;
-import java.util.Objects;
-
-public class ProjectSignerFilterHelper {
-
+object ProjectSignerFilterHelper {
     /**
      * Checks if the current path matches folders where no processing should happen.
      *
-     * @param projectPath Project {@link Path} to be analysed for the existing of a package managing system
+     * @param projectPath Project [Path] to be analysed for the existing of a package managing system
      * @return If the folder is ignorable
      */
-    public static boolean isIgnorableFolder(Path projectPath) {
-        val fileName = projectPath.getFileName();
-        if(Objects.isNull(fileName)){
-            return true;
+    fun isIgnorableFolder(projectPath: Path): Boolean {
+        val fileName = projectPath.fileName
+        if (Objects.isNull(fileName)) {
+            return true
         }
-        final String directoryName = fileName.toString();
-        return directoryName.equalsIgnoreCase("generated")
+        val directoryName = fileName.toString()
+        return (directoryName.equals("generated", ignoreCase = true)
                 ||
-                directoryName.equalsIgnoreCase("src")
+                directoryName.equals("src", ignoreCase = true)
                 ||
-                directoryName.equalsIgnoreCase("java")
+                directoryName.equals("java", ignoreCase = true)
                 ||
-                directoryName.equalsIgnoreCase("build")
+                directoryName.equals("build", ignoreCase = true)
                 ||
-                directoryName.equalsIgnoreCase("classes")
+                directoryName.equals("classes", ignoreCase = true)
                 ||
-                directoryName.equalsIgnoreCase("sources")
+                directoryName.equals("sources", ignoreCase = true)
                 ||
-                directoryName.equalsIgnoreCase("dist")
+                directoryName.equals("dist", ignoreCase = true)
                 ||
-                directoryName.equalsIgnoreCase("target")
+                directoryName.equals("target", ignoreCase = true)
                 ||
-                directoryName.equalsIgnoreCase("node_modules")
+                directoryName.equals("node_modules", ignoreCase = true)
                 ||
-                directoryName.equalsIgnoreCase("resources")
+                directoryName.equals("resources", ignoreCase = true)
                 ||
-                directoryName.equalsIgnoreCase("project-signer-templates")
+                directoryName.equals("project-signer-templates", ignoreCase = true)
                 ||
-                directoryName.equalsIgnoreCase("test-classes");
+                directoryName.equals("test-classes", ignoreCase = true))
     }
 }

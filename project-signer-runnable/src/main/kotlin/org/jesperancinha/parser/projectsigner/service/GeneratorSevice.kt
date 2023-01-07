@@ -1,77 +1,85 @@
-package org.jesperancinha.parser.projectsigner.service;
+package org.jesperancinha.parser.projectsigner.service
 
-import lombok.extern.slf4j.Slf4j;
-import org.jesperancinha.parser.markdowner.model.Paragraphs;
-import org.jesperancinha.parser.projectsigner.filter.ProjectSignerLicenseFilter;
-import org.springframework.stereotype.Service;
-
-import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Path;
-import java.util.List;
-import java.util.Objects;
+import lombok.extern.slf4j.Slf4j
+import org.jesperancinha.parser.markdowner.model.Paragraphs
+import org.jesperancinha.parser.projectsigner.filter.ProjectSignerLicenseFilter
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+import org.springframework.stereotype.Service
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileWriter
+import java.io.IOException
+import java.nio.charset.StandardCharsets
+import java.nio.file.Path
+import java.util.*
+import kotlin.system.exitProcess
 
 /**
  * This is a generator service which is responsible for the generation of the new Readme.md file
  * It includes extra functions:
- * <p>
+ *
+ *
  * - Denies creation of Readme.md files where no project exists
- * - Creates matching Readme.me files where they don't exists in spite of existing package managing system files
+ * - Creates matching Readme.me files where they don't exist in spite of existing package managing system files
  */
 @Slf4j
 @Service
-public class GeneratorSevice {
-
-    private final ReadmeNamingService readmeNamingService;
-    private final ReadmeService readmeService;
-
-    public GeneratorSevice(ReadmeNamingService readmeNamingService,
-                           ReadmeService readmeService) {
-        this.readmeNamingService = readmeNamingService;
-        this.readmeService = readmeService;
-    }
-
-    public void processReadmeFile(final Path readmePath, final Paragraphs allParagraphs) throws IOException {
-        final InputStream inputStream = readmeNamingService.buildReadmeStream(readmePath);
+open class GeneratorSevice(
+    private val readmeNamingService: ReadmeNamingService,
+    private val readmeService: ReadmeService
+) {
+    @Throws(IOException::class)
+    open fun processReadmeFile(readmePath: Path, allParagraphs: Paragraphs?) {
+        val inputStream = readmeNamingService.buildReadmeStream(readmePath)
         if (Objects.nonNull(inputStream)) {
-            readmeService.exportNewReadme(readmePath, inputStream, allParagraphs);
+            readmeService.exportNewReadme(readmePath, inputStream, allParagraphs)
         }
     }
 
-    public void processLicenseFile(Path licencePath, List<String> licenses) throws Throwable {
-        final File f = new File(licencePath.toFile(), "Readme.md");
-        final File licenseLegacyFile = new File(licencePath.toFile(), "License.txt");
-        String licenseText = null;
+    @Throws(Throwable::class)
+    open fun processLicenseFile(licencePath: Path, licenses: List<String>?) {
+        val f = File(licencePath.toFile(), "Readme.md")
+        val licenseLegacyFile = File(licencePath.toFile(), "License.txt")
+        var licenseText: String? = null
         if (licenseLegacyFile.exists()) {
-            boolean delete = licenseLegacyFile.delete();
+            val delete = licenseLegacyFile.delete()
             if (!delete) {
-                log.error("Could not delete existing legacy file License.txt. Exiting...");
-                System.exit(1);
+                logger.error("Could not delete existing legacy file License.txt. Exiting...")
+                exitProcess(1)
             }
         }
-        final File expectedLegactyFile = new File(licencePath.toFile(), "License");
+        val expectedLegactyFile = File(licencePath.toFile(), "License")
         if (expectedLegactyFile.exists()) {
-            final FileInputStream templateInputStream = new FileInputStream(expectedLegactyFile);
-            licenseText = new String(templateInputStream.readAllBytes(), StandardCharsets.UTF_8);
+            val templateInputStream = FileInputStream(expectedLegactyFile)
+            licenseText = String(templateInputStream.readAllBytes(), StandardCharsets.UTF_8)
         }
-        final File licenseFile = new File(licencePath.toFile(), "LICENSE");
+        val licenseFile = File(licencePath.toFile(), "LICENSE")
         if (licenseFile.exists()) {
-            boolean delete = licenseFile.delete();
+            val delete = licenseFile.delete()
             if (!delete) {
-                log.error("Could not delete existing licence file LICENSE. Exiting...");
-                System.exit(1);
+                logger.error("Could not delete existing licence file LICENSE. Exiting...")
+                exitProcess(1)
             }
         }
         if (f.exists()) {
             try {
-                final String newLicense = ProjectSignerLicenseFilter.getLicense(licenses, licenseText);
-                final FileWriter fileWriter = new FileWriter(licenseFile);
-                fileWriter.write(newLicense);
-                fileWriter.flush();
-                fileWriter.close();
-            } catch (RuntimeException e) {
-                log.error("Failed to find license for path {} and text {}", licencePath.toString(), licenseText);
+                val newLicense = ProjectSignerLicenseFilter.getLicense(licenses, licenseText)
+                val fileWriter = FileWriter(licenseFile)
+                fileWriter.write(newLicense)
+                fileWriter.flush()
+                fileWriter.close()
+            } catch (e: RuntimeException) {
+                logger.error(
+                    "Failed to find license for path {} and text {}",
+                    licencePath.toString(),
+                    licenseText
+                )
             }
         }
+    }
+
+    companion object {
+        val logger: Logger = LoggerFactory.getLogger(GeneratorSevice::class.java)
     }
 }

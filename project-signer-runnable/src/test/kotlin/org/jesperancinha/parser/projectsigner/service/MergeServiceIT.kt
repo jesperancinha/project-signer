@@ -1,45 +1,37 @@
-package org.jesperancinha.parser.projectsigner.service;
+package org.jesperancinha.parser.projectsigner.service
 
-import org.jesperancinha.parser.markdowner.model.Paragraphs;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
+import org.assertj.core.api.Assertions.assertThat
+import org.jesperancinha.parser.markdowner.model.Paragraphs
+import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest
+import org.junit.jupiter.api.Test
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.test.context.ActiveProfiles
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.ROOT_DIRECTORY;
-import static org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.TEMPLATE_LOCATION_README_MD;
-
-@SpringBootTest(args = {TEMPLATE_LOCATION_README_MD, ROOT_DIRECTORY})
+@SpringBootTest(args = [ProjectSignerOptionsTest.Companion.TEMPLATE_LOCATION_README_MD, ProjectSignerOptionsTest.Companion.ROOT_DIRECTORY])
 @ActiveProfiles("test")
-public class MergeServiceIT {
-
+class MergeServiceIT {
     @Autowired
-    private MergeService mergeService;
-
+    private val mergeService: MergeService? = null
     @Test
-    public void mergeDocumentWithFooterTemplate() {
-        final String testReadme = "Readme text!";
-        final Paragraphs.ParagraphsBuilder paragraphsBuilder = new Paragraphs.ParagraphsBuilder();
-        paragraphsBuilder.withTagParagraph("## tag", "This is a test paragraph");
-        paragraphsBuilder.withTagParagraph("## ta", "This is a test2 paragraph");
-        final Paragraphs testParagraphs = paragraphsBuilder.build();
-
-        final String result = mergeService.mergeDocumentWithFooterTemplate(testReadme, testParagraphs);
-
-        assertThat(result).isEqualTo("Readme text!\n\n## tag\nThis is a test paragraph\n\n## ta\nThis is a test2 paragraph\n");
+    fun mergeDocumentWithFooterTemplate() {
+        val testReadme = "Readme text!"
+        val paragraphsBuilder = Paragraphs.ParagraphsBuilder()
+        paragraphsBuilder.withTagParagraph("## tag", "This is a test paragraph")
+        paragraphsBuilder.withTagParagraph("## ta", "This is a test2 paragraph")
+        val testParagraphs: Paragraphs = paragraphsBuilder.build()
+        val result = mergeService!!.mergeDocumentWithFooterTemplate(testReadme, testParagraphs)
+        assertThat(result).isEqualTo("Readme text!\n\n## tag\nThis is a test paragraph\n\n## ta\nThis is a test2 paragraph\n")
     }
 
     @Test
-    public void mergeDocumentWithFooterTemplateDifferentOrder() {
-        final String testReadme = "Readme text!";
-        final Paragraphs.ParagraphsBuilder paragraphsBuilder = new Paragraphs.ParagraphsBuilder();
-        paragraphsBuilder.withTagParagraph("## ta", "This is a test2 paragraph");
-        paragraphsBuilder.withTagParagraph("## tag", "This is a test paragraph");
-        final Paragraphs testParagraphs = paragraphsBuilder.build();
-
-        final String result = mergeService.mergeDocumentWithFooterTemplate(testReadme, testParagraphs);
-
-        assertThat(result).isEqualTo("Readme text!\n\n## ta\nThis is a test2 paragraph\n\n## tag\nThis is a test paragraph\n");
+    fun mergeDocumentWithFooterTemplateDifferentOrder() {
+        val testReadme = "Readme text!"
+        val paragraphsBuilder = Paragraphs.ParagraphsBuilder()
+        paragraphsBuilder.withTagParagraph("## ta", "This is a test2 paragraph")
+        paragraphsBuilder.withTagParagraph("## tag", "This is a test paragraph")
+        val testParagraphs: Paragraphs = paragraphsBuilder.build()
+        val result = mergeService!!.mergeDocumentWithFooterTemplate(testReadme, testParagraphs)
+        assertThat(result).isEqualTo("Readme text!\n\n## ta\nThis is a test2 paragraph\n\n## tag\nThis is a test paragraph\n")
     }
 }

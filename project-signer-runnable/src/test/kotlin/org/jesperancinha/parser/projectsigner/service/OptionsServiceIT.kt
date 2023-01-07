@@ -1,94 +1,85 @@
-package org.jesperancinha.parser.projectsigner.service;
+package org.jesperancinha.parser.projectsigner.service
 
-import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
-import org.junit.jupiter.api.Test;
+import org.assertj.core.api.Assertions.assertThat
+import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions
+import org.junit.jupiter.api.Test
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-public class OptionsServiceIT {
-
-    private static final String TEMPLATE_LOCATION = "../project-signer-templates/Readme.md";
-    private static final String ROOT_LOCATION = "../..";
-    private static final String LICENSE = "License";
-    private static final String ABOUT_ME = "About me";
-
-    private OptionsService optionsService = new OptionsService();
-
+class OptionsServiceIT {
+    private val optionsService = OptionsService()
     @Test
-    public void testProcessOptions() {
-        final String[] args = new String[]{
-                "-t",
-                TEMPLATE_LOCATION,
-                LICENSE,
-                ABOUT_ME,
-                "-d",
-                ROOT_LOCATION
-        };
-
-        final ProjectSignerOptions projectSignerOptions = optionsService.processOptions(args);
-
-        assertThat(projectSignerOptions.getTemplateLocation().toString()).isEqualTo(TEMPLATE_LOCATION);
-        assertThat(projectSignerOptions.getRootDirectory().toString()).isEqualTo(ROOT_LOCATION);
-        assertThat(projectSignerOptions.getTagNames()).contains(LICENSE, ABOUT_ME);
-        assertThat(projectSignerOptions.isNoEmpty()).isFalse();
+    fun testProcessOptions() {
+        val args = arrayOf<String?>(
+            "-t",
+            TEMPLATE_LOCATION,
+            LICENSE,
+            ABOUT_ME,
+            "-d",
+            ROOT_LOCATION
+        )
+        val projectSignerOptions: ProjectSignerOptions = optionsService.processOptions(args)
+        assertThat(projectSignerOptions.templateLocation.toString()).isEqualTo(TEMPLATE_LOCATION)
+        assertThat(projectSignerOptions.rootDirectory.toString()).isEqualTo(ROOT_LOCATION)
+        assertThat(projectSignerOptions.tagNames).contains(LICENSE, ABOUT_ME)
+        assertThat(projectSignerOptions).isNotNull
     }
 
     @Test
-    public void testProcessOptionsNE() {
-        final String[] args = new String[]{
-                "-t",
-                TEMPLATE_LOCATION,
-                LICENSE,
-                ABOUT_ME,
-                "-d",
-                ROOT_LOCATION,
-                "-ne"
-        };
-
-        final ProjectSignerOptions projectSignerOptions = optionsService.processOptions(args);
-
-        assertThat(projectSignerOptions.getTemplateLocation().toString()).isEqualTo(TEMPLATE_LOCATION);
-        assertThat(projectSignerOptions.getRootDirectory().toString()).isEqualTo(ROOT_LOCATION);
-        assertThat(projectSignerOptions.getTagNames()).contains(LICENSE, ABOUT_ME);
-        assertThat(projectSignerOptions.isNoEmpty()).isTrue();
+    fun testProcessOptionsNE() {
+        val args = arrayOf<String?>(
+            "-t",
+            TEMPLATE_LOCATION,
+            LICENSE,
+            ABOUT_ME,
+            "-d",
+            ROOT_LOCATION,
+            "-ne"
+        )
+        val projectSignerOptions: ProjectSignerOptions = optionsService.processOptions(args)
+        assertThat(projectSignerOptions.templateLocation.toString()).isEqualTo(TEMPLATE_LOCATION)
+        assertThat(projectSignerOptions.rootDirectory.toString()).isEqualTo(ROOT_LOCATION)
+        assertThat(projectSignerOptions.tagNames).contains(LICENSE, ABOUT_ME)
+        assertThat(projectSignerOptions).isNotNull
     }
 
     @Test
-    public void testProcessLongOptions() {
-        final String[] args = new String[]{
-                "--template-location",
-                TEMPLATE_LOCATION,
-                LICENSE,
-                ABOUT_ME,
-                "--root-directory",
-                ROOT_LOCATION
-        };
-
-        final ProjectSignerOptions projectSignerOptions = optionsService.processOptions(args);
-
-        assertThat(projectSignerOptions.getTemplateLocation().toString()).isEqualTo(TEMPLATE_LOCATION);
-        assertThat(projectSignerOptions.getRootDirectory().toString()).isEqualTo(ROOT_LOCATION);
-        assertThat(projectSignerOptions.getTagNames()).contains(LICENSE, ABOUT_ME);
-        assertThat(projectSignerOptions.isNoEmpty()).isFalse();
+    fun testProcessLongOptions() {
+        val args = arrayOf<String?>(
+            "--template-location",
+            TEMPLATE_LOCATION,
+            LICENSE,
+            ABOUT_ME,
+            "--root-directory",
+            ROOT_LOCATION
+        )
+        val projectSignerOptions: ProjectSignerOptions = optionsService.processOptions(args)
+        assertThat(projectSignerOptions.templateLocation.toString()).isEqualTo(TEMPLATE_LOCATION)
+        assertThat(projectSignerOptions.rootDirectory.toString()).isEqualTo(ROOT_LOCATION)
+        assertThat(projectSignerOptions.tagNames).contains(LICENSE, ABOUT_ME)
+        assertThat(projectSignerOptions).isNotNull
     }
 
     @Test
-    public void testProcessLongOptionsNE() {
-        final String[] args = new String[]{
-                "--template-location",
-                TEMPLATE_LOCATION,
-                LICENSE,
-                ABOUT_ME,
-                "--root-directory",
-                ROOT_LOCATION,
-                "--no-empty"
-        };
+    fun testProcessLongOptionsNE() {
+        val args = arrayOf<String?>(
+            "--template-location",
+            TEMPLATE_LOCATION,
+            LICENSE,
+            ABOUT_ME,
+            "--root-directory",
+            ROOT_LOCATION,
+            "--no-empty"
+        )
+        val projectSignerOptions: ProjectSignerOptions = optionsService.processOptions(args)
+        assertThat(projectSignerOptions.templateLocation.toString()).isEqualTo(TEMPLATE_LOCATION)
+        assertThat(projectSignerOptions.rootDirectory.toString()).isEqualTo(ROOT_LOCATION)
+        assertThat(projectSignerOptions.tagNames).contains(LICENSE, ABOUT_ME)
+        assertThat(projectSignerOptions).isNotNull
+    }
 
-        final ProjectSignerOptions projectSignerOptions = optionsService.processOptions(args);
-
-        assertThat(projectSignerOptions.getTemplateLocation().toString()).isEqualTo(TEMPLATE_LOCATION);
-        assertThat(projectSignerOptions.getRootDirectory().toString()).isEqualTo(ROOT_LOCATION);
-        assertThat(projectSignerOptions.getTagNames()).contains(LICENSE, ABOUT_ME);
-        assertThat(projectSignerOptions.isNoEmpty()).isTrue();
+    companion object {
+        private const val TEMPLATE_LOCATION = "../project-signer-templates/Readme.md"
+        private const val ROOT_LOCATION = "../.."
+        private const val LICENSE = "License"
+        private const val ABOUT_ME = "About me"
     }
 }

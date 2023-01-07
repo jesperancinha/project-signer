@@ -1,160 +1,182 @@
-package org.jesperancinha.parser.projectsigner.service;
+package org.jesperancinha.parser.projectsigner.service
 
-import lombok.extern.slf4j.Slf4j;
-import lombok.val;
-import org.jesperancinha.parser.markdowner.badges.model.Badge;
-import org.jesperancinha.parser.markdowner.badges.model.BadgeSettingGroup;
-import org.jesperancinha.parser.markdowner.badges.model.BadgeType;
-import org.jesperancinha.parser.markdowner.badges.parser.BadgeParser;
-import org.jesperancinha.parser.projectsigner.model.ProjectData;
-import org.springframework.stereotype.Service;
-
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.Path;
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
+import lombok.extern.slf4j.Slf4j
+import org.jesperancinha.parser.markdowner.badges.model.Badge
+import org.jesperancinha.parser.markdowner.badges.model.BadgePattern
+import org.jesperancinha.parser.markdowner.badges.model.BadgeType
+import org.jesperancinha.parser.markdowner.badges.parser.BadgeParser
+import org.jesperancinha.parser.projectsigner.model.ProjectData
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+import org.springframework.stereotype.Service
+import java.io.File
+import java.io.FileWriter
+import java.io.IOException
+import java.nio.file.Path
+import java.util.*
+import java.util.function.Consumer
+import java.util.stream.Collectors
+import kotlin.system.exitProcess
 
 @Service
 @Slf4j
-public class FileWriterService {
-    public void exportReadmeFile(Path path, String text) throws IOException {
-        val readmeFile = new File(path.toFile(), "Readme.md");
-        val fileWriter = new FileWriter(readmeFile);
-        fileWriter.write(text);
-        fileWriter.flush();
-        fileWriter.close();
+open class FileWriterService {
+    @Throws(IOException::class)
+    open fun exportReadmeFile(path: Path, text: String?) {
+        val readmeFile = File(path.toFile(), "Readme.md")
+        val fileWriter = FileWriter(readmeFile)
+        fileWriter.write(text)
+        fileWriter.flush()
+        fileWriter.close()
     }
 
-    public void exportReportFiles(Path path, final List<ProjectData> projectDataList) {
-        BadgeParser.badgeTypes.values().forEach(badgeType -> {
-            val file = new File(path.toFile(), badgeType.getDestinationFile());
+    open fun exportReportFiles(path: Path?, projectDataList: List<ProjectData>) {
+        BadgeParser.badgeTypes.values.forEach(Consumer { badgeType: BadgeType ->
+            val file = File(path!!.toFile(), badgeType.destinationFile)
             try {
-                val fileWriter = new FileWriter(file);
-                fileWriter.write(String.format("# %s Report\n\n", getTitle(badgeType)));
-                writeHyperLinks(fileWriter);
-                writeTitles(badgeType, fileWriter);
-                writeTopTable(badgeType, fileWriter);
-                projectDataList.sort((o1, o2) -> {
-                    val badgeList1 = o1.badgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).toList();
-                    val badgeList2 = o2.badgeGroupMap().get(badgeType).getBadgeHashMap().values().stream().filter(Objects::nonNull).toList();
-                    val nBadges1 = badgeList1.size();
-                    val nBadges2 = badgeList2.size();
+                val fileWriter = FileWriter(file)
+                fileWriter.write(String.format("# %s Report\n\n", getTitle(badgeType)))
+                writeHyperLinks(fileWriter)
+                writeTitles(badgeType, fileWriter)
+                writeTopTable(badgeType, fileWriter)
+
+
+                projectDataList.sortedWith { o1: ProjectData, o2: ProjectData ->
+                    val badgeList1 = o1.badgeGroupMap[badgeType]!!
+                        .badgeHashMap.values.stream().filter { obj: Badge? -> Objects.nonNull(obj) }.toList()
+                    val badgeList2 = o2.badgeGroupMap[badgeType]!!.badgeHashMap.values.stream()
+                        .filter { obj: Badge? -> Objects.nonNull(obj) }
+                        .toList()
+                    val nBadges1 = badgeList1.size
+                    val nBadges2 = badgeList2.size
                     if (nBadges1 == nBadges2) {
-                        if (badgeList1.size() > 0) {
-                            val badgeText1 = badgeList1.get(0).getBadgeText();
-                            val badgeText2 = badgeList2.get(0).getBadgeText();
+                        if (badgeList1.size > 0) {
+                            val badgeText1 = badgeList1[0].badgeText
+                            val badgeText2 = badgeList2[0].badgeText
                             if (badgeText1.contains("message=") && badgeText2.contains("message=")) {
-                                final var message1 = badgeText1.split("message=")[1].substring(0, 3);
-                                final var message2 = badgeText2.split("message=")[1].substring(0, 3);
-                                return message1.compareTo(message2);
+                                val message1 = badgeText1.split("message=".toRegex()).dropLastWhile { it.isEmpty() }
+                                    .toTypedArray()[1].substring(0, 3)
+                                val message2 = badgeText2.split("message=".toRegex()).dropLastWhile { it.isEmpty() }
+                                    .toTypedArray()[1].substring(0, 3)
+                                return@sortedWith message1.compareTo(message2)
                             }
                         }
-                        return o1.title().compareTo(o2.title());
+                        return@sortedWith o1.title.compareTo(o2.title)
                     }
-                    return nBadges2 - nBadges1;
-                });
-                projectDataList.forEach(projectData -> writeProjectData(badgeType, fileWriter, projectData));
-                writeHyperLinks(fileWriter);
-                fileWriter.close();
-            } catch (IOException e) {
-                log.error("Error!", e);
-                System.exit(1);
-            }
-        });
-
-    }
-
-    private void writeHyperLinks(FileWriter fileWriter) throws IOException {
-        final var links = BadgeParser.badgeTypes.values().stream()
-                .map(badgeType -> {
-                    final String title = getTitle(badgeType);
-                    return String.format("[%s](./%s)",
-                            title,
-                            badgeType.getDestinationFile());
-                })
-                .collect(Collectors.joining(" - "));
-        fileWriter.write(String.format("## %s \n\n", links));
-    }
-
-    private String getTitle(BadgeType badgeType) {
-        if (Objects.isNull(badgeType.getTitle())) {
-            return badgeType.getDestinationFile().replace(".md", "");
-        }
-        return badgeType.getTitle();
-    }
-
-    private void writeTitles(BadgeType badgeType, FileWriter fileWriter) throws IOException {
-        final var badgeSettingGroup = BadgeParser.badgeSettingGroups.get(badgeType);
-        fileWriter.write("|Project");
-        badgeSettingGroup.getBadgeSettingList().forEach(badgePattern -> {
-            try {
-                if (!badgePattern.getTitle().equals("Project")) {
-                    fileWriter.write("|");
-                    fileWriter.write(badgePattern.getTitle());
+                    nBadges2 - nBadges1
                 }
-            } catch (IOException e) {
-                log.error("Error!", e);
-                System.exit(1);
+                projectDataList.forEach(Consumer { projectData: ProjectData? ->
+                    writeProjectData(
+                        badgeType,
+                        fileWriter,
+                        projectData
+                    )
+                })
+                writeHyperLinks(fileWriter)
+                fileWriter.close()
+            } catch (e: IOException) {
+                logger.error("Error!", e)
+                exitProcess(1)
             }
-        });
-        fileWriter.write("|\n");
-        fileWriter.flush();
+        })
     }
 
-    private void writeProjectData(BadgeType badgeType, FileWriter fileWriter, ProjectData projectData) {
-        try {
-            final var badgeGroup = projectData.badgeGroupMap().get(badgeType);
-
-            BadgeParser.badgeSettingGroups.get(badgeType).getBadgeSettingList()
-                    .forEach(badgePattern -> {
-                        final Badge badge = badgeGroup.getBadgeHashMap().get(badgePattern.getPattern());
-                        if (badgePattern.getTitle().equals("Project") && Objects.isNull(badge)) {
-                            try {
-                                fileWriter.write("|");
-                                fileWriter.write(projectData.title());
-                            } catch (IOException e) {
-                                log.error("Error!", e);
-                                System.exit(1);
-                            }
-                        } else {
-                            writeBadgeElement(fileWriter, badge);
-                        }
-                    });
-            fileWriter.write("|\n");
-            fileWriter.flush();
-        } catch (IOException e) {
-            log.error("Error!", e);
-            System.exit(1);
-        }
-    }
-
-    private void writeBadgeElement(FileWriter fileWriter, org.jesperancinha.parser.markdowner.badges.model.Badge badge) {
-        try {
-            fileWriter.write("|");
-            if (Objects.isNull(badge)) {
-                fileWriter.write("---");
-            } else {
-                fileWriter.write(badge.getBadgeText());
+    @Throws(IOException::class)
+    private fun writeHyperLinks(fileWriter: FileWriter) {
+        val links = BadgeParser.badgeTypes.values.stream()
+            .map { badgeType: BadgeType ->
+                val title = getTitle(badgeType)
+                String.format(
+                    "[%s](./%s)",
+                    title,
+                    badgeType.destinationFile
+                )
             }
-        } catch (IOException e) {
-            log.error("Error!", e);
-            System.exit(1);
-        }
+            .collect(Collectors.joining(" - "))
+        fileWriter.write(String.format("## %s \n\n", links))
     }
 
-    private void writeTopTable(BadgeType badgeType, FileWriter fileWriter) throws IOException {
-        final BadgeSettingGroup badgeSettingGroup = BadgeParser.badgeSettingGroups.get(badgeType);
-        badgeSettingGroup.getBadgeSettingList().forEach(badgePattern -> {
+    private fun getTitle(badgeType: BadgeType): String {
+        return if (Objects.isNull(badgeType.title)) {
+            badgeType.destinationFile.replace(".md", "")
+        } else badgeType.title
+    }
+
+    @Throws(IOException::class)
+    private fun writeTitles(badgeType: BadgeType, fileWriter: FileWriter) {
+        val badgeSettingGroup = BadgeParser.badgeSettingGroups[badgeType]
+        fileWriter.write("|Project")
+        badgeSettingGroup!!.badgeSettingList.forEach(Consumer { badgePattern: BadgePattern ->
             try {
-                fileWriter.write("|---");
-            } catch (IOException e) {
-                log.error("Error!", e);
-                System.exit(1);
+                if (badgePattern.title != "Project") {
+                    fileWriter.write("|")
+                    fileWriter.write(badgePattern.title)
+                }
+            } catch (e: IOException) {
+                logger.error("Error!", e)
+                System.exit(1)
             }
-        });
-        fileWriter.write("|\n");
+        })
+        fileWriter.write("|\n")
+        fileWriter.flush()
     }
+
+    private fun writeProjectData(badgeType: BadgeType, fileWriter: FileWriter, projectData: ProjectData?) {
+        try {
+            val badgeGroup = projectData!!.badgeGroupMap[badgeType]
+            BadgeParser.badgeSettingGroups[badgeType]!!.badgeSettingList
+                .forEach(Consumer { badgePattern: BadgePattern ->
+                    val badge = badgeGroup!!.badgeHashMap[badgePattern.pattern]
+                    if (badgePattern.title == "Project" && Objects.isNull(badge)) {
+                        try {
+                            fileWriter.write("|")
+                            fileWriter.write(projectData.title)
+                        } catch (e: IOException) {
+                            logger.error("Error!", e)
+                            System.exit(1)
+                        }
+                    } else {
+                        writeBadgeElement(fileWriter, badge)
+                    }
+                })
+            fileWriter.write("|\n")
+            fileWriter.flush()
+        } catch (e: IOException) {
+            logger.error("Error!", e)
+            System.exit(1)
+        }
+    }
+
+    private fun writeBadgeElement(fileWriter: FileWriter, badge: Badge?) {
+        try {
+            fileWriter.write("|")
+            if (Objects.isNull(badge)) {
+                fileWriter.write("---")
+            } else {
+                fileWriter.write(badge!!.badgeText)
+            }
+        } catch (e: IOException) {
+            logger.error("Error!", e)
+            exitProcess(1)
+        }
+    }
+
+    @Throws(IOException::class)
+    private fun writeTopTable(badgeType: BadgeType, fileWriter: FileWriter) {
+        val badgeSettingGroup = BadgeParser.badgeSettingGroups[badgeType]
+        badgeSettingGroup!!.badgeSettingList.forEach(Consumer { badgePattern: BadgePattern? ->
+            try {
+                fileWriter.write("|---")
+            } catch (e: IOException) {
+                logger.error("Error!", e)
+                exitProcess(1)
+            }
+        })
+        fileWriter.write("|\n")
+    }
+    
+    companion object {
+        val logger: Logger = LoggerFactory.getLogger(FileWriterService::class.java)
+    }
+
 }

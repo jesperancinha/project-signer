@@ -1,75 +1,70 @@
-package org.jesperancinha.parser.projectsigner.filter;
+package org.jesperancinha.parser.projectsigner.filter
 
-import lombok.Builder;
-import lombok.extern.slf4j.Slf4j;
-import org.jesperancinha.parser.markdowner.model.Paragraphs;
-import org.jesperancinha.parser.projectsigner.service.GeneratorSevice;
-import org.springframework.util.ObjectUtils;
+import org.jesperancinha.parser.markdowner.model.Paragraphs
+import org.jesperancinha.parser.projectsigner.service.GeneratorSevice
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+import org.springframework.util.ObjectUtils
+import java.io.IOException
+import java.nio.file.AccessDeniedException
+import java.nio.file.FileVisitResult
+import java.nio.file.Path
+import java.nio.file.SimpleFileVisitor
+import java.nio.file.attribute.BasicFileAttributes
+import java.util.*
 
-import java.io.IOException;
-import java.nio.file.AccessDeniedException;
-import java.nio.file.FileVisitResult;
-import java.nio.file.Path;
-import java.nio.file.SimpleFileVisitor;
-import java.nio.file.attribute.BasicFileAttributes;
-import java.util.List;
-import java.util.Objects;
+open class ProjectSignerVisitor(
+    private val generatorService: GeneratorSevice? = null,
+    private val allParagraphs: Paragraphs? = null,
+    private val allLicenseText: List<String>? = null
+) : SimpleFileVisitor<Path>() {
 
-import static java.nio.file.FileVisitResult.CONTINUE;
-import static java.nio.file.FileVisitResult.SKIP_SUBTREE;
-import static org.jesperancinha.parser.projectsigner.filter.ProjectSignerFilterHelper.isIgnorableFolder;
-
-@Slf4j
-@Builder
-public class ProjectSignerVisitor extends SimpleFileVisitor<Path> {
-
-    private final GeneratorSevice generatorService;
-    private final Paragraphs allParagraphs;
-    private final List<String> allLicenseText;
-
-    @Override
-    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
-        log.trace("Visiting file {}", file);
-        return CONTINUE;
+    override fun visitFile(file: Path, attrs: BasicFileAttributes): FileVisitResult {
+        logger.trace("Visiting file {}", file)
+        return FileVisitResult.CONTINUE
     }
 
-    @Override
-    public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) {
-        if (isIgnorableFolder(dir)) {
-            return SKIP_SUBTREE;
-        }
-        return CONTINUE;
+    override fun preVisitDirectory(dir: Path, attrs: BasicFileAttributes): FileVisitResult {
+        return if (ProjectSignerFilterHelper.isIgnorableFolder(dir)) {
+            FileVisitResult.SKIP_SUBTREE
+        } else FileVisitResult.CONTINUE
     }
 
-    @Override
-    public FileVisitResult postVisitDirectory(Path dir, IOException e) throws IOException {
-        if (isIgnorableFolder(dir)) {
-            return SKIP_SUBTREE;
-        }
-        if (ObjectUtils.isEmpty(e)) {
-            generatorService.processReadmeFile(dir, allParagraphs);
-            if (Objects.nonNull(allLicenseText)) {
-                try {
-                    generatorService.processLicenseFile(dir, allLicenseText);
-                } catch (Throwable ex) {
-                    throw new RuntimeException(ex);
-                }
+    @Throws(IOException::class)
+    override fun postVisitDirectory(dir: Path?, e: IOException?): FileVisitResult {
+        dir?.let {
+            if (ProjectSignerFilterHelper.isIgnorableFolder(dir)) {
+                return FileVisitResult.SKIP_SUBTREE
             }
-        } else {
-            log.error("Failed on file {}", dir, e);
+            if (ObjectUtils.isEmpty(e)) {
+                generatorService!!.processReadmeFile(dir, allParagraphs)
+                if (Objects.nonNull(allLicenseText)) {
+                    try {
+                        generatorService.processLicenseFile(dir, allLicenseText)
+                    } catch (ex: Throwable) {
+                        throw RuntimeException(ex)
+                    }
+                }
+            } else {
+                logger.error("Failed on file {}", dir, e)
+            }
         }
-        return CONTINUE;
+        return FileVisitResult.CONTINUE
     }
 
-    @Override
-    public FileVisitResult visitFileFailed(Path file,
-                                           IOException exc) {
-        if (exc instanceof AccessDeniedException) {
-            log.warn("Access denied on file {}", file);
+    override fun visitFileFailed(
+        file: Path,
+        exc: IOException
+    ): FileVisitResult {
+        if (exc is AccessDeniedException) {
+            logger.warn("Access denied on file {}", file)
         } else {
-            log.error("Error on file {}", file, exc);
+            logger.error("Error on file {}", file, exc)
         }
-        return CONTINUE;
+        return FileVisitResult.CONTINUE
     }
 
+    companion object {
+        val logger: Logger = LoggerFactory.getLogger(ProjectSignerVisitor::class.java)
+    }
 }

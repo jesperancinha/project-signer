@@ -1,61 +1,59 @@
-package org.jesperancinha.parser.projectsigner.service;
+package org.jesperancinha.parser.projectsigner.service
 
-import org.jesperancinha.parser.markdowner.model.Paragraphs;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.api.io.TempDir;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.jesperancinha.parser.markdowner.model.Paragraphs
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
+import org.junit.jupiter.api.io.TempDir
+import org.mockito.InjectMocks
+import org.mockito.Mock
+import org.mockito.Mockito.*
+import org.mockito.junit.jupiter.MockitoExtension
+import java.io.IOException
+import java.nio.file.Path
 
-import java.io.IOException;
-import java.nio.file.Path;
-
-import static org.mockito.Mockito.*;
-
-@ExtendWith(MockitoExtension.class)
-class FinderServiceTest {
-
+@ExtendWith(MockitoExtension::class)
+internal class FinderServiceTest {
     @InjectMocks
-    private FinderService finderService;
+    private val finderService: FinderService? = null
 
     @Mock
-    private ReadmeNamingService readmeNamingService;
+    private val readmeNamingService: ReadmeNamingService? = null
 
     @Mock
-    private MergeService mergeService;
+    private val mergeService: MergeService? = null
 
     @Mock
-    private TemplateService templateService;
+    private val templateService: TemplateService? = null
 
     @Mock
-    private ReadmeService readmeService;
+    private val readmeService: ReadmeService? = null
 
     @Mock
-    private OptionsServiceMock optionsService;
+    lateinit var optionsService: OptionsServiceMock
 
     @Mock
-    private FileWriterService fileWriterService;
+    private val fileWriterService: FileWriterService? = null
 
     @Mock
-    private GeneratorSevice generatorService;
-
-    @TempDir
-    public static Path tempDirectory;
+    private val generatorService: GeneratorSevice? = null
 
     @Test
-    public void testIterateThroughFilesAndFolders() throws IOException {
-        final Paragraphs mockParagraphs = mock(Paragraphs.class);
-        when(templateService.findAllParagraphs()).thenReturn(mockParagraphs);
+    @Throws(IOException::class)
+    fun testIterateThroughFilesAndFolders() {
+        val mockParagraphs: Paragraphs = mock(Paragraphs::class.java)
+        `when`(templateService!!.findAllParagraphs()).thenReturn(mockParagraphs)
+        finderService!!.iterateThroughFilesAndFolders(tempDirectory!!)
+        verify(templateService).findAllParagraphs()
+        verify(generatorService)?.processReadmeFile(tempDirectory!!, mockParagraphs)
+        verifyNoInteractions(readmeNamingService)
+        verifyNoInteractions(optionsService)
+        verifyNoInteractions(fileWriterService)
+        verifyNoInteractions(readmeService)
+        verifyNoInteractions(mergeService)
+    }
 
-        finderService.iterateThroughFilesAndFolders(tempDirectory);
-
-        verify(templateService).findAllParagraphs();
-        verify(generatorService).processReadmeFile(tempDirectory, mockParagraphs);
-        verifyNoInteractions(readmeNamingService);
-        verifyNoInteractions(optionsService);
-        verifyNoInteractions(fileWriterService);
-        verifyNoInteractions(readmeService);
-        verifyNoInteractions(mergeService);
+    companion object {
+        @TempDir
+        var tempDirectory: Path? = null
     }
 }

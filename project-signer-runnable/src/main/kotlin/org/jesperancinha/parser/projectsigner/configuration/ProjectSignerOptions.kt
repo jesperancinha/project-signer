@@ -1,68 +1,51 @@
-package org.jesperancinha.parser.projectsigner.configuration;
+package org.jesperancinha.parser.projectsigner.configuration
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import picocli.CommandLine.Option;
-import picocli.CommandLine.Parameters;
+import picocli.CommandLine
+import picocli.CommandLine.*
+import java.nio.file.Path
+open class ProjectSignerOptions {
+    @Option(
+        names = ["-t", "--template-location"],
+        paramLabel = "Template location",
+        description = ["Location of the signing template"],
+        required = true
+    )
+    var templateLocation: Path? = null
 
-import java.nio.file.Path;
-import java.util.Arrays;
-import java.util.Objects;
+    @Option(
+        names = ["-l", "--license-location"],
+        paramLabel = "License location",
+        description = ["Location of tzhe License template"]
+    )
+    var licenseLocations: String? = null
 
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-public class ProjectSignerOptions {
+    @Option(
+        names = ["-r", "--report-location"],
+        paramLabel = "Report location",
+        description = ["Destination of report files"],
+        defaultValue = "../project-signer-quality"
+    )
+    var reportLocation: String? = null
 
-    @Option(names = {"-t", "--template-location"},
-            paramLabel = "Template location",
-            description = "Location of the signing template",
-            required = true)
-    private String templateLocation;
+    @Parameters(
+        paramLabel = "Start tags",
+        description = ["Start of paragraph replace. This will remove all paragraphs with these names. It only applies to rules with '#' title markdown notation"]
+    )
+    var tagNames: Array<String> =  emptyArray()
 
-    @Option(names = {"-l", "--license-location"},
-            paramLabel = "License location",
-            description = "Location of the License template")
-    private String licenseLocations;
+    @Option(
+        names = ["-d", "--root-directory"],
+        paramLabel = "Root directory",
+        description = ["Where to start searching for sub Readme.md files and/or empty projects"]
+    )
+    var rootDirectory: Path? = null
 
-    @Option(names = {"-r", "--report-location"},
-            paramLabel = "Report location",
-            description = "Destination of report files",
-            defaultValue = "../project-signer-quality")
-    private String reportLocation;
-
-    @Parameters(paramLabel = "Start tags",
-            description = "Start of paragraph replace. This will remove all paragraphs with these names. It only applies to rules with '#' title markdown notation")
-    private String[] tagNames;
-
-    @Option(names = {"-d", "--root-directory"},
-            paramLabel = "Root directory",
-            description = "Where to start searching for sub Readme.md files and/or empty projects")
-    private String rootDirectory;
-
-    @Option(names = {"-ne", "--no-empty"},
-            paramLabel = "No Empty",
-            description = "If set, it does not create empty signed Readme.md files",
-            defaultValue = "false")
-    private boolean noEmpty;
-
-    public Path getRootDirectory() {
-        return Path.of(rootDirectory);
-    }
-
-    public Path getTemplateLocation() {
-        return Path.of(templateLocation);
-    }
-
-    public Path[] getLicenseLocations() {
-        if (Objects.isNull(licenseLocations)) {
-            return null;
-        }
-        return Arrays.stream(licenseLocations.split(",")).map(Path::of).toArray(Path[]::new);
-    }
-
-    public Path getReportLocation() {
-        return Path.of(reportLocation);
-    }
+    @Option(
+        names = ["-ne", "--no-empty"],
+        paramLabel = "No Empty",
+        description = ["If set, it does not create empty signed Readme.md files"],
+        defaultValue = "false"
+    )
+    var noEmpty:Boolean = false
+    fun getLicenseLocations(): Array<Path>? = licenseLocations?.split(",")?.mapNotNull { Path.of(it) }?.toTypedArray()
 }

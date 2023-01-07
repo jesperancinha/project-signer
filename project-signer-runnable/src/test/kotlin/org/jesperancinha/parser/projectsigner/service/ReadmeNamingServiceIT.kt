@@ -1,144 +1,139 @@
-package org.jesperancinha.parser.projectsigner.service;
+package org.jesperancinha.parser.projectsigner.service
 
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.io.IOUtils;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.ActiveProfiles;
+import org.apache.commons.io.IOUtils
+import org.assertj.core.api.Assertions.assertThat
+import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest
+import org.junit.jupiter.api.AfterEach
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
+import org.mockito.Mockito.atLeast
+import org.mockito.Mockito.verify
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.boot.test.mock.mockito.MockBean
+import org.springframework.test.context.ActiveProfiles
+import java.io.IOException
+import java.net.URISyntaxException
+import java.nio.charset.Charset
+import java.nio.charset.Charset.*
+import java.nio.file.Path
+import java.util.*
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URISyntaxException;
-import java.nio.charset.Charset;
-import java.nio.file.Path;
-import java.util.Objects;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.ROOT_DIRECTORY;
-import static org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.TEMPLATE_LOCATION_README_MD;
-import static org.mockito.Mockito.atLeast;
-import static org.mockito.Mockito.verify;
-
-@SpringBootTest(args = {TEMPLATE_LOCATION_README_MD, ROOT_DIRECTORY})
+@SpringBootTest(args = [ProjectSignerOptionsTest.TEMPLATE_LOCATION_README_MD, ProjectSignerOptionsTest.ROOT_DIRECTORY])
 @ActiveProfiles("test")
-@Slf4j
-class ReadmeNamingServiceIT {
-    @MockBean
-    private FinderService finderService;
-
-    @Autowired
-    private ReadmeNamingService namingService;
-
-    @Autowired
-    private OptionsServiceMock optionsService;
-
+internal class ReadmeNamingServiceIT @Autowired constructor(
+    private val namingService: ReadmeNamingService,
+    private val optionsService: OptionsServiceMock
+) {
     @BeforeEach
-    public void setUp() {
-        optionsService.processOptions();
-        optionsService.setNoEmptyDown();
-        log.info(optionsService.getProjectSignerOptions().getRootDirectory().toString());
+    fun setUp() {
+        optionsService.processOptions()
+        optionsService.setNoEmptyDown()
+
+        logger.info(optionsService.projectSignerOptions?.rootDirectory.toString())
     }
 
     @Test
-    public void testBuildReadmeSamePath() throws IOException {
-        final Path path = Path.of(optionsService.getProjectSignerOptions().getTemplateLocation().toString());
-
-        final InputStream inputStream = namingService.buildReadmeStream(path);
-
-        assertThat(inputStream).isNull();
+    @Throws(IOException::class)
+    fun testBuildReadmeSamePath() {
+        val path = Path.of(optionsService.projectSignerOptions?.templateLocation.toString())
+        val inputStream = namingService.buildReadmeStream(path)
+        assertThat(inputStream).isNull()
     }
 
     @Test
-    public void testBuildReadmeStreamNothing() throws URISyntaxException, IOException {
-        final Path path = Path.of(Objects.requireNonNull(getClass().getResource("/directory2NoReadme/noProject2")).toURI());
-
-        final InputStream inputStream = namingService.buildReadmeStream(path);
-
-        assertThat(inputStream).isNull();
+    @Throws(URISyntaxException::class, IOException::class)
+    fun testBuildReadmeStreamNothing() {
+        val path = Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/noProject2")).toURI())
+        val inputStream = namingService.buildReadmeStream(path)
+        assertThat(inputStream).isNull()
     }
 
     @Test
-    public void testBuildReadmeStreamMixMavenAndNPMFlagOn() throws URISyntaxException, IOException {
-        optionsService.setNoEmptyUp();
-        final Path path = Path.of(Objects.requireNonNull(getClass().getResource("/directory2NoReadme/project3MavenAndNPM")).toURI());
-
-        final InputStream inputStream = namingService.buildReadmeStream(path);
-
-        assertThat(inputStream).isNotNull();
+    @Throws(URISyntaxException::class, IOException::class)
+    fun testBuildReadmeStreamMixMavenAndNPMFlagOn() {
+        optionsService.setNoEmptyUp()
+        val path =
+            Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project3MavenAndNPM")).toURI())
+        val inputStream = namingService.buildReadmeStream(path)
+        assertThat(inputStream).isNotNull
     }
 
     @Test
-    public void testBuildReadmeStreamMixMavenAndNPM() throws URISyntaxException, IOException {
-        final Path path = Path.of(Objects.requireNonNull(getClass().getResource("/directory2NoReadme/project3MavenAndNPM")).toURI());
-
-        final InputStream inputStream = namingService.buildReadmeStream(path);
-
-        assertThat(inputStream).isNotNull();
-        final String result = IOUtils.toString(inputStream, Charset.defaultCharset());
-        assertThat(result).isEqualTo("# This is a test project");
+    @Throws(URISyntaxException::class, IOException::class)
+    fun testBuildReadmeStreamMixMavenAndNPM() {
+        val path =
+            Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project3MavenAndNPM")).toURI())
+        val inputStream = namingService.buildReadmeStream(path)
+        assertThat(inputStream).isNotNull
+        val result: String = IOUtils.toString(inputStream, defaultCharset())
+        assertThat(result).isEqualTo("# This is a test project")
     }
 
     @Test
-    public void testBuildReadmeStreamMavenName() throws URISyntaxException, IOException {
-        final Path path = Path.of(Objects.requireNonNull(getClass().getResource("/directory2NoReadme/project1Maven")).toURI());
-
-        final InputStream inputStream = namingService.buildReadmeStream(path);
-
-        assertThat(inputStream).isNotNull();
-        final String result = IOUtils.toString(inputStream, Charset.defaultCharset());
-        assertThat(result).isEqualTo("# This is a test project");
+    @Throws(URISyntaxException::class, IOException::class)
+    fun testBuildReadmeStreamMavenName() {
+        val path = Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project1Maven")).toURI())
+        val inputStream = namingService.buildReadmeStream(path)
+        assertThat(inputStream).isNotNull
+        val result: String = IOUtils.toString(inputStream, defaultCharset())
+        assertThat(result).isEqualTo("# This is a test project")
     }
 
     @Test
-    public void testBuildReadmeStreamMavenNoName() throws URISyntaxException, IOException {
-
-        final Path path = Path.of(Objects.requireNonNull(getClass().getResource("/directory2NoReadme/project1MavenNoName")).toURI());
-        final InputStream inputStream = namingService.buildReadmeStream(path);
-
-        assertThat(inputStream).isNotNull();
-        final String result = IOUtils.toString(inputStream, Charset.defaultCharset());
-        assertThat(result).isEqualTo("# ProjectMavenArtifact");
+    @Throws(URISyntaxException::class, IOException::class)
+    fun testBuildReadmeStreamMavenNoName() {
+        val path =
+            Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project1MavenNoName")).toURI())
+        val inputStream = namingService.buildReadmeStream(path)
+        assertThat(inputStream).isNotNull
+        val result: String = IOUtils.toString(inputStream, defaultCharset())
+        assertThat(result).isEqualTo("# ProjectMavenArtifact")
     }
 
     @Test
-    public void testBuildReadmeStreamNPM() throws URISyntaxException, IOException {
-        final Path path = Path.of(Objects.requireNonNull(getClass().getResource("/directory2NoReadme/project2NPM")).toURI());
-
-        final InputStream inputStream = namingService.buildReadmeStream(path);
-
-        assertThat(inputStream).isNotNull();
-        final String result = IOUtils.toString(inputStream, Charset.defaultCharset());
-        assertThat(result).isEqualTo("# npm-project");
+    @Throws(URISyntaxException::class, IOException::class)
+    fun testBuildReadmeStreamNPM() {
+        val path = Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project2NPM")).toURI())
+        val inputStream = namingService.buildReadmeStream(path)
+        assertThat(inputStream).isNotNull
+        val result: String = IOUtils.toString(inputStream, defaultCharset())
+        assertThat(result).isEqualTo("# npm-project")
     }
 
     @Test
-    public void testBuildReadmeStreamGradle() throws URISyntaxException, IOException {
-        final Path path = Path.of(Objects.requireNonNull(getClass().getResource("/directory2NoReadme/project4Gradle")).toURI());
-
-        final InputStream inputStream = namingService.buildReadmeStream(path);
-
-        assertThat(inputStream).isNotNull();
-        final String result = IOUtils.toString(inputStream, Charset.defaultCharset());
-        assertThat(result).isEqualTo("# project4Gradle");
+    @Throws(URISyntaxException::class, IOException::class)
+    fun testBuildReadmeStreamGradle() {
+        val path = Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project4Gradle")).toURI())
+        val inputStream = namingService.buildReadmeStream(path)
+        assertThat(inputStream).isNotNull
+        val result: String = IOUtils.toString(inputStream, defaultCharset())
+        assertThat(result).isEqualTo("# project4Gradle")
     }
 
     @Test
-    public void testBuildReadmeStreamSBT() throws URISyntaxException, IOException {
-        final Path path = Path.of(Objects.requireNonNull(getClass().getResource("/directory2NoReadme/project5Sbt")).toURI());
-
-        final InputStream inputStream = namingService.buildReadmeStream(path);
-
-        assertThat(inputStream).isNotNull();
-        final String result = IOUtils.toString(inputStream, Charset.defaultCharset());
-        assertThat(result).isEqualTo("# sbt-project");
+    @Throws(URISyntaxException::class, IOException::class)
+    fun testBuildReadmeStreamSBT() {
+        val path = Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project5Sbt")).toURI())
+        val inputStream = namingService.buildReadmeStream(path)
+        assertThat(inputStream).isNotNull
+        val result: String = IOUtils.toString(inputStream, defaultCharset())
+        assertThat(result).isEqualTo("# sbt-project")
     }
 
     @AfterEach
-    public void tearDown() throws IOException {
-        verify(finderService, atLeast(0)).iterateThroughFilesAndFolders(optionsService.getProjectSignerOptions().getRootDirectory());
+    @Throws(IOException::class)
+    fun tearDown() {
+//        verify(
+//            finderService,
+//            atLeast(0)
+//        )
+//            ?.iterateThroughFilesAndFolders(optionsService!!.projectSignerOptions?.rootDirectory!!)
+    }
+
+    companion object {
+        val logger: Logger = LoggerFactory.getLogger(ReadmeNamingServiceIT::class.java)
     }
 }

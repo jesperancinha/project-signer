@@ -1,36 +1,33 @@
-package org.jesperancinha.parser.projectsigner;
+package org.jesperancinha.parser.projectsigner
+import org.mockito.Mockito.verify
+import org.mockito.Mockito.verifyNoMoreInteractions
+import org.assertj.core.api.AssertionsForClassTypes.assertThat
 
-import org.jesperancinha.parser.projectsigner.service.FinderService;
-import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.util.CollectionUtils;
+import org.jesperancinha.parser.projectsigner.service.FinderService
+import org.junit.jupiter.api.Test
+import org.mockito.ArgumentCaptor
+import org.mockito.Captor
+import org.mockito.Mockito.atLeast
+import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.boot.test.mock.mockito.MockBean
+import org.springframework.test.context.ActiveProfiles
+import org.springframework.util.CollectionUtils
+import java.nio.file.Path
 
-import java.io.IOException;
-import java.nio.file.Path;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.*;
-
-@SpringBootTest(args = {"--template-location=Readme.md","--root-directory=/"})
+@SpringBootTest(args = ["--template-location=Readme.md", "--root-directory=/"])
 @ActiveProfiles("test")
-public class ProjectSignerStartIT {
-
+class ProjectSignerStartIT {
     @MockBean
-    private FinderService finderService;
+    private val finderService: FinderService? = null
 
     @Captor
-    private ArgumentCaptor<Path> pathArgumentCaptor;
-
+    private val pathArgumentCaptor: ArgumentCaptor<Path>? = null
     @Test
-    public void run() throws IOException {
-        verify(finderService, atLeast(0)).iterateThroughFilesAndFolders(pathArgumentCaptor.capture());
-        verifyNoMoreInteractions(finderService);
-        if (!CollectionUtils.isEmpty(pathArgumentCaptor.getAllValues())) {
-            assertThat(pathArgumentCaptor.getValue()).isNotNull();
+    fun run() {
+        pathArgumentCaptor?.capture()?.let { verify(finderService, atLeast(0))?.iterateThroughFilesAndFolders(it) }
+        verifyNoMoreInteractions(finderService)
+        if (!CollectionUtils.isEmpty(pathArgumentCaptor?.allValues)) {
+            assertThat(pathArgumentCaptor?.value).isNotNull
         }
     }
 }

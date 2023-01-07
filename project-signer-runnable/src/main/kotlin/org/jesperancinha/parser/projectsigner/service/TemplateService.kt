@@ -1,57 +1,60 @@
-package org.jesperancinha.parser.projectsigner.service;
+package org.jesperancinha.parser.projectsigner.service
 
-import lombok.extern.slf4j.Slf4j;
-import lombok.val;
-import org.jesperancinha.parser.markdowner.helper.TemplateParserHelper;
-import org.jesperancinha.parser.markdowner.model.Paragraphs;
-import org.springframework.stereotype.Service;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
+import lombok.extern.slf4j.Slf4j
+import org.jesperancinha.parser.markdowner.helper.TemplateParserHelper
+import org.jesperancinha.parser.markdowner.model.Paragraphs
+import org.slf4j.LoggerFactory
+import org.springframework.stereotype.Service
+import java.io.FileInputStream
+import java.io.IOException
+import java.nio.charset.StandardCharsets
+import java.nio.file.Path
+import java.util.*
+import java.util.logging.Logger
+import java.util.stream.Collectors
 
 /**
  * A markdown template service to handle markdown texts
  */
 @Service
-@Slf4j
-public class TemplateService {
-
-    private final OptionsService optionsService;
-
-    public TemplateService(OptionsService optionsService) {
-        this.optionsService = optionsService;
-    }
-
+open class TemplateService(private val optionsService: OptionsService) {
     /**
-     * Receives an input Markdown text stream nd parses its content to a Paragraphs object see {@link Paragraphs}
+     * Receives an input Markdown text stream nd parses its content to a Paragraphs object see [Paragraphs]
      *
-     * @return A {@link Paragraphs} parsed object
+     * @return A [Paragraphs] parsed object
      * @throws IOException Any kind of IO Exception
      */
-    public Paragraphs findAllParagraphs() throws IOException {
-        val fileTemplate = optionsService.getProjectSignerOptions().getTemplateLocation().toFile();
-        val templateInputStream = new FileInputStream(fileTemplate);
-        return TemplateParserHelper.findAllParagraphs(templateInputStream);
+    @Throws(IOException::class)
+    open fun findAllParagraphs(): Paragraphs? {
+        val fileTemplate = optionsService.projectSignerOptions?.templateLocation?.toFile()
+        val templateInputStream = FileInputStream(fileTemplate)
+        return TemplateParserHelper.findAllParagraphs(templateInputStream)
     }
 
-    public List<String> readAllLicenses() {
-        val licenseLocations = optionsService.getProjectSignerOptions().getLicenseLocations();
-        if (licenseLocations == null) {
-            return Collections.emptyList();
-        }
-        return Arrays.stream(licenseLocations)
-                .map(path -> {
-                    try (final FileInputStream templateInputStream = new FileInputStream(path.toFile())) {
-                        return new String(templateInputStream.readAllBytes(), StandardCharsets.UTF_8);
-                    } catch (IOException e) {
-                        log.error("Failing to read template file {}. Error {}", path.getFileName().toString(), e.getMessage());
-                        return null;
+    open fun readAllLicenses(): List<String>? {
+        val licenseLocations = optionsService.projectSignerOptions?.getLicenseLocations()
+            ?: return emptyList()
+        return licenseLocations
+            .mapNotNull { path: Path ->
+                try {
+                    FileInputStream(path.toFile()).use { templateInputStream ->
+                        return@mapNotNull String(
+                            templateInputStream.readAllBytes(),
+                            StandardCharsets.UTF_8
+                        )
                     }
-                }).collect(Collectors.toList());
+                } catch (e: IOException) {
+                    logger.error(
+                        "Failing to read template file {}. Error {}",
+                        path.fileName.toString(),
+                        e.message
+                    )
+                    return@mapNotNull null
+                }
+            }
+    }
+
+    companion object {
+        val logger: org.slf4j.Logger = LoggerFactory.getLogger(TemplateService::class.java)
     }
 }

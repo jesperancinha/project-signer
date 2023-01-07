@@ -1,11 +1,8 @@
-package org.jesperancinha.parser.projectsigner.model;
+package org.jesperancinha.parser.projectsigner.model
 
-import lombok.Builder;
-import org.jesperancinha.parser.markdowner.badges.model.BadgeGroup;
-import org.jesperancinha.parser.markdowner.badges.model.BadgeType;
-
-import java.util.Map;
+import lombok.Builder
+import org.jesperancinha.parser.markdowner.badges.model.BadgeGroup
+import org.jesperancinha.parser.markdowner.badges.model.BadgeType
 
 @Builder
-public record ProjectData(String title, Map<BadgeType, BadgeGroup> badgeGroupMap) {
-}
+class ProjectData(val title: String, val badgeGroupMap: Map<BadgeType, BadgeGroup>)
