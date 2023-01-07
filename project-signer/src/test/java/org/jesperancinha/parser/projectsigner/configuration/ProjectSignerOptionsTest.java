@@ -12,6 +12,10 @@ public class ProjectSignerOptionsTest {
     private static final String TEST_LABEL_2 = "label2";
     private static final String TEST_ROOT = "root";
 
+    public static final String TEMPLATE_LOCATION_README_MD = "--template-location=Readme.md";
+    public static final String ROOT_DIRECTORY = "--root-directory=/";
+    public static final String[] ALL_ARGS = new String[]{TEMPLATE_LOCATION_README_MD, ROOT_DIRECTORY};
+
     @Test
     public void parseOptions() {
         final String[] args = {"-t", TEST_LOCATION, TEST_LABEL_1, TEST_LABEL_2, "-d", TEST_ROOT};

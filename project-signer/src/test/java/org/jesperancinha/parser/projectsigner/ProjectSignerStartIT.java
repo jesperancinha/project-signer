@@ -1,14 +1,12 @@
 package org.jesperancinha.parser.projectsigner;
 
-import org.jesperancinha.parser.projectsigner.service.FinderServiceImpl;
+import org.jesperancinha.parser.projectsigner.service.FinderService;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.util.CollectionUtils;
 
 import java.io.IOException;
@@ -24,7 +22,7 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
 public class ProjectSignerStartIT {
 
     @MockBean
-    private FinderServiceImpl finderService;
+    private FinderService finderService;
 
     @Captor
     private ArgumentCaptor<Path> pathArgumentCaptor;

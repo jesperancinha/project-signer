@@ -1,7 +1,9 @@
 package org.jesperancinha.parser.projectsigner.api;
 
+import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.model.ProjectData;
 import org.jesperancinha.parser.projectsigner.service.FileWriterService;
+import org.jesperancinha.parser.projectsigner.service.FinderService;
 import org.jesperancinha.parser.projectsigner.service.MergeService;
 import org.jesperancinha.parser.projectsigner.service.OptionsService;
 import org.junit.jupiter.api.Test;
@@ -28,16 +30,9 @@ public class InterfacesTest {
             }
         };
 
-        final var finderService = new FinderService() {
+        final var generatorService = new GeneratorService<Paragraphs>() {
             @Override
-            public void iterateThroughFilesAndFolders(Path rootPath) throws IOException {
-
-            }
-        };
-
-        final var generatorService = new GeneratorService<>() {
-            @Override
-            public void processReadmeFile(Path readmePath, Object allParagraphs) throws IOException {
+            public void processReadmeFile(Path readmePath, Paragraphs allParagraphs) throws IOException {
 
             }
 
@@ -45,7 +40,9 @@ public class InterfacesTest {
             public void processLicenseFile(Path licencePath, List<String> license) throws Throwable {
 
             }
+
         };
+
         final var mergeService = new MergeService(fileWriterService) {
             public String mergeDocumentWithFooterTemplate(String readmeMd, Object footer) {
                 return null;
@@ -83,15 +80,21 @@ public class InterfacesTest {
             }
         };
 
-        final var templateService = new TemplateService<>() {
+        final var templateService = new TemplateService<Paragraphs>() {
             @Override
-            public Object findAllParagraphs() throws IOException {
+            public Paragraphs findAllParagraphs() throws IOException {
                 return null;
             }
 
             @Override
             public List<String> readAllLicenses() throws IOException {
                 return null;
+            }
+        };
+
+        final var finderService = new FinderService(generatorService, templateService) {
+            public void iterateThroughFilesAndFolders(Path rootPath) throws IOException {
+
             }
         };
 

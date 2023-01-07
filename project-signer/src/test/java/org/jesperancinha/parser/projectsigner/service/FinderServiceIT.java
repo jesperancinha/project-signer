@@ -5,12 +5,10 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.io.TempDir;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,10 +24,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest(args = {"--template-location=Readme.md","--root-directory=/"})
 @Slf4j
 @ActiveProfiles("test")
-class FinderServiceImplIT {
+class FinderServiceIT {
 
     @Autowired
-    private FinderServiceImpl finderService;
+    private FinderService finderService;
 
     @TempDir
     public static Path tempDirectory;

@@ -1,6 +1,5 @@
 package org.jesperancinha.parser.projectsigner.service;
 
-import lombok.extern.slf4j.Slf4j;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.api.GeneratorService;
 import org.jesperancinha.parser.projectsigner.api.ReadmeNamingService;
@@ -22,10 +21,10 @@ import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class FinderServiceImplTest {
+class FinderServiceTest {
 
     @InjectMocks
-    private FinderServiceImpl finderService;
+    private FinderService finderService;
 
     @Mock
     private ReadmeNamingService readmeNamingService;

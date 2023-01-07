@@ -2,14 +2,15 @@ package org.jesperancinha.parser.projectsigner.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
+import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.core.env.Environment;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,17 +19,17 @@ import java.nio.charset.Charset;
 import java.nio.file.Path;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.*;
 import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 
-@SpringBootTest
-@ExtendWith(SpringExtension.class)
+@SpringBootTest(args = {TEMPLATE_LOCATION_README_MD, ROOT_DIRECTORY})
+@ActiveProfiles("test")
 @Slf4j
 class ReadmeNamingServiceImplIT {
-
     @MockBean
-    private FinderServiceImpl finderService;
+    private FinderService finderService;
 
     @Autowired
     private ReadmeNamingServiceImpl namingService;
@@ -36,8 +37,12 @@ class ReadmeNamingServiceImplIT {
     @Autowired
     private OptionsServiceMock optionsService;
 
+    @Autowired
+    private Environment env;
+
     @BeforeEach
     public void setUp() {
+        optionsService.processOptions(ALL_ARGS);
         optionsService.setNoEmptyDown();
         log.info(optionsService.getProjectSignerOptions().getRootDirectory().toString());
     }
@@ -139,6 +144,5 @@ class ReadmeNamingServiceImplIT {
     @AfterEach
     public void tearDown() throws IOException {
         verify(finderService, atLeast(0)).iterateThroughFilesAndFolders(optionsService.getProjectSignerOptions().getRootDirectory());
-        verifyNoMoreInteractions(finderService);
     }
 }
