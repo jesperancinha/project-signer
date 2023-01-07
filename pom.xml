@@ -6,17 +6,16 @@
     <artifactId>project-signer-root</artifactId>
     <version>3.0.7</version>
     <packaging>pom</packaging>
+    <name>Project Signer :: Parent</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <markdowner.version>${project.parent.version}</markdowner.version>
         <project-signer-api.version>${project.parent.version}</project-signer-api.version>
         <commons-io.version>2.11.0</commons-io.version>
-        <java.version>17</java.version>
+        <java.version>19</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.release>${java.version}</maven.compiler.release>
-        <maven-compiler-plugin.source>${java.version}§</maven-compiler-plugin.source>
-        <maven-compiler-plugin.target>${java.version}</maven-compiler-plugin.target>
         <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
         <maven-failsafe-plugin.version>3.0.0-M7</maven-failsafe-plugin.version>
         <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>

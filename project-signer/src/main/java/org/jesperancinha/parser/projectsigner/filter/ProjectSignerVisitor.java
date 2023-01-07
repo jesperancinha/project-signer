@@ -1,7 +1,6 @@
 package org.jesperancinha.parser.projectsigner.filter;
 
 import lombok.Builder;
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
 import org.jesperancinha.parser.projectsigner.api.GeneratorService;
@@ -42,16 +41,19 @@ public class ProjectSignerVisitor extends SimpleFileVisitor<Path> {
         return CONTINUE;
     }
 
-    @SneakyThrows
     @Override
-    public FileVisitResult postVisitDirectory(Path dir, IOException e) {
+    public FileVisitResult postVisitDirectory(Path dir, IOException e) throws IOException {
         if (isIgnorableFolder(dir)) {
             return SKIP_SUBTREE;
         }
         if (ObjectUtils.isEmpty(e)) {
             generatorService.processReadmeFile(dir, allParagraphs);
             if (Objects.nonNull(allLicenseText)) {
-                generatorService.processLicenseFile(dir, allLicenseText);
+                try {
+                    generatorService.processLicenseFile(dir, allLicenseText);
+                } catch (Throwable ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         } else {
             log.error("Failed on file {}", dir, e);

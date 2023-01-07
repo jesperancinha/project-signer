@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import picocli.CommandLine;
 
 @Service
-@Profile({"dev", "prod"})
+@Profile({"dev", "prod", "test"})
 public class OptionsService {
 
     private ProjectSignerOptions projectSignerOptions;

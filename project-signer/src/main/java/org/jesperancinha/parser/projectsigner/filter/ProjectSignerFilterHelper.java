@@ -1,6 +1,9 @@
 package org.jesperancinha.parser.projectsigner.filter;
 
+import lombok.val;
+
 import java.nio.file.Path;
+import java.util.Objects;
 
 public class ProjectSignerFilterHelper {
 
@@ -11,7 +14,11 @@ public class ProjectSignerFilterHelper {
      * @return If the folder is ignorable
      */
     public static boolean isIgnorableFolder(Path projectPath) {
-        final String directoryName = projectPath.getFileName().toString();
+        val fileName = projectPath.getFileName();
+        if(Objects.isNull(fileName)){
+            return true;
+        }
+        final String directoryName = fileName.toString();
         return directoryName.equalsIgnoreCase("generated")
                 ||
                 directoryName.equalsIgnoreCase("src")

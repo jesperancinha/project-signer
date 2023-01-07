@@ -1,7 +1,6 @@
 package org.jesperancinha.parser.projectsigner.service;
 
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
-import org.jesperancinha.parser.projectsigner.api.MergeService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +11,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 @ExtendWith(SpringExtension.class)
-public class MergeServiceImplIT {
+public class MergeServiceIT {
 
     @Autowired
-    private MergeService<Paragraphs> mergeService;
+    private MergeService mergeService;
 
     @Test
     public void mergeDocumentWithFooterTemplate() {

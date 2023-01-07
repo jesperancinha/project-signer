@@ -1,5 +1,8 @@
 package org.jesperancinha.parser.projectsigner.api;
 
+import org.jesperancinha.parser.projectsigner.model.ProjectData;
+import org.jesperancinha.parser.projectsigner.service.FileWriterService;
+import org.jesperancinha.parser.projectsigner.service.MergeService;
 import org.jesperancinha.parser.projectsigner.service.OptionsService;
 import org.junit.jupiter.api.Test;
 
@@ -15,14 +18,12 @@ public class InterfacesTest {
 
     @Test
     public void testAllInterfacesWhenCreatingImplementationThenAllow() {
-        final var fileWriterService = new FileWriterService<String>() {
-            @Override
+        final var fileWriterService = new FileWriterService() {
             public void exportReadmeFile(Path path, String text) throws IOException {
 
             }
 
-            @Override
-            public void exportReportFile(Path path, List<String> projectDataList) throws IOException {
+            public void exportReportFile(Path path, List<ProjectData> projectDataList) {
 
             }
         };
@@ -45,13 +46,11 @@ public class InterfacesTest {
 
             }
         };
-        final var mergeService = new MergeService<>() {
-            @Override
+        final var mergeService = new MergeService(fileWriterService) {
             public String mergeDocumentWithFooterTemplate(String readmeMd, Object footer) {
                 return null;
             }
 
-            @Override
             public void writeMergedResult(Path readmePath, String newText) throws IOException {
 
             }

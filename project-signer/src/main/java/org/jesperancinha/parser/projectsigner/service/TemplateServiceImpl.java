@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -42,7 +43,11 @@ public class TemplateServiceImpl implements TemplateService<Paragraphs> {
 
     @Override
     public List<String> readAllLicenses() {
-        return Arrays.stream(optionsService.getProjectSignerOptions().getLicenseLocations())
+        val licenseLocations = optionsService.getProjectSignerOptions().getLicenseLocations();
+        if(licenseLocations==null){
+            return Collections.emptyList();
+        }
+        return Arrays.stream(licenseLocations)
                 .map(path -> {
                     try {
                         final FileInputStream templateInputStream = new FileInputStream(path.toFile());

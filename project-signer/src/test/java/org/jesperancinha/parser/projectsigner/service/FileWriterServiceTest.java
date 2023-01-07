@@ -16,12 +16,12 @@ import java.nio.file.Path;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(MockitoExtension.class)
-class FileWriterServiceImplTest {
+class FileWriterServiceTest {
 
     private static final String README_SIGNED_FILE = "Readme signed file";
 
     @InjectMocks
-    private FileWriterServiceImpl fileWriterService;
+    private FileWriterService fileWriterService;
 
     @TempDir
     public static Path tempDirectory;

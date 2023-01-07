@@ -6,7 +6,6 @@ import org.apache.commons.io.IOUtils;
 import org.jesperancinha.parser.markdowner.badges.parser.BadgeParser;
 import org.jesperancinha.parser.markdowner.helper.ReadmeParserHelper;
 import org.jesperancinha.parser.markdowner.model.Paragraphs;
-import org.jesperancinha.parser.projectsigner.api.MergeService;
 import org.jesperancinha.parser.projectsigner.api.ReadmeService;
 import org.jesperancinha.parser.projectsigner.model.LintMatch;
 import org.jesperancinha.parser.projectsigner.model.LintPattern;
@@ -15,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -53,11 +53,11 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs, ProjectData>
         }
     }
 
-    private final MergeService<Paragraphs> mergeService;
+    private final MergeService mergeService;
     private final OptionsService optionsService;
     private final List<ProjectData> allProjectData = new ArrayList<>();
 
-    public ReadmeServiceImpl(MergeService<Paragraphs> mergeService, OptionsService optionsService) {
+    public ReadmeServiceImpl(MergeService mergeService, OptionsService optionsService) {
         this.mergeService = mergeService;
         this.optionsService = optionsService;
     }
@@ -74,6 +74,9 @@ public class ReadmeServiceImpl implements ReadmeService<Paragraphs, ProjectData>
      */
     @Override
     public String readDataSprippedOfTags(final InputStream readmeInputStream, String... tags) throws IOException {
+        if (tags == null) {
+            return IOUtils.toString(readmeInputStream, Charset.defaultCharset());
+        }
         return ReadmeParserHelper.readDataSprippedOfTags(readmeInputStream, tags);
     }
 
