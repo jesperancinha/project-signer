@@ -23,10 +23,7 @@ import kotlin.system.exitProcess
 open class FileWriterService {
     @Throws(IOException::class)
     open fun exportReadmeFile(path: Path, text: String) {
-        val fileName = path.toFile()
-            .list { _, name -> name.lowercase().endsWith("readme.md") }
-            .takeIf { it?.isNotEmpty() ?: false }
-            ?.let { it[0] } ?: "Readme.md"
+        val fileName = path.findReadmeFileNameWithDefault()
         val readmeFile = File(path.toFile(), fileName)
         val fileWriter = FileWriter(readmeFile)
         fileWriter.write(text)
@@ -184,3 +181,10 @@ open class FileWriterService {
     }
 
 }
+
+fun Path.findReadmeFileNameWithDefault() = findReadmeFileName() ?: "Readme.md"
+
+fun Path.findReadmeFileName() = toFile()
+    .list { _, name -> name.lowercase().endsWith("readme.md") }
+    .takeIf { it?.isNotEmpty() ?: false }
+    ?.let { it[0] }

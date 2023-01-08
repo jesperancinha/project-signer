@@ -2,14 +2,12 @@ package org.jesperancinha.parser.projectsigner.filter
 
 import org.jesperancinha.parser.markdowner.model.Paragraphs
 import org.jesperancinha.parser.projectsigner.service.GeneratorSevice
+import org.jesperancinha.parser.projectsigner.service.findReadmeFileName
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.util.ObjectUtils
 import java.io.IOException
-import java.nio.file.AccessDeniedException
-import java.nio.file.FileVisitResult
-import java.nio.file.Path
-import java.nio.file.SimpleFileVisitor
+import java.nio.file.*
 import java.nio.file.attribute.BasicFileAttributes
 import java.util.*
 
@@ -37,6 +35,9 @@ open class ProjectSignerVisitor(
                 return FileVisitResult.SKIP_SUBTREE
             }
             if (ObjectUtils.isEmpty(e)) {
+                 dir.findReadmeFileName()?.let {
+                     Files.move(dir, dir.resolveSibling("Readme.md"))
+                 }
                 generatorService!!.processReadmeFile(dir, allParagraphs)
                 if (Objects.nonNull(allLicenseText)) {
                     try {
