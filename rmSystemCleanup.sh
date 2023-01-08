@@ -35,6 +35,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
       find . -type d -name 'node_modules' | xargs rm -rf
       echo -e "\n\e[31m---*** Cleaning non versioned files ***---\e[0m"
       git clean -xdf
+      git checkout .
       cd ..
     fi
   done

@@ -47,3 +47,6 @@ codecov.yml
 
 # Front end
 node_modules
+
+# PID
+.attach_pid*
