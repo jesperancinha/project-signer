@@ -2,7 +2,11 @@
 
 ## [2.0.2](https://github.com/jesperancinha/project-signer/tree/2.0.2) - [db55a31555e3061c90aad5d02b2dd52cd922e271](https://github.com/jesperancinha/project-signer/tree/2.0.2) - JDK19 Build - Java
 
+- Migration to JDK 19
+
 ## [2.0.1](https://github.com/jesperancinha/project-signer/tree/2.0.1) - [2130b790beab36ab534a0f6ead4c6a48cc6e723e](https://github.com/jesperancinha/project-signer/tree/2.0.1) - JDK17 Build - Java
+
+- Migration to JDK 17
 
 ## [2.0.0](https://github.com/jesperancinha/project-signer/tree/2.0.0) - [ee876a4cf63fb238cb94c771b95a28646639c9b5](https://github.com/jesperancinha/project-signer/tree/2.0.0)
 
