@@ -1,5 +1,12 @@
 # Project Signer Release Notes
 
+## [3.0.0](https://github.com/jesperancinha/project-signer/tree/3.0.0) - [dce8b71d356fbf9f74a401dafa5998ec1a844904](https://github.com/jesperancinha/project-signer/tree/3.0.0) - JDK19 Build - Kotlin
+
+- First Kotlin Conversion
+- Improvements to Manage Readme.md files
+- Null checks improvements
+- Warnings added
+
 ## [2.0.2](https://github.com/jesperancinha/project-signer/tree/2.0.2) - [db55a31555e3061c90aad5d02b2dd52cd922e271](https://github.com/jesperancinha/project-signer/tree/2.0.2) - JDK19 Build - Java
 
 - Migration to JDK 19
