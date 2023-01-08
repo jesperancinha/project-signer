@@ -12,7 +12,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   cd ..
   for item in *; do
     if [[ -d "$item" ]]; then
-      if [[ "$item" == "project-signer" ]]; then
+      if [[ "$item" != "project-signer" ]]; then
         cd "${item}" || exit
         echo -e "\n\e[31m---*** Cleaning $item ***---\e[0m"
         echo -e "\n\e[31m---*** Cleaning non versioned files ***---\e[0m"
