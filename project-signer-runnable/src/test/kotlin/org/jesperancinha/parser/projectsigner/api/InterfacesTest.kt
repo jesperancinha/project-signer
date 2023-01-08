@@ -15,11 +15,11 @@ class InterfacesTest {
     @Test
     fun testAllInterfacesWhenCreatingImplementationThenAllow() {
         val fileWriterService: FileWriterService = object : FileWriterService() {
-            override fun exportReadmeFile(path: Path, text: String?) {}
+            override fun exportReadmeFile(path: Path, text: String) {}
             override fun exportReportFiles(path: Path?, projectDataList: List<ProjectData>) {}
         }
         val mergeService: MergeService = object : MergeService(fileWriterService) {
-            override fun writeMergedResult(readmePath: Path, newText: String?) {}
+            override fun writeMergedResult(readmePath: Path, newText: String) {}
         }
         val optionsService: OptionsService = mock(OptionsService::class.java)
         val readmeService: ReadmeService = object : ReadmeService(mergeService, optionsService) {

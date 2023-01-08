@@ -27,7 +27,7 @@ open class MergeService(private val fileWriterService: FileWriterService) {
     }
 
     @Throws(IOException::class)
-    open fun writeMergedResult(readmePath: Path, newText: String?) {
+    open fun writeMergedResult(readmePath: Path, newText: String) {
         logger.trace("New readme:\n {}", newText)
         fileWriterService.exportReadmeFile(readmePath, newText)
     }

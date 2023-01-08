@@ -22,7 +22,7 @@ import kotlin.system.exitProcess
 @Slf4j
 open class FileWriterService {
     @Throws(IOException::class)
-    open fun exportReadmeFile(path: Path, text: String?) {
+    open fun exportReadmeFile(path: Path, text: String) {
         val readmeFile = File(path.toFile(), "Readme.md")
         val fileWriter = FileWriter(readmeFile)
         fileWriter.write(text)

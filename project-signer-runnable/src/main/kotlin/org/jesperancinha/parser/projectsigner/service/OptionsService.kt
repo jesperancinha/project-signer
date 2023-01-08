@@ -13,13 +13,11 @@ open class OptionsService {
     var projectSignerOptions: ProjectSignerOptions? = null
     var commonNamingParser: ReadmeNamingParserBuilder? = null
 
-    fun processOptions(args: Array<String?>): ProjectSignerOptions {
-        val projectSignerOptions = ProjectSignerOptions()
-        CommandLine(projectSignerOptions).parseArgs(*args)
-        this.projectSignerOptions = projectSignerOptions
+    fun processOptions(args: Array<String?>): ProjectSignerOptions = ProjectSignerOptions().apply {
+        CommandLine(this).parseArgs(*args)
+        projectSignerOptions = this
         commonNamingParser = ReadmeNamingParser.builder()
-            .templateLocation(this.projectSignerOptions!!.templateLocation)
-            .isNoEmpty(this.projectSignerOptions != null)
-        return projectSignerOptions
+            .templateLocation(projectSignerOptions?.templateLocation)
+            .isNoEmpty(projectSignerOptions != null)
     }
 }
