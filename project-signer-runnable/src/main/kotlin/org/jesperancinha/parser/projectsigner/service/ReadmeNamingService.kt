@@ -27,7 +27,9 @@ open class ReadmeNamingService(
      */
     @Throws(IOException::class)
     open fun buildReadmeStream(path: Path?): InputStream? {
-       return optionsService.commonNamingParser?.fileFilterChain(fileFilterChain)?.build()
+        return optionsService.commonNamingParser
+            ?.fileFilterChain(fileFilterChain)
+            ?.isNoEmpty(optionsService.projectSignerOptions?.noEmpty == true)?.build()
             ?.buildReadmeStream(path)
     }
 }

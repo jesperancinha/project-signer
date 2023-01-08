@@ -11,9 +11,7 @@ import picocli.CommandLine
 @Profile("dev", "prod", "test")
 open class OptionsService {
     var projectSignerOptions: ProjectSignerOptions? = null
-        private set
     var commonNamingParser: ReadmeNamingParserBuilder? = null
-        private set
 
     fun processOptions(args: Array<String?>): ProjectSignerOptions {
         val projectSignerOptions = ProjectSignerOptions()

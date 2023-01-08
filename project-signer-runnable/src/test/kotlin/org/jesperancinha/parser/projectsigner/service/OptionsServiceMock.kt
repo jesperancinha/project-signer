@@ -17,12 +17,11 @@ import java.util.*
 @Profile("test", "localtest", "default")
 open class OptionsServiceMock (
     var projectSignerOptions: ProjectSignerOptions?= null,
-    var commonBuilder: ReadmeNamingParserBuilder?= null
+    private var commonBuilder: ReadmeNamingParserBuilder?= null
 ) {
 
     fun setNoEmptyUp() {
-        Mockito.clearInvocations(projectSignerOptions)
-        `when`(projectSignerOptions?.noEmpty).thenReturn(true)
+        projectSignerOptions?.noEmpty = true
         commonBuilder = ReadmeNamingParser.builder()
             .templateLocation(projectSignerOptions?.templateLocation)
             .isNoEmpty(projectSignerOptions?.noEmpty == true)
