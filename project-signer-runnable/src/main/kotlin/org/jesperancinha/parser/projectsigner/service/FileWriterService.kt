@@ -16,6 +16,7 @@ import java.nio.file.Path
 import java.util.*
 import java.util.function.Consumer
 import java.util.stream.Collectors
+import kotlin.io.path.absolutePathString
 import kotlin.system.exitProcess
 
 @Service
@@ -23,7 +24,11 @@ import kotlin.system.exitProcess
 open class FileWriterService {
     @Throws(IOException::class)
     open fun exportReadmeFile(path: Path, text: String) {
-        val readmeFile = File(path.toFile(), "Readme.md")
+        val fileName = path.toFile()
+            .list { _, name -> name.lowercase().endsWith("readme.md") }
+            .takeIf { it?.isNotEmpty() ?: false }
+            ?.let { it[0] } ?: "Readme.md"
+        val readmeFile = File(path.toFile(), fileName)
         val fileWriter = FileWriter(readmeFile)
         fileWriter.write(text)
         fileWriter.flush()
@@ -174,7 +179,7 @@ open class FileWriterService {
         })
         fileWriter.write("|\n")
     }
-    
+
     companion object {
         val logger: Logger = LoggerFactory.getLogger(FileWriterService::class.java)
     }
