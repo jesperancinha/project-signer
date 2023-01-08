@@ -129,9 +129,6 @@
                             </goals>
                         </execution>
                     </executions>
-                    <configuration>
-                        <sourcepath>target/generated-sources/delombok</sourcepath>
-                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
