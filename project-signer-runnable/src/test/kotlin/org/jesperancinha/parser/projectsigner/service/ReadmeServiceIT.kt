@@ -64,13 +64,22 @@ internal class ReadmeServiceIT {
     @Throws(IOException::class)
     fun testReadDataSprippedOfTagsSpecialCase1() {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_SPECIAL_CASE_1)
-        val label3 = readmeService!!.readDataSprippedOfTags(resourceAsStream, "License", "About me")
-        assertThat(label3).isEqualTo("# Mancala JE")
+        val label = readmeService!!.readDataSprippedOfTags(resourceAsStream, "License", "About me")
+        assertThat(label).isEqualTo("# Mancala JE")
+    }
+
+    @Test
+    @Throws(IOException::class)
+    fun testReadDataEmojis() {
+        val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_SPECIAL_CASE_EMOJI)
+        val label = readmeService!!.readDataSprippedOfTags(resourceAsStream, "License", "About me")
+        assertThat(label).isEqualTo("# Note manager WebApp \uD83D\uDCBB")
     }
 
     companion object {
         private const val DIRECTORY_0_README_MD = "/directory1/Readme.md"
         private const val DIRECTORY_1_README_MD = "/directory1/subDirectory1/Readme.md"
         private const val DIRECTORY_1_SPECIAL_CASE_1 = "/directory1/specialCase1/Readme.md"
+        private const val DIRECTORY_1_SPECIAL_CASE_EMOJI = "/directory1/specialCaseEmoji/Readme.md"
     }
 }

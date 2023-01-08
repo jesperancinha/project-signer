@@ -119,16 +119,6 @@ internal class ReadmeNamingServiceIT @Autowired constructor(
         assertThat(result).isEqualTo("# sbt-project")
     }
 
-    @AfterEach
-    @Throws(IOException::class)
-    fun tearDown() {
-//        verify(
-//            finderService,
-//            atLeast(0)
-//        )
-//            ?.iterateThroughFilesAndFolders(optionsService!!.projectSignerOptions?.rootDirectory!!)
-    }
-
     companion object {
         val logger: Logger = LoggerFactory.getLogger(ReadmeNamingServiceIT::class.java)
     }
