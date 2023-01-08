@@ -42,10 +42,10 @@ open class ProjectSignerVisitor(
                         Files.move(toPath, toPath.resolveSibling("Readme.md"))
                     }
                 }
-                generatorService!!.processReadmeFile(dir, allParagraphs)
+                generatorService?.processReadmeFile(dir, allParagraphs)
                 if (Objects.nonNull(allLicenseText)) {
                     try {
-                        generatorService.processLicenseFile(dir, allLicenseText)
+                        generatorService?.processLicenseFile(dir, allLicenseText)
                     } catch (ex: Throwable) {
                         throw RuntimeException(ex)
                     }
