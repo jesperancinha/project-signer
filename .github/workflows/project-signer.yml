@@ -1,4 +1,4 @@
-name: project-signer
+name: PSR Build
 
 on:
   push:
