@@ -6,6 +6,7 @@ import org.jesperancinha.parser.projectsigner.service.findReadmeFileName
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.util.ObjectUtils
+import java.io.File
 import java.io.IOException
 import java.nio.file.*
 import java.nio.file.attribute.BasicFileAttributes
@@ -35,9 +36,12 @@ open class ProjectSignerVisitor(
                 return FileVisitResult.SKIP_SUBTREE
             }
             if (ObjectUtils.isEmpty(e)) {
-                 dir.findReadmeFileName()?.let {
-                     Files.move(dir, dir.resolveSibling("Readme.md"))
-                 }
+                dir.findReadmeFileName()?.let {
+                    if (it != "Readme.md") {
+                        val toPath = File(dir.toFile(), it).toPath()
+                        Files.move(toPath, toPath.resolveSibling("Readme.md"))
+                    }
+                }
                 generatorService!!.processReadmeFile(dir, allParagraphs)
                 if (Objects.nonNull(allLicenseText)) {
                     try {
