@@ -1,10 +1,17 @@
 package org.jesperancinha.parser.projectsigner.configuration
 
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import picocli.CommandLine
 
 class ProjectSignerOptionsTest {
+
+    @BeforeEach
+    fun setUp() {
+        assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+    }
+
     @Test
     fun parseOptions() {
         val args = arrayOf("-t", TEST_LOCATION, TEST_LABEL_1, TEST_LABEL_2, "-d", TEST_ROOT)
@@ -37,3 +44,5 @@ class ProjectSignerOptionsTest {
         const val ROOT_DIRECTORY = "--root-directory=/target/test-classes/"
     }
 }
+
+

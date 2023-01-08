@@ -1,6 +1,9 @@
 package org.jesperancinha.parser.projectsigner.service
 
+import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.markdowner.model.Paragraphs
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.io.TempDir
@@ -36,6 +39,11 @@ internal class FinderServiceTest {
 
     @Mock
     private val generatorService: GeneratorSevice? = null
+
+    @BeforeEach
+    fun setUp() {
+        assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+    }
 
     @Test
     @Throws(IOException::class)

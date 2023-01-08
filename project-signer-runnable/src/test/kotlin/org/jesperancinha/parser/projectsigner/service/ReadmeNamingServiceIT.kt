@@ -3,7 +3,6 @@ package org.jesperancinha.parser.projectsigner.service
 import org.apache.commons.io.IOUtils
 import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest
-import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.slf4j.Logger

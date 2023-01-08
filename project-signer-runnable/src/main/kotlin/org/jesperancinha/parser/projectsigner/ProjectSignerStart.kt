@@ -20,10 +20,12 @@ open class ProjectSignerStart(
     private val finderService: FinderService,
     private val fileWriterService: FileWriterService,
     private val optionsService: OptionsService,
-    private val readmeService: ReadmeService, private val environment: Environment
+    private val readmeService: ReadmeService,
+    private val environment: Environment
 ) : ApplicationRunner {
     @Throws(Exception::class)
     override fun run(args: ApplicationArguments) {
+        System.setProperty("file.encoding","UTF-8")
         if (environment.activeProfiles.isNotEmpty()) {
             val projectSignerOptions = optionsService.processOptions(args.sourceArgs)
             finderService.iterateThroughFilesAndFolders(projectSignerOptions.rootDirectory ?: throw RuntimeException("Root directory needs to be configured!"))

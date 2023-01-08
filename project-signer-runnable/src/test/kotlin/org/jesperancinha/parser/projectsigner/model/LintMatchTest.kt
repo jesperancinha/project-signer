@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import org.apache.commons.io.IOUtils
 import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.projectsigner.service.ReadmeService
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import java.io.IOException
 import java.io.InputStream
@@ -14,6 +15,12 @@ import java.util.function.Function
 import java.util.regex.Pattern
 
 internal class LintMatchTest {
+
+    @BeforeEach
+    fun setUp() {
+        assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+    }
+
     @Test
     @Throws(IOException::class)
     fun testMatchAndReplaceWhenPatterReplacedThenGetDocumentWithStandards() {

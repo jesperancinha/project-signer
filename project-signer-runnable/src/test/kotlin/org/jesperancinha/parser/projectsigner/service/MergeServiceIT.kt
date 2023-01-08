@@ -3,6 +3,7 @@ package org.jesperancinha.parser.projectsigner.service
 import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.markdowner.model.Paragraphs
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
@@ -13,6 +14,12 @@ import org.springframework.test.context.ActiveProfiles
 class MergeServiceIT {
     @Autowired
     private val mergeService: MergeService? = null
+
+    @BeforeEach
+    fun setUp() {
+        assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+    }
+
     @Test
     fun mergeDocumentWithFooterTemplate() {
         val testReadme = "Readme text!"

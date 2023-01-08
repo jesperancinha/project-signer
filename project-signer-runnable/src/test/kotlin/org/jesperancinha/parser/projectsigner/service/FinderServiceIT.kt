@@ -29,6 +29,7 @@ internal class FinderServiceIT {
     @BeforeEach
     @Throws(IOException::class)
     fun setUp() {
+        assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
         val resource = javaClass.getResource("/.")
         copyFolder(Path.of(resource.path), tempDirectory)
     }

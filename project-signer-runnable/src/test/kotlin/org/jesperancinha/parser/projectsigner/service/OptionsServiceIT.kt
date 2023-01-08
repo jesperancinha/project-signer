@@ -2,10 +2,17 @@ package org.jesperancinha.parser.projectsigner.service
 
 import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 class OptionsServiceIT {
     private val optionsService = OptionsService()
+
+    @BeforeEach
+    fun setUp() {
+        assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+    }
+
     @Test
     fun testProcessOptions() {
         val args = arrayOf<String?>(

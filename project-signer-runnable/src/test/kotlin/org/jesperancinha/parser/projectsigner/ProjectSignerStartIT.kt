@@ -1,7 +1,9 @@
 package org.jesperancinha.parser.projectsigner
 
+import org.assertj.core.api.Assertions
 import org.assertj.core.api.AssertionsForClassTypes.assertThat
 import org.jesperancinha.parser.projectsigner.service.FinderService
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.ArgumentCaptor
 import org.mockito.Captor
@@ -16,6 +18,11 @@ import java.nio.file.Path
 class ProjectSignerStartIT {
     @Captor
     private val pathArgumentCaptor: ArgumentCaptor<Path>? = null
+
+    @BeforeEach
+    fun setUp() {
+        Assertions.assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+    }
 
     @Test
     fun run() {

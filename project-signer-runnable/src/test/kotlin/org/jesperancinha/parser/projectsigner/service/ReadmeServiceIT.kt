@@ -1,6 +1,8 @@
 package org.jesperancinha.parser.projectsigner.service
 
+import org.assertj.core.api.Assertions
 import org.assertj.core.api.AssertionsForClassTypes.assertThat
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
@@ -12,6 +14,12 @@ import java.io.IOException
 internal class ReadmeServiceIT {
     @Autowired
     private val readmeService: ReadmeService? = null
+
+    @BeforeEach
+    fun setUp() {
+        Assertions.assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+    }
+
     @Test
     @Throws(IOException::class)
     fun testReadDataSprippedOfTagsFile0Label1() {

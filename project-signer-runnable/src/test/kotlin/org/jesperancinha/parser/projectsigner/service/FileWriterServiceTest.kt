@@ -2,6 +2,7 @@ package org.jesperancinha.parser.projectsigner.service
 
 import org.apache.commons.io.IOUtils
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.io.TempDir
@@ -17,6 +18,11 @@ import java.nio.file.Path
 internal class FileWriterServiceTest {
     @InjectMocks
     private val fileWriterService: FileWriterService? = null
+
+    @BeforeEach
+    fun setUp() {
+        assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+    }
 
     @Test
     @Throws(IOException::class)
