@@ -15,7 +15,7 @@ import kotlin.io.path.deleteIfExists
 
 open class ProjectSignerVisitor(
     private val generatorService: GeneratorSevice? = null,
-    private val allParagraphs: Paragraphs? = null,
+    private val allParagraphs: Paragraphs,
     private val allLicenseText: List<String>? = null
 ) : SimpleFileVisitor<Path>() {
 

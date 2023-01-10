@@ -1,13 +1,8 @@
 package org.jesperancinha.parser.projectsigner.service
 
 import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser
-import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser.ReadmeNamingParserBuilder
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest
-import org.mockito.Mockito
-import org.mockito.Mockito.mock
-import org.mockito.Mockito.`when`
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Service
 import java.nio.file.Path
@@ -17,14 +12,18 @@ import java.util.*
 @Profile("test", "localtest", "default")
 open class OptionsServiceMock (
     var projectSignerOptions: ProjectSignerOptions?= null,
-    private var commonBuilder: ReadmeNamingParserBuilder?= null
+    private var commonBuilder: ReadmeNamingParser?= null
 ) {
 
     fun setNoEmptyUp() {
         projectSignerOptions?.noEmpty = true
-        commonBuilder = ReadmeNamingParser.builder()
-            .templateLocation(projectSignerOptions?.templateLocation)
-            .isNoEmpty(projectSignerOptions?.noEmpty == true)
+        commonBuilder = projectSignerOptions?.templateLocation?.let {
+            ReadmeNamingParser(
+                templateLocation = it,
+                isNoEmpty = (projectSignerOptions?.noEmpty == true)
+            )
+        }
+
     }
 
     fun processOptions(): ProjectSignerOptions {
@@ -35,20 +34,24 @@ open class OptionsServiceMock (
         projectSignerOptions.tagNames=arrayOf("License", "About me")
         this.projectSignerOptions = projectSignerOptions
         commonBuilder = this.projectSignerOptions?.noEmpty?.let {
-            ReadmeNamingParser.builder()
-                .templateLocation(this.projectSignerOptions!!.templateLocation)
-                .isNoEmpty(it)
+            this.projectSignerOptions!!.templateLocation?.let { it1 ->
+                ReadmeNamingParser(
+                    templateLocation = it1,
+                    isNoEmpty = it
+                )
+            }
         }
         return projectSignerOptions
     }
-    val commonNamingParser: ReadmeNamingParserBuilder?
-        get() = commonBuilder
 
     fun setNoEmptyDown() {
         commonBuilder = projectSignerOptions?.noEmpty?.let {
-            ReadmeNamingParser.builder()
-                .templateLocation(projectSignerOptions?.templateLocation)
-                .isNoEmpty(it)
+            projectSignerOptions?.templateLocation?.let { it1 ->
+                ReadmeNamingParser(
+                    templateLocation = it1,
+                    isNoEmpty = it
+                )
+            }
         }
     }
 }

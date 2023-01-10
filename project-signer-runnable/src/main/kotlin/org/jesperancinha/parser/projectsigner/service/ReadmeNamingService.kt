@@ -1,6 +1,7 @@
 package org.jesperancinha.parser.projectsigner.service
 
 import org.jesperancinha.parser.markdowner.filter.FileFilterChain
+import org.jesperancinha.parser.markdowner.filter.ReadmeNamingParser
 import org.springframework.stereotype.Service
 import java.io.*
 import java.nio.file.Path
@@ -26,10 +27,18 @@ open class ReadmeNamingService(
      * @throws IOException Any IO Exception that may occur
      */
     @Throws(IOException::class)
-    open fun buildReadmeStream(path: Path?): InputStream? {
-        return optionsService.commonNamingParser
-            ?.fileFilterChain(fileFilterChain)
-            ?.isNoEmpty(optionsService.projectSignerOptions?.noEmpty == true)?.build()
-            ?.buildReadmeStream(path)
+    open fun buildReadmeStream(path: Path): InputStream? {
+        return optionsService.apply {
+            commonNamingParser = commonNamingParser?.templateLocation?.let {
+                ReadmeNamingParser(
+                    fileFilterChain = fileFilterChain,
+                    templateLocation = it,
+                    isNoEmpty = optionsService.projectSignerOptions?.noEmpty == true
+                )
+            }
+        }.commonNamingParser?.buildReadmeStream(path)
     }
+
+//    ?.fileFilterChain(fileFilterChain)
+//    ?.isNoEmpty()
 }

@@ -1,7 +1,6 @@
 package org.jesperancinha.parser.projectsigner.service
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import lombok.extern.slf4j.Slf4j
 import org.apache.commons.io.IOUtils
 import org.jesperancinha.parser.markdowner.badges.parser.BadgeParser
 import org.jesperancinha.parser.markdowner.helper.ReadmeParserHelper
@@ -26,7 +25,6 @@ import kotlin.system.exitProcess
  * A Readme service to read and manipulate markdown files
  */
 @Service
-@Slf4j
 open class ReadmeService(private val mergeService: MergeService, private val optionsService: OptionsService?) {
     val allProjectData: MutableList<ProjectData> = ArrayList()
 
@@ -36,31 +34,31 @@ open class ReadmeService(private val mergeService: MergeService, private val opt
      *
      * This means any content of # tags
      *
-     * @param readmeInputStream An input stream of a markdown text
+     * @param templateInputStream An input stream of a Markdown text
      * @param tags              All tags of the paragraphs to be removed
      * @return The filtered String
      * @throws IOException Any IO Exception thrown
      */
     @Throws(IOException::class)
-    open fun readDataSprippedOfTags(templateInputStream: InputStream?, vararg tags: String): String? {
-        return if (tags == null) {
+    open fun readDataSprippedOfTags(templateInputStream: InputStream, vararg tags: String): String? {
+        return if (tags.isEmpty())
             IOUtils.toString(templateInputStream, Charset.defaultCharset())
-        } else ReadmeParserHelper.readDataSprippedOfTags(templateInputStream, *tags)
+        else ReadmeParserHelper.readDataSprippedOfTags(templateInputStream, *tags)
     }
 
     @Throws(IOException::class)
-    open fun exportNewReadme(readmePath: Path, inputStream: InputStream?, allParagraphs: Paragraphs?) {
+    open fun exportNewReadme(readmePath: Path, inputStream: InputStream, allParagraphs: Paragraphs) {
         logger.info("Visiting path {}", readmePath)
         val readme =
-            readDataSprippedOfTags(inputStream, *optionsService?.projectSignerOptions?.tagNames ?: emptyArray())
+            readDataSprippedOfTags(inputStream, *optionsService?.projectSignerOptions?.tagNames ?: emptyArray()) ?: ""
         val newText = mergeService.mergeDocumentWithFooterTemplate(readme, allParagraphs)
         val lintedText = createLintedText(newText)
         val nonRefText = removeNonRefs(lintedText)
         if (!optionsService?.projectSignerOptions?.rootDirectory?.relativize(readmePath).toString().contains("/")) {
-            readme?.split("\n".toRegex())?.dropLastWhile { it.isEmpty() }?.toTypedArray()?.get(0)?.replace(
+            readme.split("\n".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()[0].replace(
                 "#",
                 ""
-            )?.strip()?.let {
+            ).strip()?.let {
                 ProjectData(
                     title = it,
                     badgeGroupMap = BadgeParser.parse(readme)

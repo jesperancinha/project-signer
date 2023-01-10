@@ -1,6 +1,5 @@
 package org.jesperancinha.parser.projectsigner.service
 
-import lombok.extern.slf4j.Slf4j
 import org.jesperancinha.parser.markdowner.badges.model.Badge
 import org.jesperancinha.parser.markdowner.badges.model.BadgePattern
 import org.jesperancinha.parser.markdowner.badges.model.BadgeType
@@ -19,7 +18,6 @@ import java.util.stream.Collectors
 import kotlin.system.exitProcess
 
 @Service
-@Slf4j
 open class FileWriterService {
     @Throws(IOException::class)
     open fun exportReadmeFile(path: Path, text: String) {
@@ -31,9 +29,9 @@ open class FileWriterService {
         fileWriter.close()
     }
 
-    open fun exportReportFiles(path: Path?, projectDataList: List<ProjectData>) {
+    open fun exportReportFiles(path: Path, projectDataList: List<ProjectData>) {
         BadgeParser.badgeTypes.values.forEach(Consumer { badgeType: BadgeType ->
-            val file = File(path!!.toFile(), badgeType.destinationFile)
+            val file = File(path.toFile(), badgeType.destinationFile)
             try {
                 val fileWriter = FileWriter(file)
                 fileWriter.write(String.format("# %s Report\n\n", getTitle(badgeType)))
@@ -43,18 +41,18 @@ open class FileWriterService {
 
 
                 projectDataList.sortedWith { o1: ProjectData, o2: ProjectData ->
-                    val badgeList1 = o1.badgeGroupMap[badgeType]!!
-                        .badgeHashMap.values.stream().filter { obj: Badge? -> Objects.nonNull(obj) }.toList()
-                    val badgeList2 = o2.badgeGroupMap[badgeType]!!.badgeHashMap.values.stream()
-                        .filter { obj: Badge? -> Objects.nonNull(obj) }
-                        .toList()
-                    val nBadges1 = badgeList1.size
-                    val nBadges2 = badgeList2.size
+                    val badgeList1 = o1.badgeGroupMap[badgeType]?.badgeHashMap?.values?.filterNotNull()?.toList()
+                    val badgeList2 = o2.badgeGroupMap[badgeType]?.badgeHashMap?.values?.filterNotNull()?.toList()
+                    val nBadges1 = badgeList1?.size ?: 0
+                    val nBadges2 = badgeList2?.size ?: 0
                     if (nBadges1 == nBadges2) {
-                        if (badgeList1.size > 0) {
+                        if (badgeList1?.isNotEmpty() == true && badgeList2?.isNotEmpty() == true) {
                             val badgeText1 = badgeList1[0].badgeText
                             val badgeText2 = badgeList2[0].badgeText
-                            if (badgeText1.contains("message=") && badgeText2.contains("message=")) {
+                            if (badgeText1.contains("message=") && badgeText2.contains(
+                                    "message="
+                                )
+                            ) {
                                 val message1 = badgeText1.split("message=".toRegex()).dropLastWhile { it.isEmpty() }
                                     .toTypedArray()[1].substring(0, 3)
                                 val message2 = badgeText2.split("message=".toRegex()).dropLastWhile { it.isEmpty() }
@@ -98,9 +96,9 @@ open class FileWriterService {
     }
 
     private fun getTitle(badgeType: BadgeType): String {
-        return if (Objects.isNull(badgeType.title)) {
+        return (if (Objects.isNull(badgeType.title)) {
             badgeType.destinationFile.replace(".md", "")
-        } else badgeType.title
+        } else badgeType.title) ?: ""
     }
 
     @Throws(IOException::class)
@@ -115,7 +113,7 @@ open class FileWriterService {
                 }
             } catch (e: IOException) {
                 logger.error("Error!", e)
-                System.exit(1)
+                exitProcess(1)
             }
         })
         fileWriter.write("|\n")
@@ -127,34 +125,34 @@ open class FileWriterService {
             val badgeGroup = projectData!!.badgeGroupMap[badgeType]
             BadgeParser.badgeSettingGroups[badgeType]!!.badgeSettingList
                 .forEach(Consumer { badgePattern: BadgePattern ->
-                    val badge = badgeGroup!!.badgeHashMap[badgePattern.pattern]
+                    val badge = badgeGroup?.badgeHashMap?.get(badgePattern.pattern)
                     if (badgePattern.title == "Project" && Objects.isNull(badge)) {
                         try {
                             fileWriter.write("|")
                             fileWriter.write(projectData.title)
                         } catch (e: IOException) {
                             logger.error("Error!", e)
-                            System.exit(1)
+                            exitProcess(1)
                         }
                     } else {
-                        writeBadgeElement(fileWriter, badge)
+                        badge?.let { writeBadgeElement(fileWriter, it) }
                     }
                 })
             fileWriter.write("|\n")
             fileWriter.flush()
         } catch (e: IOException) {
             logger.error("Error!", e)
-            System.exit(1)
+            exitProcess(1)
         }
     }
 
-    private fun writeBadgeElement(fileWriter: FileWriter, badge: Badge?) {
+    private fun writeBadgeElement(fileWriter: FileWriter, badge: Badge) {
         try {
             fileWriter.write("|")
             if (Objects.isNull(badge)) {
                 fileWriter.write("---")
             } else {
-                fileWriter.write(badge!!.badgeText)
+                fileWriter.write(badge.badgeText)
             }
         } catch (e: IOException) {
             logger.error("Error!", e)
@@ -165,7 +163,7 @@ open class FileWriterService {
     @Throws(IOException::class)
     private fun writeTopTable(badgeType: BadgeType, fileWriter: FileWriter) {
         val badgeSettingGroup = BadgeParser.badgeSettingGroups[badgeType]
-        badgeSettingGroup!!.badgeSettingList.forEach(Consumer { badgePattern: BadgePattern? ->
+        badgeSettingGroup?.badgeSettingList?.forEach(Consumer {
             try {
                 fileWriter.write("|---")
             } catch (e: IOException) {

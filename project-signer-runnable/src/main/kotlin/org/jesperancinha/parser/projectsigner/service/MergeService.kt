@@ -1,6 +1,5 @@
 package org.jesperancinha.parser.projectsigner.service
 
-import lombok.extern.slf4j.Slf4j
 import org.jesperancinha.parser.markdowner.helper.MergeParserHelper
 import org.jesperancinha.parser.markdowner.model.Paragraphs
 import org.slf4j.Logger
@@ -12,7 +11,6 @@ import java.nio.file.Path
 /**
  * A merge service destined to merge operation between markdown files and objects
  */
-@Slf4j
 @Service
 open class MergeService(private val fileWriterService: FileWriterService) {
     /**
@@ -22,7 +20,7 @@ open class MergeService(private val fileWriterService: FileWriterService) {
      * @param footer   A [Paragraphs] instance which will add all paragraphs to the end of the markdown text
      * @return The complete String merge between a [String] text and a [Paragraphs] instances
      */
-    fun mergeDocumentWithFooterTemplate(readmeMd: String?, footer: Paragraphs?): String {
+    fun mergeDocumentWithFooterTemplate(readmeMd: String, footer: Paragraphs): String {
         return MergeParserHelper.mergeDocumentWithFooterTemplate(readmeMd, footer)
     }
 

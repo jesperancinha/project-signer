@@ -1,6 +1,5 @@
 package org.jesperancinha.parser.projectsigner
 
-import lombok.extern.slf4j.Slf4j
 import org.jesperancinha.parser.projectsigner.service.FileWriterService
 import org.jesperancinha.parser.projectsigner.service.FinderService
 import org.jesperancinha.parser.projectsigner.service.OptionsService
@@ -14,7 +13,6 @@ import java.nio.file.Path
 import java.util.*
 import kotlin.RuntimeException
 
-@Slf4j
 @SpringBootApplication
 open class ProjectSignerStart(
     private val finderService: FinderService,
@@ -31,9 +29,12 @@ open class ProjectSignerStart(
             finderService.iterateThroughFilesAndFolders(projectSignerOptions.rootDirectory ?: throw RuntimeException("Root directory needs to be configured!"))
             val profiles = listOf(*environment.activeProfiles)
             if (profiles.contains("prod") || profiles.contains("dev")) {
-                fileWriterService.exportReportFiles(
-                    optionsService.projectSignerOptions?.reportLocation?.let { Path.of(it) ?: throw RuntimeException("Report location needs to be configured") }, readmeService.allProjectData
-                )
+                optionsService.projectSignerOptions?.reportLocation?.let { Path.of(it) ?: throw RuntimeException("Report location needs to be configured") }
+                    ?.let {
+                        fileWriterService.exportReportFiles(
+                            it, readmeService.allProjectData
+                        )
+                    }
             }
         }
     }

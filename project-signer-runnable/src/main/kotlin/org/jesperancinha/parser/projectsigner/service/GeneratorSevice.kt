@@ -1,6 +1,5 @@
 package org.jesperancinha.parser.projectsigner.service
 
-import lombok.extern.slf4j.Slf4j
 import org.jesperancinha.parser.markdowner.model.Paragraphs
 import org.jesperancinha.parser.projectsigner.filter.ProjectSignerLicenseFilter
 import org.slf4j.Logger
@@ -23,16 +22,15 @@ import kotlin.system.exitProcess
  * - Denies creation of Readme.md files where no project exists
  * - Creates matching Readme.me files where they don't exist in spite of existing package managing system files
  */
-@Slf4j
 @Service
 open class GeneratorSevice(
     private val readmeNamingService: ReadmeNamingService,
     private val readmeService: ReadmeService
 ) {
     @Throws(IOException::class)
-    open fun processReadmeFile(readmePath: Path, allParagraphs: Paragraphs?) {
+    open fun processReadmeFile(readmePath: Path, allParagraphs: Paragraphs) {
         val inputStream = readmeNamingService.buildReadmeStream(readmePath)
-        if (Objects.nonNull(inputStream)) {
+        if (inputStream != null) {
             readmeService.exportNewReadme(readmePath, inputStream, allParagraphs)
         }
     }

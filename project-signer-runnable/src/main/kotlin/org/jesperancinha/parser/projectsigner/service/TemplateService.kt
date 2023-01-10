@@ -1,6 +1,5 @@
 package org.jesperancinha.parser.projectsigner.service
 
-import lombok.extern.slf4j.Slf4j
 import org.jesperancinha.parser.markdowner.helper.TemplateParserHelper
 import org.jesperancinha.parser.markdowner.model.Paragraphs
 import org.slf4j.LoggerFactory
@@ -10,8 +9,6 @@ import java.io.IOException
 import java.nio.charset.StandardCharsets
 import java.nio.file.Path
 import java.util.*
-import java.util.logging.Logger
-import java.util.stream.Collectors
 
 /**
  * A markdown template service to handle markdown texts
@@ -25,10 +22,10 @@ open class TemplateService(private val optionsService: OptionsService) {
      * @throws IOException Any kind of IO Exception
      */
     @Throws(IOException::class)
-    open fun findAllParagraphs(): Paragraphs? {
+    open fun findAllParagraphs(): Paragraphs {
         val fileTemplate = optionsService.projectSignerOptions?.templateLocation?.toFile()
-        val templateInputStream = FileInputStream(fileTemplate)
-        return TemplateParserHelper.findAllParagraphs(templateInputStream)
+        val templateInputStream = fileTemplate?.let { FileInputStream(it) }
+        return templateInputStream?.let { TemplateParserHelper.findAllParagraphs(templateInputStream) } ?: Paragraphs()
     }
 
     open fun readAllLicenses(): List<String>? {

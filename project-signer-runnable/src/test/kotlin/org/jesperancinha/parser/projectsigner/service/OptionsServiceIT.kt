@@ -15,7 +15,7 @@ class OptionsServiceIT {
 
     @Test
     fun testProcessOptions() {
-        val args = arrayOf<String?>(
+        val args = arrayOf<String>(
             "-t",
             TEMPLATE_LOCATION,
             LICENSE,
@@ -32,7 +32,7 @@ class OptionsServiceIT {
 
     @Test
     fun testProcessOptionsNE() {
-        val args = arrayOf<String?>(
+        val args = arrayOf<String>(
             "-t",
             TEMPLATE_LOCATION,
             LICENSE,
@@ -50,7 +50,7 @@ class OptionsServiceIT {
 
     @Test
     fun testProcessLongOptions() {
-        val args = arrayOf<String?>(
+        val args = arrayOf<String>(
             "--template-location",
             TEMPLATE_LOCATION,
             LICENSE,
@@ -67,7 +67,7 @@ class OptionsServiceIT {
 
     @Test
     fun testProcessLongOptionsNE() {
-        val args = arrayOf<String?>(
+        val args = arrayOf<String>(
             "--template-location",
             TEMPLATE_LOCATION,
             LICENSE,
