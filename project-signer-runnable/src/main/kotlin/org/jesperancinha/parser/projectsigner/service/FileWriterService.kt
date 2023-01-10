@@ -95,10 +95,10 @@ open class FileWriterService {
         fileWriter.write(String.format("## %s \n\n", links))
     }
 
-    private fun getTitle(badgeType: BadgeType): String {
+    private fun getTitle(badgeType: BadgeType): String? {
         return (if (Objects.isNull(badgeType.title)) {
             badgeType.destinationFile.replace(".md", "")
-        } else badgeType.title) ?: ""
+        } else badgeType.title)
     }
 
     @Throws(IOException::class)
@@ -122,22 +122,23 @@ open class FileWriterService {
 
     private fun writeProjectData(badgeType: BadgeType, fileWriter: FileWriter, projectData: ProjectData?) {
         try {
-            val badgeGroup = projectData!!.badgeGroupMap[badgeType]
-            BadgeParser.badgeSettingGroups[badgeType]!!.badgeSettingList
-                .forEach(Consumer { badgePattern: BadgePattern ->
+            val badgeGroup = projectData?.badgeGroupMap?.get(badgeType)
+            BadgeParser.badgeSettingGroups[badgeType]?.badgeSettingList?.forEach { badgePattern: BadgePattern ->
                     val badge = badgeGroup?.badgeHashMap?.get(badgePattern.pattern)
-                    if (badgePattern.title == "Project" && Objects.isNull(badge)) {
+                    if (badgePattern.title == "Project" && badge == null) {
                         try {
                             fileWriter.write("|")
-                            fileWriter.write(projectData.title)
+                            if (projectData != null) {
+                                fileWriter.write(projectData.title)
+                            }
                         } catch (e: IOException) {
                             logger.error("Error!", e)
                             exitProcess(1)
                         }
                     } else {
-                        badge?.let { writeBadgeElement(fileWriter, it) }
+                        writeBadgeElement(fileWriter, badge)
                     }
-                })
+                }
             fileWriter.write("|\n")
             fileWriter.flush()
         } catch (e: IOException) {
@@ -146,11 +147,11 @@ open class FileWriterService {
         }
     }
 
-    private fun writeBadgeElement(fileWriter: FileWriter, badge: Badge) {
+    private fun writeBadgeElement(fileWriter: FileWriter, badge: Badge?) {
         try {
             fileWriter.write("|")
-            if (Objects.isNull(badge)) {
-                fileWriter.write("---")
+            if (badge ==null) {
+                fileWriter.write(" ")
             } else {
                 fileWriter.write(badge.badgeText)
             }
