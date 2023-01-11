@@ -1,6 +1,6 @@
 package org.jesperancinha.parser.projectsigner.api
 
-import org.assertj.core.api.AssertionsForClassTypes.assertThat
+import io.kotest.matchers.nulls.shouldNotBeNull
 import org.jesperancinha.parser.markdowner.filter.FileFilterChain
 import org.jesperancinha.parser.markdowner.filter.MavenFilter
 import org.jesperancinha.parser.markdowner.model.Paragraphs
@@ -14,7 +14,7 @@ import java.nio.file.Path
 
 class InterfacesTest {
     @Test
-    fun testAllInterfacesWhenCreatingImplementationThenAllow() {
+    fun `should create and functionally run anonymous class instances`() {
         val fileWriterService: FileWriterService = object : FileWriterService() {
             override fun exportReadmeFile(path: Path, text: String) {}
             override fun exportReportFiles(path: Path, projectDataList: List<ProjectData>) {}
@@ -60,13 +60,13 @@ class InterfacesTest {
                 return null
             }
         }
-        assertThat(fileWriterService).isNotNull
-        assertThat(finderService).isNotNull
-        assertThat(generatorService).isNotNull
-        assertThat(mergeService).isNotNull
-        assertThat(optionsService).isNotNull
-        assertThat(readmeNamingService).isNotNull
-        assertThat(readmeService).isNotNull
-        assertThat(templateService).isNotNull
+        fileWriterService.shouldNotBeNull()
+        finderService.shouldNotBeNull()
+        generatorService.shouldNotBeNull()
+        mergeService.shouldNotBeNull()
+        optionsService.shouldNotBeNull()
+        readmeNamingService.shouldNotBeNull()
+        readmeService.shouldNotBeNull()
+        templateService.shouldNotBeNull()
     }
 }
