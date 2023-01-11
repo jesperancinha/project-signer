@@ -3,7 +3,8 @@ package org.jesperancinha.parser.projectsigner.service
 import io.kotest.matchers.nulls.shouldNotBeNull
 import org.apache.commons.io.IOUtils
 import org.assertj.core.api.Assertions.assertThat
-import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest
+import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.ROOT_DIRECTORY
+import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.TEMPLATE_LOCATION_README_MD
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.slf4j.Logger
@@ -17,7 +18,7 @@ import java.nio.charset.Charset.*
 import java.nio.file.Path
 import java.util.*
 
-@SpringBootTest(args = [ProjectSignerOptionsTest.TEMPLATE_LOCATION_README_MD, ProjectSignerOptionsTest.ROOT_DIRECTORY])
+@SpringBootTest(args = [TEMPLATE_LOCATION_README_MD, ROOT_DIRECTORY])
 @ActiveProfiles("test")
 internal class ReadmeNamingServiceIT @Autowired constructor(
     private val namingService: ReadmeNamingService,
