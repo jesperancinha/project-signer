@@ -1,7 +1,6 @@
 package org.jesperancinha.parser.projectsigner.service
 
 import io.kotest.matchers.shouldBe
-import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.markdowner.model.Paragraphs
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.ROOT_DIRECTORY
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.TEMPLATE_LOCATION_README_MD
@@ -30,7 +29,7 @@ private class MergeServiceIT {
         paragraphsBuilder.withTagParagraph("## ta", "This is a test2 paragraph")
         val testParagraphs: Paragraphs = paragraphsBuilder
         val result = mergeService!!.mergeDocumentWithFooterTemplate(testReadme, testParagraphs)
-        assertThat(result).isEqualTo("Readme text!\n\n## tag\nThis is a test paragraph\n\n## ta\nThis is a test2 paragraph\n")
+        result shouldBe "Readme text!\n\n## tag\nThis is a test paragraph\n\n## ta\nThis is a test2 paragraph\n"
     }
 
     @Test
@@ -41,6 +40,6 @@ private class MergeServiceIT {
         paragraphsBuilder.withTagParagraph("## tag", "This is a test paragraph")
         val testParagraphs: Paragraphs = paragraphsBuilder
         val result = mergeService!!.mergeDocumentWithFooterTemplate(testReadme, testParagraphs)
-        assertThat(result).isEqualTo("Readme text!\n\n## ta\nThis is a test2 paragraph\n\n## tag\nThis is a test paragraph\n")
+        result shouldBe "Readme text!\n\n## ta\nThis is a test2 paragraph\n\n## tag\nThis is a test paragraph\n"
     }
 }

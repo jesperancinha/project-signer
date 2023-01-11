@@ -1,5 +1,6 @@
 package org.jesperancinha.parser.projectsigner.service
 
+import io.kotest.matchers.nulls.shouldNotBeNull
 import org.apache.commons.io.IOUtils
 import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest
@@ -53,7 +54,7 @@ internal class ReadmeNamingServiceIT @Autowired constructor(
         val path =
             Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project3MavenAndNPM")).toURI())
         val inputStream = namingService.buildReadmeStream(path)
-        assertThat(inputStream).isNotNull
+        inputStream.shouldNotBeNull()
     }
 
     @Test
@@ -62,7 +63,7 @@ internal class ReadmeNamingServiceIT @Autowired constructor(
         val path =
             Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project3MavenAndNPM")).toURI())
         val inputStream = namingService.buildReadmeStream(path)
-        assertThat(inputStream).isNotNull
+        inputStream.shouldNotBeNull()
         val result: String = IOUtils.toString(inputStream, defaultCharset())
         assertThat(result).isEqualTo("# This is a test project")
     }
@@ -72,7 +73,7 @@ internal class ReadmeNamingServiceIT @Autowired constructor(
     fun testBuildReadmeStreamMavenName() {
         val path = Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project1Maven")).toURI())
         val inputStream = namingService.buildReadmeStream(path)
-        assertThat(inputStream).isNotNull
+        inputStream.shouldNotBeNull()
         val result: String = IOUtils.toString(inputStream, defaultCharset())
         assertThat(result).isEqualTo("# This is a test project")
     }
@@ -83,7 +84,7 @@ internal class ReadmeNamingServiceIT @Autowired constructor(
         val path =
             Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project1MavenNoName")).toURI())
         val inputStream = namingService.buildReadmeStream(path)
-        assertThat(inputStream).isNotNull
+        inputStream.shouldNotBeNull()
         val result: String = IOUtils.toString(inputStream, defaultCharset())
         assertThat(result).isEqualTo("# ProjectMavenArtifact")
     }
@@ -94,7 +95,7 @@ internal class ReadmeNamingServiceIT @Autowired constructor(
         val path = Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project2NPM")).toURI())
         val inputStream = namingService.buildReadmeStream(path)
 
-        assertThat(inputStream).isNotNull
+        inputStream.shouldNotBeNull()
         val result: String = IOUtils.toString(inputStream, defaultCharset())
         assertThat(result).isEqualTo("# npm-project")
     }
@@ -104,7 +105,7 @@ internal class ReadmeNamingServiceIT @Autowired constructor(
     fun testBuildReadmeStreamGradle() {
         val path = Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project4Gradle")).toURI())
         val inputStream = namingService.buildReadmeStream(path)
-        assertThat(inputStream).isNotNull
+        inputStream.shouldNotBeNull()
         val result: String = IOUtils.toString(inputStream, defaultCharset())
         assertThat(result).isEqualTo("# project4Gradle")
     }
@@ -114,7 +115,7 @@ internal class ReadmeNamingServiceIT @Autowired constructor(
     fun testBuildReadmeStreamSBT() {
         val path = Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project5Sbt")).toURI())
         val inputStream = namingService.buildReadmeStream(path)
-        assertThat(inputStream).isNotNull
+        inputStream.shouldNotBeNull()
         val result: String = IOUtils.toString(inputStream, defaultCharset())
         assertThat(result).isEqualTo("# sbt-project")
     }
