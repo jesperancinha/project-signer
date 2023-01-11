@@ -1,14 +1,12 @@
 package org.jesperancinha.parser.projectsigner
 
-import org.assertj.core.api.Assertions
+import io.kotest.matchers.shouldBe
 import org.assertj.core.api.AssertionsForClassTypes.assertThat
-import org.jesperancinha.parser.projectsigner.service.FinderService
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.ArgumentCaptor
 import org.mockito.Captor
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.boot.test.mock.mockito.MockBean
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.util.CollectionUtils
 import java.nio.file.Path
@@ -21,7 +19,7 @@ class ProjectSignerStartIT {
 
     @BeforeEach
     fun setUp() {
-        Assertions.assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+        System.getProperty("file.encoding") shouldBe "UTF-8"
     }
 
     @Test

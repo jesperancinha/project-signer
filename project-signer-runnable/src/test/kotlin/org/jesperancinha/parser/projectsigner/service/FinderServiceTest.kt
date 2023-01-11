@@ -1,7 +1,6 @@
 package org.jesperancinha.parser.projectsigner.service
 
-import org.assertj.core.api.Assertions
-import org.assertj.core.api.Assertions.assertThat
+import io.kotest.matchers.shouldBe
 import org.jesperancinha.parser.markdowner.model.Paragraphs
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -42,7 +41,7 @@ internal class FinderServiceTest {
 
     @BeforeEach
     fun setUp() {
-        assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+        System.getProperty("file.encoding") shouldBe "UTF-8"
     }
 
     @Test

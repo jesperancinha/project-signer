@@ -1,6 +1,7 @@
 package org.jesperancinha.parser.projectsigner.model
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import io.kotest.matchers.shouldBe
 import org.apache.commons.io.IOUtils
 import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.projectsigner.service.ReadmeService
@@ -11,14 +12,13 @@ import java.io.InputStream
 import java.nio.charset.StandardCharsets
 import java.util.*
 import java.util.function.Consumer
-import java.util.function.Function
 import java.util.regex.Pattern
 
 internal class LintMatchTest {
 
     @BeforeEach
     fun setUp() {
-        assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+        System.getProperty("file.encoding") shouldBe "UTF-8"
     }
 
     @Test

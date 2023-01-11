@@ -1,9 +1,12 @@
 package org.jesperancinha.parser.projectsigner.service
 
+import io.kotest.matchers.nulls.shouldNotBeNull
+import io.kotest.matchers.shouldBe
 import org.apache.commons.io.FileUtils
 import org.apache.commons.io.IOUtils
 import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest
+import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.ROOT_DIRECTORY
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.TEMPLATE_LOCATION_README_MD
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -21,7 +24,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardCopyOption
 
-@SpringBootTest(args = [TEMPLATE_LOCATION_README_MD, ProjectSignerOptionsTest.Companion.ROOT_DIRECTORY])
+@SpringBootTest(args = [TEMPLATE_LOCATION_README_MD, ROOT_DIRECTORY])
 @ActiveProfiles("test")
 internal class FinderServiceIT {
     @Autowired
@@ -29,8 +32,9 @@ internal class FinderServiceIT {
     @BeforeEach
     @Throws(IOException::class)
     fun setUp() {
-        assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+        System.getProperty("file.encoding") shouldBe "UTF-8"
         val resource = javaClass.getResource("/.")
+        resource.shouldNotBeNull()
         copyFolder(Path.of(resource.path), tempDirectory)
     }
 

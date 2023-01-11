@@ -1,6 +1,6 @@
 package org.jesperancinha.parser.projectsigner.service
 
-import org.assertj.core.api.Assertions
+import io.kotest.matchers.shouldBe
 import org.assertj.core.api.AssertionsForClassTypes.assertThat
 import org.jesperancinha.parser.markdowner.model.Paragraph
 import org.jesperancinha.parser.markdowner.model.Paragraphs
@@ -22,7 +22,7 @@ class TemplateServiceIT @Autowired constructor(
 
     @BeforeEach
     fun setUp() {
-        Assertions.assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+        System.getProperty("file.encoding") shouldBe "UTF-8"
     }
 
     @Test

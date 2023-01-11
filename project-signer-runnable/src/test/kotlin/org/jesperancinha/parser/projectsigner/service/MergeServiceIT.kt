@@ -1,5 +1,6 @@
 package org.jesperancinha.parser.projectsigner.service
 
+import io.kotest.matchers.shouldBe
 import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.markdowner.model.Paragraphs
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.ROOT_DIRECTORY
@@ -18,7 +19,7 @@ private class MergeServiceIT {
 
     @BeforeEach
     fun setUp() {
-        assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+        System.getProperty("file.encoding") shouldBe "UTF-8"
     }
 
     @Test

@@ -93,6 +93,7 @@ internal class ReadmeNamingServiceIT @Autowired constructor(
     fun testBuildReadmeStreamNPM() {
         val path = Path.of(Objects.requireNonNull(javaClass.getResource("/directory2NoReadme/project2NPM")).toURI())
         val inputStream = namingService.buildReadmeStream(path)
+
         assertThat(inputStream).isNotNull
         val result: String = IOUtils.toString(inputStream, defaultCharset())
         assertThat(result).isEqualTo("# npm-project")

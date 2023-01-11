@@ -1,5 +1,6 @@
 package org.jesperancinha.parser.projectsigner.service
 
+import io.kotest.matchers.shouldBe
 import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions
 import org.junit.jupiter.api.BeforeEach
@@ -10,7 +11,7 @@ class OptionsServiceIT {
 
     @BeforeEach
     fun setUp() {
-        assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+        System.getProperty("file.encoding") shouldBe "UTF-8"
     }
 
     @Test
@@ -32,7 +33,7 @@ class OptionsServiceIT {
 
     @Test
     fun testProcessOptionsNE() {
-        val args = arrayOf<String>(
+        val args = arrayOf(
             "-t",
             TEMPLATE_LOCATION,
             LICENSE,
@@ -50,7 +51,7 @@ class OptionsServiceIT {
 
     @Test
     fun testProcessLongOptions() {
-        val args = arrayOf<String>(
+        val args = arrayOf(
             "--template-location",
             TEMPLATE_LOCATION,
             LICENSE,
@@ -67,7 +68,7 @@ class OptionsServiceIT {
 
     @Test
     fun testProcessLongOptionsNE() {
-        val args = arrayOf<String>(
+        val args = arrayOf(
             "--template-location",
             TEMPLATE_LOCATION,
             LICENSE,
