@@ -1,42 +1,45 @@
 package org.jesperancinha.parser.projectsigner.service
 
 import io.kotest.matchers.shouldBe
+import io.mockk.confirmVerified
+import io.mockk.every
+import io.mockk.impl.annotations.InjectMockKs
+import io.mockk.impl.annotations.MockK
+import io.mockk.junit5.MockKExtension
+import io.mockk.verify
 import org.jesperancinha.parser.markdowner.model.Paragraphs
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.io.TempDir
-import org.mockito.InjectMocks
-import org.mockito.Mock
 import org.mockito.Mockito.*
-import org.mockito.junit.jupiter.MockitoExtension
 import java.io.IOException
 import java.nio.file.Path
 
-@ExtendWith(MockitoExtension::class)
+@ExtendWith(MockKExtension::class)
 internal class FinderServiceTest {
-    @InjectMocks
+    @InjectMockKs
     lateinit var finderService: FinderService
 
-    @Mock
+    @MockK
     lateinit var readmeNamingService: ReadmeNamingService
 
-    @Mock
+    @MockK
     lateinit var mergeService: MergeService
 
-    @Mock
+    @MockK(relaxed = true)
     lateinit var templateService: TemplateService
 
-    @Mock
+    @MockK
     lateinit var readmeService: ReadmeService
 
-    @Mock
+    @MockK
     lateinit var optionsService: OptionsServiceMock
 
-    @Mock
+    @MockK
     lateinit var fileWriterService: FileWriterService
 
-    @Mock
+    @MockK(relaxed = true)
     lateinit var generatorService: GeneratorSevice
 
     @BeforeEach
@@ -48,15 +51,11 @@ internal class FinderServiceTest {
     @Throws(IOException::class)
     fun testIterateThroughFilesAndFolders() {
         val mockParagraphs: Paragraphs = mock(Paragraphs::class.java)
-        `when`(templateService.findAllParagraphs()).thenReturn(mockParagraphs)
+        every { templateService.findAllParagraphs() } returns mockParagraphs
         finderService.iterateThroughFilesAndFolders(tempDirectory)
-        verify(templateService).findAllParagraphs()
-        verify(generatorService)?.processReadmeFile(tempDirectory, mockParagraphs)
-        verifyNoInteractions(readmeNamingService)
-        verifyNoInteractions(optionsService)
-        verifyNoInteractions(fileWriterService)
-        verifyNoInteractions(readmeService)
-        verifyNoInteractions(mergeService)
+        verify { templateService.findAllParagraphs() }
+        verify { generatorService.processReadmeFile(tempDirectory, mockParagraphs) }
+        confirmVerified(readmeNamingService, optionsService, fileWriterService, readmeService, mergeService)
     }
 
     companion object {
