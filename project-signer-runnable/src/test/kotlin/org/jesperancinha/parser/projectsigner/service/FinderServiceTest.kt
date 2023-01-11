@@ -16,28 +16,28 @@ import java.nio.file.Path
 @ExtendWith(MockitoExtension::class)
 internal class FinderServiceTest {
     @InjectMocks
-    private val finderService: FinderService? = null
+    lateinit var finderService: FinderService
 
     @Mock
-    private val readmeNamingService: ReadmeNamingService? = null
+    lateinit var readmeNamingService: ReadmeNamingService
 
     @Mock
-    private val mergeService: MergeService? = null
+    lateinit var mergeService: MergeService
 
     @Mock
-    private val templateService: TemplateService? = null
+    lateinit var templateService: TemplateService
 
     @Mock
-    private val readmeService: ReadmeService? = null
+    lateinit var readmeService: ReadmeService
 
     @Mock
     lateinit var optionsService: OptionsServiceMock
 
     @Mock
-    private val fileWriterService: FileWriterService? = null
+    lateinit var fileWriterService: FileWriterService
 
     @Mock
-    private val generatorService: GeneratorSevice? = null
+    lateinit var generatorService: GeneratorSevice
 
     @BeforeEach
     fun setUp() {
@@ -48,10 +48,10 @@ internal class FinderServiceTest {
     @Throws(IOException::class)
     fun testIterateThroughFilesAndFolders() {
         val mockParagraphs: Paragraphs = mock(Paragraphs::class.java)
-        `when`(templateService!!.findAllParagraphs()).thenReturn(mockParagraphs)
-        finderService!!.iterateThroughFilesAndFolders(tempDirectory!!)
+        `when`(templateService.findAllParagraphs()).thenReturn(mockParagraphs)
+        finderService.iterateThroughFilesAndFolders(tempDirectory)
         verify(templateService).findAllParagraphs()
-        verify(generatorService)?.processReadmeFile(tempDirectory!!, mockParagraphs)
+        verify(generatorService)?.processReadmeFile(tempDirectory, mockParagraphs)
         verifyNoInteractions(readmeNamingService)
         verifyNoInteractions(optionsService)
         verifyNoInteractions(fileWriterService)
@@ -61,6 +61,6 @@ internal class FinderServiceTest {
 
     companion object {
         @TempDir
-        var tempDirectory: Path? = null
+        lateinit var tempDirectory: Path
     }
 }
