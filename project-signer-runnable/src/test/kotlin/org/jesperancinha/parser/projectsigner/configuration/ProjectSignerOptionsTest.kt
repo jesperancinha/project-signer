@@ -1,6 +1,8 @@
 package org.jesperancinha.parser.projectsigner.configuration
 
-import org.assertj.core.api.Assertions.assertThat
+import io.kotest.matchers.collections.shouldContainExactly
+import io.kotest.matchers.nulls.shouldNotBeNull
+import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import picocli.CommandLine
@@ -9,29 +11,29 @@ class ProjectSignerOptionsTest {
 
     @BeforeEach
     fun setUp() {
-        assertThat(System.getProperty("file.encoding")).isEqualTo("UTF-8")
+        System.getProperty("file.encoding") shouldBe "UTF-8"
     }
 
     @Test
-    fun parseOptions() {
+    fun `should parse generic options`() {
         val args = arrayOf("-t", TEST_LOCATION, TEST_LABEL_1, TEST_LABEL_2, "-d", TEST_ROOT)
         val projectSignerOptions = ProjectSignerOptions()
         CommandLine(projectSignerOptions).parseArgs(*args)
-        assertThat(projectSignerOptions.templateLocation.toString()).isEqualTo(TEST_LOCATION)
-        assertThat(projectSignerOptions.tagNames).containsOnly(TEST_LABEL_1, TEST_LABEL_2)
-        assertThat(projectSignerOptions.rootDirectory.toString()).isEqualTo(TEST_ROOT)
-        assertThat(projectSignerOptions).isNotNull
+        projectSignerOptions.shouldNotBeNull()
+        projectSignerOptions.templateLocation.toString() shouldBe TEST_LOCATION
+        projectSignerOptions.tagNames.shouldContainExactly(TEST_LABEL_1, TEST_LABEL_2)
+        projectSignerOptions.rootDirectory.toString() shouldBe TEST_ROOT
     }
 
     @Test
-    fun parseOptionsWithNoEmpty() {
+    fun `should parse options with no empty activated`() {
         val args = arrayOf("-t", TEST_LOCATION, TEST_LABEL_1, TEST_LABEL_2, "-d", TEST_ROOT, "-ne")
         val projectSignerOptions = ProjectSignerOptions()
         CommandLine(projectSignerOptions).parseArgs(*args)
-        assertThat(projectSignerOptions.templateLocation.toString()).isEqualTo(TEST_LOCATION)
-        assertThat(projectSignerOptions.tagNames).containsOnly(TEST_LABEL_1, TEST_LABEL_2)
-        assertThat(projectSignerOptions.rootDirectory.toString()).isEqualTo(TEST_ROOT)
-        assertThat(projectSignerOptions).isNotNull
+        projectSignerOptions.shouldNotBeNull()
+        projectSignerOptions.templateLocation.toString() shouldBe TEST_LOCATION
+        projectSignerOptions.tagNames.shouldContainExactly(TEST_LABEL_1, TEST_LABEL_2)
+        projectSignerOptions.rootDirectory.toString() shouldBe TEST_ROOT
     }
 
     companion object {
