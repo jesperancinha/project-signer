@@ -6,13 +6,13 @@ import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
+import io.mockk.mockk
 import io.mockk.verify
 import org.jesperancinha.parser.markdowner.model.Paragraphs
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.io.TempDir
-import org.mockito.Mockito.*
 import java.io.IOException
 import java.nio.file.Path
 
@@ -50,7 +50,7 @@ internal class FinderServiceTest {
     @Test
     @Throws(IOException::class)
     fun testIterateThroughFilesAndFolders() {
-        val mockParagraphs: Paragraphs = mock(Paragraphs::class.java)
+        val mockParagraphs: Paragraphs = mockk()
         every { templateService.findAllParagraphs() } returns mockParagraphs
         finderService.iterateThroughFilesAndFolders(tempDirectory)
         verify { templateService.findAllParagraphs() }

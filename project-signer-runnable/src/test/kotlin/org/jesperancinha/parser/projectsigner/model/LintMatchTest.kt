@@ -3,7 +3,6 @@ package org.jesperancinha.parser.projectsigner.model
 import com.fasterxml.jackson.databind.ObjectMapper
 import io.kotest.matchers.shouldBe
 import org.apache.commons.io.IOUtils
-import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.projectsigner.service.ReadmeService
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -24,12 +23,12 @@ internal class LintMatchTest {
     @Test
     @Throws(IOException::class)
     fun testMatchAndReplaceWhenPatterReplacedThenGetDocumentWithStandards() {
-        assertThat(formatText("\n- test")).isEqualTo("\n-   test")
-        assertThat(formatText("\n- [")).isEqualTo("\n-   [")
-        assertThat(formatText("\n1. A")).isEqualTo("\n1.  A")
-        assertThat(formatText("\n12.  A")).isEqualTo("\n12. A")
-        assertThat(formatText("\n   1. A")).isEqualTo("\n   1.  A")
-        assertThat(formatText("\n   12.  A")).isEqualTo("\n   12. A")
+        formatText("\n- test") shouldBe "\n-   test"
+        formatText("\n- [") shouldBe "\n-   ["
+        formatText("\n1. A") shouldBe "\n1.  A"
+        formatText("\n12.  A") shouldBe "\n12. A"
+        formatText("\n   1. A") shouldBe "\n   1.  A"
+        formatText("\n   12.  A") shouldBe "\n   12. A"
     }
 
     @Throws(IOException::class)

@@ -5,7 +5,6 @@ import io.kotest.matchers.shouldBe
 import org.apache.commons.io.FileUtils
 import org.apache.commons.io.IOUtils
 import org.assertj.core.api.Assertions.assertThat
-import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.ROOT_DIRECTORY
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.TEMPLATE_LOCATION_README_MD
 import org.junit.jupiter.api.BeforeEach
@@ -26,9 +25,10 @@ import java.nio.file.StandardCopyOption
 
 @SpringBootTest(args = [TEMPLATE_LOCATION_README_MD, ROOT_DIRECTORY])
 @ActiveProfiles("test")
-internal class FinderServiceIT {
-    @Autowired
-    private val finderService: FinderService? = null
+internal class FinderServiceIT @Autowired constructor(
+    private val finderService: FinderService
+) {
+
     @BeforeEach
     @Throws(IOException::class)
     fun setUp() {
@@ -42,7 +42,7 @@ internal class FinderServiceIT {
     @Throws(IOException::class)
     fun testIterateThroughFilesAndFolders() {
         assertThat(tempDirectory).isNotNull
-        finderService!!.iterateThroughFilesAndFolders(tempDirectory!!)
+        finderService.iterateThroughFilesAndFolders(tempDirectory!!)
         val subDirectory1 = getFileContent("directory1/subDirectory1/Readme.md")
         assertThat(subDirectory1).isEqualTo("# label1\n\n# label2\n\n# label3\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n")
         val directory1 = getFileContent("directory1/Readme.md")

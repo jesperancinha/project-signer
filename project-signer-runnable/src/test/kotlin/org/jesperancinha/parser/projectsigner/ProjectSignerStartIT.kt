@@ -1,7 +1,7 @@
 package org.jesperancinha.parser.projectsigner
 
+import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
-import org.assertj.core.api.AssertionsForClassTypes.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.ArgumentCaptor
@@ -15,7 +15,7 @@ import java.nio.file.Path
 @ActiveProfiles("test")
 class ProjectSignerStartIT {
     @Captor
-    private val pathArgumentCaptor: ArgumentCaptor<Path>? = null
+    lateinit var pathArgumentCaptor: ArgumentCaptor<Path>
 
     @BeforeEach
     fun setUp() {
@@ -24,8 +24,8 @@ class ProjectSignerStartIT {
 
     @Test
     fun run() {
-        if (!CollectionUtils.isEmpty(pathArgumentCaptor?.allValues)) {
-            assertThat(pathArgumentCaptor?.value).isNotNull
+        if (!CollectionUtils.isEmpty(pathArgumentCaptor.allValues)) {
+            pathArgumentCaptor.value.shouldNotBeNull()
         }
     }
 }

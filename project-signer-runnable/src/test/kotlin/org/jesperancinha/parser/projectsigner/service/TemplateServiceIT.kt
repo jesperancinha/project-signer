@@ -1,7 +1,7 @@
 package org.jesperancinha.parser.projectsigner.service
 
+import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
-import org.assertj.core.api.AssertionsForClassTypes.assertThat
 import org.jesperancinha.parser.markdowner.model.Paragraph
 import org.jesperancinha.parser.markdowner.model.Paragraphs
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.ROOT_DIRECTORY
@@ -29,13 +29,10 @@ class TemplateServiceIT @Autowired constructor(
     @Throws(IOException::class)
     fun testFindAllParagraphs() {
         val allParagraphs: Paragraphs = templateService.findAllParagraphs()
-        assertThat(allParagraphs.getParagraphCount()).isEqualTo(2)
-        val license: Paragraph ?= allParagraphs.getParagraphByTag("License")
-        val aboutMe: Paragraph ?= allParagraphs.getParagraphByTag("About me")
-        assertThat(license).isNotNull
-        assertThat(aboutMe).isNotNull
-        assertThat(license?.text).isEqualTo("\nThis is one One")
-        assertThat(aboutMe?.text).isEqualTo("\nThis is two Two")
-        assertThat(allParagraphs.getParagraphCount()).isEqualTo(2)
+        allParagraphs.getParagraphCount() shouldBe 2
+        val license: Paragraph = allParagraphs.getParagraphByTag("License").shouldNotBeNull()
+        val aboutMe: Paragraph = allParagraphs.getParagraphByTag("About me").shouldNotBeNull()
+        license.text shouldBe "\nThis is one One"
+        aboutMe.text shouldBe "\nThis is two Two"
     }
 }

@@ -2,7 +2,6 @@ package org.jesperancinha.parser.projectsigner.service
 
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
-import org.assertj.core.api.AssertionsForClassTypes.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -27,7 +26,7 @@ internal class ReadmeServiceIT {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_0_README_MD)
         resourceAsStream.shouldNotBeNull()
         val label1 = readmeService!!.readDataSprippedOfTags(resourceAsStream, "label1")
-        assertThat(label1).isEqualTo("# label3")
+        label1 shouldBe "# label3"
     }
 
     @Test
@@ -36,7 +35,7 @@ internal class ReadmeServiceIT {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_0_README_MD)
         resourceAsStream.shouldNotBeNull()
         val label2 = readmeService!!.readDataSprippedOfTags(resourceAsStream, "label2")
-        assertThat(label2).isEqualTo("## label1\n\n# label3")
+        label2 shouldBe "## label1\n\n# label3"
     }
 
     @Test
@@ -45,7 +44,7 @@ internal class ReadmeServiceIT {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_0_README_MD)
         resourceAsStream.shouldNotBeNull()
         val label3 = readmeService!!.readDataSprippedOfTags(resourceAsStream, "label3")
-        assertThat(label3).isEqualTo("## label1\n\n### label2")
+        label3 shouldBe ("## label1\n\n### label2")
     }
 
     @Test
@@ -54,7 +53,7 @@ internal class ReadmeServiceIT {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_README_MD)
         resourceAsStream.shouldNotBeNull()
         val label1 = readmeService!!.readDataSprippedOfTags(resourceAsStream, "label1")
-        assertThat(label1).isEqualTo("# label2\n\n# label3")
+        label1 shouldBe "# label2\n\n# label3"
     }
 
     @Test
@@ -63,7 +62,7 @@ internal class ReadmeServiceIT {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_README_MD)
         resourceAsStream.shouldNotBeNull()
         val label2 = readmeService!!.readDataSprippedOfTags(resourceAsStream, "label2")
-        assertThat(label2).isEqualTo("# label1\n\n# label3")
+        label2 shouldBe "# label1\n\n# label3"
     }
 
     @Test
@@ -72,7 +71,7 @@ internal class ReadmeServiceIT {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_README_MD)
         resourceAsStream.shouldNotBeNull()
         val label3 = readmeService!!.readDataSprippedOfTags(resourceAsStream, "label3")
-        assertThat(label3).isEqualTo("# label1\n\n# label2")
+        label3 shouldBe "# label1\n\n# label2"
     }
 
     @Test
@@ -81,7 +80,7 @@ internal class ReadmeServiceIT {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_SPECIAL_CASE_1)
         resourceAsStream.shouldNotBeNull()
         val label = readmeService!!.readDataSprippedOfTags(resourceAsStream, "License", "About me")
-        assertThat(label).isEqualTo("# Mancala JE")
+        label shouldBe "# Mancala JE"
     }
 
     @Test
@@ -90,7 +89,7 @@ internal class ReadmeServiceIT {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_SPECIAL_CASE_EMOJI)
         resourceAsStream.shouldNotBeNull()
         val label = readmeService!!.readDataSprippedOfTags(resourceAsStream, "License", "About me")
-        assertThat(label).isEqualTo("# Note manager WebApp \uD83D\uDCBB")
+        label shouldBe "# Note manager WebApp \uD83D\uDCBB"
     }
 
     companion object {

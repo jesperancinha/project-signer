@@ -12,9 +12,9 @@ import org.springframework.test.context.ActiveProfiles
 
 @SpringBootTest(args = [TEMPLATE_LOCATION_README_MD, ROOT_DIRECTORY])
 @ActiveProfiles("test")
-private class MergeServiceIT {
-    @Autowired
-    private val mergeService: MergeService? = null
+private class MergeServiceIT @Autowired constructor(
+    private val mergeService: MergeService
+){
 
     @BeforeEach
     fun setUp() {
@@ -28,7 +28,7 @@ private class MergeServiceIT {
         paragraphsBuilder.withTagParagraph("## tag", "This is a test paragraph")
         paragraphsBuilder.withTagParagraph("## ta", "This is a test2 paragraph")
         val testParagraphs: Paragraphs = paragraphsBuilder
-        val result = mergeService!!.mergeDocumentWithFooterTemplate(testReadme, testParagraphs)
+        val result = mergeService.mergeDocumentWithFooterTemplate(testReadme, testParagraphs)
         result shouldBe "Readme text!\n\n## tag\nThis is a test paragraph\n\n## ta\nThis is a test2 paragraph\n"
     }
 
@@ -39,7 +39,7 @@ private class MergeServiceIT {
         paragraphsBuilder.withTagParagraph("## ta", "This is a test2 paragraph")
         paragraphsBuilder.withTagParagraph("## tag", "This is a test paragraph")
         val testParagraphs: Paragraphs = paragraphsBuilder
-        val result = mergeService!!.mergeDocumentWithFooterTemplate(testReadme, testParagraphs)
+        val result = mergeService.mergeDocumentWithFooterTemplate(testReadme, testParagraphs)
         result shouldBe "Readme text!\n\n## ta\nThis is a test2 paragraph\n\n## tag\nThis is a test paragraph\n"
     }
 }

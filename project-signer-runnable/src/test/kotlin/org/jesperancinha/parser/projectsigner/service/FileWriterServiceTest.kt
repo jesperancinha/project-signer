@@ -2,22 +2,22 @@ package org.jesperancinha.parser.projectsigner.service
 
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
+import io.mockk.impl.annotations.InjectMockKs
+import io.mockk.junit5.MockKExtension
 import org.apache.commons.io.IOUtils.toString
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.io.TempDir
-import org.mockito.InjectMocks
-import org.mockito.junit.jupiter.MockitoExtension
 import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
 import java.io.InputStreamReader
 import java.nio.file.Path
 
-@ExtendWith(MockitoExtension::class)
+@ExtendWith(MockKExtension::class)
 internal class FileWriterServiceTest {
-    @InjectMocks
+    @InjectMockKs
     private lateinit var fileWriterService: FileWriterService
 
     @BeforeEach

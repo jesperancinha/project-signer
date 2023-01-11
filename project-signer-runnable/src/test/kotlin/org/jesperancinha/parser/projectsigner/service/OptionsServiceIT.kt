@@ -1,7 +1,8 @@
 package org.jesperancinha.parser.projectsigner.service
 
+import io.kotest.matchers.collections.shouldContainExactly
+import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
-import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -16,7 +17,7 @@ class OptionsServiceIT {
 
     @Test
     fun testProcessOptions() {
-        val args = arrayOf<String>(
+        val args = arrayOf(
             "-t",
             TEMPLATE_LOCATION,
             LICENSE,
@@ -25,10 +26,10 @@ class OptionsServiceIT {
             ROOT_LOCATION
         )
         val projectSignerOptions: ProjectSignerOptions = optionsService.processOptions(args)
-        assertThat(projectSignerOptions.templateLocation.toString()).isEqualTo(TEMPLATE_LOCATION)
-        assertThat(projectSignerOptions.rootDirectory.toString()).isEqualTo(ROOT_LOCATION)
-        assertThat(projectSignerOptions.tagNames).contains(LICENSE, ABOUT_ME)
-        assertThat(projectSignerOptions).isNotNull
+        projectSignerOptions.templateLocation.toString() shouldBe TEMPLATE_LOCATION
+        projectSignerOptions.rootDirectory.toString() shouldBe ROOT_LOCATION
+        projectSignerOptions.tagNames.shouldContainExactly(LICENSE, ABOUT_ME)
+        projectSignerOptions.shouldNotBeNull()
     }
 
     @Test
@@ -43,10 +44,10 @@ class OptionsServiceIT {
             "-ne"
         )
         val projectSignerOptions: ProjectSignerOptions = optionsService.processOptions(args)
-        assertThat(projectSignerOptions.templateLocation.toString()).isEqualTo(TEMPLATE_LOCATION)
-        assertThat(projectSignerOptions.rootDirectory.toString()).isEqualTo(ROOT_LOCATION)
-        assertThat(projectSignerOptions.tagNames).contains(LICENSE, ABOUT_ME)
-        assertThat(projectSignerOptions).isNotNull
+        projectSignerOptions.templateLocation.toString() shouldBe TEMPLATE_LOCATION
+        projectSignerOptions.rootDirectory.toString() shouldBe ROOT_LOCATION
+        projectSignerOptions.tagNames.shouldContainExactly(LICENSE, ABOUT_ME)
+        projectSignerOptions.shouldNotBeNull()
     }
 
     @Test
@@ -60,10 +61,10 @@ class OptionsServiceIT {
             ROOT_LOCATION
         )
         val projectSignerOptions: ProjectSignerOptions = optionsService.processOptions(args)
-        assertThat(projectSignerOptions.templateLocation.toString()).isEqualTo(TEMPLATE_LOCATION)
-        assertThat(projectSignerOptions.rootDirectory.toString()).isEqualTo(ROOT_LOCATION)
-        assertThat(projectSignerOptions.tagNames).contains(LICENSE, ABOUT_ME)
-        assertThat(projectSignerOptions).isNotNull
+        projectSignerOptions.templateLocation.toString() shouldBe TEMPLATE_LOCATION
+        projectSignerOptions.rootDirectory.toString() shouldBe ROOT_LOCATION
+        projectSignerOptions.tagNames.shouldContainExactly(LICENSE, ABOUT_ME)
+        projectSignerOptions.shouldNotBeNull()
     }
 
     @Test
@@ -78,10 +79,10 @@ class OptionsServiceIT {
             "--no-empty"
         )
         val projectSignerOptions: ProjectSignerOptions = optionsService.processOptions(args)
-        assertThat(projectSignerOptions.templateLocation.toString()).isEqualTo(TEMPLATE_LOCATION)
-        assertThat(projectSignerOptions.rootDirectory.toString()).isEqualTo(ROOT_LOCATION)
-        assertThat(projectSignerOptions.tagNames).contains(LICENSE, ABOUT_ME)
-        assertThat(projectSignerOptions).isNotNull
+        projectSignerOptions.templateLocation.toString() shouldBe TEMPLATE_LOCATION
+        projectSignerOptions.rootDirectory.toString() shouldBe ROOT_LOCATION
+        projectSignerOptions.tagNames.shouldContainExactly(LICENSE, ABOUT_ME)
+        projectSignerOptions.shouldNotBeNull()
     }
 
     companion object {

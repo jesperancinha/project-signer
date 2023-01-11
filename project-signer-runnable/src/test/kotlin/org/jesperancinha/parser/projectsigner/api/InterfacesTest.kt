@@ -1,13 +1,13 @@
 package org.jesperancinha.parser.projectsigner.api
 
 import io.kotest.matchers.nulls.shouldNotBeNull
+import io.mockk.mockk
 import org.jesperancinha.parser.markdowner.filter.FileFilterChain
 import org.jesperancinha.parser.markdowner.filter.MavenFilter
 import org.jesperancinha.parser.markdowner.model.Paragraphs
 import org.jesperancinha.parser.projectsigner.model.ProjectData
 import org.jesperancinha.parser.projectsigner.service.*
 import org.junit.jupiter.api.Test
-import org.mockito.Mockito.mock
 import java.io.IOException
 import java.io.InputStream
 import java.nio.file.Path
@@ -22,7 +22,7 @@ class InterfacesTest {
         val mergeService: MergeService = object : MergeService(fileWriterService) {
             override fun writeMergedResult(readmePath: Path, newText: String) {}
         }
-        val optionsService: OptionsService = mock(OptionsService::class.java)
+        val optionsService: OptionsService = mockk()
         val readmeService: ReadmeService = object : ReadmeService(mergeService, optionsService) {
             override fun readDataSprippedOfTags(templateInputStream: InputStream, vararg tags: String): String? {
                 return null
