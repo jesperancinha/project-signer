@@ -21,7 +21,7 @@
   },
   {
     "title": "GitHub Pipeline",
-    "badge": "[a-zA-Z0-9\\- ,]*",
+    "badge": "[a-zA-Z0-9\\- ,_]*",
     "codePrefix": "github.com"
   },
   {
