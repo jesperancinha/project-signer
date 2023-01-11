@@ -1,10 +1,10 @@
 package org.jesperancinha.parser.projectsigner.service
 
+import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 import org.apache.commons.io.FileUtils
 import org.apache.commons.io.IOUtils
-import org.assertj.core.api.Assertions.assertThat
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.ROOT_DIRECTORY
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.TEMPLATE_LOCATION_README_MD
 import org.junit.jupiter.api.BeforeEach
@@ -41,26 +41,26 @@ internal class FinderServiceIT @Autowired constructor(
     @Test
     @Throws(IOException::class)
     fun testIterateThroughFilesAndFolders() {
-        assertThat(tempDirectory).isNotNull
+        tempDirectory.shouldNotBeNull()
         finderService.iterateThroughFilesAndFolders(tempDirectory!!)
         val subDirectory1 = getFileContent("directory1/subDirectory1/Readme.md")
-        assertThat(subDirectory1).isEqualTo("# label1\n\n# label2\n\n# label3\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n")
+        subDirectory1 shouldBe "# label1\n\n# label2\n\n# label3\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n"
         val directory1 = getFileContent("directory1/Readme.md")
-        assertThat(directory1).isEqualTo("## label1\n\n### label2\n\n# label3\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n")
+        directory1 shouldBe "## label1\n\n### label2\n\n# label3\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n"
         val noProject2 = getFileContent("directory2NoReadme/noProject2/Readme.md")
-        assertThat(noProject2).isNull()
+        noProject2.shouldBeNull()
         val project1Maven = getFileContent("directory2NoReadme/project1Maven/Readme.md")
-        assertThat(project1Maven).isEqualTo("# This is a test project\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n")
+        project1Maven shouldBe "# This is a test project\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n"
         val project1MavenNoName = getFileContent("directory2NoReadme/project1MavenNoName/Readme.md")
-        assertThat(project1MavenNoName).isEqualTo("# ProjectMavenArtifact\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n")
+        project1MavenNoName shouldBe "# ProjectMavenArtifact\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n"
         val project2NPM = getFileContent("directory2NoReadme/project2NPM/Readme.md")
-        assertThat(project2NPM).isEqualTo("# npm-project\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n")
+        project2NPM shouldBe "# npm-project\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n"
         val project3MavenAndNPM = getFileContent("directory2NoReadme/project3MavenAndNPM/Readme.md")
-        assertThat(project3MavenAndNPM).isEqualTo("# This is a test project\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n")
+        project3MavenAndNPM shouldBe "# This is a test project\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n"
         val project4Gradle = getFileContent("directory2NoReadme/project4Gradle/Readme.md")
-        assertThat(project4Gradle).isEqualTo("# project4Gradle\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n")
+        project4Gradle shouldBe "# project4Gradle\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n"
         val project5Sbt = getFileContent("directory2NoReadme/project5Sbt/Readme.md")
-        assertThat(project5Sbt).isEqualTo("# sbt-project\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n")
+        project5Sbt shouldBe "# sbt-project\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n"
     }
 
     @Throws(IOException::class)

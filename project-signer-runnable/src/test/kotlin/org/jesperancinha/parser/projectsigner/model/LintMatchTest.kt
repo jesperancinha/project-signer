@@ -34,7 +34,7 @@ internal class LintMatchTest {
     @Throws(IOException::class)
     private fun formatText(test: String): String {
         val jsonLint = IOUtils.toString(
-            Objects.requireNonNull<InputStream>(
+            Objects.requireNonNull(
                 ReadmeService::class.java.getResourceAsStream("/jeorg-lint.json")
             ),
             StandardCharsets.UTF_8
