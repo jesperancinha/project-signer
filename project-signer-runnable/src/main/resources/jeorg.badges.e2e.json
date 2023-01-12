@@ -16,7 +16,7 @@
   },
   {
     "title": "GitHub E2E Pipeline",
-    "badge": "[a-zA-Z0-9\\-]*e2e[a-zA-Z0-9\\-]*",
+    "badge": "[a-zA-Z0-9\\- ]*e2e[a-zA-Z0-9\\- ]*",
     "codePrefix": "github.com"
   },
   {

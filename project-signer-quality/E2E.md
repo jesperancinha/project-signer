@@ -77,7 +77,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate)| | | | |
 |Project Armona| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=String%20Array%20Paradigms&color=informational)](https://github.com/jesperancinha/string-array-paradigms)| | | | |
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Image%20Train%20Filters%20Web%20🚂&color=informational)](https://github.com/jesperancinha/image-train-filters-web)| | | | |
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Image%20Train%20Filters%20Web%20🚂&color=informational)](https://github.com/jesperancinha/image-train-filters-web)| | |[![E2E e2e-image-train-filters](https://github.com/jesperancinha/image-train-filters-web/actions/workflows/image-train-filters-e2e.yml/badge.svg)](https://github.com/jesperancinha/image-train-filters-web/actions/workflows/image-train-filters-e2e.yml)| |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ping-app-android%20🏓&color=informational)](https://github.com/jesperancinha/ping-app-android)| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JSON%20to%20Builder%20Pattern&color=informational)](https://github.com/jesperancinha/json-to-builder-pattern)| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-maven-plugin)| | | | |
