@@ -37,7 +37,6 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=image-sizer&color=informational)](https://github.com/jesperancinha/image-sizer)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ISBN%20Stacks%20📚%20&color=informational)](https://github.com/jesperancinha/isbn-stacks)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Camel%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-camel-test-drives)| | | | | | |
-|Kart race laps| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Inner%20Text%20Searcher%20Go%20📖&color=informational)](https://github.com/jesperancinha/inner-text-searcher-go)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=sound-garage%20🎸&color=informational)](https://github.com/jesperancinha/sound-garage)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=base-converter-android%20⏹&color=informational)](https://github.com/jesperancinha/base-converter-android)| | | | | | |
@@ -71,7 +70,6 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=performance-parsers%20🗄&color=informational)](https://github.com/jesperancinha/performance-parsers)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Moving%20Objects%20Cams%20Service%20💎&color=informational)](https://github.com/jesperancinha/moving-objects-service-root)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)| | | | | | |
-|untitled| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=android-action🤖&color=informational)](https://github.com/JEsperancinhaOrg/android-action)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Markdowner&color=informational)](https://github.com/jesperancinha/markdowner)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate)| | | | | | |
@@ -90,7 +88,6 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Med%20Dicom%20Service🏥&color=informational)](https://github.com/jesperancinha/med_dicom_service)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Performance%20Objects%20&color=informational)](https://github.com/jesperancinha/performance-projects)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Airflights%20Clojure%20✈️&color=informational)](https://github.com/jesperancinha/airflights-clojure)| | | | | | |
-|ktor-training-day| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=nowje-spring-xml-to-code-maven-plugin%20🍃&color=informational)](https://github.com/JEsperancinhaOrg/nowje-spring-xml-to-code-maven-plugin)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Healthy%20Cameras%20📹&color=informational)](https://github.com/jesperancinha/healthy-cameras)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=itf-chartizate-android🧿&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)| | | | | | |
