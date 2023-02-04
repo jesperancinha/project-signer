@@ -31,6 +31,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=loom-action☕️&color=informational)](https://github.com/JEsperancinhaOrg/loom-action)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=StaCo%20App%20🪙%20&color=informational)](https://github.com/jesperancinha/staco-app)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-reporter-commons&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-commons)| | | | | | | | |
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Radioactive%20Narwhals%20Shop%20☢%20&color=informational)](https://github.com/jesperancinha/radioactive-narwhals-shop)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android🧿&color=informational)](https://github.com/jesperancinha/image-train-filters-android)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver%20📼%20&color=informational)](https://github.com/jesperancinha/vma-archiver)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Public%20Transport%20Declarer%20🚂&color=informational)](https://github.com/jesperancinha/public-transport-declarer)| | | | | | | | |
@@ -52,6 +53,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate%20Modules&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-modules)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Scala%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-scala-test-drives)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives🧮&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)| | | | | | | | |
+|library-books| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=jeorg-security-defense-test-drives%20🔬&color=informational)](https://github.com/jesperancinha/jeorg-security-defense-test-drives)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Airports%20App%20🛬&color=informational)](https://github.com/jesperancinha/airports-app)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=rust-test-drive%20⚙️&color=informational)](https://github.com/jesperancinha/rust-test-drive)| | | | | | | | |
@@ -67,6 +69,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-reporter-sbt-plugin&color=informational)](https://github.com/jesperancinhaorg/omni-reporter-sbt-plugin)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Good%20Story%20🐉&color=informational)](https://github.com/jesperancinha/good-story)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-test-drives)| | | | | | | | |
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network%20👀&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=performance-parsers%20🗄&color=informational)](https://github.com/jesperancinha/performance-parsers)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Moving%20Objects%20Cams%20Service%20💎&color=informational)](https://github.com/jesperancinha/moving-objects-service-root)| | | | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)| | | | | | | | |
