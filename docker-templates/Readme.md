@@ -3,7 +3,7 @@
 1.  [docker-images](./docker-images) - Unused archive of image definitions I used in the past for Docker environments
 2.  [docker-psql](./docker-psql) - An up to date `generic scripts` + `docker-compose` + `docker image` + `start scripts` to create a PostgreSQL container.
 
-## About me 👨🏽‍💻🚀🏳️‍🌈
+## About me
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
 [![GitHub followers](https://img.shields.io/github/followers/jesperancinha.svg?label=Jesperancinha&style=social "GitHub")](https://github.com/jesperancinha)
@@ -12,6 +12,8 @@
 | [Sessionize](https://sessionize.com/joao-esperancinha/)
 | [Spotify](https://open.spotify.com/user/jlnozkcomrxgsaip7yvffpqqm?si=b54b89eae8894960)
 | [Medium](https://medium.com/@jofisaes)
+| [YouTube](https://www.youtube.com/@joaoesperancinha/featured)
+| [Instagram](https://www.instagram.com/joaofisaes/)
 | [Buy me a coffee](https://www.buymeacoffee.com/jesperancinha)
 | [Credly Badges](https://www.credly.com/users/joao-esperancinha)
 | [Google Apps](https://play.google.com/store/apps/developer?id=Joao+Filipe+Sabino+Esperancinha)

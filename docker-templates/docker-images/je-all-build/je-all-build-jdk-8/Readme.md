@@ -35,7 +35,7 @@ This image is meant to be used in build pipelines, where a lot of utilities, pac
 -   [How to update from webupd8 team PPA (Oracle JDK 8/9) that got inconsistent with its GPG key?](https://askubuntu.com/questions/1085166/how-to-update-from-webupd8-team-ppa-oracle-jdk-8-9-that-got-inconsistent-with)
 -   [How To Install Java with `apt` on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04)
 
-## About me 👨🏽‍💻🚀🏳️‍🌈
+## About me
 
 [![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/JEOrgLogo-20.png "João Esperancinha Homepage")](http://joaofilipesabinoesperancinha.nl)
 [![GitHub followers](https://img.shields.io/github/followers/jesperancinha.svg?label=Jesperancinha&style=social "GitHub")](https://github.com/jesperancinha)
@@ -44,6 +44,8 @@ This image is meant to be used in build pipelines, where a lot of utilities, pac
 | [Sessionize](https://sessionize.com/joao-esperancinha/)
 | [Spotify](https://open.spotify.com/user/jlnozkcomrxgsaip7yvffpqqm?si=b54b89eae8894960)
 | [Medium](https://medium.com/@jofisaes)
+| [YouTube](https://www.youtube.com/@joaoesperancinha/featured)
+| [Instagram](https://www.instagram.com/joaofisaes/)
 | [Buy me a coffee](https://www.buymeacoffee.com/jesperancinha)
 | [Credly Badges](https://www.credly.com/users/joao-esperancinha)
 | [Google Apps](https://play.google.com/store/apps/developer?id=Joao+Filipe+Sabino+Esperancinha)
