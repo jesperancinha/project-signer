@@ -13,7 +13,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
       git pull
       year="$(git log --reverse | sed -n -e "3,3p" | sed 's/\(.*\)\ \([0-9]*\)\ \(.*\)/\2/')"
       echo "----------------- Signing years in repo ${item} -----------------"
-      find . -iname "License" | xargs sed -i "" 's/\[yyyy\]/'${year}'/g'
+      find . -iname "License" | xargs sed -i "" 's/\[yyyy\]/'"${year}"'/g'
       find . -iname "License" | xargs -I {} sed -i -e "s/\[yyyy\]/${year}/g" {} {}
       cd ..
     fi
