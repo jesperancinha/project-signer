@@ -49,7 +49,8 @@ sdk install java 12.0.2.hs-adpt
 sdk install java 13.0.2.hs-adpt
 sdk install java 14.0.0.hs-adpt
 sdk install java 16.0.1.hs-adpt
-sdk install java java 17-open
+sdk install java 17-open
+sdk install java 19.0.2-open
 ```
 
 ### Java installation via [APT](http://manpages.ubuntu.com/manpages/xenial/en/man8/apt.8.html)
