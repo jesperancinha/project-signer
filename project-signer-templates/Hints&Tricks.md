@@ -49,7 +49,8 @@ sdk install java 12.0.2.hs-adpt
 sdk install java 13.0.2.hs-adpt
 sdk install java 14.0.0.hs-adpt
 sdk install java 16.0.1.hs-adpt
-sdk install java java 17-open
+sdk install java 17-open
+sdk install java 19.0.2-open
 ```
 
 ### Java installation via [APT](http://manpages.ubuntu.com/manpages/xenial/en/man8/apt.8.html)
@@ -83,6 +84,7 @@ alias jdk13="sdk use java 13.0.2.hs-adpt"
 alias jdk14="sdk use java 14.0.0.hs-adpt"
 alias jdk16="sdk use java 16.0.1.hs-adpt"
 alias jdk17="sdk use java 17-open"
+alias jdk19="sdk use java 19.0.2-open"
 alias node16='export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" c && nvm install 16.13.0 && nvm use 16.13.0'
 alias m2enable="mv ~/.m2/settings.backup ~/.m2/settings.xml"
 alias m2disable="mv ~/.m2/settings.xml ~/.m2/settings.backup"
