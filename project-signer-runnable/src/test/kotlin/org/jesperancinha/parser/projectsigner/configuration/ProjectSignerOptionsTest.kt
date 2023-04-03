@@ -42,7 +42,7 @@ class ProjectSignerOptionsTest {
         private const val TEST_LABEL_2 = "label2"
         private const val TEST_ROOT = "root"
         const val README_MD = "target/test-classes/Readme.md"
-        const val TEMPLATE_LOCATION_README_MD = "--template-location=" + README_MD
+        const val TEMPLATE_LOCATION_README_MD = "--raw-location=" + README_MD
         const val ROOT_DIRECTORY = "--root-directory=/target/test-classes/"
     }
 }

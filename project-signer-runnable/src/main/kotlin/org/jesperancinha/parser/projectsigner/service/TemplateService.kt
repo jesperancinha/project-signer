@@ -11,7 +11,7 @@ import java.nio.file.Path
 import java.util.*
 
 /**
- * A markdown template service to handle markdown texts
+ * A markdown raw service to handle markdown texts
  */
 @Service
 open class TemplateService(private val optionsService: OptionsService) {
@@ -42,7 +42,7 @@ open class TemplateService(private val optionsService: OptionsService) {
                     }
                 } catch (e: IOException) {
                     logger.error(
-                        "Failing to read template file {}. Error {}",
+                        "Failing to read raw file {}. Error {}",
                         path.fileName.toString(),
                         e.message
                     )

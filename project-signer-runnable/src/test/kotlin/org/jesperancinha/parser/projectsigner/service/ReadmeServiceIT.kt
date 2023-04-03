@@ -9,13 +9,12 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ActiveProfiles
 import java.io.IOException
 
-@SpringBootTest(args = ["--template-location=Readme.md", "--root-directory=/"])
+@SpringBootTest(args = ["--raw-location=Readme.md", "--root-directory=/"])
 @ActiveProfiles("test")
 internal class ReadmeServiceIT @Autowired constructor(
     @Autowired
     private val readmeService: ReadmeService
 ){
-
 
     @BeforeEach
     fun setUp() {
@@ -95,7 +94,7 @@ internal class ReadmeServiceIT @Autowired constructor(
     }
 
     companion object {
-        private const val DIRECTORY_0_README_MD = "/directory1/Readme.md"
+        private const val DIRECTORY_0_README_MD = "/raw/Readme.md"
         private const val DIRECTORY_1_README_MD = "/directory1/subDirectory1/Readme.md"
         private const val DIRECTORY_1_SPECIAL_CASE_1 = "/directory1/specialCase1/Readme.md"
         private const val DIRECTORY_1_SPECIAL_CASE_EMOJI = "/directory1/specialCaseEmoji/Readme.md"

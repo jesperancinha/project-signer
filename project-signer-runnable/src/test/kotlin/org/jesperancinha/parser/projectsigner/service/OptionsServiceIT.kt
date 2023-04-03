@@ -53,7 +53,7 @@ class OptionsServiceIT {
     @Test
     fun testProcessLongOptions() {
         val args = arrayOf(
-            "--template-location",
+            "--raw-location",
             TEMPLATE_LOCATION,
             LICENSE,
             ABOUT_ME,
@@ -70,7 +70,7 @@ class OptionsServiceIT {
     @Test
     fun testProcessLongOptionsNE() {
         val args = arrayOf(
-            "--template-location",
+            "--raw-location",
             TEMPLATE_LOCATION,
             LICENSE,
             ABOUT_ME,

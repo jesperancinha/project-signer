@@ -3,7 +3,6 @@ package org.jesperancinha.parser.projectsigner.service
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
-import io.kotest.matchers.string.shouldNotBeEmpty
 import org.apache.commons.io.FileUtils
 import org.apache.commons.io.IOUtils
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.ROOT_DIRECTORY
@@ -43,7 +42,7 @@ internal class FinderServiceIT @Autowired constructor(
     @Throws(IOException::class)
     fun testIterateThroughFilesAndFolders() {
         val techUsedCommonText =
-            "\n## Technologies used\n\nPlease check the [TechStack.md](TeckStack.md) file for details.\n"
+            "\n## Technologies used\n\nPlease check the [TechStack.md](TechStack.md) file for details.\n"
         tempDirectory.shouldNotBeNull()
         finderService.iterateThroughFilesAndFolders(tempDirectory!!)
 
