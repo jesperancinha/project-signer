@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service
 import java.nio.file.Path
 import java.util.regex.Pattern
 
-val nameAndLinkPattern = Pattern.compile(".*\"([a-z A-Z]*)\".*(http.*)\\)")
+val nameAndLinkPattern = Pattern.compile(".*\"([a-z A-Z0-9]*)\".*(http.*)\\)")
 
 private const val TECHNOLOGIES_USED = "## Technologies used\n"
 
