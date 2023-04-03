@@ -28,7 +28,7 @@ import kotlin.system.exitProcess
 open class ReadmeService(
     private val mergeService: MergeService,
     private val optionsService: OptionsService,
-    private val techStackService: TechStackService
+    private val techStackService: TechStackService,
 ) {
     val allProjectData: MutableList<ProjectData> = ArrayList()
 
@@ -51,8 +51,7 @@ open class ReadmeService(
     }
 
     @Throws(IOException::class)
-    open fun exportNewReadme(readmePath: Path, inputStream: InputStream, globalParagraphs: Paragraphs) {
-        val  allParagraphs = techStackService.mutateTechnologiesUsedParagraph(readmePath, globalParagraphs)
+    open fun exportNewReadme(readmePath: Path, inputStream: InputStream, allParagraphs: Paragraphs) {
         logger.info("Visiting path {}", readmePath)
         val readme =
             readDataStrippedOfTags(inputStream, *optionsService.projectSignerOptions?.tagNames ?: emptyArray()) ?: ""
@@ -72,9 +71,11 @@ open class ReadmeService(
                 allProjectData.add(
                     it
                 )
-             }
+            }
         }
-        mergeService.writeMergedResult(readmePath, nonRefText)
+        val techStackTextFiltered =
+            techStackService.mutateTechnologiesUsedParagraph(nonRefText.split("\n")[0], readmePath, nonRefText)
+        mergeService.writeMergedResult(readmePath, techStackTextFiltered)
     }
 
     private fun createLintedText(newText: String): String {

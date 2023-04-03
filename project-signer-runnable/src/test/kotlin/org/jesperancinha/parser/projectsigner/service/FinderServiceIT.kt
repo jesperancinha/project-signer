@@ -3,6 +3,7 @@ package org.jesperancinha.parser.projectsigner.service
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
+import io.kotest.matchers.string.shouldNotBeEmpty
 import org.apache.commons.io.FileUtils
 import org.apache.commons.io.IOUtils
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.ROOT_DIRECTORY
@@ -41,12 +42,33 @@ internal class FinderServiceIT @Autowired constructor(
     @Test
     @Throws(IOException::class)
     fun testIterateThroughFilesAndFolders() {
+        val techUsedCommonText =
+            "\n## Technologies used\n\nPlease check the [TechStack.md](TeckStack.md) file for details.\n"
         tempDirectory.shouldNotBeNull()
         finderService.iterateThroughFilesAndFolders(tempDirectory!!)
-        val subDirectory1 = getFileContent("directory1/subDirectory1/Readme.md")
-        subDirectory1 shouldBe "# label1\n\n# label2\n\n# label3\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n"
-        val directory1 = getFileContent("directory1/Readme.md")
-        directory1 shouldBe "## label1\n\n### label2\n\n# label3\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n"
+
+        getFileContent("directory1/subDirectory1/Readme.md") shouldBe "# label1\n\n# label2\n\n# label3\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n"
+        getFileContent("directory1/subDirectory1/TechStack.md").shouldBeNull()
+
+        getFileContent("directory1/Readme.md") shouldBe "# Spot On Project - The Emotional\n$techUsedCommonText\n## label1\n\n### label2\n\n# label3\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n"
+        getFileContent("directory1/TechStack.md").shouldNotBeNull() shouldBe """
+            # Spot On Project - The Emotional TechStack
+
+            - [Kotlin](https://kotlinlang.org/)
+
+            - [Spring Framework](https://spring.io/projects/spring-framework)
+
+            - [Spring Boot](https://spring.io/projects/spring-boot)
+
+            - [Mockk](https://mockk.io/)
+
+            - [Kotest](https://kotest.io/)
+
+            - [Maven](https://maven.apache.org/)
+        """.trimIndent()
+
+        getFileContent("directory1/specialCaseEmoji/TechStack.md").shouldBeNull()
+
         val noProject2 = getFileContent("directory2NoReadme/noProject2/Readme.md")
         noProject2.shouldBeNull()
         val project1Maven = getFileContent("directory2NoReadme/project1Maven/Readme.md")
