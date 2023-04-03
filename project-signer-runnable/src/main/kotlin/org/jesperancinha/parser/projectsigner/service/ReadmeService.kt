@@ -5,8 +5,8 @@ import org.apache.commons.io.IOUtils
 import org.jesperancinha.parser.markdowner.badges.parser.BadgeParser
 import org.jesperancinha.parser.markdowner.helper.ReadmeParserHelper
 import org.jesperancinha.parser.markdowner.model.Paragraphs
-import org.jesperancinha.parser.projectsigner.model.LintMatch
-import org.jesperancinha.parser.projectsigner.model.LintPattern
+import org.jesperancinha.parser.projectsigner.model.SIgnerMatch
+import org.jesperancinha.parser.projectsigner.model.SignerPattern
 import org.jesperancinha.parser.projectsigner.model.ProjectData
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -25,7 +25,11 @@ import kotlin.system.exitProcess
  * A Readme service to read and manipulate markdown files
  */
 @Service
-open class ReadmeService(private val mergeService: MergeService, private val optionsService: OptionsService?) {
+open class ReadmeService(
+    private val mergeService: MergeService,
+    private val optionsService: OptionsService,
+    private val techStackService: TechStackService
+) {
     val allProjectData: MutableList<ProjectData> = ArrayList()
 
     /**
@@ -40,7 +44,7 @@ open class ReadmeService(private val mergeService: MergeService, private val opt
      * @throws IOException Any IO Exception thrown
      */
     @Throws(IOException::class)
-    open fun readDataSprippedOfTags(templateInputStream: InputStream, vararg tags: String): String? {
+    open fun readDataStrippedOfTags(templateInputStream: InputStream, vararg tags: String): String? {
         return if (tags.isEmpty())
             IOUtils.toString(templateInputStream, Charset.defaultCharset())
         else ReadmeParserHelper.readDataSprippedOfTags(templateInputStream, *tags)
@@ -50,25 +54,26 @@ open class ReadmeService(private val mergeService: MergeService, private val opt
     open fun exportNewReadme(readmePath: Path, inputStream: InputStream, allParagraphs: Paragraphs) {
         logger.info("Visiting path {}", readmePath)
         val readme =
-            readDataSprippedOfTags(inputStream, *optionsService?.projectSignerOptions?.tagNames ?: emptyArray()) ?: ""
+            readDataStrippedOfTags(inputStream, *optionsService.projectSignerOptions?.tagNames ?: emptyArray()) ?: ""
         val newText = mergeService.mergeDocumentWithFooterTemplate(readme, allParagraphs)
         val lintedText = createLintedText(newText)
         val nonRefText = removeNonRefs(lintedText)
-        if (!optionsService?.projectSignerOptions?.rootDirectory?.relativize(readmePath).toString().contains("/")) {
+        if (!optionsService.projectSignerOptions?.rootDirectory?.relativize(readmePath).toString().contains("/")) {
             readme.split("\n".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()[0].replace(
                 "#",
                 ""
-            ).strip()?.let {
+            ).trim().let {
                 ProjectData(
                     title = it,
                     badgeGroupMap = BadgeParser.parse(readme)
                 )
-            }?.let {
+            }.let {
                 allProjectData.add(
                     it
                 )
-            }
+             }
         }
+        val techStackFilteredText = techStackService.filterTechStack(nonRefText = nonRefText)
         mergeService.writeMergedResult(readmePath, nonRefText)
     }
 
@@ -76,10 +81,10 @@ open class ReadmeService(private val mergeService: MergeService, private val opt
         val ref = object : Any() {
             var readme = newText
         }
-        lintMatches!!.forEach(Consumer { lintMatch: LintPattern ->
-            val m = lintMatch.find.matcher(ref.readme)
+        lintMatches!!.forEach(Consumer { signerPattern: SignerPattern ->
+            val m = signerPattern.find.matcher(ref.readme)
             if (m.find()) {
-                ref.readme = m.replaceAll(lintMatch.replace)
+                ref.readme = m.replaceAll(signerPattern.replace)
             }
         })
         return ref.readme
@@ -107,7 +112,7 @@ open class ReadmeService(private val mergeService: MergeService, private val opt
     companion object {
         val logger: Logger = LoggerFactory.getLogger(ReadmeService::class.java)
         private var refsToRemove: List<String>? = null
-        private var lintMatches: List<LintPattern>? = null
+        private var lintMatches: List<SignerPattern>? = null
         private val objectMapper = ObjectMapper()
 
         init {
@@ -122,9 +127,9 @@ open class ReadmeService(private val mergeService: MergeService, private val opt
                     ReadmeService::class.java.getResourceAsStream("/jeorg-lint.json"),
                     StandardCharsets.UTF_8.name()
                 )
-                lintMatches = objectMapper.readValue(jsonLint, Array<LintMatch>::class.java)
-                    .map { lintMatch: LintMatch ->
-                        LintPattern(
+                lintMatches = objectMapper.readValue(jsonLint, Array<SIgnerMatch>::class.java)
+                    .map { lintMatch: SIgnerMatch ->
+                        SignerPattern(
                             find = Pattern.compile(lintMatch.find),
                             replace = lintMatch.replace
 

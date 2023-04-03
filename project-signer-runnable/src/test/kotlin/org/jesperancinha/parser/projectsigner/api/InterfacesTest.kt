@@ -23,8 +23,9 @@ class InterfacesTest {
             override fun writeMergedResult(readmePath: Path, newText: String) {}
         }
         val optionsService: OptionsService = mockk()
-        val readmeService: ReadmeService = object : ReadmeService(mergeService, optionsService) {
-            override fun readDataSprippedOfTags(templateInputStream: InputStream, vararg tags: String): String? {
+        val techStackService: TechStackService = mockk()
+        val readmeService: ReadmeService = object : ReadmeService(mergeService, optionsService, techStackService) {
+            override fun readDataStrippedOfTags(templateInputStream: InputStream, vararg tags: String): String? {
                 return null
             }
 

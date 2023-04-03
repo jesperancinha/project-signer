@@ -11,9 +11,11 @@ import java.io.IOException
 
 @SpringBootTest(args = ["--template-location=Readme.md", "--root-directory=/"])
 @ActiveProfiles("test")
-internal class ReadmeServiceIT {
+internal class ReadmeServiceIT @Autowired constructor(
     @Autowired
-    private val readmeService: ReadmeService? = null
+    private val readmeService: ReadmeService
+){
+
 
     @BeforeEach
     fun setUp() {
@@ -25,7 +27,7 @@ internal class ReadmeServiceIT {
     fun testReadDataSprippedOfTagsFile0Label1() {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_0_README_MD)
         resourceAsStream.shouldNotBeNull()
-        val label1 = readmeService!!.readDataSprippedOfTags(resourceAsStream, "label1")
+        val label1 = readmeService.readDataStrippedOfTags(resourceAsStream, "label1")
         label1 shouldBe "# label3"
     }
 
@@ -34,7 +36,7 @@ internal class ReadmeServiceIT {
     fun testReadDataSprippedOfTagsFile0Label2() {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_0_README_MD)
         resourceAsStream.shouldNotBeNull()
-        val label2 = readmeService!!.readDataSprippedOfTags(resourceAsStream, "label2")
+        val label2 = readmeService.readDataStrippedOfTags(resourceAsStream, "label2")
         label2 shouldBe "## label1\n\n# label3"
     }
 
@@ -43,7 +45,7 @@ internal class ReadmeServiceIT {
     fun testReadDataSprippedOfTagsFile0Label3() {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_0_README_MD)
         resourceAsStream.shouldNotBeNull()
-        val label3 = readmeService!!.readDataSprippedOfTags(resourceAsStream, "label3")
+        val label3 = readmeService.readDataStrippedOfTags(resourceAsStream, "label3")
         label3 shouldBe ("## label1\n\n### label2")
     }
 
@@ -52,7 +54,7 @@ internal class ReadmeServiceIT {
     fun testReadDataSprippedOfTagsFile1Label1() {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_README_MD)
         resourceAsStream.shouldNotBeNull()
-        val label1 = readmeService!!.readDataSprippedOfTags(resourceAsStream, "label1")
+        val label1 = readmeService.readDataStrippedOfTags(resourceAsStream, "label1")
         label1 shouldBe "# label2\n\n# label3"
     }
 
@@ -61,7 +63,7 @@ internal class ReadmeServiceIT {
     fun testReadDataSprippedOfTagsFile1Label2() {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_README_MD)
         resourceAsStream.shouldNotBeNull()
-        val label2 = readmeService!!.readDataSprippedOfTags(resourceAsStream, "label2")
+        val label2 = readmeService.readDataStrippedOfTags(resourceAsStream, "label2")
         label2 shouldBe "# label1\n\n# label3"
     }
 
@@ -70,7 +72,7 @@ internal class ReadmeServiceIT {
     fun testReadDataSprippedOfTagsFile1Label3() {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_README_MD)
         resourceAsStream.shouldNotBeNull()
-        val label3 = readmeService!!.readDataSprippedOfTags(resourceAsStream, "label3")
+        val label3 = readmeService.readDataStrippedOfTags(resourceAsStream, "label3")
         label3 shouldBe "# label1\n\n# label2"
     }
 
@@ -79,7 +81,7 @@ internal class ReadmeServiceIT {
     fun testReadDataSprippedOfTagsSpecialCase1() {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_SPECIAL_CASE_1)
         resourceAsStream.shouldNotBeNull()
-        val label = readmeService!!.readDataSprippedOfTags(resourceAsStream, "License", "About me")
+        val label = readmeService.readDataStrippedOfTags(resourceAsStream, "License", "About me")
         label shouldBe "# Mancala JE"
     }
 
@@ -88,7 +90,7 @@ internal class ReadmeServiceIT {
     fun testReadDataEmojis() {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_SPECIAL_CASE_EMOJI)
         resourceAsStream.shouldNotBeNull()
-        val label = readmeService!!.readDataSprippedOfTags(resourceAsStream, "License", "About me")
+        val label = readmeService.readDataStrippedOfTags(resourceAsStream, "License", "About me")
         label shouldBe "# Note manager WebApp \uD83D\uDCBB"
     }
 

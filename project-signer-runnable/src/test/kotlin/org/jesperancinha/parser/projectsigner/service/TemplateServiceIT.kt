@@ -2,6 +2,7 @@ package org.jesperancinha.parser.projectsigner.service
 
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
+import io.kotest.matchers.string.shouldStartWith
 import org.jesperancinha.parser.markdowner.model.Paragraph
 import org.jesperancinha.parser.markdowner.model.Paragraphs
 import org.jesperancinha.parser.projectsigner.configuration.ProjectSignerOptionsTest.Companion.ROOT_DIRECTORY
@@ -29,10 +30,12 @@ class TemplateServiceIT @Autowired constructor(
     @Throws(IOException::class)
     fun testFindAllParagraphs() {
         val allParagraphs: Paragraphs = templateService.findAllParagraphs()
-        allParagraphs.getParagraphCount() shouldBe 2
+        allParagraphs.getParagraphCount() shouldBe 3
         val license: Paragraph = allParagraphs.getParagraphByTag("License").shouldNotBeNull()
         val aboutMe: Paragraph = allParagraphs.getParagraphByTag("About me").shouldNotBeNull()
+        val technologiesUsed: Paragraph = allParagraphs.getParagraphByTag("Technologies used").shouldNotBeNull()
         license.text shouldBe "\nThis is one One"
         aboutMe.text shouldBe "\nThis is two Two"
+        technologiesUsed.text.shouldStartWith("\n---")
     }
 }
