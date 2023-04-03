@@ -22,7 +22,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=nowje-unit-test-exchange-maven-plugin&color=informational)](https://github.com/JEsperancinhaOrg/nowje-unit-test-exchange-maven-plugin)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Finantial%20Transactions%20in%20Akka%20💶&color=informational)](https://github.com/jesperancinha/finantial-transactions-akka)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Cups%20Kalah%20☕️%20&color=informational)](https://github.com/jesperancinha/mancalaje)| | |
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=City%20Library%20Management%20🏢&color=informational)](https://github.com/jesperancinha/advanced-library-management)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/locust-50.png "Locust")](https://locust.io/)| |
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=City%20Library%20Management%20🏢&color=informational)](https://github.com/jesperancinha/advanced-library-management)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEOrg%20Cloud%20Test%20Drives%20☁️&color=informational)](https://github.com/jesperancinha/jeorg-cloud-test-drives)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Bridge%20Surveillance%20Story%20🌉&color=informational)](https://github.com/jesperancinha/bridges-surveillance-story)| | |
 |Live and Video support repo| | |
@@ -33,10 +33,10 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-reporter-commons&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-commons)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Radioactive%20Narwhals%20Shop%20☢%20&color=informational)](https://github.com/jesperancinha/radioactive-narwhals-shop)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android🧿&color=informational)](https://github.com/jesperancinha/image-train-filters-android)| | |
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver%20📼%20&color=informational)](https://github.com/jesperancinha/vma-archiver)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/locust-50.png "Locust")](https://locust.io/)| |
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=VMA%20Archiver%20📼%20&color=informational)](https://github.com/jesperancinha/vma-archiver)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Public%20Transport%20Declarer%20🚂&color=informational)](https://github.com/jesperancinha/public-transport-declarer)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=image-sizer&color=informational)](https://github.com/jesperancinha/image-sizer)| | |
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ISBN%20Stacks%20📚%20&color=informational)](https://github.com/jesperancinha/isbn-stacks)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/locust-50.png "Locust")](https://locust.io/)| |
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ISBN%20Stacks%20📚%20&color=informational)](https://github.com/jesperancinha/isbn-stacks)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Camel%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-camel-test-drives)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Inner%20Text%20Searcher%20Go%20📖&color=informational)](https://github.com/jesperancinha/inner-text-searcher-go)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=sound-garage%20🎸&color=informational)](https://github.com/jesperancinha/sound-garage)| | |

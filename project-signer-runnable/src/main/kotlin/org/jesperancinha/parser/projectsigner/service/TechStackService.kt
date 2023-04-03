@@ -24,7 +24,7 @@ class TechStackService(
         }
         val secondSplit = headSplit[1].split("## ")
         val techOriginalParagraph = secondSplit[0]
-        if (techOriginalParagraph.isEmpty()) {
+        if (techOriginalParagraph.isEmpty() || techOriginalParagraph.contains(PLEASE_CHECK_THE_TECH_STACK_MD_TECK_STACK_MD_FILE_FOR_DETAILS)) {
             return nonRefText
         }
         val techStackList = techOriginalParagraph.split("\n").let { lines ->

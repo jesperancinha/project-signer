@@ -4,7 +4,7 @@
 
 |Project|Tomcat|Wildfly|Jetty|Undertow|Flask|
 |---|---|---|---|---|---|
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-test-drives)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/tomcat-50.png "Tomcat")](https://tomcat.apache.org/whichversion.html)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/wild-fly-50.png "WildFly")](https://www.wildfly.org/)| | | |
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Java%20EE%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-java-ee-test-drives)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=jeorg-micro-test-drives%20💽&color=informational)](https://github.com/jesperancinha/jeorg-micro-test-drives)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=car-lease%20🚗&color=informational)](https://github.com/jesperancinha/car-lease)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-lein&color=informational)](https://github.com/jesperancinhaorg/omni-coveragereporter-lein)| | | | | |
@@ -58,7 +58,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Airports%20App%20🛬&color=informational)](https://github.com/jesperancinha/airports-app)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=rust-test-drive%20⚙️&color=informational)](https://github.com/jesperancinha/rust-test-drive)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Joao%20Filipe%20Sabino%20Esperancinha%20Home&color=informational)](https://gitlab.com/jesperancinha/joao-filipe-sabino-esperancinha-home)| | | | | |
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Master%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-master-test-drives)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/tomcat-50.png "Tomcat")](http://tomcat.apache.org/)| |[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/jetty-50.png "Jetty")](https://www.eclipse.org/jetty/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/undertow-50.png "Undertow")](https://undertow.io/)| |
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Master%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-master-test-drives)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=catcher-app-android%20🔮&color=informational)](https://github.com/jesperancinha/catcher-app-android)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=math-service-scala%20🧮&color=informational)](https://github.com/jesperancinha/math-service-scala)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-gradle-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-gradle-plugin)| | | | | |
@@ -68,7 +68,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=matrix-anywhere-android%20⏹&color=informational)](https://github.com/jesperancinha/matrix-anywhere-android)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-reporter-sbt-plugin&color=informational)](https://github.com/jesperancinhaorg/omni-reporter-sbt-plugin)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Good%20Story%20🐉&color=informational)](https://github.com/jesperancinha/good-story)| | | | | |
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-test-drives)| | |[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/jetty-50.png "Jetty")](https://www.eclipse.org/jetty/)| | |
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Spring%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-spring-test-drives)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Agent%20Network%20👀&color=informational "Agent Network")](http://github.com/jesperancinha/agent-network)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=performance-parsers%20🗄&color=informational)](https://github.com/jesperancinha/performance-parsers)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Moving%20Objects%20Cams%20Service%20💎&color=informational)](https://github.com/jesperancinha/moving-objects-service-root)| | | | | |
@@ -88,7 +88,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=xml-adder🌿&color=informational)](https://github.com/jesperancinha/xml-adder)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Whiskers%20Kotlin%20Native%20🐈&color=informational)](https://github.com/jesperancinha/whiskers-kotlin-native-command-line)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=goblins-tale-strongswordfell%20👹&color=informational)](https://github.com/jesperancinha/goblins-tale-strongswordfell)| | | | | |
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Med%20Dicom%20Service🏥&color=informational)](https://github.com/jesperancinha/med_dicom_service)| | | | |[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/flask-50.png "Flask Service")](https://flask.palletsprojects.com/)|
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Med%20Dicom%20Service🏥&color=informational)](https://github.com/jesperancinha/med_dicom_service)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Performance%20Objects%20&color=informational)](https://github.com/jesperancinha/performance-projects)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Airflights%20Clojure%20✈️&color=informational)](https://github.com/jesperancinha/airflights-clojure)| | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=nowje-spring-xml-to-code-maven-plugin%20🍃&color=informational)](https://github.com/JEsperancinhaOrg/nowje-spring-xml-to-code-maven-plugin)| | | | | |
