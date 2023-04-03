@@ -1,3 +1,6 @@
+SHELL := /bin/bash
+GRADLE_VERSION := 8.0.2
+
 b: build
 build:
 	mvn clean install

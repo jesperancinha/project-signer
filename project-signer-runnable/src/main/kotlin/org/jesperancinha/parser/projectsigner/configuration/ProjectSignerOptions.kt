@@ -1,13 +1,14 @@
 package org.jesperancinha.parser.projectsigner.configuration
 
-import picocli.CommandLine
-import picocli.CommandLine.*
+import picocli.CommandLine.Option
+import picocli.CommandLine.Parameters
 import java.nio.file.Path
+
 open class ProjectSignerOptions {
     @Option(
-        names = ["-t", "--template-location"],
+        names = ["-t", "--raw-location"],
         paramLabel = "Template location",
-        description = ["Location of the signing template"],
+        description = ["Location of the signing raw"],
         required = true
     )
     var templateLocation: Path? = null
@@ -15,7 +16,7 @@ open class ProjectSignerOptions {
     @Option(
         names = ["-l", "--license-location"],
         paramLabel = "License location",
-        description = ["Location of tzhe License template"]
+        description = ["Location of tzhe License raw"]
     )
     var licenseLocations: String? = null
 

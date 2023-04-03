@@ -11,7 +11,7 @@ import org.springframework.test.context.ActiveProfiles
 import org.springframework.util.CollectionUtils
 import java.nio.file.Path
 
-@SpringBootTest(args = ["--template-location=Readme.md", "--root-directory=/"])
+@SpringBootTest(args = ["--raw-location=Readme.md", "--root-directory=/"])
 @ActiveProfiles("test")
 class ProjectSignerStartIT {
     @Captor
