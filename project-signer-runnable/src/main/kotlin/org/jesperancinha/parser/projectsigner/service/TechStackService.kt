@@ -28,16 +28,15 @@ class TechStackService(
             return nonRefText
         }
         val techStackList = techOriginalParagraph.split("\n").let { lines ->
-            lines.filter { it.isNotEmpty() && it != "---" }
-                .map {
-                    val matcher = nameAndLinkPattern.matcher(it)
-                    matcher.matches()
-                    runCatching {
-                        matcher.run { "[${group(1)}](${group(2)})" }
-                    }.onFailure { ex ->
-                        logger.error("Error found interpreting \"{}\" to tech stack! {}", it, ex.stackTraceToString())
-                    }.getOrNull()
-                }
+            lines.filter { it.isNotEmpty() && it != "---" }.mapNotNull {
+                val matcher = nameAndLinkPattern.matcher(it)
+                matcher.matches()
+                runCatching {
+                    matcher.run { "[${group(1)}](${group(2)})" }
+                }.onFailure { ex ->
+                    logger.error("Error found interpreting \"{}\" to tech stack! {}", it, ex.stackTraceToString())
+                }.getOrNull()
+            }
         }
         val techStackText = "$projectName TechStack\n\n- ${techStackList.joinToString("\n\n- ")}"
         fileWriterService.exportTechStack(readmePath, techStackText)
