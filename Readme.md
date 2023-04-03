@@ -22,8 +22,6 @@
 [![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/project-signer.svg)]()
 [![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/project-signer.svg)]()
 
----
-
 ## Technologies used
 
 Please check the [TechStack.md](TechStack.md) file for details.
