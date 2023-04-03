@@ -19,6 +19,15 @@ import kotlin.system.exitProcess
 
 @Service
 open class FileWriterService {
+    open fun exportTechStack(path: Path, text: String) {
+        val fileName = path.findTechStackFileNameWithDefault()
+        val techStackFile = File(path.toFile(), fileName)
+        val fileWriter = FileWriter(techStackFile)
+        fileWriter.write(text)
+        fileWriter.flush()
+        fileWriter.close()
+    }
+
     @Throws(IOException::class)
     open fun exportReadmeFile(path: Path, text: String) {
         val fileName = path.findReadmeFileNameWithDefault()
@@ -180,6 +189,13 @@ open class FileWriterService {
     }
 
 }
+
+fun Path.findTechStackFileNameWithDefault() = findTechStackFileName() ?: "TechStack.md"
+
+fun Path.findTechStackFileName() = toFile()
+    .list { _, name -> name.lowercase().endsWith("techStack.md") }
+    .takeIf { it?.isNotEmpty() ?: false }
+    ?.let { it[0] }
 
 fun Path.findReadmeFileNameWithDefault() = findReadmeFileName() ?: "Readme.md"
 

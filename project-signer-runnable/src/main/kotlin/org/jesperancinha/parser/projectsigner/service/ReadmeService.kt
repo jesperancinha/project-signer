@@ -51,7 +51,8 @@ open class ReadmeService(
     }
 
     @Throws(IOException::class)
-    open fun exportNewReadme(readmePath: Path, inputStream: InputStream, allParagraphs: Paragraphs) {
+    open fun exportNewReadme(readmePath: Path, inputStream: InputStream, globalParagraphs: Paragraphs) {
+        val  allParagraphs = techStackService.mutateTechnologiesUsedParagraph(readmePath, globalParagraphs)
         logger.info("Visiting path {}", readmePath)
         val readme =
             readDataStrippedOfTags(inputStream, *optionsService.projectSignerOptions?.tagNames ?: emptyArray()) ?: ""
@@ -73,7 +74,6 @@ open class ReadmeService(
                 )
              }
         }
-        val techStackFilteredText = techStackService.filterTechStack(nonRefText = nonRefText)
         mergeService.writeMergedResult(readmePath, nonRefText)
     }
 

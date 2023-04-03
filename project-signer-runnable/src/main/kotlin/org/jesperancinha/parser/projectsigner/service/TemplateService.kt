@@ -22,7 +22,7 @@ open class TemplateService(private val optionsService: OptionsService) {
      * @throws IOException Any kind of IO Exception
      */
     @Throws(IOException::class)
-    open fun findAllParagraphs(): Paragraphs {
+    open fun  findAllParagraphs(): Paragraphs {
         val fileTemplate = optionsService.projectSignerOptions?.templateLocation?.toFile()
         val templateInputStream = fileTemplate?.let { FileInputStream(it) }
         return templateInputStream?.let { TemplateParserHelper.findAllParagraphs(templateInputStream) } ?: Paragraphs()

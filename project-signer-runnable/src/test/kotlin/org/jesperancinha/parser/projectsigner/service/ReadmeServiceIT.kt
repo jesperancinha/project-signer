@@ -78,7 +78,7 @@ internal class ReadmeServiceIT @Autowired constructor(
 
     @Test
     @Throws(IOException::class)
-    fun testReadDataSprippedOfTagsSpecialCase1() {
+    fun `should read special case 1 with tags stripped off`() {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_SPECIAL_CASE_1)
         resourceAsStream.shouldNotBeNull()
         val label = readmeService.readDataStrippedOfTags(resourceAsStream, "License", "About me")
@@ -87,7 +87,7 @@ internal class ReadmeServiceIT @Autowired constructor(
 
     @Test
     @Throws(IOException::class)
-    fun testReadDataEmojis() {
+    fun `should read emoji data`() {
         val resourceAsStream = javaClass.getResourceAsStream(DIRECTORY_1_SPECIAL_CASE_EMOJI)
         resourceAsStream.shouldNotBeNull()
         val label = readmeService.readDataStrippedOfTags(resourceAsStream, "License", "About me")
