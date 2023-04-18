@@ -52,7 +52,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Concert%20Demos%20🎸%20&color=informational)](https://github.com/jesperancinha/concert-demos-root)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate%20Modules&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-modules)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Scala%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-scala-test-drives)| | | | | | |
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives🧮&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/python-50.png "Python")](https://www.python.org/)| | | | | |
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Algorithms%20Test%20Drives🧮&color=informational)](https://github.com/jesperancinha/jeorg-algorithms-test-drives)| | | | | | |
 |library-books| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=jeorg-security-defense-test-drives%20🔬&color=informational)](https://github.com/jesperancinha/jeorg-security-defense-test-drives)| | | | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Airports%20App%20🛬&color=informational)](https://github.com/jesperancinha/airports-app)| | | | | | |
