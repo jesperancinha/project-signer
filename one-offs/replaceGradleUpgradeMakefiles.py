@@ -5,6 +5,7 @@ rootdir = '../../'
 
 
 def replaceMakefileByPrefixFiles(prefix):
+    print("* Starting fix with '" + prefix + "':")
     with open(prefix + ".txt", "r") as file:
         data = file.read()
     with open(prefix + "Replacement.txt", "r") as file2:
@@ -23,3 +24,5 @@ def replaceMakefileByPrefixFiles(prefix):
 
 replaceMakefileByPrefixFiles("upgradeGradlePattern")
 replaceMakefileByPrefixFiles("gradleVersion")
+replaceMakefileByPrefixFiles("shellAddition")
+replaceMakefileByPrefixFiles("shellFix")
