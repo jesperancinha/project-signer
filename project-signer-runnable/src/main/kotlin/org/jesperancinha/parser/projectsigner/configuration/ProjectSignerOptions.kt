@@ -16,7 +16,7 @@ open class ProjectSignerOptions {
     @Option(
         names = ["-l", "--license-location"],
         paramLabel = "License location",
-        description = ["Location of tzhe License raw"]
+        description = ["License location"]
     )
     var licenseLocations: String? = null
 
