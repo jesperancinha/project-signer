@@ -1,29 +1,29 @@
 import os
 from os.path import exists
 
-rootdir = '../../'
+root_dir = '../../'
 
 
-def replaceMakefileByPrefixFiles(prefix):
+def replace_makefile_by_prefix_files(prefix):
     print("* Starting fix with '" + prefix + "':")
     with open(prefix + ".txt", "r") as file:
         data = file.read()
     with open(prefix + "Replacement.txt", "r") as file2:
-        newData = file2.read()
-    for file in os.listdir(rootdir):
-        testMakeFile = file + '/Makefile'
-        if (exists(os.path.join(rootdir, testMakeFile))):
-            makefile = os.path.join(rootdir, testMakeFile)
+        new_data = file2.read()
+    for file in os.listdir(root_dir):
+        test_make_file = file + '/Makefile'
+        if exists(os.path.join(root_dir, test_make_file)):
+            makefile = os.path.join(root_dir, test_make_file)
             with open(makefile) as f:
-                originalFileContent = f.read()
-                if data in originalFileContent:
+                original_file_content = f.read()
+                if data in original_file_content:
                     print(makefile)
                     with open(makefile, 'w') as f:
-                        f.write(originalFileContent.replace(data, newData))
+                        f.write(original_file_content.replace(data, new_data))
 
 
-replaceMakefileByPrefixFiles("upgradeGradlePattern")
-replaceMakefileByPrefixFiles("gradleVersion")
-replaceMakefileByPrefixFiles("shellAddition")
-replaceMakefileByPrefixFiles("shellFix")
-replaceMakefileByPrefixFiles("shellGitHubConflictFix")
+replace_makefile_by_prefix_files("upgradeGradlePattern")
+replace_makefile_by_prefix_files("gradleVersion")
+replace_makefile_by_prefix_files("shellAddition")
+replace_makefile_by_prefix_files("shellFix")
+replace_makefile_by_prefix_files("shellGitHubConflictFix")

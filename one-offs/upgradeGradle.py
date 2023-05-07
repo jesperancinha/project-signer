@@ -3,7 +3,7 @@ from os.path import exists
 import requests
 import re
 
-rootdir = '../../'
+root_dir = '../../'
 
 api_url = "https://services.gradle.org/versions/current"
 response = requests.get(api_url)
@@ -13,19 +13,19 @@ print(latest_gradle)
 print(version)
 
 
-def upgradeGradle():
-    for file in os.listdir(rootdir):
-        testMakeFile = file + '/Makefile'
-        if (exists(os.path.join(rootdir, testMakeFile))):
-            makefile = os.path.join(rootdir, testMakeFile)
-            with open(makefile) as f:
-                originalFileContent = f.read()
-                if 'GRADLE_VERSION' in originalFileContent:
+def upgrade_gradle():
+    for file in os.listdir(root_dir):
+        test_make_file = file + '/Makefile'
+        if exists(os.path.join(root_dir, test_make_file)):
+            makefile = os.path.join(root_dir, test_make_file)
+            with open(makefile) as original_file:
+                original_file_content = original_file.read()
+                if 'GRADLE_VERSION' in original_file_content:
                     print(makefile)
-                    with open(makefile, 'w') as f:
-                        newFile = re.sub('[0-9]+\.[0-9]+\.?[0-9]*',
-                                         version, originalFileContent, 1)
-                        f.write(newFile)
+                    with open(makefile, 'w') as new_file:
+                        new_file_content = re.sub(r'[0-9]+\.[0-9]+\.?[0-9]*',
+                                                  version, original_file_content, 1)
+                        new_file.write(new_file_content)
 
 
-upgradeGradle()
+upgrade_gradle()
