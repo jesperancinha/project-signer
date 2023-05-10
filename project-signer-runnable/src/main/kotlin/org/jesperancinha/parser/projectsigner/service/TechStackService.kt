@@ -10,6 +10,13 @@ val nameAndLinkPattern = Pattern.compile(".*\"([a-z A-Z0-9.]*)\".*(http.*)\\)")
 
 private const val TECHNOLOGIES_USED = "## Technologies used\n"
 
+private val TECHNOLOGIES_USED_LIST = listOf(
+    TECHNOLOGIES_USED,
+    "## 1.  - Technologies used\n",
+    "## Tech Stack\n",
+    "## Technology Stack\n",
+)
+
 private const val PLEASE_CHECK_THE_TECH_STACK_MD_TECK_STACK_MD_FILE_FOR_DETAILS =
     "\nPlease check the [TechStack.md](TechStack.md) file for details."
 
@@ -18,8 +25,9 @@ class TechStackService(
     val fileWriterService: FileWriterService,
 ) {
     fun mutateTechnologiesUsedParagraph(projectName: String, readmePath: Path, nonRefText: String): String {
-        val headSplit = nonRefText.split(TECHNOLOGIES_USED)
-        if (headSplit.size <= 1) {
+        val (index, headSplit) = TECHNOLOGIES_USED_LIST.mapIndexed { index, techText -> index to nonRefText.split(techText) }
+            .firstOrNull { (_, text) -> text.size > 1 } ?: (0 to null)
+        if (headSplit.isNullOrEmpty()) {
             return nonRefText
         }
         val secondSplit = headSplit[1].split("## ")
