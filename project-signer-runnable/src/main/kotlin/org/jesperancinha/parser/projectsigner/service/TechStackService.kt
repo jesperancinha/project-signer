@@ -12,6 +12,7 @@ private const val TECHNOLOGIES_USED = "## Technologies used\n"
 
 private val TECHNOLOGIES_USED_LIST = listOf(
     TECHNOLOGIES_USED,
+    "# Technologies used",
     "## 1.  - Technologies used\n",
     "## Tech Stack\n",
     "## Technology Stack\n",
