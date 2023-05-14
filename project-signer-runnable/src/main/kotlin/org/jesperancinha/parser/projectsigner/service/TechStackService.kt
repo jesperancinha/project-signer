@@ -15,6 +15,7 @@ private val TECHNOLOGIES_USED_LIST = listOf(
     "# Technologies used",
     "## 1.  - Technologies used\n",
     "## Tech Stack\n",
+    "## Tech stack\n",
     "## Technology Stack\n",
 )
 
