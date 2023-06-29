@@ -78,7 +78,7 @@ sudo apt -y autoremove
 
 ```bash
 alias jdk8="sdk use java 8.0.242.hs-adpt"
-alias jdk11="sdk use java  11.0.6.hs-adpt"
+alias jdk11="sdk use java 11.0.6.hs-adpt"
 alias jdk12="sdk use java 12.0.2.hs-adpt"
 alias jdk13="sdk use java 13.0.2.hs-adpt"
 alias jdk14="sdk use java 14.0.0.hs-adpt"
