@@ -6,3 +6,5 @@ upgrade-gradle:
 # Upgrades makefile scripts
 upgrade-makefile-variables:
 	python3 upgradeMakefileScripts.py
+upgrade-circle-ci:
+	python3 upgradeCircleCIScripts.py
