@@ -19,7 +19,7 @@
         <commons-io.version>2.13.0</commons-io.version>
         <maven-failsafe-plugin.version>3.1.2</maven-failsafe-plugin.version>
         <jaxb-api.version>2.3.1</jaxb-api.version>
-        <spring-boot-maven-plugin.version>3.1.1</spring-boot-maven-plugin.version>
+        <spring-boot-maven-plugin.version>3.1.2</spring-boot-maven-plugin.version>
         <jackson-databind.version>2.15.2</jackson-databind.version>
         <kotlin.version>1.9.0</kotlin.version>
 
