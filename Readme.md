@@ -111,13 +111,24 @@ mvn nexus-staging:release  -Prelease
 </settings>
 ```
 
+---
 
 ## My Android apps
 
-- https://github.com/jesperancinha/base-converter-android
-- https://github.com/jesperancinha/timezone-app-utility-android
-- https://github.com/jesperancinha/ping-app-android
-- https://github.com/jesperancinha/catcher-app-android
+<div align="center">
+
+[![](https://img.shields.io/badge/Matrix%20Anywhere-%230077B5.svg?style=for-the-badge&logo=android&color=0a5d00)](https://github.com/jesperancinha/matrix-anywhere-android)
+[![](https://img.shields.io/badge/Base%20Converter-%230077B5.svg?style=for-the-badge&logo=android&color=0a5d00)](https://github.com/jesperancinha/base-converter-android)
+[![](https://img.shields.io/badge/Timezone%20Utility-%230077B5.svg?style=for-the-badge&logo=android&color=0a5d00)](https://github.com/jesperancinha/timezone-app-utility-android)
+[![](https://img.shields.io/badge/Ping%20App-%230077B5.svg?style=for-the-badge&logo=android&color=0a5d00)](https://github.com/jesperancinha/ping-app-android)
+[![](https://img.shields.io/badge/Catcher%20App-%230077B5.svg?style=for-the-badge&logo=android&color=0a5d00)](https://github.com/jesperancinha/catcher-app-android)
+
+</div>
+
+
+Check all the apps here: [![](https://img.shields.io/badge/Google%20Play-%230077B5.svg?style=for-the-badge&logo=googleplay&color=purple)](https://play.google.com/store/apps/developer?id=Joao+Filipe+Sabino+Esperancinha)
+
+---
 
 ## References
 
