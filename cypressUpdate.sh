@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+cd e2e || exit
+sudo npm install -g npm-check-updates@latest
+ncu -u
+cd ..
+
 cypress=$(cat < "e2e/package.json" | grep cypress | tail -1 | cut -d'"' -f4- | rev | cut -c 2- | rev)
 cypress_docker=$(cat < "e2e/package.json" | grep cypress | tail -1 | cut -d'"' -f4- | cut -c 2- )
 echo -e "Cypress Version"
@@ -10,10 +15,7 @@ sed -E 's/"cypress": .*/"cypress": "'"$cypress"'"/g' e2e/package.json
 read -p "Are you sure? (Yy/Nn)" -n 1 -r
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  cd e2e || exit
-  sudo npm install -g npm-check-updates@latest
-  ncu -u
-  cd ../..
+  cd ..
   for item in *; do
     if [[ -d "$item" ]] && [[ "$item" != ".git" ]] && [[ "$item" != "target" ]]; then
       if [[ ! $item = "project-signer" ]]; then
