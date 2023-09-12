@@ -9,6 +9,6 @@
   "author": "João Esperancinha",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.1.0"
+    "cypress": "^13.2.0"
   }
 }
