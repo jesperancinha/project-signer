@@ -4,6 +4,10 @@ GRADLE_VERSION ?= 8.2
 b: build
 build:
 	mvn clean install
+build-cypress:
+	cd e2e; \
+	yarn; \
+	npm i
 test:
 	mvn test
 local:
