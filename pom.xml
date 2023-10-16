@@ -23,7 +23,7 @@
         <jackson-databind.version>2.15.3</jackson-databind.version>
         <kotlin.version>1.9.10</kotlin.version>
 
-        <jacoco-maven-plugin.version>0.8.10</jacoco-maven-plugin.version>
+        <jacoco-maven-plugin.version>0.8.11</jacoco-maven-plugin.version>
         <omni-coveragereporter-maven-plugin.version>0.4.3</omni-coveragereporter-maven-plugin.version>
         <springmockk.version>4.0.2</springmockk.version>
     </properties>
