@@ -21,7 +21,7 @@
         <jaxb-api.version>2.3.1</jaxb-api.version>
         <spring-boot-maven-plugin.version>3.1.5</spring-boot-maven-plugin.version>
         <jackson-databind.version>2.15.3</jackson-databind.version>
-        <kotlin.version>1.9.10</kotlin.version>
+        <kotlin.version>1.9.20</kotlin.version>
 
         <jacoco-maven-plugin.version>0.8.11</jacoco-maven-plugin.version>
         <omni-coveragereporter-maven-plugin.version>0.4.3</omni-coveragereporter-maven-plugin.version>
