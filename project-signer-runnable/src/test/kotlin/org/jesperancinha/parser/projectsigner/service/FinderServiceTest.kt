@@ -51,7 +51,9 @@ internal class FinderServiceTest {
     @Throws(IOException::class)
     fun testIterateThroughFilesAndFolders() {
         val mockParagraphs: Paragraphs = mockk()
+        every { mockParagraphs.getParagraphCount() } returns 0
         every { templateService.findAllParagraphs() } returns mockParagraphs
+        every { templateService.findAllRedirectParagraphs() } returns mockParagraphs
         finderService.iterateThroughFilesAndFolders(tempDirectory)
         verify { templateService.findAllParagraphs() }
         verify { generatorService.processReadmeFile(tempDirectory, mockParagraphs) }

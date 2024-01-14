@@ -53,7 +53,10 @@ open class ProjectSignerVisitor(
                     }
                 }
 
-                if(allRedirectParagraphs == null || dir.isUserProject(rootPath)) {
+                if (allRedirectParagraphs == null ||
+                    allRedirectParagraphs.getParagraphCount() == 0 ||
+                    dir.isUserProject(rootPath)
+                ) {
                     generatorService?.processReadmeFile(dir, allParagraphs)
                 } else {
                     generatorService?.processReadmeFile(dir, requireNotNull(allRedirectParagraphs))

@@ -54,7 +54,7 @@ open class ProjectSignerOptions {
         names = ["-tr", "--raw-redirect-location"],
         paramLabel = "Redirect Template location",
         description = ["Location of the redirect template raw"],
-        required = true
+        required = false
     )
     var redirectTemplateLocation: Path? = null
 
