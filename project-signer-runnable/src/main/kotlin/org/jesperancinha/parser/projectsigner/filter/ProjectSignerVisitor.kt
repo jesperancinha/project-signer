@@ -6,16 +6,20 @@ import org.jesperancinha.parser.projectsigner.service.findReadmeFileName
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.util.ObjectUtils
+import java.io.BufferedReader
 import java.io.File
 import java.io.IOException
+import java.io.InputStreamReader
 import java.nio.file.*
 import java.nio.file.attribute.BasicFileAttributes
 import java.util.*
+import kotlin.io.path.absolutePathString
 import kotlin.io.path.deleteIfExists
 
 open class ProjectSignerVisitor(
     private val generatorService: GeneratorSevice? = null,
     private val allParagraphs: Paragraphs,
+    private val allRedirectParagraphs: Paragraphs?,
     private val allLicenseText: List<String>? = null
 ) : SimpleFileVisitor<Path>() {
 
@@ -47,7 +51,12 @@ open class ProjectSignerVisitor(
                         )
                     }
                 }
-                generatorService?.processReadmeFile(dir, allParagraphs)
+
+                if(allRedirectParagraphs == null || dir.isUserProject()) {
+                    generatorService?.processReadmeFile(dir, allParagraphs)
+                } else {
+                    generatorService?.processReadmeFile(dir, requireNotNull(allRedirectParagraphs))
+                }
                 if (Objects.nonNull(allLicenseText)) {
                     try {
                         generatorService?.processLicenseFile(dir, allLicenseText)
@@ -77,4 +86,16 @@ open class ProjectSignerVisitor(
     companion object {
         val logger: Logger = LoggerFactory.getLogger(ProjectSignerVisitor::class.java)
     }
+}
+
+private fun Path.isUserProject(): Boolean {
+    val process = ProcessBuilder("git", "config", "--get", "user.name")
+        .start()
+
+    val reader = BufferedReader(InputStreamReader(process.inputStream))
+    val username = reader.readLine()
+
+    process.waitFor()
+
+    return this.absolutePathString().contains("/$username")
 }

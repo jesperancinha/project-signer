@@ -21,9 +21,13 @@ open class TemplateService(private val optionsService: OptionsService) {
      * @return A [Paragraphs] parsed object
      * @throws IOException Any kind of IO Exception
      */
-    @Throws(IOException::class)
     open fun  findAllParagraphs(): Paragraphs {
         val fileTemplate = optionsService.projectSignerOptions?.templateLocation?.toFile()
+        val templateInputStream = fileTemplate?.let { FileInputStream(it) }
+        return templateInputStream?.let { TemplateParserHelper.findAllParagraphs(templateInputStream) } ?: Paragraphs()
+    }
+    open fun findAllRedirectParagraphs(): Paragraphs? {
+        val fileTemplate = optionsService.projectSignerOptions?.redirectTemplateLocation?.toFile()
         val templateInputStream = fileTemplate?.let { FileInputStream(it) }
         return templateInputStream?.let { TemplateParserHelper.findAllParagraphs(templateInputStream) } ?: Paragraphs()
     }

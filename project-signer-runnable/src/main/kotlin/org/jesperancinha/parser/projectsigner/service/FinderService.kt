@@ -14,6 +14,7 @@ open class FinderService(
     @Throws(IOException::class)
     open fun iterateThroughFilesAndFolders(rootPath: Path): Path? {
         val allParagraphs = templateService.findAllParagraphs()
+        val allRedirectParagraphs = templateService.findAllRedirectParagraphs()
         val readAllLicenses = templateService.readAllLicenses()
        return Files.walkFileTree(
             rootPath,
@@ -21,6 +22,7 @@ open class FinderService(
             ProjectSignerVisitor(
                 generatorService = generatorService,
                 allParagraphs = allParagraphs,
+                allRedirectParagraphs = allRedirectParagraphs,
                 allLicenseText = readAllLicenses
             )
         )

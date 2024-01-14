@@ -48,5 +48,15 @@ open class ProjectSignerOptions {
         defaultValue = "false"
     )
     var noEmpty:Boolean = false
+
+
+    @Option(
+        names = ["-tr", "--raw-redirect-location"],
+        paramLabel = "Redirect Template location",
+        description = ["Location of the redirect template raw"],
+        required = true
+    )
+    var redirectTemplateLocation: Path? = null
+
     fun getLicenseLocations(): Array<Path>? = licenseLocations?.split(",")?.mapNotNull { Path.of(it) }?.toTypedArray()
 }
