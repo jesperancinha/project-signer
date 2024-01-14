@@ -20,7 +20,8 @@ open class ProjectSignerVisitor(
     private val generatorService: GeneratorSevice? = null,
     private val allParagraphs: Paragraphs,
     private val allRedirectParagraphs: Paragraphs?,
-    private val allLicenseText: List<String>? = null
+    private val allLicenseText: List<String>? = null,
+    private val rootPath: Path
 ) : SimpleFileVisitor<Path>() {
 
     override fun visitFile(file: Path, attrs: BasicFileAttributes): FileVisitResult {
@@ -52,7 +53,7 @@ open class ProjectSignerVisitor(
                     }
                 }
 
-                if(allRedirectParagraphs == null || dir.isUserProject()) {
+                if(allRedirectParagraphs == null || dir.isUserProject(rootPath)) {
                     generatorService?.processReadmeFile(dir, allParagraphs)
                 } else {
                     generatorService?.processReadmeFile(dir, requireNotNull(allRedirectParagraphs))
@@ -88,7 +89,7 @@ open class ProjectSignerVisitor(
     }
 }
 
-private fun Path.isUserProject(): Boolean {
+private fun Path.isUserProject(rootPath: Path): Boolean {
     val process = ProcessBuilder("git", "config", "--get", "user.name")
         .start()
 
@@ -96,6 +97,5 @@ private fun Path.isUserProject(): Boolean {
     val username = reader.readLine()
 
     process.waitFor()
-
-    return this.absolutePathString().contains("/$username")
+    return this.absolutePathString().replace(rootPath.absolutePathString(), "").contains("/$username")
 }

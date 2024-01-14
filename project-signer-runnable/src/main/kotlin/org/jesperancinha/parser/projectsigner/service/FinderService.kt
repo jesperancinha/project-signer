@@ -23,7 +23,8 @@ open class FinderService(
                 generatorService = generatorService,
                 allParagraphs = allParagraphs,
                 allRedirectParagraphs = allRedirectParagraphs,
-                allLicenseText = readAllLicenses
+                allLicenseText = readAllLicenses,
+                rootPath = rootPath
             )
         )
     }
