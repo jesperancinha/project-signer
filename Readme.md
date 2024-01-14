@@ -50,6 +50,8 @@ Example:
 -l "../project-signer-templates/licenses/APACHE2.template,../project-signer-templates/licenses/ISC.template,../project-signer-templates/licenses/MIT.template" -t "../project-signer-templates/Readme.md" -tr "../project-signer-templates/RedirectReadme.md" License "About me" "Achievements" -d ../../
 ```
 
+Run with `prod` profile.
+
 To summarize, this program will scan all your readme files and standardize name. You may want a generic signature in all your projects and this little runner will do just that!
 
 This command line runner will complete several boiler plate tasks:
