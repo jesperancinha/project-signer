@@ -8,6 +8,12 @@
   <img align="center" src="https://komarev.com/ghpvc/?username=jesperancinha"/>
 </div>
 
+---
+
+Hello there developers! This is my GitHub profile, welcome!
+I am an experience Software developer/engineer that loves to share knowledge with everyone on this network. 👋. 
+
+Feel free to have a look, ask questions and open issues!
 
 ---
 
