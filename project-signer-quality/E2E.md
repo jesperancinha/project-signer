@@ -4,6 +4,7 @@
 
 |Project|Cypress|Swagger|GitHub E2E Pipeline|GitLab E2E+ Pipeline|
 |---|---|---|---|---|
+|**FreeCodeCamp**- Information Security and Quality Assurance| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate%20Modules&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-modules)| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Cups%20Kalah%20☕️%20&color=informational)](https://github.com/jesperancinha/mancalaje)| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Concert%20Demos%20🎸%20&color=informational)](https://github.com/jesperancinha/concert-demos-root)| | |[![concert-demos-root-e2e](https://github.com/jesperancinha/concert-demos-root/actions/workflows/concert-demos-root-e2e.yml/badge.svg)](https://github.com/jesperancinha/concert-demos-root/actions/workflows/concert-demos-root-e2e.yml)| |
@@ -13,7 +14,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Your%20finance%20JE&color=informational)](https://github.com/jesperancinha/your-finance-je)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/cypress-50.png "Cypress")](https://www.cypress.io/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/swagger-50.png "Swagger")](https://swagger.io/)|[![e2e-your-finance-je](https://github.com/jesperancinha/your-finance-je/actions/workflows/your-finance-je-e2e.yml/badge.svg)](https://github.com/jesperancinha/your-finance-je/actions/workflows/your-finance-je-e2e.yml)| |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Good%20Story%20🐉&color=informational)](https://github.com/jesperancinha/good-story)| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Video%20Series%20Apps&color=informational)](https://github.com/jesperancinha/video-series-app)| | |[![e2e-video-series-app](https://github.com/jesperancinha/video-series-app/actions/workflows/video-series-app-e2e.yml/badge.svg)](https://github.com/jesperancinha/video-series-app/actions/workflows/video-series-app-e2e.yml)| |
-|<div align="center">| | | | |
+|| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=jeorg-micro-test-drives%20💽&color=informational)](https://github.com/jesperancinha/jeorg-micro-test-drives)| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Consolerizer&color=informational)](https://github.com/JEsperancinhaOrg/consolerizer-root)| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Inner%20Text%20Searcher%20Go%20📖&color=informational)](https://github.com/jesperancinha/inner-text-searcher-go)| | | | |
@@ -46,7 +47,9 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Sea%20Shell%20Archiver&color=informational)](https://github.com/jesperancinha/sea-shell-archiver)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/cypress-50.png "Cypress")](https://www.cypress.io/)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-50/swagger-50.png "Swagger")](https://swagger.io/)|[![S_ARCH e2e-sea-shell-archiver](https://github.com/jesperancinha/sea-shell-archiver/actions/workflows/sea-shell-archiver-e2e.yml/badge.svg)](https://github.com/jesperancinha/sea-shell-archiver/actions/workflows/sea-shell-archiver-e2e.yml)| |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Images%20Go%20🏞&color=informational)](https://github.com/jesperancinha/images-go)| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Kitten%20House%20Care%20🐱&color=informational)](https://github.com/jesperancinha/kitten-house-care-parent)| | | | |
+|**FreeCodeCamp**- Information Security and Quality Assurance| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Performance%20Objects%20&color=informational)](https://github.com/jesperancinha/performance-projects)| | | | |
+|jeorg-java-test-drives| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=StaCo%20App%20🪙%20&color=informational)](https://github.com/jesperancinha/staco-app)| | |[![e2e-staco-app](https://github.com/jesperancinha/staco-app/actions/workflows/staco-app-e2e.yml/badge.svg)](https://github.com/jesperancinha/staco-app/actions/workflows/staco-app-e2e.yml)| |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JSON%20to%20Builder%20Pattern&color=informational)](https://github.com/jesperancinha/json-to-builder-pattern)| | | | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=math-service-scala%20🧮&color=informational)](https://github.com/jesperancinha/math-service-scala)| | | | |
