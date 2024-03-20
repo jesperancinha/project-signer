@@ -13,6 +13,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=base-converter-android%20⏹&color=informational)](https://github.com/jesperancinha/base-converter-android)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Your%20finance%20JE&color=informational)](https://github.com/jesperancinha/your-finance-je)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://itnext.io/learning-jwt-security-using-kumuluzee-the-finances-of-a-league-of-the-environment-2f541e99cc90)| |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Good%20Story%20🐉&color=informational)](https://github.com/jesperancinha/good-story)| | |
+|wild-life-safety-monitor| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitLab&message=Video%20Series%20Apps&color=informational)](https://github.com/jesperancinha/video-series-app)| | |
 || | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=jeorg-micro-test-drives%20💽&color=informational)](https://github.com/jesperancinha/jeorg-micro-test-drives)| | |
@@ -42,7 +43,7 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=omni-coveragereporter-gradle-plugin&color=informational)](https://github.com/JEsperancinhaOrg/omni-reporter-gradle-plugin)| | |
 |.github| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JEOrg%20Cloud%20Test%20Drives%20☁️&color=informational)](https://github.com/jesperancinha/jeorg-cloud-test-drives)| | |
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Moving%20Objects%20Cams%20Service%20💎&color=informational)](https://github.com/jesperancinha/moving-objects-service-root)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://itnext.io/monitoring-secure-coroutines-and-webflux-reactive-applications-with-prometheus-grafana-and-b99dafb59a4b)| |
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Moving%20Objects%20Cams%20Service%20💎&color=informational)](https://github.com/jesperancinha/moving-objects-service-root)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Public%20Transport%20Declarer%20🚂&color=informational)](https://github.com/jesperancinha/public-transport-declarer)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Sea%20Shell%20Archiver&color=informational)](https://github.com/jesperancinha/sea-shell-archiver)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Images%20Go%20🏞&color=informational)](https://github.com/jesperancinha/images-go)| | |
@@ -50,7 +51,7 @@
 |**FreeCodeCamp**- Information Security and Quality Assurance| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Performance%20Objects%20&color=informational)](https://github.com/jesperancinha/performance-projects)| | |
 |jeorg-java-test-drives| | |
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=StaCo%20App%20🪙%20&color=informational)](https://github.com/jesperancinha/staco-app)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://itnext.io/learning-aws-with-localstack-and-reactive-kotlin-a-stamps-and-coins-implementation-d10278f98587)| |
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=StaCo%20App%20🪙%20&color=informational)](https://github.com/jesperancinha/staco-app)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=JSON%20to%20Builder%20Pattern&color=informational)](https://github.com/jesperancinha/json-to-builder-pattern)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=math-service-scala%20🧮&color=informational)](https://github.com/jesperancinha/math-service-scala)| | |
 |anseitrw-small-projects| | |
@@ -91,12 +92,13 @@
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Android🧿&color=informational)](https://github.com/jesperancinha/image-train-filters-android)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Scala%20Test%20Drives&color=informational)](https://github.com/jesperancinha/jeorg-scala-test-drives)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Favourite%20Lyrics%20App🎶&color=informational)](https://github.com/jesperancinha/favourite-lyrics-app)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/swlh/hexagonal-architecture-a596390269fd)| |
+|Kont Test Drives - Startup with KONNECT| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Buy%20Odd%20Yucca%20Concert🌴&color=informational)](https://github.com/jesperancinha/buy-odd-yucca-concert)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://itnext.io/configurable-kong-api-gateway-with-micronaut-services-in-kotlin-a-very-odd-yucca-tribute-concert-e0a978618eab)| |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Coffee%20Paradigms&color=informational)](https://github.com/jesperancinha/coffee-paradigms)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Airports%20App%20🛬&color=informational)](https://github.com/jesperancinha/airports-app)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Image%20Train%20Filters%20Web%20🚂&color=informational)](https://github.com/jesperancinha/image-train-filters-web)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Kotlin%20Test%20Drives&color=informational)](https://github.com/jesperancinha/kotlin-test-drives)| | |
-|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Newscast%20Explorer&color=informational)](https://github.com/jesperancinha/news-cast-explorer)|[![alt text](https://raw.githubusercontent.com/jesperancinha/project-signer/master/project-signer-templates/icons-20/medium-20.png "Medium")](https://medium.com/@jofisaes/newscast-using-sagas-in-choreography-and-orchestration-patterns-a-java-17-and-kotlin-example-e3d0ec17b910)| |
+|[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Newscast%20Explorer&color=informational)](https://github.com/jesperancinha/news-cast-explorer)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=ITF%20Chartizate&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=rust-test-drive%20⚙️&color=informational)](https://github.com/jesperancinha/rust-test-drive)| | |
 |[![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=image-sizer&color=informational)](https://github.com/jesperancinha/image-sizer)| | |
