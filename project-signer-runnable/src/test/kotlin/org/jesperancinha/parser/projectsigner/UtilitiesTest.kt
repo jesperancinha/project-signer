@@ -17,6 +17,6 @@ class UtilitiesTest {
 
         process.waitFor()
 
-        username shouldBeIn arrayOf("jesperancinha", null)
+        username shouldBeIn arrayOf("jesperancinha", null, "Joao Esperancinha")
     }
 }
