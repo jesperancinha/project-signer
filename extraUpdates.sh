@@ -15,6 +15,8 @@ arr["actions\/setup-java@v3"]="actions\/setup-java@v4"
 arr["actions\/setup-node@v1"]="actions\/setup-node@v4"
 arr["actions\/setup-node@v2"]="actions\/setup-node@v4"
 arr["actions\/setup-node@v3"]="actions\/setup-node@v4"
+arr["gradle\/gradle-build-action@v1"]="gradle\/gradle-build-action@v3"
+arr["gradle\/gradle-build-action@v2"]="gradle\/gradle-build-action@v3"
 
 echo -e "Cypress Version"
 echo -e "--- New version is \e[32m$cypress\e[0m"
