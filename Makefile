@@ -51,3 +51,5 @@ install-linux:
 	curl https://services.gradle.org/versions/current
 upgrade-cypress-all-projects:
 	./cypressUpdate.sh
+deps-plugins-update:
+	curl -sL https://raw.githubusercontent.com/jesperancinha/project-signer/master/pluginUpdatesOne.sh | bash
