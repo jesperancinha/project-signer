@@ -29,7 +29,6 @@ for key in "${!arr[@]}"; do
   fi
 done
 if [ -d .github/workflows ]; then
-  rm .github/workflows/*.*01
   WORKFLOWS=".github/workflows/*"
   for f in $WORKFLOWS
   do
