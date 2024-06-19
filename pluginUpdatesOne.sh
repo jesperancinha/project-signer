@@ -18,8 +18,9 @@ for plugin in "${pluginsArr[@]}"; do
   echo "Performing GET request to $versionUrl"
   result=$(curl -s $versionUrl)
   echo "$result"
-  version=$( echo $result | jq -r '.[0].name' | cut -d '.' -f1)
+  version=$( echo "$result" | jq -r '.[0].name' | cut -d '.' -f1)
   arr["$tag\/$name@v[0-9]*"]="$tag\/$name@$version"
+  echo "Will replace $tag\/$name@v[0-9]* with $tag\/$name@$version"
 done
 
 echo -e "GitHub Workflow Updates"
