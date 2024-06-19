@@ -11,7 +11,7 @@ sudo npm install -g npm-check-updates@latest
 ncu -u
 cd ..
 
-cypress=$(cat < "$e2eFolder/package.json" | grep cypress | tail -1 | cut -d'"' -f4- | rev | cut -c 2- | rev | tr -d '"')
+cypress=$(cat < "$e2eFolder/package.json" | grep cypress\" | tail -1 | cut -d'"' -f4- | rev | cut -c 2- | rev | tr -d '"')
 echo -e "Cypress Version"
 echo -e "--- New version is \e[32m$cypress\e[0m"
 echo -e "--- New docker version is \e[32m$cypress\e[0m"
