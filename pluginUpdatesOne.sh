@@ -40,6 +40,6 @@ if [ -d .github/workflows ]; then
         sed -E 's/'$key'/'"${arr[${key}]}"'/g' "$f""01" > "$f"
       fi
     done
-    rm "$f""01"
+    if [ -f "$f""01" ]; then rm "$f""01"; fi
   done
 fi
