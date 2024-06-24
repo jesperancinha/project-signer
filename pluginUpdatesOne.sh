@@ -20,6 +20,7 @@ for plugin in "${pluginsArr[@]}"; do
   echo "$tag"/"$name"
   versionUrl="https://api.github.com/repos/"$tag"/"$name"/tags"
   echo "Performing GET request to $versionUrl"
+  sleep 1
   result=$(curl -s $versionUrl)
   echo "$result"
   name=${name//\//\\/}
