@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-newVersion=$(curl -s 'https://dl.google.com/dl/android/maven2/androidx/compose/compiler/compiler/maven-metadata.xml' | xmllint --xpath 'string(//metadata/versioning/latest)' -)
-
 sudo apt -y install libxml2-utils
+
+newVersion=$(curl -s 'https://dl.google.com/dl/android/maven2/androidx/compose/compiler/compiler/maven-metadata.xml' | xmllint --xpath 'string(//metadata/versioning/latest)' -)
 
 echo "Updating JetPack compose compiler to version $newVersion"
 
