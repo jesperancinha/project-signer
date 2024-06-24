@@ -14,7 +14,6 @@ pluginsArr[4]="nick-fields/retry"
 pluginsArr[5]="peter-evans/create-pull-request"
 pluginsArr[6]="dependabot/fetch-metadata"
 pluginsArr[7]="github/codeql-action"
-pluginsArr[8]="github/codeql-action"
 
 pluginsReplaceArr[${pluginsArr[0]}]=${pluginsArr[0]}
 pluginsReplaceArr[${pluginsArr[1]}]=${pluginsArr[1]}
@@ -23,8 +22,7 @@ pluginsReplaceArr[${pluginsArr[3]}]=${pluginsArr[3]}
 pluginsReplaceArr[${pluginsArr[4]}]=${pluginsArr[4]}
 pluginsReplaceArr[${pluginsArr[5]}]=${pluginsArr[5]}
 pluginsReplaceArr[${pluginsArr[6]}]=${pluginsArr[6]}
-pluginsReplaceArr[${pluginsArr[7]}]="github/codeql-action/init"
-pluginsReplaceArr[${pluginsArr[8]}]="github/codeql-action/autobuild"
+pluginsReplaceArr[${pluginsArr[7]}]="github/codeql-action/init github/codeql-action/autobuild github/codeql-action/analyze"
 
 for plugin in "${pluginsArr[@]}"; do
 
@@ -37,18 +35,21 @@ for plugin in "${pluginsArr[@]}"; do
   result=$(curl -s $versionUrl)
   echo "$result"
 
-  tag=$(echo "${pluginsReplaceArr[$plugin]}" | awk -F"$separator" '{print $1}')
-  name=$(echo "${pluginsReplaceArr[$plugin]}" | awk -F"$separator" '{print substr($0, index($0,$2))}')
-  name=${name//\//\\/}
-  echo "$tag"/"$name"
+  pluginSegments=${pluginsReplaceArr[$plugin]}
+  for pluginSement in $pluginSegments; do
+    tag=$(echo "$pluginSement" | awk -F"$separator" '{print $1}')
+    name=$(echo "$pluginSement" | awk -F"$separator" '{print substr($0, index($0,$2))}')
+    name=${name//\//\\/}
+    echo "$tag"/"$name"
 
-  version=$( echo "$result" | jq -r '.[0].name' | cut -d '.' -f1)
-  if [[ -n $version ]]; then
-    arr["$tag\/$name@v[0-9\.]*"]="$tag\/$name@$version"
-    echo "Will replace $tag\/$name@v[0-9]* with $tag\/$name@$version"
-  else
-    echo "ERROR! Failed to get $plugin version!"
-  fi
+    version=$(echo "$result" | jq -r '.[0].name' | cut -d '.' -f1)
+    if [[ -n $version ]]; then
+      arr["$tag\/$name@v[0-9\.]*"]="$tag\/$name@$version"
+      echo "Will replace $tag\/$name@v[0-9]* with $tag\/$name@$version"
+    else
+      echo "ERROR! Failed to get $plugin version!"
+    fi
+  done
 done
 
 echo -e "GitHub Workflow Updates"
