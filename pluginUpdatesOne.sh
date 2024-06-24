@@ -35,8 +35,8 @@ for plugin in "${pluginsArr[@]}"; do
   result=$(curl -s $versionUrl)
   echo "$result"
 
-  tag=$(echo ${pluginsReplaceArr[$plugin]]} | awk -F"$separator" '{print $1}')
-  name=$(echo ${pluginsReplaceArr[$plugin]]} | awk -F"$separator" '{print substr($0, index($0,$2))}')
+  tag=$(echo ${pluginsReplaceArr[$plugin]} | awk -F"$separator" '{print $1}')
+  name=$(echo ${pluginsReplaceArr[$plugin]} | awk -F"$separator" '{print substr($0, index($0,$2))}')
   name=${name//\//\\/}
   version=$( echo "$result" | jq -r '.[0].name' | cut -d '.' -f1)
   if [[ -n $version ]]; then
