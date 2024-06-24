@@ -14,6 +14,7 @@ pluginsArr[4]="nick-fields/retry"
 pluginsArr[5]="peter-evans/create-pull-request"
 pluginsArr[6]="dependabot/fetch-metadata"
 pluginsArr[7]="github/codeql-action"
+pluginsArr[8]="github/codeql-action"
 
 pluginsReplaceArr[${pluginsArr[0]}]=${pluginsArr[0]}
 pluginsReplaceArr[${pluginsArr[1]}]=${pluginsArr[1]}
@@ -23,6 +24,7 @@ pluginsReplaceArr[${pluginsArr[4]}]=${pluginsArr[4]}
 pluginsReplaceArr[${pluginsArr[5]}]=${pluginsArr[5]}
 pluginsReplaceArr[${pluginsArr[6]}]=${pluginsArr[6]}
 pluginsReplaceArr[${pluginsArr[7]}]="github/codeql-action/init"
+pluginsReplaceArr[${pluginsArr[8]}]="github/codeql-action/autobuild"
 
 for plugin in "${pluginsArr[@]}"; do
 
