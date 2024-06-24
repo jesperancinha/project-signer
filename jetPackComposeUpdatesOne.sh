@@ -2,6 +2,8 @@
 
 newVersion=$(curl -s 'https://dl.google.com/dl/android/maven2/androidx/compose/compiler/compiler/maven-metadata.xml' | xmllint --xpath 'string(//metadata/versioning/latest)' -)
 
+sudo apt install xmllint
+
 echo "Updating JetPack compose compiler to version $newVersion"
 
 for file in $(find . -name "build.gradle.kts"); do
