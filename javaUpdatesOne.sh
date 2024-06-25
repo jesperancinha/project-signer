@@ -54,7 +54,7 @@ if [[ -n $latestJavaLTS ]]; then
   #  Circle CI File
   f=".circleci/config.yml"
   if [ -f $f ]; then
-    targetImageUrl=$(curl -s https://api.adoptopenjdk.net/v3/assets/latest/"$latestJavaLTS"/hotspot | jq -r '.[0].binary.package.link')
+    targetImageUrl=$(curl -s curl -s "https://api.adoptium.net/v3/assets/latest/$latestJavaLTS/hotspot" | jq -r '[.[] | select(.binary.image_type == "jdk" and .binary.os == "linux" and .binary.architecture == "x64")][0].binary.package.link')
     targetImageUrl=${targetImageUrl//\//\\/}
     sed -E 's/-\s*image:\s*maven.*/- image: '"$targetImage"'/g' "$f" > "$f""01"
     mv "$f""01" "$f"
