@@ -134,6 +134,7 @@ Production deployment location: [![](https://img.shields.io/badge/Google%20Play-
 
 ## References
 
+-   [Java Bytecode versions](https://javaalmanac.io/bytecode/versions/)
 -   [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)
 -   [github-profile-views-counter](https://github.com/antonkomarev/github-profile-views-counter)
 -   [App Icon Maker](https://appiconmaker.co/)
