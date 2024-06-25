@@ -63,9 +63,9 @@ if [[ -n $latestJavaLTS ]]; then
     sed -E 's/command:\s*wget\s*https:\/\/.*;\\/command: wget '"$targetImageUrl"';\\/g' "$f" > "$f""01"
     mv "$f""01" "$f"
     fileName=$(echo "$targetImageUrl" | awk -F'/' '{print $NF}')
-    sed -E 's/tar (-)?xvf .* &&/tar -xvf '"$fileName"';\\/g' "$f" > "$f""01"
+    sed -E 's/tar (-)?xvf .* &&/tar xvf '"$fileName"';\\/g' "$f" > "$f""01"
     mv "$f""01" "$f"
-    sed -E 's/tar (-)?xvf .*;\\/tar -xvf '"$fileName"';\\/g' "$f" > "$f""01"
+    sed -E 's/tar (-)?xvf .*;\\/tar xvf '"$fileName"';\\/g' "$f" > "$f""01"
     mv "$f""01" "$f"
     sed -E 's/jdk[0-9]+/jdk'"$latestJavaLTS"'/g' "$f" > "$f""01"
     mv "$f""01" "$f"
