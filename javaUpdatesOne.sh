@@ -58,22 +58,16 @@ if [[ -n $latestJavaLTS ]]; then
     targetImageUrl=${targetImageUrl//\//\\/}
     sed -E 's/-\s*image:\s*maven.*/- image: '"$targetImage"'/g' "$f" > "$f""01"
     mv "$f""01" "$f"
-    sed -E 's/command:\s*wget\s*https:\/\/.* &&/command: wget '"$targetImageUrl"'; \\/g' "$f" > "$f""01"
-    mv "$f""01" "$f"
-    sed -E 's/command:\s*wget\s*https:\/\/.*;\\/command: wget '"$targetImageUrl"'; \\/g' "$f" > "$f""01"
+    sed -E 's/command:\s*wget\s*https:\/\/.* &&/command: wget '"$targetImageUrl"' \&\&/g' "$f" > "$f""01"
     mv "$f""01" "$f"
     fileName=$(echo "$targetImageUrl" | awk -F'/' '{print $NF}')
-    sed -E 's/tar (-)?xvf .* &&/tar -xvf '"$fileName"'; \\/g' "$f" > "$f""01"
-    mv "$f""01" "$f"
-    sed -E 's/tar (-)?xvf .*;\\/tar -xvf '"$fileName"'; \\/g' "$f" > "$f""01"
+    sed -E 's/tar (-)?xvf .* &&/tar -xvf '"$fileName"' \&\&/g' "$f" > "$f""01"
     mv "$f""01" "$f"
     sed -E 's/jdk[0-9]+/jdk'"$latestJavaLTS"'/g' "$f" > "$f""01"
     mv "$f""01" "$f"
     sed -E 's/jdk-[0-9]+/jdk-'"$latestJavaLTS"'/g' "$f" > "$f""01"
     mv "$f""01" "$f"
     sed -E 's/Install SDK [0-9]*/Install SDK '"$latestJavaLTS"'/g' "$f" > "$f""01"
-    mv "$f""01" "$f"
-    sed -E 's/ &&/;\\/g' "$f" > "$f""01"
     mv "$f""01" "$f"
   fi
 
