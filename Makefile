@@ -55,4 +55,7 @@ deps-plugins-update:
 	curl -sL https://raw.githubusercontent.com/jesperancinha/project-signer/master/pluginUpdatesOne.sh | bash
 deps-java-update:
 	curl -sL https://raw.githubusercontent.com/jesperancinha/project-signer/master/javaUpdatesOne.sh | bash
+deps-cypress-update:
+	cd e2e; \
+	ncu -u
 deps-quick-update: deps-cypress-update deps-plugins-update deps-java-update
