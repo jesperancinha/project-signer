@@ -51,6 +51,13 @@ if [[ -n $latestJavaLTS ]]; then
       mv "$f""01" "$f"
   done
 
+  #  Circle CI File
+  f=".circleci/config.yml"
+  if [ -f $f ]; then
+    sed -E 's/-\s*image:\s*maven.*/- image: '"$targetImage"'/g' "$f" > "$f""01"
+    mv "$f""01" "$f"
+  fi
+
 else
   echo "Unable to read latest Java LTS version!"
 fi
