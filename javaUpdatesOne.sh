@@ -67,6 +67,8 @@ if [[ -n $latestJavaLTS ]]; then
     mv "$f""01" "$f"
     sed -E 's/jdk-[0-9]+/jdk-'"$latestJavaLTS"'/g' "$f" > "$f""01"
     mv "$f""01" "$f"
+    sed -E 's/Install SDK [0-9]*/Install SDK '"$latestJavaLTS"'/g' "$f" > "$f""01"
+    mv "$f""01" "$f"
   fi
 
 else
