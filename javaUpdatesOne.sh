@@ -54,7 +54,16 @@ if [[ -n $latestJavaLTS ]]; then
   #  Circle CI File
   f=".circleci/config.yml"
   if [ -f $f ]; then
+    targetImageUrl=$(curl -s https://api.adoptopenjdk.net/v3/assets/latest/"$latestJavaLTS"/hotspot | jq -r '.[0].binary.package.link')
+    targetImageUrl=${targetImageUrl//\//\\/}
     sed -E 's/-\s*image:\s*maven.*/- image: '"$targetImage"'/g' "$f" > "$f""01"
+    mv "$f""01" "$f"
+    sed -E 's/command:\s*wget\s*https:\/\/.* &&/command: wget '"$targetImageUrl"' \&\&/g' "$f" > "$f""01"
+    mv "$f""01" "$f"
+    fileName=last_segment=$(echo "$targetImageUrl" | awk -F'/' '{print $NF}')
+    sed -E 's/tar (-)?xvf .* &&/tar -xvf '"$fileName"' \&\&/g' "$f" > "$f""01"
+    mv "$f""01" "$f"
+    sed -E 's/jdk[0-9]*/jdk'"$latestJavaLTS"'/g' "$f" > "$f""01"
     mv "$f""01" "$f"
   fi
 
