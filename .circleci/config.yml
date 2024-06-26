@@ -14,6 +14,7 @@ jobs:
             - v1-dependencies-{{ checksum "pom.xml" }}
             - v1-dependencies-
 
+      - run: apk add maven
       - run: mvn clean install
 
       - save_cache:
