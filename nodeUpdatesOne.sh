@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-#latestNodeLTS=$(curl -s https://nodejs.org/dist/index.json | jq -r '.[] | select(.lts != false) | .version' | head -n 1 | cut -d'.' -f1 | cut -d 'v' -f2)
-latestNodeLTS="20"
+latestNodeLTS=$(curl -s https://nodejs.org/dist/index.json | jq -r '.[] | select(.lts != false) | .version' | head -n 1 | cut -d'.' -f1 | cut -d 'v' -f2)
 
 echo "Found node JS version $latestNodeLTS"
 if [[ -n $latestNodeLTS ]]; then
