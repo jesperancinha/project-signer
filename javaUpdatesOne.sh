@@ -62,6 +62,8 @@ if [[ -n $latestJavaLTS ]]; then
     targetImageUrl=${targetImageUrl//\//\\/}
     sed -E 's/-\s*image:\s*maven.*/- image: '"$targetImage"'/g' "$f" > "$f""01"
     mv "$f""01" "$f"
+    sed -E 's/-\s*image:\s*.*jdk.*/- image: '"$targetImage"'/g' "$f" > "$f""01"
+    mv "$f""01" "$f"
     sed -E 's/command:\s*wget\s*https:\/\/.* &&/command: wget '"$targetImageUrl"' \&\&/g' "$f" > "$f""01"
     mv "$f""01" "$f"
     fileName=$(echo "$targetImageUrl" | awk -F'/' '{print $NF}')
