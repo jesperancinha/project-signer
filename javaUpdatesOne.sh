@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-latestJavaLTS=$( curl -s https://api.adoptopenjdk.net/v3/info/available_releases | jq '.most_recent_lts')
+latestJavaLTS=$(curl -s https://api.adoptopenjdk.net/v3/info/available_releases | jq '.most_recent_lts')
 distribution="adopt"
 targetImage="eclipse-temurin:21-alpine"
 
