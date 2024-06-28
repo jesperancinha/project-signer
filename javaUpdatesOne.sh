@@ -3,6 +3,7 @@
 latestJavaLTS=$(curl -s https://api.adoptopenjdk.net/v3/info/available_releases | jq '.most_recent_lts')
 distribution="adopt"
 targetImage="eclipse-temurin:21-alpine"
+targetGradleImage="gradle:jdk21"
 
 if [[ -n $latestJavaLTS ]]; then
   #  YML pipeline files and more - Version
@@ -60,9 +61,11 @@ if [[ -n $latestJavaLTS ]]; then
   if [ -f $f ]; then
     targetImageUrl=$(curl -s curl -s "https://api.adoptium.net/v3/assets/latest/$latestJavaLTS/hotspot" | jq -r '[.[] | select(.binary.image_type == "jdk" and .binary.os == "linux" and .binary.architecture == "x64")][0].binary.package.link')
     targetImageUrl=${targetImageUrl//\//\\/}
+    sed -E 's/-\s*image:\s*gradle.*/- image: '"$targetGradleImage"'/g' "$f" > "$f""01"
+    mv "$f""01" "$f"
     sed -E 's/-\s*image:\s*maven.*/- image: '"$targetImage"'/g' "$f" > "$f""01"
     mv "$f""01" "$f"
-    sed -E 's/-\s*image:\s*.*jdk.*/- image: '"$targetImage"'/g' "$f" > "$f""01"
+    sed -E '/gradle/!s/-\s*image:\s*.*jdk.*/- image: '"$targetImage"'/g' "$f" > "$f""01"
     mv "$f""01" "$f"
     sed -E 's/command:\s*wget\s*https:\/\/.* &&/command: wget '"$targetImageUrl"' \&\&/g' "$f" > "$f""01"
     mv "$f""01" "$f"
