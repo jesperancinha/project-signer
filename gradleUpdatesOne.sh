@@ -15,6 +15,8 @@ if [[ -n $latestGradle ]]; then
   if [ -f $f ]; then
     sed -E "s/GRADLE_VERSION \?= [0-9\.a-z]*/GRADLE_VERSION ?= $latestGradle/g" "$f" > "$f""01"
     mv "$f""01" "$f"
+    sed -E "s/GRADLE_VERSION \:= [0-9\.a-z]*/GRADLE_VERSION ?= $latestGradle/g" "$f" > "$f""01"
+    mv "$f""01" "$f"
   fi
   #  Makefile.mk Gradle parent GRADLE_VERSION
   echo "Scanning Makefile"
@@ -22,7 +24,11 @@ if [[ -n $latestGradle ]]; then
   if [ -f $f ]; then
     sed -E "s/GRADLE_VERSION \?= [0-9\.a-z]*/GRADLE_VERSION ?= $latestGradle/g" "$f" > "$f""01"
     mv "$f""01" "$f"
+    sed -E "s/GRADLE_VERSION \:= [0-9\.a-z]*/GRADLE_VERSION ?= $latestGradle/g" "$f" > "$f""01"
+    mv "$f""01" "$f"
   fi
+  if [ -d build ]; then rm -r build; fi
+  gradle wrapper
   ./gradlew build
 else
   echo "Unable to read latest Java LTS version!"
