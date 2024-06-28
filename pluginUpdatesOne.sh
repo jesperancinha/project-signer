@@ -24,6 +24,7 @@ pluginsReplaceArr[${pluginsArr[4]}]=${pluginsArr[4]}
 pluginsReplaceArr[${pluginsArr[5]}]=${pluginsArr[5]}
 pluginsReplaceArr[${pluginsArr[6]}]=${pluginsArr[6]}
 pluginsReplaceArr[${pluginsArr[7]}]="github/codeql-action/init github/codeql-action/autobuild github/codeql-action/analyze"
+pluginsReplaceArr[${pluginsArr[8]}]=${pluginsArr[8]}
 
 for plugin in "${pluginsArr[@]}"; do
 
