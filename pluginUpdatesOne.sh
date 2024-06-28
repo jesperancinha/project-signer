@@ -14,6 +14,7 @@ pluginsArr[4]="nick-fields/retry"
 pluginsArr[5]="peter-evans/create-pull-request"
 pluginsArr[6]="dependabot/fetch-metadata"
 pluginsArr[7]="github/codeql-action"
+pluginsArr[8]="graalvm/setup-graalvm"
 
 pluginsReplaceArr[${pluginsArr[0]}]=${pluginsArr[0]}
 pluginsReplaceArr[${pluginsArr[1]}]=${pluginsArr[1]}
