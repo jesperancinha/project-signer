@@ -45,6 +45,8 @@ if [[ -n $latestJavaLTS ]]; then
       mv "$f""01" "$f"
       sed -E "s/<java\.jdk>[0-9]*<\/java\.jdk>/<java.jdk>$latestJavaLTS<\/java.jdk>/g" "$f" > "$f""01"
       mv "$f""01" "$f"
+      sed -E "s/<maven\.compiler\.source>[0-9]*<\/maven\.compiler\.source>/<maven.compiler.source>$latestJavaLTS<\/maven.compiler.source>/g" "$f" > "$f""01"
+      mv "$f""01" "$f"
   done
 
   #  Docker Files
