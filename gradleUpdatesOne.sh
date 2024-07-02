@@ -8,6 +8,8 @@ if [[ -n $latestGradle ]]; then
   for f in $(find . -name "*.yml"); do
       sed -E "s/gradle-version\: [0-9\.a-z]*/gradle-version: $latestGradle/g" "$f" > "$f""01"
       mv "$f""01" "$f"
+      sed -E "s/Setup Gradle [0-9\.a-z]*/Setup Gradle $latestGradle/g" "$f" > "$f""01"
+      mv "$f""01" "$f"
   done
   #  Makefile Gradle parent GRADLE_VERSION
   echo "Scanning Makefile"
