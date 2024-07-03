@@ -30,8 +30,7 @@ if [[ -n $latestGradle ]]; then
     mv "$f""01" "$f"
   fi
   if [ -d build ]; then rm -r build; fi
-  gradle wrapper --gradle-version "$GRADLE_VERSION"
-  ./gradlew build
+  make
 else
   echo "Unable to read latest Java LTS version!"
 fi
