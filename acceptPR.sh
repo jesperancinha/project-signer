@@ -9,7 +9,6 @@ function echoPRDate() {
 
 LANG=en_us_8859_1
 if [ ! -f pr.md ]; then
-  touch pr.md
   echoPRDate
   git add pr.md
   git commit -m "Accepts Automated PRs on $(date)"
