@@ -3,8 +3,8 @@ echo "Used only to create an extra commit so that PR's created with the plugin g
 echo "More info one:"
 echo "- https://github.com/orgs/community/discussions/25702"
 
-function echoPRDate() {
-  "PR Accept on $(date)" >> pr.md
+echoPRDate() {
+  echo "PR Accept on $(date)" >> pr.md
 }
 
 LANG=en_us_8859_1
