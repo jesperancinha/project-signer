@@ -11,8 +11,8 @@ org=${org:=jesperancinhaOrg}
 porg=${porg:=100}
 
 echo -e '\e[31mWARNING!!\e[0m'
-echo -e "\e[32mCarefull when using this script. It will clone EVERY repo from user $1 into the root directory!\e[0m"
-echo -e "\e[32mExample usage: ./cloneAll.sh $user $pages $org $porg\e[0m"
+echo -e "\e[32mCarefull when using this script! It will push an extra commit to automated merge requests\e[0m"
+echo -e "\e[32mExample usage: ./startMergeAll.sh $user $pages $org $porg\e[0m"
 read -p "Are you sure? (Yy/Nn)" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   repos=$(curl https://api.github.com/users/"${user}"/repos?per_page="${pages}")
@@ -22,10 +22,16 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
       echo "${row}" | base64 --decode | jq -r "${1}"
     }
     if [[ $(_jq '.fork') =~ ^'false'$ ]]; then
-      repoAddress=$(_jq '.ssh_url')
+      repoAddress=$(_jq '.name')
       echo "${repoAddress}"
-      git clone "${repoAddress}"
+      if [ -d "${repoAddress}" ]; then
+        cd "${repoAddress}"
+        curl -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/jesperancinha/buy-odd-yucca-concert/pulls?state=open" | jq '.[] | .head.ref' | grep "update-" | xargs -I {} git checkout {} | make accept-prs
+        # shellcheck disable=SC2103
+        cd ..
+      fi
     fi
+    sleep 0.5
   done
   repos=$(curl https://api.github.com/orgs/"${org}"/repos?per_page="${porg}")
   for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
@@ -33,10 +39,15 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
       echo "${row}" | base64 --decode | jq -r "${1}"
     }
     if [[ $(_jq2 '.fork') =~ ^'false'$ ]]; then
-      repoAddress=$(_jq2 '.ssh_url')
+      repoAddress=$(_jq2 '.name')
       echo "${repoAddress}"
-      git clone "${repoAddress}"
+      if [ -d "${repoAddress}" ]; then
+        cd "${repoAddress}"
+        # shellcheck disable=SC2103
+        cd ..
+      fi
     fi
+    sleep 0.5
   done
   cd project-signer || exit
 fi
