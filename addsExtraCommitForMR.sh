@@ -30,6 +30,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
         git pull
         git fetch -p
         curl -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/jesperancinha/buy-odd-yucca-concert/pulls?state=open" | jq '.[] | .head.ref' | grep "update-" | xargs -I {} git checkout {} && git pull && make accept-prs
+        git checkout main &
+        git checkout master &
         # shellcheck disable=SC2103
         cd ..
       fi
