@@ -27,12 +27,14 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
       echo "${repoAddress}"
       if [ -d "${repoAddress}" ]; then
         cd "${repoAddress}" || exit
-        curl -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/jesperancinha/buy-odd-yucca-concert/pulls?state=open" | jq '.[] | .head.ref' | grep "update-" | xargs -I {} git checkout {} | make accept-prs
+        git pull
+        git fetch -p
+        curl -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/jesperancinha/buy-odd-yucca-concert/pulls?state=open" | jq '.[] | .head.ref' | grep "update-" | xargs -I {} git checkout {} && git pull && make accept-prs
         # shellcheck disable=SC2103
         cd ..
       fi
     fi
-    sleep 0.5
+    sleep 1
   done
   repos=$(curl https://api.github.com/orgs/"${org}"/repos?per_page="${porg}")
   echo "$repos"
@@ -49,7 +51,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
         cd ..
       fi
     fi
-    sleep 0.5
+    sleep 1
   done
   cd project-signer || exit
 fi
