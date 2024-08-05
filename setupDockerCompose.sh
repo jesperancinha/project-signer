@@ -13,7 +13,7 @@ mkdir -p $DOCKER_CONFIG/cli-plugins; \
 curl -SL https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose; \
 chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose;
 if [ ! -f /usr/bin/docker-compose ]; then
-  ln -s ~/.docker/cli-plugins/docker-compose /usr/bin/docker-compose
+  sudo ln -s ~/.docker/cli-plugins/docker-compose /usr/bin/docker-compose
 else
   echo "File already exists! Continuing"
 fi
