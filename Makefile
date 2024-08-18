@@ -65,3 +65,5 @@ deps-gradle-update:
 deps-quick-update: deps-cypress-update deps-plugins-update deps-java-update deps-node-update deps-gradle-update
 accept-prs:
 	curl -sL https://raw.githubusercontent.com/jesperancinha/project-signer/master/acceptPR.sh | bash
+accept-all-prs:
+	./accept-all-prs.sh
