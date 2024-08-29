@@ -69,7 +69,7 @@ open class FileWriterService {
                                 return@sortedWith message1.compareTo(message2)
                             }
                         }
-                        return@sortedWith o1.title.compareTo(o2.title)
+                        return@sortedWith o1.getNormalizedTitle().compareTo(o2.getNormalizedTitle())
                     }
                     nBadges2 - nBadges1
                 }
@@ -138,7 +138,7 @@ open class FileWriterService {
                         try {
                             fileWriter.write("|")
                             if (projectData != null) {
-                                fileWriter.write(projectData.title)
+                                fileWriter.write(projectData.getNormalizedTitle())
                             }
                         } catch (e: IOException) {
                             logger.error("Error!", e)

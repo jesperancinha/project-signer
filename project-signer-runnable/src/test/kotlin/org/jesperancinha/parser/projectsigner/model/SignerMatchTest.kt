@@ -39,8 +39,8 @@ internal class SignerMatchTest {
             StandardCharsets.UTF_8
         )
         val lintMatches: List<SignerPattern> =
-            objectMapper.readValue(jsonLint, Array<SIgnerMatch>::class.java)
-                .map { (find, replace): SIgnerMatch ->
+            objectMapper.readValue(jsonLint, Array<SignerMatch>::class.java)
+                .map { (find, replace): SignerMatch ->
                     SignerPattern(
                         find = Pattern.compile(find),
                         replace = replace

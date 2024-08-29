@@ -5,7 +5,7 @@ import org.apache.commons.io.IOUtils
 import org.jesperancinha.parser.markdowner.badges.parser.BadgeParser
 import org.jesperancinha.parser.markdowner.helper.ReadmeParserHelper
 import org.jesperancinha.parser.markdowner.model.Paragraphs
-import org.jesperancinha.parser.projectsigner.model.SIgnerMatch
+import org.jesperancinha.parser.projectsigner.model.SignerMatch
 import org.jesperancinha.parser.projectsigner.model.SignerPattern
 import org.jesperancinha.parser.projectsigner.model.ProjectData
 import org.slf4j.Logger
@@ -19,6 +19,7 @@ import java.util.*
 import java.util.function.Consumer
 import java.util.regex.Pattern
 import java.util.stream.Collectors
+import kotlin.io.path.name
 import kotlin.system.exitProcess
 
 /**
@@ -59,19 +60,36 @@ open class ReadmeService(
         val lintedText = createLintedText(newText)
         val nonRefText = removeNonRefs(lintedText)
         if (!optionsService.projectSignerOptions?.rootDirectory?.relativize(readmePath).toString().contains("/")) {
-            readme.split("\n".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()[0].replace(
-                "#",
-                ""
-            ).trim().let {
-                ProjectData(
-                    title = it,
-                    badgeGroupMap = BadgeParser.parse(readme)
+            readme.split("\n".toRegex()).dropLastWhile { it.isEmpty() }
+                .toTypedArray()
+                .firstOrNull()
+                ?.replace(
+                    "#",
+                    ""
                 )
-            }.let {
-                allProjectData.add(
-                    it
-                )
-            }
+                ?.trim()?.let {
+                    ProjectData(
+                        title = it,
+                        directory = runCatching {
+                            val toPath =
+                                readmePath.toFile().absoluteFile.relativeTo(File(".").absoluteFile.parentFile.parentFile)
+                                    .toPath()
+                            if (toPath.name == "")
+                                readmePath.subpath(2, 3).name
+                            else
+                                toPath.subpath(1, 2).name
+                        }.getOrElse {
+                            logger.error("ERROR getting title!", it)
+                            null
+                        },
+                        badgeGroupMap = BadgeParser.parse(readme)
+                    )
+                }
+                ?.let {
+                    allProjectData.add(
+                        it
+                    )
+                }
         }
         val techStackTextFiltered =
             techStackService.mutateTechnologiesUsedParagraph(nonRefText.split("\n")[0], readmePath, nonRefText)
@@ -128,8 +146,8 @@ open class ReadmeService(
                     ReadmeService::class.java.getResourceAsStream("/jeorg-lint.json"),
                     StandardCharsets.UTF_8.name()
                 )
-                lintMatches = objectMapper.readValue(jsonLint, Array<SIgnerMatch>::class.java)
-                    .map { lintMatch: SIgnerMatch ->
+                lintMatches = objectMapper.readValue(jsonLint, Array<SignerMatch>::class.java)
+                    .map { lintMatch: SignerMatch ->
                         SignerPattern(
                             find = Pattern.compile(lintMatch.find),
                             replace = lintMatch.replace
