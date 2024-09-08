@@ -6,8 +6,7 @@ for item in *; do
     cd "${item}/.github/workflows" || exit
     for f in *.yml; do
       echo "Replacing $f"
-#      sed -E "s/\s*pull_request_target:\n\s*branches:\n\s*-\s*'\*\*'//g" "$f" > "$f""01"
-      sed -E "s/pull_request_target://g" "$f" > "$f""01"
+      awk '/pull_request_target:/ {flag=1} flag && /- '\''\*\*'\''/ {flag=0; next} !flag' "$f" > "$f""01" && mv "$f""01" "$f"
       mv "$f""01" "$f"
     done
     cd ../../..
