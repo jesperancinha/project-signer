@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source pluginUpdatesOne.sh 1 2 3 4 5 6 7 8 9
+source pluginUpdatesOne.sh
 
 # shellcheck disable=SC2154
 version_command="${versions[${pluginsArr[0]}]} ${versions[${pluginsArr[1]}]} ${versions[${pluginsArr[2]}]} ${versions[${pluginsArr[3]}]} ${versions[${pluginsArr[4]}]} ${versions[${pluginsArr[5]}]} ${versions[${pluginsArr[6]}]} ${versions[${pluginsArr[7]}]} ${versions[${pluginsArr[8]}]}"
@@ -41,4 +41,4 @@ remote_name="origin"
 #    cd ..
 #  fi
 #done
-cd project-signer || exit
+#cd project-signer || exit
