@@ -2,15 +2,21 @@
 source pluginUpdatesOne.sh
 
 # shellcheck disable=SC2154
+if [ ${#versions[@]} -ne 9 ]; then
+  echo "Cannot retrieve latest plugin versions. Aborting execution..."
+  exit 0
+fi
+
+# shellcheck disable=SC2154
 version_command="${versions[${pluginsArr[0]}]} ${versions[${pluginsArr[1]}]} ${versions[${pluginsArr[2]}]} ${versions[${pluginsArr[3]}]} ${versions[${pluginsArr[4]}]} ${versions[${pluginsArr[5]}]} ${versions[${pluginsArr[6]}]} ${versions[${pluginsArr[7]}]} ${versions[${pluginsArr[8]}]}"
 branch_name="update-quick"
 remote_name="origin"
 
-#cd ..
-#for item in *; do
-#  if [[ -d "$item" ]]; then
-#    cd "${item}" || exit
-#    if [ -f Makefile ]; then
+cd ..
+for item in *; do
+  if [[ -d "$item" ]]; then
+    cd "${item}" || exit
+    if [ -f Makefile ]; then
       if grep -q "^deps-quick-update:" Makefile; then
         echo "---*** Quick Update Makefile command found in $item ***---"
         if git show-ref --verify --quiet refs/heads/master; then
@@ -36,9 +42,9 @@ remote_name="origin"
           fi
         fi
       fi
-#    fi
-#
-#    cd ..
-#  fi
-#done
-#cd project-signer || exit
+    fi
+
+    cd ..
+  fi
+done
+cd project-signer || exit
