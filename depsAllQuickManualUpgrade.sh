@@ -22,7 +22,7 @@ remote_name="origin"
             if git show-ref --verify --quiet refs/heads/master; then
               git checkout master
             fi
-            if git show-ref --verify --quiet refs/heads/master; then
+            if git show-ref --verify --quiet refs/heads/main; then
               git checkout main
             fi
           fi
