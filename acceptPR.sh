@@ -4,7 +4,7 @@ echo "More info one:"
 echo "- https://github.com/orgs/community/discussions/25702"
 
 echoPRDate() {
-  echo "PR Accept on $(date)" >> pr.md
+  echo "PR Accept on $(date)" > pr.md
 }
 git pull
 LANG=en_us_8859_1
