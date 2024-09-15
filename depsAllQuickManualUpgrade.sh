@@ -3,11 +3,11 @@
 branch_name="update-quick"
 remote_name="origin"
 
-#cd ..
-#for item in *; do
-#  if [[ -d "$item" ]]; then
-#    cd "${item}" || exit
-#    if [ -f Makefile ]; then
+cd ..
+for item in *; do
+  if [[ -d "$item" ]]; then
+    cd "${item}" || exit
+    if [ -f Makefile ]; then
       item="this"
       if grep -q "^deps-quick-update:" Makefile; then
         echo "---*** Quick Update Makefile command found in $item ***---"
@@ -28,9 +28,9 @@ remote_name="origin"
           fi
         fi
       fi
-#    fi
-#
-#    cd ..
-#  fi
-#done
-#cd project-signer || exit
+    fi
+
+    cd ..
+  fi
+done
+cd project-signer || exit
