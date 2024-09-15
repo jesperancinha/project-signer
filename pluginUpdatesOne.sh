@@ -5,6 +5,7 @@ separator="/"
 declare -A arr
 declare -A pluginsArr
 declare -A pluginsReplaceArr
+declare -A versions
 
 pluginsArr[0]="actions/checkout"
 pluginsArr[1]="actions/setup-java"
@@ -26,8 +27,7 @@ pluginsReplaceArr[${pluginsArr[6]}]=${pluginsArr[6]}
 pluginsReplaceArr[${pluginsArr[7]}]="github/codeql-action/init github/codeql-action/autobuild github/codeql-action/analyze"
 pluginsReplaceArr[${pluginsArr[8]}]=${pluginsArr[8]}
 
-if [ "$#" -eq 8 ]; then
-    declare -A versions
+if [ "$#" -eq 9 ]; then
     versions[${pluginsArr[0]}]=$1
     versions[${pluginsArr[1]}]=$2
     versions[${pluginsArr[2]}]=$3
@@ -74,6 +74,7 @@ else
       version=$(echo "$result" | jq -r '.[0].name' | cut -d '.' -f1)
       if [[ -n $version ]]; then
         if [[ $version == v* ]]; then
+          versions[${plugin}]=$version
           arr["$tag\/$name@v[0-9\.]*"]="$tag\/$name@$version"
           echo "Will replace $tag\/$name@v[0-9]* with $tag\/$name@$version"
         else
