@@ -11,6 +11,12 @@ for item in *; do
       item="this"
       if grep -q "^deps-quick-update:" Makefile; then
         echo "---*** Quick Update Makefile command found in $item ***---"
+        if git show-ref --verify --quiet refs/heads/master; then
+          git checkout master
+        fi
+        if git show-ref --verify --quiet refs/heads/main; then
+          git checkout main
+        fi
         git pull
         git fetch -p
         make deps-quick-update
