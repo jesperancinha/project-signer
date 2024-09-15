@@ -8,7 +8,6 @@ for item in *; do
   if [[ -d "$item" ]]; then
     cd "${item}" || exit
     if [ -f Makefile ]; then
-      item="this"
       if grep -q "^deps-quick-update:" Makefile; then
         echo "---*** Quick Update Makefile command found in $item ***---"
         if git show-ref --verify --quiet refs/heads/master; then
