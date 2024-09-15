@@ -55,7 +55,7 @@ deps-cypress-update:
 	cd e2e; \
 	ncu -u
 deps-plugins-update:
-	curl -sL https://raw.githubusercontent.com/jesperancinha/project-signer/master/pluginUpdatesOne.sh | bash -s -- $(PARAMS)
+	curl -sL https://raw.githubusercontent.com/jesperancinha/project-signer/master/pluginUpdatesOne.sh -H "Cache-Control: no-cache" | bash -s -- $(PARAMS)
 deps-java-update:
 	curl -sL https://raw.githubusercontent.com/jesperancinha/project-signer/master/javaUpdatesOne.sh | bash
 deps-node-update:
