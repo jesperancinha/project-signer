@@ -2,7 +2,7 @@
 source pluginUpdatesOne.sh
 
 # shellcheck disable=SC2154
-if [ ${#versions[@]} -ne 9 ]; then
+if [ ${#versions[@]} -ne ${#pluginsArr[@]} ]; then
   echo "Cannot retrieve latest plugin versions. Aborting execution..."
   exit 0
 fi
