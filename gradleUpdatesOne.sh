@@ -30,7 +30,6 @@ if [[ -n $latestGradle ]]; then
     mv "$f""01" "$f"
   fi
   if [ -d build ]; then rm -r build; fi
-  make
 else
   echo "Unable to read latest Java LTS version!"
 fi
