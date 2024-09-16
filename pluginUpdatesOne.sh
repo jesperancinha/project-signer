@@ -79,6 +79,7 @@ else
           echo "Will replace $tag\/$name@v[0-9]* with $tag\/$name@$version"
         else
           echo "Version $version of $name is not verified, the update will not continue"
+          versions[${plugin}]="!"
         fi
       else
         echo "ERROR! Failed to get $plugin version!"
@@ -99,7 +100,7 @@ if [ -d .github/workflows ]; then
   do
     echo "Processing $f file..."
     for key in "${!arr[@]}"; do
-      if [[ -n "${arr[${key}]}" ]]; then
+      if [[ -n "${arr[${key}]}" && "${arr[${key}]}" != "!" ]]; then
         echo -e "--- Updating \e[32m$key\e[0m to \e[32m${arr[${key}]}\e[0m"
         sed -E 's/'$key'/'"${arr[${key}]}"'/g' "$f" > "$f""01"
         mv "$f""01" "$f"
