@@ -32,6 +32,8 @@ if [[ -n $latestJavaLTS ]]; then
       mv "$f""01" "$f"
       sed -E "s/jvmTarget\s*=\s* \"[0-9]*\"/jvmTarget = \"$latestJavaLTS\"/g" "$f" > "$f""01"
       mv "$f""01" "$f"
+      sed -E "s/jvmTarget\.set\(JVM_[0-9]*\)/jvmTarget.set(JVM_$latestJavaLTS)/g" "$f" > "$f""01"
+      mv "$f""01" "$f"
       sed -E "s/jvmToolchain\([0-9]*\)/jvmToolchain($latestJavaLTS)/g" "$f" > "$f""01"
       mv "$f""01" "$f"
       sed -E "s/languageVersion = JavaLanguageVersion.of\([0-9]*\)/languageVersion = JavaLanguageVersion.of($latestJavaLTS)/g" "$f" > "$f""01"
