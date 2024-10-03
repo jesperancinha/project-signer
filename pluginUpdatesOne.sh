@@ -7,6 +7,10 @@ declare -A pluginsArr
 declare -A pluginsReplaceArr
 declare -A versions
 
+latestGradle=$(curl -s https://services.gradle.org/versions/current | jq -r '.version')
+latestJavaLTS=$(curl -s https://api.adoptopenjdk.net/v3/info/available_releases | jq '.most_recent_lts')
+distribution="adopt"
+
 pluginsArr[0]="actions/checkout"
 pluginsArr[1]="actions/setup-java"
 pluginsArr[2]="actions/setup-node"
@@ -103,6 +107,22 @@ if [ -d .github/workflows ]; then
       if [[ -n "${arr[${key}]}" && "${arr[${key}]}" != "!" ]]; then
         echo -e "--- Updating \e[32m$key\e[0m to \e[32m${arr[${key}]}\e[0m"
         sed -E 's/'$key'/'"${arr[${key}]}"'/g' "$f" > "$f""01"
+        mv "$f""01" "$f"
+      fi
+      if [[ -n $latestGradle ]]; then
+        echo -e "--- Updating to gradle version \e[32m$latestGradle\e[0m"
+        sed -E "s/gradle-version\: [0-9\.a-z]*/gradle-version: $latestGradle/g" "$f" > "$f""01"
+        mv "$f""01" "$f"
+        sed -E "s/Setup Gradle [0-9\.a-z]*/Setup Gradle $latestGradle/g" "$f" > "$f""01"
+        mv "$f""01" "$f"
+      fi
+      if [[ -n $latestJavaLTS ]]; then
+        echo -e "--- Updating to java version \e[32m$latestJavaLTS\e[0m"
+        sed -E 's/Set up JDK [0-9]*/Set up JDK '"$latestJavaLTS"'/g' "$f" > "$f""01"
+        mv "$f""01" "$f"
+        sed -E "s/java-version: '[0-9]*'/java-version: '$latestJavaLTS'/g" "$f" > "$f""01"
+        mv "$f""01" "$f"
+        sed -E "s/distribution: '[0-9a-zA-Z]*'/distribution: '$distribution'/g" "$f" > "$f""01"
         mv "$f""01" "$f"
       fi
     done

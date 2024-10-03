@@ -6,16 +6,6 @@ targetImage="eclipse-temurin:21-alpine"
 targetGradleImage="gradle:jdk21"
 
 if [[ -n $latestJavaLTS ]]; then
-  #  YML pipeline files and more - Version
-  echo "Scanning for yml files including GitHub action files..."
-  for f in $(find . -name "*.yml"); do
-      sed -E 's/Set up JDK [0-9]*/Set up JDK '"$latestJavaLTS"'/g' "$f" > "$f""01"
-      mv "$f""01" "$f"
-      sed -E "s/java-version: '[0-9]*'/java-version: '$latestJavaLTS'/g" "$f" > "$f""01"
-      mv "$f""01" "$f"
-      sed -E "s/distribution: '[0-9a-zA-Z]*'/distribution: '$distribution'/g" "$f" > "$f""01"
-      mv "$f""01" "$f"
-  done
 
   #  Gradle Java - Version
   echo "Scanning for .java-version files..."
