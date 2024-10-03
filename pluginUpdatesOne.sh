@@ -117,7 +117,7 @@ if [ -d .github/workflows ]; then
         mv "$f""01" "$f"
       fi
       if [[ -n $latestJavaLTS ]]; then
-        echo -e "--- Updating to java version \e[32m$latestJavaLTS\e[0m"
+        echo -e "--- Updating to java version \e[32m$latestJavaLTS\e[0m and distribution \e[32m$distribution\e[0m"
         sed -E 's/Set up JDK [0-9]*/Set up JDK '"$latestJavaLTS"'/g' "$f" > "$f""01"
         mv "$f""01" "$f"
         sed -E "s/java-version: '[0-9]*'/java-version: '$latestJavaLTS'/g" "$f" > "$f""01"
