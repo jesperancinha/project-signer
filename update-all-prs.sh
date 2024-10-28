@@ -5,7 +5,7 @@ cd ..
 for item in *; do
   if [[ -d "$item" ]]; then
     cd "${item}" || exit
-    echo "---*** Accept PR Makefile command found in $item ***---"
+    echo "---*** Updating PRs in project $item ***---"
     if git ls-remote --exit-code --heads "$remote_name" "master"; then
       master_branch="master"
     fi
@@ -18,7 +18,7 @@ for item in *; do
     git pull
     git fetch -p
     for branch_name in $(git branch -r | grep -v '\->' | sed 's/origin\///' | grep -v 'master' | grep -v 'main' | grep -v 'migration-to-kotlin'); do
-      echo "Processing branch: $branch"
+      echo "Processing branch: $branch_name"
       if [ -n "${master_branch}" ]; then
         git checkout "${branch_name}"
         git merge origin/"${master_branch}" --no-edit
