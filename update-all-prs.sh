@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+remote_name="origin"
+cd ..
+for item in *; do
+  if [[ -d "$item" ]]; then
+    cd "${item}" || exit
+    echo "---*** Accept PR Makefile command found in $item ***---"
+    if git ls-remote --exit-code --heads "$remote_name" "master"; then
+      master_branch="master"
+    fi
+    if git ls-remote --exit-code --heads "$remote_name" "main"; then
+      master_branch="main"
+    fi
+    if [ -n "${master_branch}" ]; then
+      git checkout "${master_branch}"
+    fi
+    git pull
+    git fetch -p
+    for branch_name in $(git branch -r | grep -v '\->' | sed 's/origin\///' | grep -v 'master' | grep -v 'main' | grep -v 'migration-to-kotlin'); do
+      echo "Processing branch: $branch"
+      if [ -n "${master_branch}" ]; then
+        git checkout "${branch_name}"
+        git merge origin/"${master_branch}" --no-edit
+        git push
+        gh pr merge $(gh pr list --base "${master_branch}" --head "${branch_name}" --json number --jq '.[0].number' | xargs echo) --auto --merge
+        git checkout "${master_branch}"
+      fi
+    done
+    cd ..
+  fi
+done
+cd project-signer || exit
