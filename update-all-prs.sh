@@ -17,7 +17,7 @@ for item in *; do
     fi
     git pull
     git fetch -p
-    for branch_name in $(git branch -r | grep -v '\->' | sed 's/origin\///' | grep -v 'master' | grep -v 'main' | grep -v 'migration-to-kotlin'); do
+    for branch_name in $(git branch -r | grep -v '\->' | sed 's/origin\///' | grep -v 'master' | grep -v 'main' | grep -v 'migration-to-kotlin' | grep -v '1.0.0-eol-continuous-release-branch-recovered'); do
       echo "Processing branch: $branch_name"
       if [ -n "${master_branch}" ]; then
         git checkout "${branch_name}"
