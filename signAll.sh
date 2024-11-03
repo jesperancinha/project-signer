@@ -14,9 +14,24 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   for item in *; do
     if [[ -d "$item" ]] && [[ "$item" != ".git" ]] && [[ "$item" != "target" ]]; then
       cd "${item}" || exit
+      git pull
       year="$(git log --reverse | sed -n -e "3,3p" | sed 's/\(.*\)\ \([0-9]*\)\ \(.*\)/\2/')"
-      find . -iname "License" | xargs sed -i "" -e 's/\[yyyy\]/'${year}'/g'
-#      find . -iname "License" | xargs -I {} sed -i -e "s/\[yyyy\]/'${year}'/g" {} {}
+      if [[ -z ${errorLicense} ]]; then
+        find . -iname "License" | xargs sed -i "" 's/\[yyyy\]/'"${year}"'/g' > /dev/null 2>&1;
+        exit_code=$?
+        if [[ $exit_code == 0 ]]; then
+          errorLicense="first"
+        else
+          find . -iname "License" | xargs -I {} sed -i -e "s/\[yyyy\]/${year}/g" {} {}
+          errorLicense="second";
+        fi
+      else
+        if [[ "$errorLicense" == "first" ]]; then
+          find . -iname "License" | xargs sed -i "" 's/\[yyyy\]/'"${year}"'/g'
+        else
+          find . -iname "License" | xargs -I {} sed -i -e "s/\[yyyy\]/${year}/g" {} {}
+        fi
+      fi
       echo "----------------- Signing (committing) ${item} -----------------"
       git add .
       if [[ -z "$1" ]]; then
