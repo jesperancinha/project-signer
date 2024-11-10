@@ -21,6 +21,7 @@ for item in *; do
       echo "Processing branch: $branch_name"
       if [ -n "${master_branch}" ]; then
         git checkout "${branch_name}"
+        git pull
         git merge origin/"${master_branch}" --no-edit
         git push
         gh pr merge $(gh pr list --base "${master_branch}" --head "${branch_name}" --json number --jq '.[0].number' | xargs echo) --auto --merge
