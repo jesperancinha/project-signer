@@ -20,10 +20,10 @@ for item in *; do
         fi
         git pull
         git fetch -p
+        make accept-prs
         for branch_name in "${all_pr_branches[@]}"; do
           if git ls-remote --exit-code --heads "$remote_name" "$branch_name"; then
               echo "Remote branch '$branch_name' exists on '$remote_name'."
-              make accept-prs
               if [ -n "${master_branch}" ]; then
                 git checkout "${branch_name}"
                 git pull
