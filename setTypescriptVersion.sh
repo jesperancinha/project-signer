@@ -26,6 +26,8 @@ for branch_name in $(git branch -r | grep -v '\->' | sed 's/origin\///' | grep -
       echo "Updated $file"
     done
     find . -name "package.json.bak" -not -path "*/node_modules/*" -delete
+    git add .
+    git commit -am "Typescript Update to $stableVersion"
     git push
     gh pr merge $(gh pr list --base "${master_branch}" --head "${branch_name}" --json number --jq '.[0].number' | xargs echo) --auto --merge
     git checkout "${master_branch}"
