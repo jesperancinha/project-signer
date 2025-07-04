@@ -22,6 +22,7 @@ found_repos=()
 # Helper to process each repo JSON block
 process_repo() {
   local row=$1
+  local owner=$2
   local repo_name repo_url
 
   repo_name=$(echo "${row}" | base64 --decode | jq -r '.name')
@@ -32,7 +33,7 @@ process_repo() {
     if [[ ! -d "$repo_name" ]]; then
       echo -e "\e[34mCloning $repo_url\e[0m"
       pwd
-      gh repo clone "$repo_name"
+      gh repo clone "$owner/$repo_name"
     else
       echo -e "\e[33mSkipping $repo_name (already exists)\e[0m"
     fi
@@ -42,13 +43,23 @@ process_repo() {
 # Step 2: Fetch user repos
 repos=$(curl -s "https://api.github.com/users/${user}/repos?per_page=${pages}")
 for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
-  process_repo "$row"
+  process_repo "$row" "$user"
 done
+
+found_repos+=("jeorg-homepage")
+
+# Clone jeorg-homepage if not present
+if [[ ! -d "jeorg-homepage" ]]; then
+  echo -e "\e[34mCloning jeorg-homepage manually\e[0m"
+  gh repo clone "$user/jeorg-homepage"
+else
+  echo -e "\e[33mSkipping jeorg-homepage (already exists)\e[0m"
+fi
 
 # Step 3: Fetch org repos
 repos=$(curl -s "https://api.github.com/orgs/${org}/repos?per_page=${porg}")
 for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
-  process_repo "$row"
+  process_repo "$row" "$org"
 done
 
 # Step 4: Remove folders that are no longer in GitHub
