@@ -1,11 +1,71 @@
 #!/usr/bin/env bash
 
-remote_name="origin"
 cd ..
+
+user=jesperancinha
+pages=100
+org=JEsperancinhaOrg
+porg=100
+
+echo -e "\e[32mListing all git repos from user $user and organization $org \e[0m"
+echo -e "\e[32mExample usage: ./listAllGitHub.sh jesperancinha 100 jesperancinhaOrg 100\e[0m"
+
+# Step 1: Get current directories (assuming each repo has its own folder)
+existing_folders=()
+while IFS= read -r -d $'\0'; do
+  existing_folders+=("$(basename "$REPLY")")
+done < <(find . -mindepth 1 -maxdepth 1 -type d -print0)
+
+# Track repos that still exist remotely
+found_repos=()
+
+# Helper to process each repo JSON block
+process_repo() {
+  local row=$1
+  local repo_name repo_url
+
+  repo_name=$(echo "${row}" | base64 --decode | jq -r '.name')
+  repo_url=$(echo "${row}" | base64 --decode | jq -r '.ssh_url')
+
+  if [[ $(echo "${row}" | base64 --decode | jq -r '.fork') == "false" ]]; then
+    found_repos+=("$repo_name")
+    if [[ ! -d "$repo_name" ]]; then
+      echo -e "\e[34mCloning $repo_url\e[0m"
+      pwd
+      gh repo clone "$repo_name"
+    else
+      echo -e "\e[33mSkipping $repo_name (already exists)\e[0m"
+    fi
+  fi
+}
+
+# Step 2: Fetch user repos
+repos=$(curl -s "https://api.github.com/users/${user}/repos?per_page=${pages}")
+for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
+  process_repo "$row"
+done
+
+# Step 3: Fetch org repos
+repos=$(curl -s "https://api.github.com/orgs/${org}/repos?per_page=${porg}")
+for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
+  process_repo "$row"
+done
+
+# Step 4: Remove folders that are no longer in GitHub
+for folder in "${existing_folders[@]}"; do
+  if [[ ! " ${found_repos[*]} " =~ " ${folder} " ]]; then
+    echo -e "\e[31mRemoving obsolete folder: $folder\e[0m"
+    rm -rf "$folder"
+  fi
+done
+
+remote_name="origin"
 for item in *; do
   if [[ -d "$item" ]]; then
     cd "${item}" || exit
     echo "---*** Updating PRs in project $item ***---"
+    echo "---Configuring for user $user ---"
+    git config --local user.email jofisaes@gmail.com
     if git ls-remote --exit-code --heads "$remote_name" "master"; then
       master_branch="master"
     fi
