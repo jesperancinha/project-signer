@@ -75,8 +75,10 @@ for item in *; do
   if [[ -d "$item" ]]; then
     cd "${item}" || exit
     echo "---*** Updating PRs in project $item ***---"
-    echo "---Configuring for user $user ---"
+    echo "--- Configuring for user $user ---"
     git config --local user.email jofisaes@gmail.com
+    echo "--- Configuring rebase pull false ---"
+    git config pull.rebase false
     if git ls-remote --exit-code --heads "$remote_name" "master"; then
       master_branch="master"
     fi
