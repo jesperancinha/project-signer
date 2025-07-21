@@ -16,7 +16,7 @@
         <project-signer-api.version>${project.parent.version}</project-signer-api.version>
 
         <markdowner.version>${project.parent.version}</markdowner.version>
-        <commons-io.version>2.19.0</commons-io.version>
+        <commons-io.version>2.20.0</commons-io.version>
         <maven-failsafe-plugin.version>3.5.3</maven-failsafe-plugin.version>
         <jaxb-api.version>2.3.1</jaxb-api.version>
         <spring-boot.version>3.5.3</spring-boot.version>
