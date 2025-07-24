@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 if [ ! -x /usr/bin/docker-compose ]; then
+  sudo rm -f /usr/bin/docker-compose ; \
   echo "If DOCKER_COMPOSE_VERSION env variable is not given, this upgrade will install the latest version"; \
   if [ -z "$DOCKER_COMPOSE_VERSION" ]; then \
       DOCKER_COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4); \
@@ -12,7 +13,7 @@ if [ ! -x /usr/bin/docker-compose ]; then
   mkdir -p $DOCKER_CONFIG/cli-plugins; \
   curl -SL https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose; \
   chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose; \
-  sudo rm -f /usr/bin/docker-compose
+  sudo rm -f /usr/bin/docker-compose; \
   sudo ln -s ~/.docker/cli-plugins/docker-compose /usr/bin/docker-compose
 else
   echo "Docker compose exists at version $(docker-compose -v | tail -n 1)"; \
