@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 if [ ! -x /usr/bin/docker-compose ]; then
-  echo "Starting upgrade from docker-compose version $(docker-compose -v | tail -n 1)"; \
   echo "If DOCKER_COMPOSE_VERSION env variable is not given, this upgrade will install the latest version"; \
   if [ -z "$DOCKER_COMPOSE_VERSION" ]; then \
       DOCKER_COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4); \
@@ -16,5 +15,6 @@ if [ ! -x /usr/bin/docker-compose ]; then
   sudo rm -f /usr/bin/docker-compose
   sudo ln -s ~/.docker/cli-plugins/docker-compose /usr/bin/docker-compose
 else
+  echo "Docker compose exists at version $(docker-compose -v | tail -n 1)"; \
   echo "File already exists! Continuing"
 fi
