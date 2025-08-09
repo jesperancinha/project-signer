@@ -48,6 +48,10 @@ codecov.yml
 # Front end
 node_modules
 
+#Node
+package-lock.json
+yarn.lock
+
 # PID
 .attach_pid*
 

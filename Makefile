@@ -70,3 +70,6 @@ accept-all-prs:
 	./accept-all-prs.sh
 update-repo-prs:
 	curl -sL https://raw.githubusercontent.com/jesperancinha/project-signer/master/update-all-repo-prs.sh | bash
+remove-lock-files:
+	find . -name "package-lock.json" | xargs -I {} rm {}; \
+	find . -name "yarn.lock" | xargs -I {} rm {};
