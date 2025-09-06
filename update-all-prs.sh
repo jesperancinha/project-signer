@@ -57,7 +57,7 @@ process_repo() {
 # Step 2: Fetch user repos
 repos=$(curl -s "https://api.github.com/users/${user}/repos?per_page=${pages}")
 for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
-  parsing_result=process_repo "$row" "$user"
+  parsing_result=$(process_repo "$row" "$user")
 done
 
 found_repos+=("jeorg-homepage")
@@ -73,7 +73,7 @@ fi
 # Step 3: Fetch org repos
 repos=$(curl -s "https://api.github.com/orgs/${org}/repos?per_page=${porg}")
 for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
-  parsing_result=process_repo "$row" "$org"
+  parsing_result=$(process_repo "$row" "$org")
 done
 
 # Step 4: Remove folders that are no longer in GitHub
