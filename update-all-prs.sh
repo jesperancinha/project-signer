@@ -42,11 +42,13 @@ process_repo() {
 
   repo_name=$(echo "${row}" | base64 --decode | jq -r '.name') || {
      echo "Error: failed to parse repo name from JSON" >&2
+     echo "${row}" | base64 --decode >&2
      echo 1
      return
   }
   repo_url=$(echo "${row}" | base64 --decode | jq -r '.ssh_url') || {
      echo "Error: failed to parse url from JSON" >&2
+     echo "${row}" | base64 --decode >&2
      echo 1
      return
   }
