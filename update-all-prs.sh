@@ -42,16 +42,19 @@ process_repo() {
 
   repo_name=$(echo "${row}" | base64 --decode | jq -r '.name') || {
      echo "Error: failed to parse repo name from JSON" >&2
-     return 1
+     echo 1
+     return
   }
   repo_url=$(echo "${row}" | base64 --decode | jq -r '.ssh_url') || {
      echo "Error: failed to parse url from JSON" >&2
-     return 1
+     echo 1
+     return
   }
 
   if [[ $(echo "${row}" | base64 --decode | jq -r '.fork') == "false" ]]; then
      add_repo "$repo_name" "$owner" "$repo_url"
   fi
+  echo 0
 }
 
 # Step 2: Fetch user repos
@@ -75,6 +78,8 @@ repos=$(curl -s "https://api.github.com/orgs/${org}/repos?per_page=${porg}")
 for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
   parsing_result=$(process_repo "$row" "$org")
 done
+
+echo $parsing_result
 
 # Step 4: Remove folders that are no longer in GitHub
 if [[ $parsing_result -eq 0 ]]; then
