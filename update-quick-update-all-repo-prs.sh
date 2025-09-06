@@ -1,36 +1,120 @@
 #!/usr/bin/env bash
 
-remote_name="origin"
-if git ls-remote --exit-code --heads "$remote_name" "master"; then
-  master_branch="master"
-fi
-if git ls-remote --exit-code --heads "$remote_name" "main"; then
-  master_branch="main"
-fi
-if [ -n "${master_branch}" ]; then
-  git checkout "${master_branch}"
-  if [[  -f "Makefile" ]]; then
-    if make -qp | awk -F':' '/^[a-zA-Z0-9][^$#\/\t=]*:/{print $1}' | grep -qx "deps-quick-update"; then
-      echo "Running 'make deps-quick-update'..."
-      make deps-quick-update
-      git push
+cd ..
+
+user=jesperancinha
+pages=100
+org=JEsperancinhaOrg
+porg=100
+
+echo -e "\e[32mListing all git repos from user $user and organization $org \e[0m"
+echo -e "\e[32mExample usage: ./listAllGitHub.sh jesperancinha 100 jesperancinhaOrg 100\e[0m"
+
+# Step 1: Get current directories (assuming each repo has its own folder)
+existing_folders=()
+while IFS= read -r -d $'\0'; do
+  existing_folders+=("$(basename "$REPLY")")
+done < <(find . -mindepth 1 -maxdepth 1 -type d -print0)
+
+# Track repos that still exist remotely
+found_repos=()
+
+# Helper to process each repo JSON block
+process_repo() {
+  local row=$1
+  local owner=$2
+  local repo_name repo_url
+
+  repo_name=$(echo "${row}" | base64 --decode | jq -r '.name')
+  repo_url=$(echo "${row}" | base64 --decode | jq -r '.ssh_url')
+
+  if [[ $(echo "${row}" | base64 --decode | jq -r '.fork') == "false" ]]; then
+    found_repos+=("$repo_name")
+    if [[ ! -d "$repo_name" ]]; then
+      echo -e "\e[34mCloning $repo_url\e[0m"
+      pwd
+      gh repo clone "$owner/$repo_name"
     else
-      echo "Target 'deps-quick-update' not found in Makefile. Skipping"
+      echo -e "\e[33mSkipping $repo_name (already exists)\e[0m"
     fi
-  else
-    echo "No Makefile found in the current directory."
   fi
+}
+
+# Step 2: Fetch user repos
+repos=$(curl -s "https://api.github.com/users/${user}/repos?per_page=${pages}")
+for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
+  process_repo "$row" "$user"
+done
+
+found_repos+=("jeorg-homepage")
+
+# Clone jeorg-homepage if not present
+if [[ ! -d "jeorg-homepage" ]]; then
+  echo -e "\e[34mCloning jeorg-homepage manually\e[0m"
+  gh repo clone "$user/jeorg-homepage"
+else
+  echo -e "\e[33mSkipping jeorg-homepage (already exists)\e[0m"
 fi
-git pull
-git fetch -p
-for branch_name in $(git branch -r | grep -v '\->' | sed 's/origin\///' | grep -v 'master' | grep -v 'main' | grep -v 'migration-to-kotlin' | grep -v '1.0.0-eol-continuous-release-branch-recovered' | grep -v 'migrate-to-kotlin'); do
-  echo "Processing branch: $branch_name"
-  if [ -n "${master_branch}" ]; then
-    git checkout "${branch_name}"
-    git pull
-    git merge origin/"${master_branch}" --no-edit
-    git push
-    gh pr merge $(gh pr list --base "${master_branch}" --head "${branch_name}" --json number --jq '.[0].number' | xargs echo) --auto --merge
-    git checkout "${master_branch}"
+
+# Step 3: Fetch org repos
+repos=$(curl -s "https://api.github.com/orgs/${org}/repos?per_page=${porg}")
+for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
+  process_repo "$row" "$org"
+done
+
+# Step 4: Remove folders that are no longer in GitHub
+for folder in "${existing_folders[@]}"; do
+  if [[ ! " ${found_repos[*]} " =~ " ${folder} " ]]; then
+    echo -e "\e[31mRemoving obsolete folder: $folder\e[0m"
+    rm -rf "$folder"
   fi
 done
+
+remote_name="origin"
+for item in *; do
+  if [[ -d "$item" ]]; then
+    cd "${item}" || exit
+    echo "---*** Updating PRs in project $item ***---"
+    echo "--- Configuring for user $user ---"
+    git config --local user.email jofisaes@gmail.com
+    echo "--- Configuring rebase pull false ---"
+    git config pull.rebase false
+    if git ls-remote --exit-code --heads "$remote_name" "master"; then
+      master_branch="master"
+    fi
+    if git ls-remote --exit-code --heads "$remote_name" "main"; then
+      master_branch="main"
+    fi
+
+    if [ -n "${master_branch}" ]; then
+      git checkout "${master_branch}"
+      if [[  -f "Makefile" ]]; then
+        if make -qp | awk -F':' '/^[a-zA-Z0-9][^$#\/\t=]*:/{print $1}' | grep -qx "deps-quick-update"; then
+          echo "Running 'make deps-quick-update'..."
+          make deps-quick-update
+          git push
+        else
+          echo "Target 'deps-quick-update' not found in Makefile. Skipping"
+        fi
+      else
+        echo "No Makefile found in the current directory."
+      fi
+    fi
+
+    git pull
+    git fetch -p
+    for branch_name in $(git branch -r | grep -v '\->' | sed 's/origin\///' | grep -v 'master' | grep -v 'main' | grep -v 'migration-to-kotlin' | grep -v '1.0.0-eol-continuous-release-branch-recovered' | grep -v 'migrate-to-kotlin'); do
+      echo "Processing branch: $branch_name"
+      if [ -n "${master_branch}" ]; then
+        git checkout "${branch_name}"
+        git pull
+        git merge origin/"${master_branch}" --no-edit
+        git push
+        gh pr merge $(gh pr list --base "${master_branch}" --head "${branch_name}" --json number --jq '.[0].number' | xargs echo) --auto --merge
+        git checkout "${master_branch}"
+      fi
+    done
+    cd ..
+  fi
+done
+cd project-signer || exit
