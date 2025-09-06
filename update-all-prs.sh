@@ -18,7 +18,7 @@ done < <(find . -mindepth 1 -maxdepth 1 -type d -print0)
 
 # Track repos that still exist remotely
 found_repos=()
-
+parsing_result=0
 
 add_repo() {
     local repo_name=$1
@@ -42,12 +42,10 @@ process_repo() {
 
   repo_name=$(echo "${row}" | base64 --decode | jq -r '.name') || {
      echo "Error: failed to parse repo name from JSON" >&2
-     add_repo "$row" "$owner" "$repo_url"
      return 1
   }
   repo_url=$(echo "${row}" | base64 --decode | jq -r '.ssh_url') || {
      echo "Error: failed to parse url from JSON" >&2
-     add_repo "$row" "$owner" "$repo_url"
      return 1
   }
 
@@ -59,7 +57,7 @@ process_repo() {
 # Step 2: Fetch user repos
 repos=$(curl -s "https://api.github.com/users/${user}/repos?per_page=${pages}")
 for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
-  process_repo "$row" "$user"
+  parsing_result=process_repo "$row" "$user"
 done
 
 found_repos+=("jeorg-homepage")
@@ -75,16 +73,18 @@ fi
 # Step 3: Fetch org repos
 repos=$(curl -s "https://api.github.com/orgs/${org}/repos?per_page=${porg}")
 for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
-  process_repo "$row" "$org"
+  parsing_result=process_repo "$row" "$org"
 done
 
 # Step 4: Remove folders that are no longer in GitHub
-for folder in "${existing_folders[@]}"; do
-  if [[ ! " ${found_repos[*]} " =~ " ${folder} " ]]; then
-    echo -e "\e[31mRemoving obsolete folder: $folder\e[0m"
-    rm -rf "$folder"
-  fi
-done
+if [[ $parsing_result -eq 0 ]]; then
+  for folder in "${existing_folders[@]}"; do
+    if [[ ! " ${found_repos[*]} " =~ " ${folder} " ]]; then
+      echo -e "\e[31mRemoving obsolete folder: $folder\e[0m"
+      rm -rf "$folder"
+    fi
+  done
+fi
 
 remote_name="origin"
 for item in *; do
