@@ -81,7 +81,7 @@ for row in $(echo "${repos}" | jq -r '.[] | @base64'); do
   parsing_result=$(process_repo "$row" "$org")
 done
 
-echo $parsing_result
+echo "$parsing_result"
 
 # Step 4: Remove folders that are no longer in GitHub
 if [[ $parsing_result -eq 0 ]]; then
