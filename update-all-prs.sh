@@ -19,16 +19,12 @@ done < <(find . -mindepth 1 -maxdepth 1 -type d -print0)
 # Track repos that still exist remotely
 found_repos=()
 
-# Helper to process each repo JSON block
-process_repo() {
-  local row=$1
-  local owner=$2
-  local repo_name repo_url
 
-  repo_name=$(echo "${row}" | base64 --decode | jq -r '.name')
-  repo_url=$(echo "${row}" | base64 --decode | jq -r '.ssh_url')
+add_repo() {
+    local repo_name=$1
+    local owner=$2
+    local repo_url=$3
 
-  if [[ $(echo "${row}" | base64 --decode | jq -r '.fork') == "false" ]]; then
     found_repos+=("$repo_name")
     if [[ ! -d "$repo_name" ]]; then
       echo -e "\e[34mCloning $repo_url\e[0m"
@@ -37,6 +33,26 @@ process_repo() {
     else
       echo -e "\e[33mSkipping $repo_name (already exists)\e[0m"
     fi
+}
+# Helper to process each repo JSON block
+process_repo() {
+  local row=$1
+  local owner=$2
+  local repo_name repo_url
+
+  repo_name=$(echo "${row}" | base64 --decode | jq -r '.name') || {
+     echo "Error: failed to parse repo name from JSON" >&2
+     add_repo "$repo_name" "$owner" "$repo_url"
+     return 1
+  }
+  repo_url=$(echo "${row}" | base64 --decode | jq -r '.ssh_url') || {
+     echo "Error: failed to parse url from JSON" >&2
+     add_repo "$repo_name" "$owner" "$repo_url"
+     return 1
+  }
+
+  if [[ $(echo "${row}" | base64 --decode | jq -r '.fork') == "false" ]]; then
+     add_repo "$repo_name" "$owner" "$repo_url"
   fi
 }
 
