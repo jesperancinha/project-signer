@@ -92,6 +92,7 @@ for item in *; do
         if make -qp | awk -F':' '/^[a-zA-Z0-9][^$#\/\t=]*:/{print $1}' | grep -qx "deps-quick-update"; then
           echo "Running 'make deps-quick-update'..."
           make deps-quick-update
+          git commit -am "Plugin-update"
           git push
         else
           echo "Target 'deps-quick-update' not found in Makefile. Skipping"
