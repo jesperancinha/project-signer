@@ -55,36 +55,36 @@ if [ "$#" -eq 9 ]; then
     for plugin in "${pluginsArr[@]}"; do
       tag=$(echo $plugin | awk -F"$separator" '{print $1}')
       name=$(echo $plugin | awk -F"$separator" '{print substr($0, index($0,$2))}')
-      echo "$tag"/"$name"
+#      echo "$tag"/"$name"
       pluginSegments=${pluginsReplaceArr[$plugin]}
       for pluginSement in $pluginSegments; do
         tag=$(echo "$pluginSement" | awk -F"$separator" '{print $1}')
         name=$(echo "$pluginSement" | awk -F"$separator" '{print substr($0, index($0,$2))}')
         name=${name//\//\\/}
-        echo "$tag"/"$name"
+#        echo "$tag"/"$name"
         version=${versions[${plugin}]}
         arr["$tag\/$name@v[0-9\.]*"]="$tag\/$name@$version"
-        echo "Will replace $tag\/$name@v[0-9]* with $tag\/$name@$version"
+#        echo "Will replace $tag\/$name@v[0-9]* with $tag\/$name@$version"
       done
     done
 else
   for plugin in "${pluginsArr[@]}"; do
     tag=$(echo $plugin | awk -F"$separator" '{print $1}')
     name=$(echo $plugin | awk -F"$separator" '{print substr($0, index($0,$2))}')
-    echo "$tag"/"$name"
+#    echo "$tag"/"$name"
 
     versionUrl="https://api.github.com/repos/"$tag"/"$name"/tags"
-    echo "Performing GET request to $versionUrl"
+#    echo "Performing GET request to $versionUrl"
     sleep 1
     result=$(curl -s $versionUrl)
-    echo "$result"
+#    echo "$result"
 
     pluginSegments=${pluginsReplaceArr[$plugin]}
     for pluginSement in $pluginSegments; do
       tag=$(echo "$pluginSement" | awk -F"$separator" '{print $1}')
       name=$(echo "$pluginSement" | awk -F"$separator" '{print substr($0, index($0,$2))}')
       name=${name//\//\\/}
-      echo "$tag"/"$name"
+#      echo "$tag"/"$name"
 
       version=$(echo "$result" | jq -r '.[0].name' | cut -d '.' -f1)
       if [[ -n $version ]]; then
@@ -222,6 +222,7 @@ for item in *; do
          if [ -f "$f""01" ]; then rm "$f""01"; fi
        done
      fi
+     git commit -am "Automated Update"
     fi
 
     git pull
