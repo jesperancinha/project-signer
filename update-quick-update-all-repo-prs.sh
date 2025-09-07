@@ -222,6 +222,7 @@ for item in *; do
          if [ -f "$f""01" ]; then rm "$f""01"; fi
        done
      fi
+     echo "$(git diff)"
      git commit -am "Automated Update"
     fi
 
