@@ -224,6 +224,7 @@ for item in *; do
      fi
      echo "$(git diff)"
      git commit -am "Automated Update"
+     git push
     fi
 
     git pull
