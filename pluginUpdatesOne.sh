@@ -21,6 +21,7 @@ pluginsArr[6]="dependabot/fetch-metadata"
 pluginsArr[7]="github/codeql-action"
 pluginsArr[8]="graalvm/setup-graalvm"
 pluginsArr[9]="actions/setup-haskell"
+pluginsArr[10]="sbt/setup-sbt"
 
 pluginsReplaceArr[${pluginsArr[0]}]=${pluginsArr[0]}
 pluginsReplaceArr[${pluginsArr[1]}]=${pluginsArr[1]}
@@ -32,8 +33,9 @@ pluginsReplaceArr[${pluginsArr[6]}]=${pluginsArr[6]}
 pluginsReplaceArr[${pluginsArr[7]}]="github/codeql-action/init github/codeql-action/autobuild github/codeql-action/analyze"
 pluginsReplaceArr[${pluginsArr[8]}]=${pluginsArr[8]}
 pluginsReplaceArr[${pluginsArr[9]}]=${pluginsArr[9]}
+pluginsReplaceArr[${pluginsArr[10]}]=${pluginsArr[10]}
 
-if [ "$#" -eq 9 ]; then
+if [ "$#" -eq 10 ]; then
     versions[${pluginsArr[0]}]=$1
     versions[${pluginsArr[1]}]=$2
     versions[${pluginsArr[2]}]=$3
@@ -44,6 +46,7 @@ if [ "$#" -eq 9 ]; then
     versions[${pluginsArr[7]}]=$8
     versions[${pluginsArr[8]}]=$9
     versions[${pluginsArr[9]}]=${10}
+    versions[${pluginsArr[10]}]=${11}
     for plugin in "${pluginsArr[@]}"; do
       tag=$(echo $plugin | awk -F"$separator" '{print $1}')
       name=$(echo $plugin | awk -F"$separator" '{print substr($0, index($0,$2))}')
