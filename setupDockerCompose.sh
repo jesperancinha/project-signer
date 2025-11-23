@@ -19,3 +19,5 @@ else
   echo "Docker compose exists at version $(docker-compose -v | tail -n 1)"; \
   echo "File already exists! Continuing"
 fi
+sudo apt-get update
+sudo apt-get install docker-ce
