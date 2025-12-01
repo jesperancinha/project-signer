@@ -24,7 +24,7 @@
 
         <jacoco-maven-plugin.version>0.8.14</jacoco-maven-plugin.version>
         <omni-coveragereporter-maven-plugin.version>0.4.5</omni-coveragereporter-maven-plugin.version>
-        <springmockk.version>4.0.2</springmockk.version>
+        <springmockk.version>5.0.1</springmockk.version>
     </properties>
     <parent>
         <groupId>org.jesperancinha.parser</groupId>
