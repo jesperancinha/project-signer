@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+git config --global pull.rebase true
+git config --global core.editor true
+
 remote_name="origin"
 if git ls-remote --exit-code --heads "$remote_name" "master"; then
   master_branch="master"
