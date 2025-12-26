@@ -10,6 +10,8 @@ porg=100
 echo -e "\e[32mListing all git repos from user $user and organization $org \e[0m"
 echo -e "\e[32mExample usage: ./listAllGitHub.sh jesperancinha 100 jesperancinhaOrg 100\e[0m"
 
+git config --global pull.rebase true
+
 # Step 1: Get current directories (assuming each repo has its own folder)
 existing_folders=()
 while IFS= read -r -d $'\0'; do

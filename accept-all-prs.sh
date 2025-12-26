@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+git config --global pull.rebase true
+
 all_pr_branches=("update-cypress-dependencies-and-containers" "update-gradle" "update-npm-dependencies")
 remote_name="origin"
 cd ..
