@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test
 import java.io.IOException
 import java.nio.charset.StandardCharsets
 import java.util.*
-import java.util.function.Consumer
 import java.util.regex.Pattern
 
 internal class SignerMatchTest {
@@ -46,16 +45,10 @@ internal class SignerMatchTest {
                         replace = replace
                     )
                 }.toList()
-        val ref = object : Any() {
-            var readme = test
+        return lintMatches.fold(test) { acc, (find, replace): SignerPattern ->
+            val m = find.matcher(acc)
+            if (m.find()) m.replaceAll(replace) else acc
         }
-        lintMatches.forEach(Consumer { (find, replace): SignerPattern ->
-            val m = find.matcher(ref.readme)
-            if (m.find()) {
-                ref.readme = m.replaceAll(replace)
-            }
-        })
-        return ref.readme
     }
 
     companion object {

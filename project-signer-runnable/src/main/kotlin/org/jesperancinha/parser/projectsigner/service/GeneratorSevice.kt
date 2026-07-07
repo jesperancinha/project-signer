@@ -39,7 +39,6 @@ open class GeneratorSevice(
     open fun processLicenseFile(licencePath: Path, licenses: List<String>?) {
         val f = File(licencePath.toFile(), "Readme.md")
         val licenseLegacyFile = File(licencePath.toFile(), "License.txt")
-        var licenseText: String? = null
         if (licenseLegacyFile.exists()) {
             val delete = licenseLegacyFile.delete()
             if (!delete) {
@@ -48,10 +47,10 @@ open class GeneratorSevice(
             }
         }
         val expectedLegactyFile = File(licencePath.toFile(), "License")
-        if (expectedLegactyFile.exists()) {
+        val licenseText: String? = if (expectedLegactyFile.exists()) {
             val templateInputStream = FileInputStream(expectedLegactyFile)
-            licenseText = String(templateInputStream.readAllBytes(), StandardCharsets.UTF_8)
-        }
+            String(templateInputStream.readAllBytes(), StandardCharsets.UTF_8)
+        } else null
         val licenseFile = File(licencePath.toFile(), "LICENSE")
         if (licenseFile.exists()) {
             val delete = licenseFile.delete()

@@ -114,7 +114,7 @@ open class FileWriterService {
     private fun writeTitles(badgeType: BadgeType, fileWriter: FileWriter) {
         val badgeSettingGroup = BadgeParser.badgeSettingGroups[badgeType]
         fileWriter.write("|Project")
-        badgeSettingGroup!!.badgeSettingList.forEach(Consumer { badgePattern: BadgePattern ->
+        badgeSettingGroup?.badgeSettingList?.forEach(Consumer { badgePattern: BadgePattern ->
             try {
                 if (badgePattern.title != "Project") {
                     fileWriter.write("|")

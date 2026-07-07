@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import java.util.regex.Pattern
 
 data class SignerPattern(
-    @JsonProperty("find")
+    @param:JsonProperty("find")
     val find: Pattern,
-    @JsonProperty("replace")
+    @param:JsonProperty("replace")
     val replace: String
 )

@@ -33,13 +33,11 @@ open class OptionsServiceMock (
         projectSignerOptions.templateLocation=Path.of(ProjectSignerOptionsTest.README_MD)
         projectSignerOptions.tagNames=arrayOf("License", "About me")
         this.projectSignerOptions = projectSignerOptions
-        commonBuilder = this.projectSignerOptions?.noEmpty?.let {
-            this.projectSignerOptions!!.templateLocation?.let { it1 ->
-                ReadmeNamingParser(
-                    templateLocation = it1,
-                    isNoEmpty = it
-                )
-            }
+        commonBuilder = projectSignerOptions.templateLocation?.let { it1 ->
+            ReadmeNamingParser(
+                templateLocation = it1,
+                isNoEmpty = projectSignerOptions.noEmpty
+            )
         }
         return projectSignerOptions
     }
