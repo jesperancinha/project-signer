@@ -58,3 +58,4 @@ yarn.lock
 ## Automation
 docker-composetmp.yml
 packagetmp.json
+dependabot.yml.bak

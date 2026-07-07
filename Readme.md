@@ -132,6 +132,16 @@ Production deployment location: [![](https://img.shields.io/badge/Google%20Play-
 
 ---
 
+## Claude
+
+Prompt claude with the following:
+
+### Run all skills
+```text
+please run skills annotations, kotlin, parallel, and spring-integration-test-wiring on this project
+```
+---
+
 ## References
 
 -   [Java Bytecode versions](https://javaalmanac.io/bytecode/versions/)
