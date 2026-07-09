@@ -161,8 +161,18 @@ Essentially, this means replacing calls to it.asByteBuffer().array() with a more
 `OAuth2` from dependencies `org.springframework.security.oauth2` has been deprecated. There is a guideline manual located at: https://github.com/spring-projects/spring-security/wiki/OAuth-2.0-Migration-Guide
 Please make sure that the new code follows the guidelines. Make the eventual necessary changes to the `pom.xml` files, code, en what may be necessary.
 
-## 5. Checklist
+## 5. `ApplicationArguments` cannot be null anymore
+
+please replase `override fun run(args: ApplicationArguments?)` with `override fun run(args: ApplicationArguments?)`
+
+## 6. `import org.springframework.boot.env.EnvironmentPostProcessor` needs to be replaced by `import org.springframework.boot.EnvironmentPostProcessor`
+
+The `EnvironmentPostProcessor` is now part of the `import org.springframework.boot` package.
+
+## 7. Checklist
 
 [ ] All old security configurations have been updated to the new style. 
 [ ] All usages of `NestedServletException` have been replaced with `ServletException`.
 [ ] All usages of `DataBuffer.toByteBuffer` have been replaced with a more explicit way of creating a ByteBuffer and getting the byte array.
+[ ] There should be no `override fun run(args: ApplicationArguments?)` left
+[ ] There should be no `import org.springframework.boot.env.EnvironmentPostProcessor` left
