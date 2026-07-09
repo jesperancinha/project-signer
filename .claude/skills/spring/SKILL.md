@@ -142,12 +142,11 @@ internal class StaCoImageController(
         }.map {
             val putObjectRequest =
                 PutObjectRequest.builder().bucket(IMAGES_BUCKET).key("staco-image-$uuid.png").build()
-            val buffer = ByteBuffer.allocate(it.readableByteCount())
-            it.toByteBuffer(buffer)
-            buffer.flip()
+            val bytes = ByteArray(it.readableByteCount())
+            it.read(bytes)
             s3AsyncClient.putObject(
                 putObjectRequest,
-                AsyncRequestBody.fromBytes(buffer.array())
+                AsyncRequestBody.fromBytes(bytes)
             )
         }.then()
     }
@@ -171,7 +170,7 @@ The `EnvironmentPostProcessor` is now part of the `import org.springframework.bo
 
 ## 7. Checklist
 
-[ ] All old security configurations have been updated to the new style. 
+[ ] All old security configurations have been updated to the new style.
 [ ] All usages of `NestedServletException` have been replaced with `ServletException`.
 [ ] All usages of `DataBuffer.toByteBuffer` have been replaced with a more explicit way of creating a ByteBuffer and getting the byte array.
 [ ] There should be no `override fun run(args: ApplicationArguments?)` left
