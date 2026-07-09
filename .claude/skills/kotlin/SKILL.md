@@ -63,7 +63,26 @@ replace with:
     .getForEntity<String>("/tulips")
 ```
 
-## 7. Checklist
+## 7. Update the usage of `CSVParser` which is now deprecated
+
+This skill refers to the `CSVParser` from `org.apache.commons.csv.*`
+
+### Example 1
+
+Replace 
+```kotlin
+val csvParser = CSVParser(reader, CSV_HEADER)
+```
+
+with
+
+```kotlin
+val csvParser = CSVParser.builder()
+.setReader(reader)
+.setFormat(CSV_HEADER).get()
+```
+
+## 8. Checklist
 
 [ ] The code does not use the `!!` operator.
 [ ] The code does not use the safe call operator (`?.`) when the value is guaranteed to be non-null.
@@ -71,3 +90,4 @@ replace with:
 [ ] The code uses the `Duration` overload when using the `delay` function.
 [ ] The code does not contain any code signatures.
 [ ] The code uses the kotlin extensions for parsing when using Kotlin code.
+[ ] The code should not use the `CSVParser` constructuro directly
