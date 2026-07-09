@@ -69,7 +69,7 @@ This skill refers to the `CSVParser` from `org.apache.commons.csv.*`
 
 ### Example 1
 
-Replace 
+Replace
 ```kotlin
 val csvParser = CSVParser(reader, CSV_HEADER)
 ```
@@ -78,8 +78,46 @@ with
 
 ```kotlin
 val csvParser = CSVParser.builder()
-.setReader(reader)
-.setFormat(CSV_HEADER).get()
+    .setReader(reader)
+    .setFormat(CSV_HEADER).get()
+```
+
+### Example 2
+
+Replace this
+
+```kotlin
+private val CSV_HEADER = DEFAULT
+    .withHeader(
+        "id",
+        "description",
+        "year",
+        "value",
+        "currency",
+        "type",
+        "diameterMM",
+        "internalDiameterMM",
+        "heightMM",
+        "widthMM"
+    )
+```
+
+with:
+
+```kotlin
+private val CSV_HEADER = CSVFormat.DEFAULT.builder()
+    .setHeader(
+        "id",
+        "description",
+        "year",
+        "value",
+        "currency",
+        "type",
+        "diameterMM",
+        "internalDiameterMM",
+        "heightMM",
+        "widthMM"
+    ).get()
 ```
 
 ## 8. Checklist
