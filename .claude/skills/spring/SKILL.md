@@ -89,7 +89,7 @@ public class Flash17ConfigurationAdapter {
 NestedServletException has been deprecated.
 This means that all usages of `org.springframework.web.util.NestedServletException` should be replaced with `jakarta.servlet.ServletException` in all test classes.
 
-## 3. The `toByteBuffer` function has been deprecated.
+## 3. The `toByteBuffer()` function with no params has been deprecated.
 
 This means that all usages of `org.springframework.core.io.buffer.DataBuffer.toByteBuffer` should be replaced with another way to get the byte array.
 
