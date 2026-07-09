@@ -237,7 +237,11 @@ class ApplicationUser(
 )
 ```
 
-## 8. Checklist
+## 8. `@Nullable` needs to be used from another package
+
+The `org.springframework.lang.Nullable` is deprecated, please use `org.jspecify.annotations.Nullable` instead.
+
+## 9. Checklist
 
 [ ] All old security configurations have been updated to the new style. 
 [ ] All usages of `NestedServletException` have been replaced with `ServletException`.
