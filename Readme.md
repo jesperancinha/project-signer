@@ -52,14 +52,14 @@ Example:
 
 Run with `prod` profile.
 
-To summarize, this program will scan all your readme files and standardize name. You may want a generic signature in all your projects and this little runner will do just that!
+To summarize, this program will scan all your readme files and standardize name. You may want a generic signature in all your projects, and this little runner will do just that!
 
-This command line runner will complete several boiler plate tasks:
+This command line runner will complete several boilerplate tasks:
 
 -   Creates all Readme.md files missing - Wherever there is a pom or a package.json file, there should be a Readme.md to explain the purpose of your project. Title will be calculated according to your architecture. The title string is to be extracted from the build files. If multiple build files are present, it will find the name of the project by prioritizing the name of the project in detriment of the artifact name. In order of priority it will look for a title according to the following priority list: Maven, Gradle, SBT and finally NPM.
--   All indicated paragraph which start on a certain tag will be removed - We consider a whole paragraph according to the '#' notation of the markdown.
+-   All indicated paragraphs that start on a certain tag will be removed – We consider a whole paragraph according to the '#' notation of the Markdown.
 -   Once all Readme.md files have been created or updated, we will finally add the template signature AS IS to the footer of all found cases.
--   If a Readme file has been generated and a template option (-l) is not null, the it will copy the template file literally to the same destination.
+-   If a Readme file has been generated and a template option (-l) is not null, it will copy the template file literally to the same destination.
 -   It will also make sure the all legacy License.txt files will be removed.
 -   When running the [signAll.sh](signAll.sh) script, the [yyyy] variable in all licenses will be replaced with the year of the first commit in that repo
 
