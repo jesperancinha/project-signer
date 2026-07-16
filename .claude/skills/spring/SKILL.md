@@ -259,7 +259,7 @@ For reference, please follow the following documents:
 
 1. https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.5-Release-Notes
 2. https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide
-2. https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.1-Release-Notes
+3. https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.1-Release-Notes
 
 ## 12. Checklist
 
