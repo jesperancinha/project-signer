@@ -245,10 +245,15 @@ The `org.springframework.lang.Nullable` is deprecated, please use `org.jspecify.
 
 Replace all usages of `management.metrics.export.statsd.host` with `management.statsd.metrics.export.host`
 
-## 10. Checklist
+## 10. There should be no `open` use when the spring kotlin plugin is being used
+
+Since the `spring`, or the `all-open` plugins make methods, functions, and classes open by default, the `open` keyword should not be used.
+
+## 11. Checklist
 
 [ ] All old security configurations have been updated to the new style. 
 [ ] All usages of `NestedServletException` have been replaced with `ServletException`.
 [ ] All usages of `DataBuffer.toByteBuffer` have been replaced with a more explicit way of creating a ByteBuffer and getting the byte array.
 [ ] There should be no `override fun run(args: ApplicationArguments?)` left
 [ ] There should be no `import org.springframework.boot.env.EnvironmentPostProcessor` left
+[ ] There should be no usage of the keyword `open`, when using plugins `spring` or `all-open`
