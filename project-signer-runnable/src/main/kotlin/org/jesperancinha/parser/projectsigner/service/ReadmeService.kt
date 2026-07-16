@@ -25,7 +25,7 @@ import kotlin.system.exitProcess
  * A Readme service to read and manipulate markdown files
  */
 @Service
-open class ReadmeService(
+class ReadmeService(
     private val mergeService: MergeService,
     private val optionsService: OptionsService,
     private val techStackService: TechStackService,
@@ -44,14 +44,14 @@ open class ReadmeService(
      * @throws IOException Any IO Exception thrown
      */
     @Throws(IOException::class)
-    open fun readDataStrippedOfTags(templateInputStream: InputStream, vararg tags: String): String? {
+    fun readDataStrippedOfTags(templateInputStream: InputStream, vararg tags: String): String? {
         return if (tags.isEmpty())
             IOUtils.toString(templateInputStream, Charset.defaultCharset())
         else ReadmeParserHelper.readDataSprippedOfTags(templateInputStream, *tags)
     }
 
     @Throws(IOException::class)
-    open fun exportNewReadme(readmePath: Path, inputStream: InputStream, allParagraphs: Paragraphs) {
+    fun exportNewReadme(readmePath: Path, inputStream: InputStream, allParagraphs: Paragraphs) {
         logger.info("Visiting path {}", readmePath)
         val readme =
             readDataStrippedOfTags(inputStream, *optionsService.projectSignerOptions?.tagNames ?: emptyArray()) ?: ""

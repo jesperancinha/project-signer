@@ -14,25 +14,25 @@ import java.util.*
  * A markdown raw service to handle markdown texts
  */
 @Service
-open class TemplateService(private val optionsService: OptionsService) {
+class TemplateService(private val optionsService: OptionsService) {
     /**
      * Receives an input Markdown text stream nd parses its content to a Paragraphs object see [Paragraphs]
      *
      * @return A [Paragraphs] parsed object
      * @throws IOException Any kind of IO Exception
      */
-    open fun  findAllParagraphs(): Paragraphs {
+    fun  findAllParagraphs(): Paragraphs {
         val fileTemplate = optionsService.projectSignerOptions?.templateLocation?.toFile()
         val templateInputStream = fileTemplate?.let { FileInputStream(it) }
         return templateInputStream?.let { TemplateParserHelper.findAllParagraphs(templateInputStream) } ?: Paragraphs()
     }
-    open fun findAllRedirectParagraphs(): Paragraphs? {
+    fun findAllRedirectParagraphs(): Paragraphs? {
         val fileTemplate = optionsService.projectSignerOptions?.redirectTemplateLocation?.toFile()
         val templateInputStream = fileTemplate?.let { FileInputStream(it) }
         return templateInputStream?.let { TemplateParserHelper.findAllParagraphs(templateInputStream) } ?: Paragraphs()
     }
 
-    open fun readAllLicenses(): List<String>? {
+    fun readAllLicenses(): List<String>? {
         val licenseLocations = optionsService.projectSignerOptions?.getLicenseLocations()
             ?: return emptyList()
         return licenseLocations

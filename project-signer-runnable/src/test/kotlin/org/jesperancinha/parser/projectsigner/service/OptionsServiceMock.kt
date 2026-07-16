@@ -10,7 +10,7 @@ import java.util.*
 
 @Service
 @Profile("test", "localtest", "default")
-open class OptionsServiceMock (
+class OptionsServiceMock (
     var projectSignerOptions: ProjectSignerOptions?= null,
     private var commonBuilder: ReadmeNamingParser?= null
 ) {
