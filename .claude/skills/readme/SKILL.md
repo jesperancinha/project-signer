@@ -63,3 +63,30 @@ For all `.md` files, or other markdown files, please remove badges from the foll
 
 1. [![codebeat badge]()]() - All codebeat badges should be removed, along with any references to using it.
 2. [![BCH compliance]()]() - All BCH badges should be removed, along with any references to using it.
+
+## 4. `.md` files in Submodules, or subfolders, should not contain any of the following badges
+
+The following badges are applied to the whole project, hence why it makes no sense to keep them in submodules or subfolders.
+These badges should only be part of root `Readme.md` files. They should also be removed from other .md files if found.
+
+[![Generic badge]()]()
+[![GitHub release]()]()
+[![GitHub License]()]()
+[![CircleCI]()]()
+[![Build status]()]()
+[![jeorg-spring-master-test-drives](https://github.com/jesperancinha/jeorg-spring-master-test-drives/actions/workflows/jeorg-spring-master-test-drives.yml/badge.svg)](https://github.com/jesperancinha/jeorg-spring-master-test-drives/actions/workflows/jeorg-spring-master-test-drives.yml)
+[![Codacy Badge]()]()
+[![codebeat badge]()]()
+[![BCH compliance]()]()
+[![Known Vulnerabilities]()]()
+
+[![Codacy Badge]()]()
+[![Coverage Status]()]()
+[![codecov]()]()
+
+[![GitHub language count]()]()
+[![GitHub top language]()]()
+[![GitHub top language]()]()
+
+The pipeline GitHub action badges usually have the name of the project. They usually have `actions/workflows` in the links.
+These should only be part of root `Readme.md` files. They should also be removed from other .md files if found.
