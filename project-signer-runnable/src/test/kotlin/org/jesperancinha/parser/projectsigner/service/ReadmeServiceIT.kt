@@ -12,7 +12,6 @@ import java.io.IOException
 @SpringBootTest(args = ["--raw-location=Readme.md", "--root-directory=/"])
 @ActiveProfiles("test")
 internal class ReadmeServiceIT @Autowired constructor(
-    @Autowired
     private val readmeService: ReadmeService
 ){
 

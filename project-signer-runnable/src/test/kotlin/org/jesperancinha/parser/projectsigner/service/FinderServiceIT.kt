@@ -43,8 +43,9 @@ internal class FinderServiceIT @Autowired constructor(
     fun testIterateThroughFilesAndFolders() {
         val techUsedCommonText =
             "\n## Technologies used\n\nPlease check the [TechStack.md](TechStack.md) file for details.\n"
-        tempDirectory.shouldNotBeNull()
-        finderService.iterateThroughFilesAndFolders(tempDirectory!!)
+        val tempDir = tempDirectory
+        tempDir.shouldNotBeNull()
+        finderService.iterateThroughFilesAndFolders(tempDir)
 
         getFileContent("directory1/subDirectory1/Readme.md") shouldBe "# label1\n\n# label2\n\n# label3\n\n## License\n\nThis is one One\n\n## About me\n\nThis is two Two\n"
         getFileContent("directory1/subDirectory1/TechStack.md").shouldBeNull()
@@ -86,7 +87,8 @@ internal class FinderServiceIT @Autowired constructor(
 
     @Throws(IOException::class)
     private fun getFileContent(readmeLocation: String): String? {
-        val file: File = tempDirectory!!.resolve(readmeLocation).toFile()
+        val tempDir = tempDirectory ?: return null
+        val file: File = tempDir.resolve(readmeLocation).toFile()
         return if (file.exists()) {
             IOUtils.toString(FileInputStream(file), Charset.defaultCharset())
         } else null
@@ -94,8 +96,9 @@ internal class FinderServiceIT @Autowired constructor(
 
     @Throws(IOException::class)
     private fun copyFolder(src: Path, dest: Path?) {
+        val target = dest ?: return
         Files.walk(src)
-            .forEach { source: Path -> copy(source, dest!!.resolve(src.relativize(source))) }
+            .forEach { source: Path -> copy(source, target.resolve(src.relativize(source))) }
     }
 
     private fun copy(src: Path, dest: Path) {

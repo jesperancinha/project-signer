@@ -7,12 +7,12 @@ import java.nio.file.*
 import java.util.*
 
 @Service
-open class FinderService(
+class FinderService(
     private val generatorService: GeneratorSevice,
     private val templateService: TemplateService
 ) {
     @Throws(IOException::class)
-    open fun iterateThroughFilesAndFolders(rootPath: Path): Path? {
+    fun iterateThroughFilesAndFolders(rootPath: Path): Path? {
         val allParagraphs = templateService.findAllParagraphs()
         val allRedirectParagraphs = templateService.findAllRedirectParagraphs()
         val readAllLicenses = templateService.readAllLicenses()

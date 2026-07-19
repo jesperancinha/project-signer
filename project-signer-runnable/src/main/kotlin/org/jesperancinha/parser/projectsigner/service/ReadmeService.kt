@@ -16,7 +16,6 @@ import java.nio.charset.Charset
 import java.nio.charset.StandardCharsets
 import java.nio.file.Path
 import java.util.*
-import java.util.function.Consumer
 import java.util.regex.Pattern
 import java.util.stream.Collectors
 import kotlin.io.path.name
@@ -26,7 +25,7 @@ import kotlin.system.exitProcess
  * A Readme service to read and manipulate markdown files
  */
 @Service
-open class ReadmeService(
+class ReadmeService(
     private val mergeService: MergeService,
     private val optionsService: OptionsService,
     private val techStackService: TechStackService,
@@ -45,14 +44,14 @@ open class ReadmeService(
      * @throws IOException Any IO Exception thrown
      */
     @Throws(IOException::class)
-    open fun readDataStrippedOfTags(templateInputStream: InputStream, vararg tags: String): String? {
+    fun readDataStrippedOfTags(templateInputStream: InputStream, vararg tags: String): String? {
         return if (tags.isEmpty())
             IOUtils.toString(templateInputStream, Charset.defaultCharset())
         else ReadmeParserHelper.readDataSprippedOfTags(templateInputStream, *tags)
     }
 
     @Throws(IOException::class)
-    open fun exportNewReadme(readmePath: Path, inputStream: InputStream, allParagraphs: Paragraphs) {
+    fun exportNewReadme(readmePath: Path, inputStream: InputStream, allParagraphs: Paragraphs) {
         logger.info("Visiting path {}", readmePath)
         val readme =
             readDataStrippedOfTags(inputStream, *optionsService.projectSignerOptions?.tagNames ?: emptyArray()) ?: ""
@@ -97,20 +96,14 @@ open class ReadmeService(
     }
 
     private fun createLintedText(newText: String): String {
-        val ref = object : Any() {
-            var readme = newText
+        return lintMatches.fold(newText) { acc, signerPattern: SignerPattern ->
+            val m = signerPattern.find.matcher(acc)
+            if (m.find()) m.replaceAll(signerPattern.replace) else acc
         }
-        lintMatches!!.forEach(Consumer { signerPattern: SignerPattern ->
-            val m = signerPattern.find.matcher(ref.readme)
-            if (m.find()) {
-                ref.readme = m.replaceAll(signerPattern.replace)
-            }
-        })
-        return ref.readme
     }
 
     private fun removeNonRefs(newText: String): String {
-        return if (Objects.isNull(newText) || refsToRemove!!.size == 1 && refsToRemove!![0].isEmpty()) {
+        return if (refsToRemove.size == 1 && refsToRemove[0].isEmpty()) {
             newText
         } else Arrays.stream(newText.split("\n".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray())
             .filter { text: String -> !textIsRef(text) }
@@ -123,15 +116,15 @@ open class ReadmeService(
     }
 
     private fun textHasWord(text: String): Boolean {
-        return refsToRemove!!.stream().anyMatch { ref: String ->
+        return refsToRemove.stream().anyMatch { ref: String ->
             text.lowercase(Locale.getDefault()).contains(ref.lowercase(Locale.getDefault()))
         }
     }
 
     companion object {
         val logger: Logger = LoggerFactory.getLogger(ReadmeService::class.java)
-        private var refsToRemove: List<String>? = null
-        private var lintMatches: List<SignerPattern>? = null
+        private val refsToRemove: List<String>
+        private val lintMatches: List<SignerPattern>
         private val objectMapper = ObjectMapper()
 
         init {

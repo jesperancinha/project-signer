@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-open class ProjectSignerConfiguration {
+class ProjectSignerConfiguration {
     @Bean
-    open fun fileFilterChain(): FileFilterChain = FileFilterChain.createDefaultChain()
+    fun fileFilterChain(): FileFilterChain = FileFilterChain.createDefaultChain()
 }

@@ -18,8 +18,8 @@ import java.util.stream.Collectors
 import kotlin.system.exitProcess
 
 @Service
-open class FileWriterService {
-    open fun exportTechStack(path: Path, text: String) {
+class FileWriterService {
+    fun exportTechStack(path: Path, text: String) {
         val fileName = path.findTechStackFileNameWithDefault()
         val techStackFile = File(path.toFile(), fileName)
         val fileWriter = FileWriter(techStackFile)
@@ -29,7 +29,7 @@ open class FileWriterService {
     }
 
     @Throws(IOException::class)
-    open fun exportReadmeFile(path: Path, text: String) {
+    fun exportReadmeFile(path: Path, text: String) {
         val fileName = path.findReadmeFileNameWithDefault()
         val readmeFile = File(path.toFile(), fileName)
         val fileWriter = FileWriter(readmeFile)
@@ -38,7 +38,7 @@ open class FileWriterService {
         fileWriter.close()
     }
 
-    open fun exportReportFiles(path: Path, projectDataList: List<ProjectData>) {
+    fun exportReportFiles(path: Path, projectDataList: List<ProjectData>) {
         BadgeParser.badgeTypes.values.forEach(Consumer { badgeType: BadgeType ->
             val file = File(path.toFile(), badgeType.destinationFile)
             try {
@@ -114,7 +114,7 @@ open class FileWriterService {
     private fun writeTitles(badgeType: BadgeType, fileWriter: FileWriter) {
         val badgeSettingGroup = BadgeParser.badgeSettingGroups[badgeType]
         fileWriter.write("|Project")
-        badgeSettingGroup!!.badgeSettingList.forEach(Consumer { badgePattern: BadgePattern ->
+        badgeSettingGroup?.badgeSettingList?.forEach(Consumer { badgePattern: BadgePattern ->
             try {
                 if (badgePattern.title != "Project") {
                     fileWriter.write("|")

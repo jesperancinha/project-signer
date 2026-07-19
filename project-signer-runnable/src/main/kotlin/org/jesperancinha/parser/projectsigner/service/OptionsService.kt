@@ -8,7 +8,7 @@ import picocli.CommandLine
 
 @Service
 @Profile("dev", "prod", "test")
-open class OptionsService {
+class OptionsService {
     var projectSignerOptions: ProjectSignerOptions? = null
     var commonNamingParser: ReadmeNamingParser? = null
 

@@ -12,15 +12,14 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/eyx7uhjenc7m6s9j/branch/master?svg=true)](https://ci.appveyor.com/project/jesperancinha/project-signer/branch/master)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d423415df34f42bf821ae13a078094c9)](https://www.codacy.com/app/jofisaes/project-signer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/project-signer&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/bfb0987b-e483-4954-9c3b-24ac488006bd)](https://codebeat.co/projects/github-com-jesperancinha-project-signer-master)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/d423415df34f42bf821ae13a078094c9)](https://www.codacy.com/gh/jesperancinha/project-signer/dashboard?utm_source=github.com&utm_medium=referral&utm_content=jesperancinha/project-signer&utm_campaign=Badge_Coverage)
 [![Coverage Status](https://coveralls.io/repos/github/jesperancinha/project-signer/badge.svg?branch=master)](https://coveralls.io/github/jesperancinha/project-signer?branch=master)
 [![codecov](https://codecov.io/gh/jesperancinha/project-signer/branch/master/graph/badge.svg?token=ErqcT1G5Tq)](https://codecov.io/gh/jesperancinha/project-signer)
 
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/project-signer.svg)]()
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/project-signer.svg)]()
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/project-signer.svg)]()
+![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/project-signer.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/project-signer.svg)
+![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/project-signer.svg)
 
 ## Technologies used
 
@@ -52,14 +51,14 @@ Example:
 
 Run with `prod` profile.
 
-To summarize, this program will scan all your readme files and standardize name. You may want a generic signature in all your projects and this little runner will do just that!
+To summarize, this program will scan all your readme files and standardize name. You may want a generic signature in all your projects, and this little runner will do just that!
 
-This command line runner will complete several boiler plate tasks:
+This command line runner will complete several boilerplate tasks:
 
 -   Creates all Readme.md files missing - Wherever there is a pom or a package.json file, there should be a Readme.md to explain the purpose of your project. Title will be calculated according to your architecture. The title string is to be extracted from the build files. If multiple build files are present, it will find the name of the project by prioritizing the name of the project in detriment of the artifact name. In order of priority it will look for a title according to the following priority list: Maven, Gradle, SBT and finally NPM.
--   All indicated paragraph which start on a certain tag will be removed - We consider a whole paragraph according to the '#' notation of the markdown.
+-   All indicated paragraphs that start on a certain tag will be removed – We consider a whole paragraph according to the '#' notation of the Markdown.
 -   Once all Readme.md files have been created or updated, we will finally add the template signature AS IS to the footer of all found cases.
--   If a Readme file has been generated and a template option (-l) is not null, the it will copy the template file literally to the same destination.
+-   If a Readme file has been generated and a template option (-l) is not null, it will copy the template file literally to the same destination.
 -   It will also make sure the all legacy License.txt files will be removed.
 -   When running the [signAll.sh](signAll.sh) script, the [yyyy] variable in all licenses will be replaced with the year of the first commit in that repo
 
@@ -117,7 +116,7 @@ mvn nexus-staging:release  -Prelease
 
 ## My Android apps
 
-<div align="center">
+<div style="text-align: center;">
 
 [![](https://img.shields.io/badge/Matrix%20Anywhere-%230077B5.svg?style=for-the-badge&logo=android&color=0a5d00)](https://github.com/jesperancinha/matrix-anywhere-android)
 [![](https://img.shields.io/badge/Base%20Converter-%230077B5.svg?style=for-the-badge&logo=android&color=0a5d00)](https://github.com/jesperancinha/base-converter-android)
@@ -130,6 +129,16 @@ mvn nexus-staging:release  -Prelease
 
 Production deployment location: [![](https://img.shields.io/badge/Google%20Play-%230077B5.svg?style=for-the-badge&logo=googleplay&color=purple)](https://play.google.com/store/apps/developer?id=Joao+Filipe+Sabino+Esperancinha)
 
+---
+
+## Claude
+
+Prompt claude with the following:
+
+### Run all skills
+```text
+please run skills annotations, docker, java, jee, jvm, kotlin, maven, parallel, readme, scripts, spring, spring-test on this project
+```
 ---
 
 ## References
