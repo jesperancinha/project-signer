@@ -12,15 +12,14 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/eyx7uhjenc7m6s9j/branch/master?svg=true)](https://ci.appveyor.com/project/jesperancinha/project-signer/branch/master)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d423415df34f42bf821ae13a078094c9)](https://www.codacy.com/app/jofisaes/project-signer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jesperancinha/project-signer&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/bfb0987b-e483-4954-9c3b-24ac488006bd)](https://codebeat.co/projects/github-com-jesperancinha-project-signer-master)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/d423415df34f42bf821ae13a078094c9)](https://www.codacy.com/gh/jesperancinha/project-signer/dashboard?utm_source=github.com&utm_medium=referral&utm_content=jesperancinha/project-signer&utm_campaign=Badge_Coverage)
 [![Coverage Status](https://coveralls.io/repos/github/jesperancinha/project-signer/badge.svg?branch=master)](https://coveralls.io/github/jesperancinha/project-signer?branch=master)
 [![codecov](https://codecov.io/gh/jesperancinha/project-signer/branch/master/graph/badge.svg?token=ErqcT1G5Tq)](https://codecov.io/gh/jesperancinha/project-signer)
 
-[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/project-signer.svg)]()
-[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/project-signer.svg)]()
-[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/project-signer.svg)]()
+![GitHub language count](https://img.shields.io/github/languages/count/jesperancinha/project-signer.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/jesperancinha/project-signer.svg)
+![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinha/project-signer.svg)
 
 ## Technologies used
 
@@ -117,7 +116,7 @@ mvn nexus-staging:release  -Prelease
 
 ## My Android apps
 
-<div align="center">
+<div style="text-align: center;">
 
 [![](https://img.shields.io/badge/Matrix%20Anywhere-%230077B5.svg?style=for-the-badge&logo=android&color=0a5d00)](https://github.com/jesperancinha/matrix-anywhere-android)
 [![](https://img.shields.io/badge/Base%20Converter-%230077B5.svg?style=for-the-badge&logo=android&color=0a5d00)](https://github.com/jesperancinha/base-converter-android)
@@ -138,7 +137,7 @@ Prompt claude with the following:
 
 ### Run all skills
 ```text
-please run skills annotations, kotlin, parallel, and spring-integration-test-wiring on this project
+please run skills annotations, docker, java, jee, jvm, kotlin, maven, parallel, readme, scripts, spring, spring-test on this project
 ```
 ---
 
