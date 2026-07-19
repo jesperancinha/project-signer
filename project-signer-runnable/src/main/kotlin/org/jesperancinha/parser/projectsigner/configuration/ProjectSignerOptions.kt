@@ -4,7 +4,7 @@ import picocli.CommandLine.Option
 import picocli.CommandLine.Parameters
 import java.nio.file.Path
 
-open class ProjectSignerOptions {
+class ProjectSignerOptions {
     @Option(
         names = ["-t", "--raw-location"],
         paramLabel = "Template location",

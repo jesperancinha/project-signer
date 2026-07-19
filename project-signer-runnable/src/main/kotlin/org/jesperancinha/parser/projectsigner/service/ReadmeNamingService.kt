@@ -10,7 +10,7 @@ import java.nio.file.Path
  * A service responsible for assuring the existence of Readme files in all recognizable projects: Maven, Node package manager, Gradle and Simple build tool.
  */
 @Service
-open class ReadmeNamingService(
+class ReadmeNamingService(
     private val fileFilterChain: FileFilterChain,
     private val optionsService: OptionsService
 ) {
@@ -27,7 +27,7 @@ open class ReadmeNamingService(
      * @throws IOException Any IO Exception that may occur
      */
     @Throws(IOException::class)
-    open fun buildReadmeStream(path: Path): InputStream? {
+    fun buildReadmeStream(path: Path): InputStream? {
         return optionsService.apply {
             commonNamingParser = commonNamingParser?.templateLocation?.let {
                 ReadmeNamingParser(

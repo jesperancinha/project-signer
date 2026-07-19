@@ -16,7 +16,7 @@ import java.util.*
 import kotlin.io.path.absolutePathString
 import kotlin.io.path.deleteIfExists
 
-open class ProjectSignerVisitor(
+class ProjectSignerVisitor(
     private val generatorService: GeneratorSevice? = null,
     private val allParagraphs: Paragraphs,
     private val allRedirectParagraphs: Paragraphs?,

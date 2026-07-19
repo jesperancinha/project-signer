@@ -12,7 +12,7 @@ import java.nio.file.Path
  * A merge service destined to merge operation between markdown files and objects
  */
 @Service
-open class MergeService(private val fileWriterService: FileWriterService) {
+class MergeService(private val fileWriterService: FileWriterService) {
     /**
      * Receives a complete Markdown text and a [Paragraphs] instance and adds all paragraphs in the stipulated order to the end of the text
      *
@@ -25,7 +25,7 @@ open class MergeService(private val fileWriterService: FileWriterService) {
     }
 
     @Throws(IOException::class)
-    open fun writeMergedResult(readmePath: Path, newText: String) {
+    fun writeMergedResult(readmePath: Path, newText: String) {
         logger.trace("New readme:\n {}", newText)
         fileWriterService.exportReadmeFile(readmePath, newText)
     }

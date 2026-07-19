@@ -13,7 +13,7 @@ import java.nio.file.Path
 import kotlin.Throws
 
 @SpringBootApplication
-open class ProjectSignerStart(
+class ProjectSignerStart(
     private val finderService: FinderService,
     private val fileWriterService: FileWriterService,
     private val optionsService: OptionsService,

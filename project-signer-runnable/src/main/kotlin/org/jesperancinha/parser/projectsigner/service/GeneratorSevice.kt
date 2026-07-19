@@ -23,12 +23,12 @@ import kotlin.system.exitProcess
  * - Creates matching Readme.me files where they don't exist in spite of existing package managing system files
  */
 @Service
-open class GeneratorSevice(
+class GeneratorSevice(
     private val readmeNamingService: ReadmeNamingService,
     private val readmeService: ReadmeService
 ) {
     @Throws(IOException::class)
-    open fun processReadmeFile(readmePath: Path, allParagraphs: Paragraphs) {
+    fun processReadmeFile(readmePath: Path, allParagraphs: Paragraphs) {
         val inputStream = readmeNamingService.buildReadmeStream(readmePath)
         if (inputStream != null) {
             readmeService.exportNewReadme(readmePath, inputStream, allParagraphs)
@@ -36,10 +36,9 @@ open class GeneratorSevice(
     }
 
     @Throws(Throwable::class)
-    open fun processLicenseFile(licencePath: Path, licenses: List<String>?) {
+    fun processLicenseFile(licencePath: Path, licenses: List<String>?) {
         val f = File(licencePath.toFile(), "Readme.md")
         val licenseLegacyFile = File(licencePath.toFile(), "License.txt")
-        var licenseText: String? = null
         if (licenseLegacyFile.exists()) {
             val delete = licenseLegacyFile.delete()
             if (!delete) {
@@ -48,10 +47,10 @@ open class GeneratorSevice(
             }
         }
         val expectedLegactyFile = File(licencePath.toFile(), "License")
-        if (expectedLegactyFile.exists()) {
+        val licenseText: String? = if (expectedLegactyFile.exists()) {
             val templateInputStream = FileInputStream(expectedLegactyFile)
-            licenseText = String(templateInputStream.readAllBytes(), StandardCharsets.UTF_8)
-        }
+            String(templateInputStream.readAllBytes(), StandardCharsets.UTF_8)
+        } else null
         val licenseFile = File(licencePath.toFile(), "LICENSE")
         if (licenseFile.exists()) {
             val delete = licenseFile.delete()
