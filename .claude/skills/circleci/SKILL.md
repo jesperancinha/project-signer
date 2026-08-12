@@ -13,11 +13,13 @@ When updating or creating CircleCI configuration files in `.circleci/`, ensure t
 
 1. **Orbs**: Use CircleCI Orbs where possible to simplify configuration (e.g., `circleci/maven`, `circleci/node`).
 2. **Docker Images**: Use specific, versioned Docker images. Eclipse Temurin is preferred for Java projects.
-3. **Caching**: Implement efficient caching strategies for dependencies (e.g., Maven, NPM) to speed up builds.
-4. **Workflows**: Use workflows to manage job dependencies and parallel execution.
-5. **Resource Class**: Specify appropriate `resource_class` for jobs if necessary.
-6. **Clean Commands**: Ensure build commands are optimized and follow project standards (e.g., `mvn clean install`).
-7. **Environment Variables**: Use context or project-level environment variables for sensitive data.
+3. **Java Version**: Always use the latest available Java version that is compatible with the project (check `pom.xml` or `build.gradle`).
+4. **Caching**: Implement efficient caching strategies for dependencies (e.g., Maven, NPM) to speed up builds.
+5. **Workflows**: Use workflows to manage job dependencies and parallel execution.
+6. **Resource Class**: Specify appropriate `resource_class` for jobs if necessary.
+7. **Clean Commands**: Ensure build commands are optimized and follow project standards (e.g., `mvn clean install`).
+8. **Environment Variables**: Use context or project-level environment variables for sensitive data.
+9. **Latest Versioning**: When applicable, use the latest versions for tools, orbs, and base images.
 
 ## 3. References
 

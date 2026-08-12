@@ -10,4 +10,4 @@ workflows:
           command: 'clean install integration-test'
           executor:
             name: maven/default
-            tag: '21.0'
+            tag: '25.0'
