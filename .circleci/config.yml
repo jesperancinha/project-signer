@@ -7,7 +7,7 @@ workflows:
   maven_test:
     jobs:
       - maven/test:
-          command: 'mvn clean install integration-test'
+          command: 'clean install integration-test'
           executor:
             name: maven/default
             tag: '21.0'
