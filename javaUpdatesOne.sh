@@ -2,10 +2,11 @@
 
 latestJavaLTS=$(curl -s https://api.adoptopenjdk.net/v3/info/available_releases | jq '.most_recent_lts')
 distribution="adopt"
-targetImage="eclipse-temurin:21-alpine"
-targetGradleImage="gradle:jdk21"
 
 if [[ -n $latestJavaLTS ]]; then
+
+  targetImage="eclipse-temurin:$latestJavaLTS-alpine"
+  targetGradleImage="gradle:jdk$latestJavaLTS"
 
   #  Gradle Java - Version
   echo "Scanning for .java-version files..."
