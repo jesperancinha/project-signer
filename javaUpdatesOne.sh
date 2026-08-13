@@ -48,6 +48,8 @@ if [[ -n $latestJavaLTS ]]; then
       mv "$f""01" "$f"
       sed -E 's/FROM .*jre.*/FROM '"$targetImage"'/g' "$f" > "$f""01"
       mv "$f""01" "$f"
+      sed -E 's/FROM .*eclipse-temurin.*/FROM '"$targetImage"'/g' "$f" > "$f""01"
+      mv "$f""01" "$f"
   done
 
   #  Circle CI File
