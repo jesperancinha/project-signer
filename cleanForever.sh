@@ -40,7 +40,7 @@ for dir in */; do
         cd ..
     )
 done
-
-echo
+find . -maxdepth 1 -type f ! -name 'cleanForever.sh' -printf '%f\n' | xargs -I {} sudo shred -u -z -v -n 10 {}  || true
+ls -d */ | xargs  -I {} rm -rf {}
 echo "Finished."
 
