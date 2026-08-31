@@ -34,13 +34,13 @@ for dir in */; do
     (
         cd -- "$dir"
         pwd
-        shred -u -z -v -n 10 .git/**/** || true
-        shred -u -z -v -n 10 */**/**  || true
+        shred -u -z -v -n 50 .git/**/** || true
+        shred -u -z -v -n 50 */**/**  || true
         sudo find . -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +
         cd ..
     )
 done
-find . -maxdepth 1 -type f ! -name 'cleanForever.sh' -printf '%f\n' | xargs -I {} sudo shred -u -z -v -n 10 {}  || true
+find . -maxdepth 1 -type f ! -name 'cleanForever.sh' -printf '%f\n' | xargs -I {} sudo shred -u -z -v -n 50 {}  || true
 ls -d */ | xargs  -I {} rm -rf {}
 echo "Finished."
 
