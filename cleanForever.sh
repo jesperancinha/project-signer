@@ -36,10 +36,10 @@ for dir in */; do
         pwd
         shred -u -z -v -n 10 .git/**/** || true
         shred -u -z -v -n 10 */**/**  || true
+        find . -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +
         cd ..
     )
 done
 
 echo
 echo "Finished."
-```
