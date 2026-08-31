@@ -33,7 +33,10 @@ for dir in */; do
 
     (
         cd -- "$dir"
-        shred -u -z -v -n 10 **/**
+        pwd
+        shred -u -z -v -n 10 .git/**/** || true
+        shred -u -z -v -n 10 */**/**  || true
+        cd ..
     )
 done
 
