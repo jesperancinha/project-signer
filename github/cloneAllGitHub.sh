@@ -5,8 +5,6 @@ echo -e "\e[32mCarefull when using this script. It will clone EVERY repo from us
 echo -e "\e[32mExample usage: ./cloneAll.sh jesperancinha 100 jesperancinhaOrg 100\e[0m"
 read -p "Are you sure? (Yy/Nn)" -n 1 -r
 
-cd ../..
-
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   user=$1
   pages=$2
