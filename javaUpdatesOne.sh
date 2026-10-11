@@ -2,10 +2,11 @@
 
 latestJavaLTS=$(curl -s https://api.adoptopenjdk.net/v3/info/available_releases | jq '.most_recent_lts')
 distribution="adopt"
-targetImage="eclipse-temurin:21-alpine"
-targetGradleImage="gradle:jdk21"
 
 if [[ -n $latestJavaLTS ]]; then
+
+  targetImage="eclipse-temurin:$latestJavaLTS-alpine"
+  targetGradleImage="gradle:jdk$latestJavaLTS"
 
   #  Gradle Java - Version
   echo "Scanning for .java-version files..."
@@ -47,6 +48,8 @@ if [[ -n $latestJavaLTS ]]; then
       sed -E 's/FROM .*jdk.*/FROM '"$targetImage"'/g' "$f" > "$f""01"
       mv "$f""01" "$f"
       sed -E 's/FROM .*jre.*/FROM '"$targetImage"'/g' "$f" > "$f""01"
+      mv "$f""01" "$f"
+      sed -E 's/FROM .*eclipse\-temurin.*/FROM '"$targetImage"'/g' "$f" > "$f""01"
       mv "$f""01" "$f"
   done
 
